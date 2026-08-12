@@ -139,18 +139,26 @@
     },
     {
       "id": "t-identidad",
-      "titulo": "Identidad Nómada",
+      "titulo": "USAID",
       "area": "diseno",
       "destacado": true,
       "anio": 2025,
-      "cliente": "Café Nómada",
-      "descripcion": "Identidad visual completa para una cafetería: logotipo, papelería, menú y redes sociales.",
+      "cliente": "USAID",
+      "descripcion": "Identidad visual completa para una USAID: logotipo, papelería, editorial, backings, brieffers y redes sociales.",
       "herramientas": [
         "Illustrator",
         "InDesign",
         "Figma"
       ],
-      "imagenes": [],
+      "imagenes": [
+        "images/1786513633083-7yxd.jpg",
+        "images/1786513633102-5qia.jpg",
+        "images/1786513633118-gf0s.jpg",
+        "images/1786513633144-e8hh.jpg",
+        "images/1786513633159-dwyf.jpg",
+        "images/1786513633179-e48m.jpg",
+        "images/1786513633192-zv5m.jpg"
+      ],
       "video": {
         "tipo": "ninguno",
         "url": ""
@@ -159,18 +167,23 @@
     },
     {
       "id": "t-tienda",
-      "titulo": "Tienda Aurora",
+      "titulo": "ICOE",
       "area": "dev",
-      "destacado": false,
+      "destacado": true,
       "anio": 2024,
-      "cliente": "Aurora Store",
-      "descripcion": "E-commerce ligero y rápido con catálogo dinámico, buscador y panel de gestión de productos.",
+      "cliente": "USAID & ACDIVOCA",
+      "descripcion": "Sistema basado en Excel y Visual Basic para la visualización de datos en bruto a gráficos entendibles y temáticos para la comunidad del Choco.",
       "herramientas": [
         "React",
         "Node.js",
         "PostgreSQL"
       ],
-      "imagenes": [],
+      "imagenes": [
+        "images/1786513806719-e4dj.jpg",
+        "images/1786513806746-dcav.jpg",
+        "images/1786513806799-yeri.png",
+        "images/1786513806837-xscb.png"
+      ],
       "video": {
         "tipo": "ninguno",
         "url": ""
