@@ -1,0 +1,79 @@
+{
+  "site": {
+    "nombre": "Estudio Prisma",
+    "claim": "Portafolio creativo",
+    "heroLinea1": "Ideas que se vuelven",
+    "heroLinea2": "forma, color y código",
+    "descripcion": "Estudio creativo que reúne 3D, diseño gráfico y programación para transformar ideas en piezas que se ven, se sienten y se usan.",
+    "email": "hola@estudioprisma.com",
+    "redes": [
+      { "nombre": "Behance", "url": "https://www.behance.net" },
+      { "nombre": "GitHub", "url": "https://github.com" },
+      { "nombre": "LinkedIn", "url": "https://www.linkedin.com" }
+    ]
+  },
+  "areas": [
+    {
+      "id": "3d",
+      "nombre": "3D",
+      "corto": "3D",
+      "descripcion": "Modelado, iluminación y render para producto, arquitectura y creatividad digital.",
+      "color": "#22d3ee"
+    },
+    {
+      "id": "diseno",
+      "nombre": "Diseño Gráfico",
+      "corto": "Diseño",
+      "descripcion": "Identidad, editorial y piezas visuales con foco en jerarquía y emoción.",
+      "color": "#f472b6"
+    },
+    {
+      "id": "dev",
+      "nombre": "Programación de Software y Web",
+      "corto": "Software & Web",
+      "descripcion": "Apps, sitios web y software a medida: interfaces cuidadas y código sólido.",
+      "color": "#a3e635"
+    }
+  ],
+  "trabajos": [
+    {
+      "id": "t-geometria",
+      "titulo": "Geometría Viva",
+      "area": "3d",
+      "destacado": true,
+      "anio": 2025,
+      "cliente": "Estudio Prisma",
+      "descripcion": "Serie de renders abstractos que exploran formas primigenias, iluminación volumétrica y composición de color.",
+      "herramientas": ["Blender", "Octane", "Photoshop"],
+      "imagenes": [],
+      "video": { "tipo": "ninguno", "url": "" },
+      "enlaces": []
+    },
+    {
+      "id": "t-identidad",
+      "titulo": "Identidad Nómada",
+      "area": "diseno",
+      "destacado": true,
+      "anio": 2025,
+      "cliente": "Café Nómada",
+      "descripcion": "Identidad visual completa para una cafetería: logotipo, papelería, menú y redes sociales.",
+      "herramientas": ["Illustrator", "InDesign", "Figma"],
+      "imagenes": [],
+      "video": { "tipo": "ninguno", "url": "" },
+      "enlaces": []
+    },
+    {
+      "id": "t-tienda",
+      "titulo": "Tienda Aurora",
+      "area": "dev",
+      "destacado": false,
+      "anio": 2024,
+      "cliente": "Aurora Store",
+      "descripcion": "E-commerce ligero y rápido con catálogo dinámico, buscador y panel de gestión de productos.",
+      "herramientas": ["React", "Node.js", "PostgreSQL"],
+      "imagenes": [],
+      "video": { "tipo": "ninguno", "url": "" },
+      "enlaces": []
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+# Panel privado de administración: nunca se publica en GitHub Pages
+admin.html
+DatosBrutos.md
+
+# Archivos del sistema
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editor y logs
+.vscode/
+*.log
