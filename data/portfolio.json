@@ -3,9 +3,9 @@
     "nombre": "Miguel Rodríguez Martínez",
     "claim": "Portafolio creativo",
     "heroLinea1": "Diseñando Ideas y Destinos",
-    "heroLinea2": "forma, color y código",
+    "heroLinea2": "forma, color y código.",
     "heroTags": "3D · Diseño · Código · Videojuegos",
-    "descripcion": "Estudio creativo que reúne 3D, diseño gráfico y programación para transformar ideas en piezas que se ven, se sienten y se usan.",
+    "descripcion": "\"Desarrollo interactivo, arte técnico y diseño visual: diseño ecosistemas digitales donde la lógica robusta y el impacto estético van de la mano.\"",
     "email": "merm.198427@gmail.com",
     "redes": [
       {
@@ -81,9 +81,9 @@
       "titulo": "Assets Renders",
       "area": "3d",
       "destacado": false,
-      "anio": 2023,
-      "cliente": "",
-      "descripcion": "",
+      "anio": 2019,
+      "cliente": "Xlerion Studios",
+      "descripcion": "Serie de Assets creados en 3D Max y con el motor de Renderizado Vray.",
       "herramientas": [
         "3D max",
         "Vray."

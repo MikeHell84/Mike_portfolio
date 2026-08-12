@@ -22,6 +22,30 @@ http.createServer((req, res) => {
     return;
   }
   if (req.method === 'GET' && req.url === '/__api/ping') { res.writeHead(200, { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' }); res.end('{"ok":true}'); return; }
+  if (req.method === 'POST' && req.url === '/__api/upload') {
+    let body = '';
+    req.on('data', c => body += c);
+    req.on('end', () => {
+      try {
+        const j = JSON.parse(body);
+        const imgDir = path.join(root, 'images');
+        fs.mkdirSync(imgDir, { recursive: true });
+        let name = String(j.name || 'archivo').toLowerCase().replace(/[^a-z0-9._-]+/g, '-').replace(/^[^a-z0-9]+/, '').slice(0, 40);
+        if (!name) name = 'archivo';
+        if (!/\.(jpe?g|png|gif|webp|svg|avif|mp4|webm|mov)$/.test(name)) name += '.jpg';
+        name = Date.now() + '-' + Math.random().toString(36).slice(2, 6) + path.extname(name);
+        const data = j.data || '';
+        const b64 = data.indexOf(',') >= 0 ? data.slice(data.indexOf(',') + 1) : data;
+        fs.writeFileSync(path.join(imgDir, name), Buffer.from(b64, 'base64'));
+        res.writeHead(200, { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' });
+        res.end(JSON.stringify({ ok: true, path: 'images/' + name }));
+      } catch (e) {
+        res.writeHead(400, { 'Content-Type': 'application/json' });
+        res.end(JSON.stringify({ ok: false, error: String(e.message || e) }));
+      }
+    });
+    return;
+  }
   const urlPath = decodeURIComponent(req.url.split('?')[0]);
   let p = path.join(root, urlPath === '/' ? 'index.html' : urlPath);
   if (!p.startsWith(root)) { res.writeHead(403); res.end(); return; }
