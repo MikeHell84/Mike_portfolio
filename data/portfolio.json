@@ -59,11 +59,11 @@
     "gradto": "#00ffee",
     "fuenteTitulos": "Space Grotesk",
     "fuenteTexto": "Inter",
-    "fuenteMono": "JetBrains Mono",
+    "fuenteMono": "Fira Code",
     "css": "",
     "formas": {
       "activo": true,
-      "tipo": "orbes",
+      "tipo": "particulas",
       "cantidad": 10,
       "blur": 135,
       "opacidad": 20,
