@@ -76,7 +76,7 @@ nav.links a:hover{color:#fff}
 .eyebrow{font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.35em;font-size:.72rem;color:var(--muted);margin-bottom:22px}
 .hero h1{font-size:clamp(2.7rem,8.2vw,6.6rem);line-height:1.02;letter-spacing:-.03em;font-weight:700}
 .grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.lead{max-width:54ch;color:var(--muted);font-size:1.08rem;margin-top:26px;line-height:1.75}
+.lead{max-width:54ch;color:var(--lead-color, var(--muted));font-size:1.08rem;margin-top:26px;line-height:1.75}
 .hero-cta{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
 .btn{display:inline-flex;align-items:center;gap:8px;background:var(--grad);color:#0b0b12;border:0;padding:13px 24px;border-radius:12px;font-weight:600;font-size:.94rem;text-decoration:none;cursor:pointer;transition:transform .2s,box-shadow .2s;font-family:'Inter',sans-serif}
 .btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px -12px rgba(167,139,250,.55)}
@@ -86,7 +86,7 @@ nav.links a:hover{color:#fff}
 .stats{display:flex;gap:clamp(26px,6vw,80px);margin-top:64px;flex-wrap:wrap}
 .stat b{font-family:'Space Grotesk',sans-serif;font-size:2rem;font-weight:700}
 .stat span{display:block;color:var(--muted);font-size:.78rem;margin-top:3px}
-.marquee{border-block:1px solid rgba(255,255,255,.08);overflow:hidden;padding:15px 0;background:rgba(255,255,255,.02);position:sticky;top:0;z-index:2}
+.marquee{border-block:1px solid rgba(255,255,255,.08);overflow:hidden;padding:15px 0;background:rgba(255,255,255,.02);position:relative;z-index:2}
 .marquee-track{display:flex;width:max-content;animation:mq 30s linear infinite}
 .mq-group{display:flex;gap:48px;padding-right:48px}
 .mq-group span{font-family:'JetBrains Mono',monospace;font-size:.78rem;color:var(--muted);white-space:nowrap}
@@ -278,7 +278,8 @@ function aplicarDiseno(d){
     +'--p-tilt:'+pv(p.tilt,1.2)+'deg;'
     +'--p-shadow:'+pv(p.shadow,8)+'px;'
     +pc
-    +'--grad:linear-gradient(92deg,'+gF+','+gM+' 46%,'+gT+');}'
+    +'--grad:linear-gradient(92deg,'+gF+','+gM+' 46%,'+gT+');'
+    +"--lead-color:"+(d.lead||d.muted||'#9aa0b5')+';}'
     +'body{font-family:\''+fuB+'\',system-ui,sans-serif}'
     +'h1,h2,h3{font-family:\''+fuT+'\',sans-serif}'
     +'.logo{font-family:\''+fuT+'\',sans-serif}'
@@ -287,6 +288,34 @@ function aplicarDiseno(d){
   var st=document.getElementById('diseno-dinamico');
   if(!st){st=document.createElement('style');st.id='diseno-dinamico';document.head.appendChild(st);}
   st.textContent=css;
+  // ---- generar reglas para estilos de botones personalizados ----
+  try{
+    var bs = d.buttonStyles || {};
+    var extra = '';
+    for(var k in bs){
+      try{
+        var s = bs[k] || {};
+        var sel = '[data-style="'+k.replace(/"/g,'')+'"]';
+        var bg = s.bgColor ? s.bgColor : '';
+        var txt = s.textColor ? s.textColor : '';
+        var pad = (s.padding != null) ? (s.padding+'px') : '13px';
+        var br = (s.borderRadius != null) ? (s.borderRadius+'px') : '12px';
+        var fw = s.fontWeight || '600';
+        var icon = s.icon || '';
+        extra += '.btn'+sel+'{';
+        if(bg) extra += 'background:'+bg+';';
+        extra += 'color:'+(txt||'#0b0b12')+';';
+        extra += 'padding:'+pad+' 24px;';
+        extra += 'border-radius:'+br+';font-weight:'+fw+';}';
+        // ghost variant
+        extra += '.btn.ghost'+sel+'{background:transparent;border:1px solid rgba(255,255,255,.18);color:'+(txt||'var(--text)')+';}';
+        if(icon){
+          extra += '.btn'+sel+':before{content:"";display:inline-block;width:20px;height:20px;margin-right:8px;vertical-align:middle;background-image:url("'+icon.replace(/\"/g,'\"')+'");background-size:20px 20px;background-repeat:no-repeat;border-radius:4px;}';
+        }
+      }catch(e){/* ignore per-style errors */}
+    }
+    st.textContent = st.textContent + extra;
+  }catch(e){/* ignore */}
   aplicarFormas(d.formas,gF,gM,gT);
   aplicarParallax(d.parallax);
   aplicarFondo(d.fondo);
@@ -446,8 +475,9 @@ function renderHero(){
     '<h1 class="reveal visible">'+esc(s.heroLinea1||'Ideas que se vuelven')+'<br><span class="grad">'+esc(s.heroLinea2||'forma, color y código')+'</span></h1>'+
     '<p class="lead reveal visible">'+esc(s.descripcion||'')+'</p>'+
     '<div class="hero-cta reveal visible">'+
-      '<a class="btn" href="#area-'+esc((DATA.areas[0]&&DATA.areas[0].id)||'')+'">Ver proyectos →</a>'+
-      '<a class="btn ghost" href="#contacto">Contactar</a></div>'+
+      (function(){var bs=(DATA.site&&DATA.site.buttonStyle)?DATA.site.buttonStyle:((DATA.diseno&&DATA.diseno.defaultButtonStyle)?DATA.diseno.defaultButtonStyle:''); return '<a class="btn" '+(bs?('data-style="'+esc(bs)+'"'):'')+' href="#area-'+esc((DATA.areas[0]&&DATA.areas[0].id)||'')+'">Ver proyectos →</a>';})()+
+      (function(){var bs=(DATA.site&&DATA.site.buttonStyle)?DATA.site.buttonStyle:((DATA.diseno&&DATA.diseno.defaultButtonStyle)?DATA.diseno.defaultButtonStyle:''); return '<a class="btn ghost" '+(bs?('data-style="'+esc(bs)+'"'):'')+' href="#contacto">Contactar</a>';})()+
+    '</div>'+
     '<div class="stats reveal visible">'+
       '<div class="stat"><b>'+tr.length+'</b><span>proyectos publicados</span></div>'+
       '<div class="stat"><b>'+DATA.areas.length+'</b><span>áreas creativas</span></div>'+
@@ -486,7 +516,7 @@ function renderSecciones(){
       '<div class="area-head"><div>'+
         '<div class="area-num">ÁREA '+String(i+1).padStart(2,'0')+' // '+trabs.length+' PROYECTO'+(trabs.length===1?'':'S')+'</div>'+
         '<h2>'+esc(a.nombre)+'</h2><p>'+esc(a.descripcion||'')+'</p></div>'+
-        '<a class="btn ghost" href="#contacto">Cotizar un proyecto →</a></div>'+
+        (function(){var bs=(DATA.site&&DATA.site.buttonStyle)?DATA.site.buttonStyle:((DATA.diseno&&DATA.diseno.defaultButtonStyle)?DATA.diseno.defaultButtonStyle:''); return '<a class="btn ghost" '+(bs?('data-style="'+esc(bs)+'"'):'')+' href="#contacto">Cotizar un proyecto →</a>';})()+'</div>'+
       '<div class="grid">'+(trabs.map(cardHTML).join('')||'<p class="muted">Aún no hay proyectos publicados en esta área.</p>')+'</div></section>';
   }).join('');
 }
