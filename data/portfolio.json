@@ -24,7 +24,7 @@
     "textoPie": "MIGUEL RODRÍGUEZ MARTÍNEZ © - 2026",
     "telefono": "+27 3208605600",
     "ubicacion": "Colombia",
-    "formato": "list"
+    "formato": "comic"
   },
   "areas": [
     {
@@ -76,6 +76,29 @@
       "velocidad": 0.7,
       "opacidad": 50,
       "desenfoque": 10
+    },
+    "presentacion": {
+      "gap": 26,
+      "mincol": 300,
+      "radius": 18,
+      "tilt": 1.2,
+      "shadow": 8,
+      "colores": {
+        "bg": null,
+        "border": "#171921",
+        "text": null,
+        "muted": null,
+        "overlay": null,
+        "chip": "#212121",
+        "chipText": null,
+        "anioBg": null,
+        "anioText": null,
+        "toolBg": null,
+        "toolText": null,
+        "videoBg": null,
+        "videoText": null,
+        "shadow": "#0E1424"
+      }
     }
   },
   "trabajos": [
