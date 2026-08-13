@@ -69,6 +69,9 @@ nav.links a:hover{color:#fff}
 @keyframes ondaX{to{transform:translateX(-50%)}}
 .hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(ellipse at 50% 40%,#000 25%,transparent 75%);mask-image:radial-gradient(ellipse at 50% 40%,#000 25%,transparent 75%)}
 #bgParallax{position:fixed;top:-30%;bottom:-30%;left:0;right:0;z-index:-1;background-repeat:no-repeat;background-size:cover;pointer-events:none;will-change:transform}
+#bgFondoWrap{position:fixed;inset:0;z-index:-2;pointer-events:none;overflow:hidden}
+#bgFondoImage{position:absolute;inset:0;background-repeat:no-repeat;background-size:cover;background-position:center}
+#bgFondoOsc{position:absolute;inset:0}
 .hero-inner{margin:auto 0;padding:150px 5vw 70px;position:relative;z-index:2}
 .eyebrow{font-family:'JetBrains Mono',monospace;text-transform:uppercase;letter-spacing:.35em;font-size:.72rem;color:var(--muted);margin-bottom:22px}
 .hero h1{font-size:clamp(2.7rem,8.2vw,6.6rem);line-height:1.02;letter-spacing:-.03em;font-weight:700}
@@ -280,6 +283,7 @@ function aplicarDiseno(d){
   st.textContent=css;
   aplicarFormas(d.formas,gF,gM,gT);
   aplicarParallax(d.parallax);
+  aplicarFondo(d.fondo);
 }
 
 function aplicarFormas(f,gF,gM,gT){
@@ -338,6 +342,22 @@ function aplicarParallax(p){
   d.id='bgParallax';
   d.style.cssText='background-image:url(\''+url+'\');background-position:'+pos+';opacity:'+((p.opacidad==null?25:p.opacidad)/100)+';filter:blur('+(p.desenfoque||0)+'px)';
   document.body.appendChild(d);
+}
+
+function aplicarFondo(f){
+  var old=document.getElementById('bgFondoWrap');
+  if(old){old.parentNode.removeChild(old);}
+  f=f||{};
+  if(!f.activo||!f.imagen)return;
+  var url=String(f.imagen).replace(/["'()\\]/g,'');
+  var pos=f.posicion==='arriba'?'center top':(f.posicion==='abajo'?'center bottom':'center');
+  var w=document.createElement('div');w.id='bgFondoWrap';
+  var img=document.createElement('div');img.id='bgFondoImage';
+  img.style.cssText='background-image:url(\''+url+'\');background-position:'+pos+';opacity:'+((f.opacidad==null?40:f.opacidad)/100)+';filter:blur('+(f.desenfoque||0)+'px)';
+  var osc=document.createElement('div');osc.id='bgFondoOsc';
+  osc.style.background='rgba(0,0,0,'+((f.oscurecer==null?0:f.oscurecer)/100)+')';
+  w.appendChild(img);w.appendChild(osc);
+  document.body.appendChild(w);
 }
 
 async function init(){
