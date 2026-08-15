@@ -836,7 +836,7 @@
       "id": "t-tienda",
       "titulo": "ICOE",
       "area": "dev",
-      "anio": 2024,
+      "anio": 2016,
       "cliente": "USAID & ACDIVOCA",
       "descripcion": "Sistema basado en Excel y Visual Basic para la visualización de datos en bruto a gráficos entendibles y temáticos para la comunidad del Choco.",
       "herramientas": [
@@ -846,11 +846,11 @@
       ],
       "destacado": true,
       "imagenes": [
-        "images/1786513806719-e4dj.jpg",
-        "images/1786513806746-dcav.jpg",
-        "images/1786513806799-yeri.png",
-        "images/1786513806837-xscb.png",
-        "images/1786736406383-j9wk.jpg"
+        "http://localhost:5173/images/1786513806719-e4dj.jpg",
+        "http://localhost:5173/images/1786513806746-dcav.jpg",
+        "http://localhost:5173/images/1786513806799-yeri.png",
+        "http://localhost:5173/images/1786513806837-xscb.png",
+        "http://localhost:5173/images/1786736406383-j9wk.jpg"
       ],
       "video": {
         "tipo": "ninguno",
