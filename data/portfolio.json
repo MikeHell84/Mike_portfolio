@@ -808,8 +808,7 @@
       "id": "t-identidad",
       "titulo": "USAID",
       "area": "diseno",
-      "destacado": true,
-      "anio": 2025,
+      "anio": 2015,
       "cliente": "USAID",
       "descripcion": "Identidad visual completa para una USAID: logotipo, papelería, editorial, backings, brieffers y redes sociales.",
       "herramientas": [
@@ -817,14 +816,15 @@
         "InDesign",
         "Figma"
       ],
+      "destacado": true,
       "imagenes": [
-        "images/1786513633083-7yxd.jpg",
-        "images/1786513633102-5qia.jpg",
-        "images/1786513633118-gf0s.jpg",
-        "images/1786513633144-e8hh.jpg",
-        "images/1786513633159-dwyf.jpg",
-        "images/1786513633179-e48m.jpg",
-        "images/1786513633192-zv5m.jpg"
+        "http://localhost:5173/images/1786513633083-7yxd.jpg",
+        "http://localhost:5173/images/1786513633102-5qia.jpg",
+        "http://localhost:5173/images/1786513633118-gf0s.jpg",
+        "http://localhost:5173/images/1786513633144-e8hh.jpg",
+        "http://localhost:5173/images/1786513633159-dwyf.jpg",
+        "http://localhost:5173/images/1786513633179-e48m.jpg",
+        "http://localhost:5173/images/1786513633192-zv5m.jpg"
       ],
       "video": {
         "tipo": "ninguno",
