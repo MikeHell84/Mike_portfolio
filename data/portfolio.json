@@ -73,24 +73,24 @@
       "activo": true,
       "tipo": "orbes",
       "cantidad": 10,
-      "blur": 135,
-      "opacidad": 70,
-      "velocidad": 52
+      "blur": 100,
+      "opacidad": 50,
+      "velocidad": 27
     },
     "parallax": {
       "activo": true,
       "imagen": "images/1786740556319-2a3u.jpg",
       "posicion": "centro",
-      "velocidad": 0.7,
-      "opacidad": 50,
-      "desenfoque": 10
+      "velocidad": 0.4,
+      "opacidad": 40,
+      "desenfoque": 6
     },
     "presentacion": {
-      "gap": 26,
-      "mincol": 260,
-      "radius": 18,
-      "tilt": 2.6,
-      "shadow": 14,
+      "gap": 12,
+      "mincol": 270,
+      "radius": 12,
+      "tilt": 2.8,
+      "shadow": 6,
       "colores": {
         "bg": "#404040",
         "border": "#404454",
@@ -728,7 +728,7 @@
       ]
     },
     "beforeAfter": {
-      "activo": true,
+      "activo": false,
       "titulo": "Transformaciones",
       "descripcion": "Resultados lado a lado",
       "color": "#22d3ee",
