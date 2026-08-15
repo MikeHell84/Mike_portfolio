@@ -49,7 +49,7 @@ section,footer{scroll-margin-top:80px}
 header{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 5vw;transition:.3s;border-bottom:1px solid transparent}
 header.scrolled{background:rgba(11,11,18,.78);backdrop-filter:blur(14px);border-bottom-color:rgba(255,255,255,.07)}
 .logo{display:flex;gap:10px;align-items:center;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.02rem;letter-spacing:.02em;text-decoration:none;color:#fff;white-space:nowrap}
-.logo svg{width:26px;height:26px;flex:0 0 auto}
+.logo svg,.logo img{width:26px;height:26px;flex:0 0 auto;border-radius:6px}
 nav.links{display:flex;gap:24px;overflow-x:auto;scrollbar-width:none}
 nav.links::-webkit-scrollbar{display:none}
 nav.links a{color:var(--muted);text-decoration:none;font-size:.88rem;font-weight:500;transition:.2s;white-space:nowrap}
@@ -545,7 +545,7 @@ function construir(){
 function renderHeader(){
   var s=DATA.site;
   $('#topbar').innerHTML=
-    '<a class="logo" href="#inicio"><svg viewBox="0 0 32 32" fill="none"><defs><linearGradient id="lg" x1="0" y1="0" x2="32" y2="32"><stop stop-color="#22d3ee"/><stop offset=".5" stop-color="#a78bfa"/><stop offset="1" stop-color="#f472b6"/></linearGradient></defs><path d="M16 3 29 26H3L16 3Z" stroke="url(#lg)" stroke-width="2.5" stroke-linejoin="round"/><circle cx="16" cy="19" r="3.5" fill="url(#lg)"/></svg>'+esc(s.nombre||'Portafolio')+'</a>'+
+    '<a class="logo" href="#inicio"><img src="images/LogoMike.png" alt="'+esc(s.nombre||'Portafolio')+'">'+esc(s.nombre||'Portafolio')+'</a>'+
     '<nav class="links">'+DATA.areas.map(function(a){return '<a href="#area-'+esc(a.id)+'">'+esc(a.corto||a.nombre)+'</a>';}).join('')+'<a href="#contacto">Contacto</a></nav>'+
     '<span class="count-chip">'+DATA.trabajos.length+' PROYECTOS</span>';
 }
