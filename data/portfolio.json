@@ -51,9 +51,9 @@
     },
     {
       "id": "area_1786650100016",
-      "nombre": "Videojuegos",
-      "corto": "Videojuegos",
-      "descripcion": "Descripción de la nueva área de trabajo",
+      "nombre": "Música & Composición",
+      "corto": "Música & Composición",
+      "descripcion": "Música creada para ambientes de videojuegos, videoclips y proyectos multimedia.",
       "color": "#d11ae3"
     }
   ],
@@ -740,6 +740,28 @@
   },
   "trabajos": [
     {
+      "id": "job-1786850614912",
+      "titulo": "Dead Hope",
+      "area": "area_1786650100016",
+      "anio": 2025,
+      "cliente": "Redemthor",
+      "descripcion": "Creación, Composición y grabación de la canción Dead Hope para el videojuego llamado Total Darkness de la Banda Redemthor.",
+      "herramientas": [
+        "Software de Captura y extracción de sonidos diseñada por mi",
+        "Cakewalk Sonar",
+        "Addictive Drums 2."
+      ],
+      "destacado": false,
+      "imagenes": [
+        "images/1786850614951-vfei.jpg"
+      ],
+      "video": {
+        "tipo": "youtube",
+        "url": "https://youtu.be/_FKCl1oPJbg"
+      },
+      "enlaces": []
+    },
+    {
       "id": "tmspms7sw",
       "titulo": "Assets Renders",
       "area": "3d",
@@ -781,7 +803,7 @@
       "id": "t-geometria",
       "titulo": "Dummu Ul",
       "area": "3d",
-      "anio": 2025,
+      "anio": 2023,
       "cliente": "Xlerion Studios",
       "descripcion": "Serie de renders de uno de los personajes para el videojuego llamado TOTAL DARKNESS en Colombia para Xlerion Studios. trabajado en Zbrush para el modelado, 3D max para el mapping de las texturas, y Substance 3d painter para las texturas.",
       "herramientas": [
