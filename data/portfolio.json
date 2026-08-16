@@ -753,7 +753,7 @@
       ],
       "destacado": false,
       "imagenes": [
-        "images/1786850614951-vfei.jpg"
+        "http://localhost:5173/images/1786850614951-vfei.jpg"
       ],
       "video": {
         "tipo": "youtube",
