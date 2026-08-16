@@ -62,7 +62,7 @@
     "panel": "#141420",
     "texto": "#e8eaf2",
     "muted": "#ffffff",
-    "gradfrom": "#22d3ee",
+    "gradfrom": "#00ffe1",
     "gradmid": "#ffffff",
     "gradto": "#00ffee",
     "fuenteTitulos": "Space Grotesk",
@@ -753,7 +753,7 @@
       ],
       "destacado": true,
       "imagenes": [
-        "http://localhost:5173/images/1786850614951-vfei.jpg"
+        "images/1786850614951-vfei.jpg"
       ],
       "video": {
         "tipo": "youtube",
@@ -772,22 +772,22 @@
         "3D max",
         "Vray."
       ],
-      "destacado": false,
+      "destacado": true,
       "imagenes": [
-        "images/1786511427864-nxpg.jpg",
-        "images/1786511428047-oxbh.jpg",
-        "images/1786511428149-6ygz.jpg",
-        "images/1786511428246-k8vm.jpg",
-        "images/1786511428353-cio0.jpg",
-        "images/1786511428427-ywcc.jpg",
-        "images/1786511428545-gng6.jpg",
-        "images/1786511428661-hhzx.jpg",
-        "images/1786511428749-xgak.jpg",
-        "images/1786511428837-l2p8.jpg",
-        "images/1786511428950-g2y1.jpg",
-        "images/1786511428999-h9ci.jpg",
-        "images/1786511429043-kqym.jpg",
-        "images/1786511429070-ar42.jpg"
+        "http://localhost:5173/images/1786511427864-nxpg.jpg",
+        "http://localhost:5173/images/1786511428047-oxbh.jpg",
+        "http://localhost:5173/images/1786511428149-6ygz.jpg",
+        "http://localhost:5173/images/1786511428246-k8vm.jpg",
+        "http://localhost:5173/images/1786511428353-cio0.jpg",
+        "http://localhost:5173/images/1786511428427-ywcc.jpg",
+        "http://localhost:5173/images/1786511428545-gng6.jpg",
+        "http://localhost:5173/images/1786511428661-hhzx.jpg",
+        "http://localhost:5173/images/1786511428749-xgak.jpg",
+        "http://localhost:5173/images/1786511428837-l2p8.jpg",
+        "http://localhost:5173/images/1786511428950-g2y1.jpg",
+        "http://localhost:5173/images/1786511428999-h9ci.jpg",
+        "http://localhost:5173/images/1786511429043-kqym.jpg",
+        "http://localhost:5173/images/1786511429070-ar42.jpg"
       ],
       "video": {
         "tipo": "ninguno",
@@ -796,7 +796,8 @@
       "enlaces": [],
       "beforeAfter": {
         "before": "images/1786739228674-u0ow.jpg",
-        "after": "images/1786739228684-m29u.jpg"
+        "after": "images/1786739228684-m29u.jpg",
+        "activo": true
       }
     },
     {
