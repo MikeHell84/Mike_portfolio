@@ -774,20 +774,20 @@
       ],
       "destacado": false,
       "imagenes": [
-        "http://localhost:5173/images/1786511427864-nxpg.jpg",
-        "http://localhost:5173/images/1786511428047-oxbh.jpg",
-        "http://localhost:5173/images/1786511428149-6ygz.jpg",
-        "http://localhost:5173/images/1786511428246-k8vm.jpg",
-        "http://localhost:5173/images/1786511428353-cio0.jpg",
-        "http://localhost:5173/images/1786511428427-ywcc.jpg",
-        "http://localhost:5173/images/1786511428545-gng6.jpg",
-        "http://localhost:5173/images/1786511428661-hhzx.jpg",
-        "http://localhost:5173/images/1786511428749-xgak.jpg",
-        "http://localhost:5173/images/1786511428837-l2p8.jpg",
-        "http://localhost:5173/images/1786511428950-g2y1.jpg",
-        "http://localhost:5173/images/1786511428999-h9ci.jpg",
-        "http://localhost:5173/images/1786511429043-kqym.jpg",
-        "http://localhost:5173/images/1786511429070-ar42.jpg"
+        "images/1786511427864-nxpg.jpg",
+        "images/1786511428047-oxbh.jpg",
+        "images/1786511428149-6ygz.jpg",
+        "images/1786511428246-k8vm.jpg",
+        "images/1786511428353-cio0.jpg",
+        "images/1786511428427-ywcc.jpg",
+        "images/1786511428545-gng6.jpg",
+        "images/1786511428661-hhzx.jpg",
+        "images/1786511428749-xgak.jpg",
+        "images/1786511428837-l2p8.jpg",
+        "images/1786511428950-g2y1.jpg",
+        "images/1786511428999-h9ci.jpg",
+        "images/1786511429043-kqym.jpg",
+        "images/1786511429070-ar42.jpg"
       ],
       "video": {
         "tipo": "ninguno",
@@ -813,12 +813,12 @@
       ],
       "destacado": true,
       "imagenes": [
-        "http://localhost:5173/images/1786736406321-abj9.jpg",
-        "http://localhost:5173/images/1786736406327-lps0.jpg",
-        "http://localhost:5173/images/1786736406333-w2qd.jpg",
-        "http://localhost:5173/images/1786736406347-dun8.jpg",
-        "http://localhost:5173/images/1786736406354-29i5.jpg",
-        "http://localhost:5173/images/1786736406365-ai0j.jpg"
+        "images/1786736406321-abj9.jpg",
+        "images/1786736406327-lps0.jpg",
+        "images/1786736406333-w2qd.jpg",
+        "images/1786736406347-dun8.jpg",
+        "images/1786736406354-29i5.jpg",
+        "images/1786736406365-ai0j.jpg"
       ],
       "video": {
         "tipo": "ninguno",
@@ -840,13 +840,13 @@
       ],
       "destacado": true,
       "imagenes": [
-        "http://localhost:5173/images/1786513633083-7yxd.jpg",
-        "http://localhost:5173/images/1786513633102-5qia.jpg",
-        "http://localhost:5173/images/1786513633118-gf0s.jpg",
-        "http://localhost:5173/images/1786513633144-e8hh.jpg",
-        "http://localhost:5173/images/1786513633159-dwyf.jpg",
-        "http://localhost:5173/images/1786513633179-e48m.jpg",
-        "http://localhost:5173/images/1786513633192-zv5m.jpg"
+        "images/1786513633083-7yxd.jpg",
+        "images/1786513633102-5qia.jpg",
+        "images/1786513633118-gf0s.jpg",
+        "images/1786513633144-e8hh.jpg",
+        "images/1786513633159-dwyf.jpg",
+        "images/1786513633179-e48m.jpg",
+        "images/1786513633192-zv5m.jpg"
       ],
       "video": {
         "tipo": "ninguno",
@@ -868,11 +868,11 @@
       ],
       "destacado": true,
       "imagenes": [
-        "http://localhost:5173/images/1786513806719-e4dj.jpg",
-        "http://localhost:5173/images/1786513806746-dcav.jpg",
-        "http://localhost:5173/images/1786513806799-yeri.png",
-        "http://localhost:5173/images/1786513806837-xscb.png",
-        "http://localhost:5173/images/1786736406383-j9wk.jpg"
+        "images/1786513806719-e4dj.jpg",
+        "images/1786513806746-dcav.jpg",
+        "images/1786513806799-yeri.png",
+        "images/1786513806837-xscb.png",
+        "images/1786736406383-j9wk.jpg"
       ],
       "video": {
         "tipo": "ninguno",
