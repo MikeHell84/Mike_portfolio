@@ -54,7 +54,7 @@
       "nombre": "Música & Composición",
       "corto": "Música & Composición",
       "descripcion": "Música creada para ambientes de videojuegos, videoclips y proyectos multimedia.",
-      "color": "#d11ae3"
+      "color": "#eb002f"
     }
   ],
   "diseno": {
@@ -86,9 +86,9 @@
       "desenfoque": 6
     },
     "presentacion": {
-      "gap": 12,
+      "gap": 4,
       "mincol": 270,
-      "radius": 12,
+      "radius": 24,
       "tilt": 2.8,
       "shadow": 6,
       "colores": {
@@ -751,7 +751,7 @@
         "Cakewalk Sonar",
         "Addictive Drums 2."
       ],
-      "destacado": false,
+      "destacado": true,
       "imagenes": [
         "http://localhost:5173/images/1786850614951-vfei.jpg"
       ],
