@@ -933,6 +933,7 @@
   ],
   "trayectoria": [
     {
+      "id": "tray-1786925788880",
       "tipo": "trabajo",
       "titulo": "Full-Stack Software Engineer",
       "org": "Alcaldía de Caucasia (FOVIS)",
@@ -947,8 +948,9 @@
         "GovTech",
         "Desarrollo de proyectos de vivienda"
       ],
-      "destacado": true,
-      "id": "tray-1786925788880"
+      "imagen": null,
+      "enlace": "",
+      "destacado": true
     },
     {
       "tipo": "trabajo",
@@ -1075,22 +1077,6 @@
       ],
       "destacado": false,
       "id": "tray-1786925788887"
-    },
-    {
-      "tipo": "formacion",
-      "titulo": "Formación Complementaria - Ingeniería de Software, Metodologías Ágiles y Sistemas Distribuidos",
-      "org": "Universidad de Antioquia (UDEA)",
-      "inicio": "2022-01",
-      "fin": "2022-12",
-      "descripcion": "Formación complementaria en ingeniería de software, metodologías ágiles (Scrum) y sistemas distribuidos, complementando la formación técnica previa.",
-      "tags": [
-        "Ingeniería de Software",
-        "Metodologías Ágiles",
-        "Sistemas Distribuidos",
-        "Scrum"
-      ],
-      "destacado": false,
-      "id": "tray-1786925788888"
     }
   ]
 }
