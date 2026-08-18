@@ -321,24 +321,13 @@
 <!-- NAV -->
 <nav class="top">
   <a href="#" class="logo"><span class="dot"></span> OBRA®</a>
-  <ul>
-    <li><a href="#work" data-num="01">Trabajos</a></li>
-    <li><a href="#about" data-num="02">Estudio</a></li>
-    <li><a href="#services" data-num="03">Servicios</a></li>
-    <li><a href="#recognition" data-num="04">Reconocimientos</a></li>
-  </ul>
+  <ul id="navDesktop"></ul>
   <a href="#contact" class="cta"><span class="pulse"></span> Iniciar proyecto</a>
   <button class="menu-btn" aria-label="Menú"><span></span><span></span></button>
 </nav>
 
 <div class="mobile-menu" aria-hidden="true">
-  <ul>
-    <li><a href="#work">Trabajos <span class="n">01</span></a></li>
-    <li><a href="#about">Estudio <span class="n">02</span></a></li>
-    <li><a href="#services">Servicios <span class="n">03</span></a></li>
-    <li><a href="#recognition">Reconocimientos <span class="n">04</span></a></li>
-    <li><a href="#contact">Contacto <span class="n">05</span></a></li>
-  </ul>
+  <ul id="navMobile"></ul>
   <div class="foot"><span>hola@obra.studio</span><span>© 2026 — Todos los derechos reservados</span></div>
 </div>
 
@@ -486,6 +475,7 @@ async function init(){
     if(parts[1]){var h2=head.querySelector('h2');if(h2)h2.innerHTML='<em>'+esc(parts[1].split(' ')[0]||'')+'</em> '+esc(parts[1].split(' ').slice(1).join(' '));}
   });
   var brand=s.brand||s.nombre||'OBRA®';
+  renderNav(s.navItems);
   renderHero(s);renderTicker();renderWorks(trab,ar);renderManifesto(s);
   renderServices(ar);renderNumbers(trab,tray,ar);renderRecognition(tray);renderCTA(s);renderFooter(s);
   updateBrand(brand,s);startAnimations();
@@ -505,6 +495,13 @@ function startAnimations(){
 if(window.__PORTFOLIO__){DATA=window.__PORTFOLIO__;}
 init();
 
+function renderNav(navItems){
+  var items=navItems||[{label:'Trabajos',href:'#work'},{label:'Estudio',href:'#about'},{label:'Servicios',href:'#services'},{label:'Reconocimientos',href:'#recognition'}];
+  var dsk=items.map(function(n,i){return '<li><a href="'+esc(n.href)+'" data-num="'+String(i+1).padStart(2,'0')+'">'+esc(n.label)+'</a></li>';}).join('');
+  var mob=items.map(function(n,i){return '<li><a href="'+esc(n.href)+'">'+esc(n.label)+' <span class="n">'+String(i+1).padStart(2,'0')+'</span></a></li>';}).join('');
+  var nd=document.getElementById('navDesktop');if(nd)nd.innerHTML=dsk;
+  var nm=document.getElementById('navMobile');if(nm)nm.innerHTML=mob;
+}
 function renderHero(s){
   var tags=(s.heroTags||'').split(/\s*[·•]\s*/).filter(Boolean);
   var eye=s.eyebrowContacto||'Estudio independiente';
