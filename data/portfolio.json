@@ -2,10 +2,10 @@
   "site": {
     "nombre": "Miguel Rodríguez Martínez",
     "claim": "Portafolio creativo",
-    "heroLinea1": "Creando mundos para liberar la mente",
+    "heroLinea1": "De la idea al entorno digital: 3D, multimedia y software.",
     "heroLinea2": "\"Desarrollo interactivo, arte técnico y diseño visual: diseño ecosistemas digitales donde la lógica robusta y el impacto estético van de la mano.\"",
     "heroTags": "3D · Diseño · Código · Videojuegos",
-    "descripcion": "\"Desarrollo interactivo, arte técnico y diseño visual: diseño ecosistemas digitales donde la lógica robusta y el impacto estético van de la mano.\"",
+    "descripcion": "Soluciones visuales y técnicas que evolucionan contigo.",
     "email": "merm.198427@gmail.com",
     "redes": [
       {
@@ -28,7 +28,7 @@
     "buttonStyle": "",
     "logoUrl": "images/1787018334960-qgqc.jpg",
     "brand": "Mike",
-    "manifesto": "Diseño mundos para alternar la realidad",
+    "manifesto": "Innovación que se ve, se siente y se usa.",
     "heroBg": "#000000",
     "heroColor": "#ffffff",
     "secciones": {
@@ -80,16 +80,16 @@
     }
   ],
   "diseno": {
-    "bg": "#0b0b12",
+    "bg": "#000000",
     "panel": "#141420",
-    "texto": "#e8eaf2",
-    "muted": "#ffffff",
+    "texto": "#000000",
+    "muted": "#000000",
     "gradfrom": "#00ffe1",
     "gradmid": "#ffffff",
     "gradto": "#00ffee",
-    "fuenteTitulos": "Poppins",
-    "fuenteTexto": "Work Sans",
-    "fuenteMono": "IBM Plex Mono",
+    "fuenteTitulos": "Space Grotesk",
+    "fuenteTexto": "Inter",
+    "fuenteMono": "JetBrains Mono",
     "css": "",
     "formas": {
       "activo": true,
@@ -963,93 +963,73 @@
       "items": []
     },
     "trayectoria": {
-      "accent": "#ffffff",
-      "accent2": "#00ffe1",
-      "accent3": "#d1d1d1",
-      "cardBg": "#141420",
-      "cardBorder": "#2a2a3a",
-      "radius": 10,
-      "fontTitle": "Sora"
+      "accent": "#000000",
+      "accent2": "#000000",
+      "accent3": "#000000",
+      "cardBg": "#000000",
+      "cardBorder": "#000000",
+      "radius": 18,
+      "fontTitle": "Space Grotesk"
     },
-    "bg2": "#161613",
-    "texto2": "#b8b3a3",
-    "line": "#f2efe6",
-    "accent": "#3dfff2",
-    "accent2": "#ff4a1c",
-    "accent3": "#a78bfa",
+    "bg2": "#000000",
+    "texto2": "#000000",
+    "line": "#000000",
+    "accent": "#000000",
+    "accent2": "#000000",
+    "accent3": "#000000",
     "footer": {
-      "color": "#f2efe6",
-      "accent": "#33fffc",
-      "size": 160,
-      "text1": "Miguel Rodríguez Martínez",
-      "text2": "Multimedia Fullstack"
+      "color": "#000000",
+      "accent": "#000000",
+      "size": 280,
+      "text1": "",
+      "text2": ""
     },
     "typography": {
-      "hero": 180,
-      "claim": 21,
+      "hero": 200,
+      "claim": 20,
       "eyebrow": 11,
-      "h2": 46,
-      "body": 16,
+      "h2": 48,
+      "body": 15,
       "work": 20,
-      "svc": 42,
-      "footer": 200
+      "svc": 44,
+      "footer": 280
     },
     "layout": {
       "radius": 14,
-      "padSec": 75,
+      "padSec": 100,
       "navH": 64,
       "workGap": 12,
       "maxW": 1280,
       "lh": 1.55
     },
     "nav": {
-      "color": "#f2efe6",
-      "bg": "#0afffb",
-      "blend": "screen",
-      "preBg": "#ffff00"
+      "color": "#000000",
+      "bg": "#000000",
+      "blend": "difference",
+      "preBg": "#0e0e0c"
     },
     "works": {
-      "bg": "#161613",
-      "border": "#1a1a1a",
-      "accent": "#3dffe8"
+      "bg": "#000000",
+      "border": "#000000",
+      "accent": "#000000"
     },
     "modal": {
-      "bg": "#0f0f0f",
+      "bg": "#000000",
       "overlay": "#000000",
       "radius": 18,
       "opacity": 0.75
     },
     "services": {
-      "bg": "#161613",
+      "bg": "#000000",
       "border": "#000000",
-      "radius": 10
+      "radius": 6
     },
     "cursor": {
-      "color": "#3dfcff",
-      "size": 18,
-      "big": 100
+      "color": "#000000",
+      "size": 14,
+      "big": 90
     },
-    "controlLabels": {
-      "--fs-hero": "Hero h1",
-      "--fs-claim": "Hero claim",
-      "--fs-eyebrow": "Eyebrow secciones",
-      "--fs-h2": "Títulos h2 secciones",
-      "--fs-body": "Texto cuerpo",
-      "--fs-work": "Títulos tarjetas trabajo",
-      "--fs-svc": "Títulos servicios",
-      "--fs-footer": "Footer texto grande",
-      "--rad": "Radio global de bordes",
-      "--pad-sec": "Padding secciones",
-      "--nav-h": "Altura nav",
-      "--work-gap": "Gap tarjetas trabajo",
-      "--max-w": "Ancho máximo contenido",
-      "--lh": "Line height cuerpo",
-      "--tray-radius": "Radio modal",
-      "--modal-opacity": "Opacidad overlay",
-      "--svc-rad": "Radio tarjeta servicio",
-      "--cursor-size": "Tamaño cursor",
-      "--cursor-big": "Tamaño hover"
-    }
+    "controlLabels": {}
   },
   "trabajos": [
     {
