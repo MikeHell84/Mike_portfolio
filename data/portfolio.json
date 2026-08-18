@@ -1,8 +1,8 @@
 {
   "site": {
     "nombre": "Miguel Rodríguez Martínez",
-    "claim": "Portafolio creativo",
-    "heroLinea1": "Diseñando Ideas y Destinos",
+    "claim": "Soluciones visuales y técnicas que evolucionan contigo.",
+    "heroLinea1": "Diseño, tecnología y creatividad en un mismo flujo.",
     "heroLinea2": "forma, color y código.",
     "heroTags": "3D · Diseño · Código · Videojuegos",
     "descripcion": "\"Desarrollo interactivo, arte técnico y diseño visual: diseño ecosistemas digitales donde la lógica robusta y el impacto estético van de la mano.\"",
@@ -26,23 +26,24 @@
     "ubicacion": "Colombia",
     "formato": "comic",
     "buttonStyle": "",
-    "brand": "",
-    "logoUrl": "",
-    "faviconUrl": "",
-    "manifesto": "",
+    "brand": "Miguel Rodríguez Martínez",
+    "logoUrl": "images/1787080952220-nyu4.jpg",
+    "faviconUrl": "images/1787080952225-ier3.jpg",
+    "manifesto": "Innovación que se ve, se siente y se usa.",
     "heroBg": "#0E0E0C",
     "heroColor": "#F2EFE6",
     "secciones": {
       "workEye": "",
-      "workTitle": "",
+      "workTitle": "Estos son trabajos que han inspirado mi carrera...",
       "aboutEye": "",
-      "aboutTitle": "",
+      "aboutTitle": "Aprender algo nuevo, siempre alentará mi vida...",
       "servEye": "",
-      "servTitle": "",
-      "recEye": "",
-      "recTitle": ""
+      "servTitle": "Mis Disciplinas...",
+      "recEye": "04 / Trayectoria",
+      "recTitle": "Algo de mi trayectoria..."
     },
-    "navItems": []
+    "navItems": [],
+    "numeros": []
   },
   "areas": [
     {
@@ -1187,5 +1188,299 @@
       "enlaces": []
     }
   ],
-  "trayectoria": []
+  "trayectoria": [
+    {
+      "id": "tray-1787081600547-1",
+      "tipo": "trabajo",
+      "titulo": "Full-Stack Software Engineer",
+      "org": "Alcaldía de Caucasia (FOVIS)",
+      "inicio": "2024-01",
+      "fin": "2025-12",
+      "descripcion": "Arquitecté y desarrollé desde cero una plataforma gubernamental full-stack para la gestión de proyectos de vivienda utilizando React, Django, MySQL y Tailwind CSS. Optimicé flujos de datos para registros públicos, mejorando significativamente la eficiencia administrativa y el seguimiento de información institucional. Implementé paneles analíticos (dashboards) de KPIs en tiempo real para apoyar la toma de decisiones estratégicas de los administradores municipales.",
+      "tags": [
+        "React",
+        "Django",
+        "MySQL",
+        "Tailwind CSS",
+        "GovTech",
+        "Dashboards",
+        "KPIs"
+      ],
+      "destacado": true,
+      "imagen": "",
+      "enlace": ""
+    },
+    {
+      "id": "tray-1787081600547-2",
+      "tipo": "trabajo",
+      "titulo": "Desarrollador Web y Diseñador de Innovación",
+      "org": "2INK",
+      "inicio": "2024-01",
+      "fin": "2025-12",
+      "descripcion": "Lideré la arquitectura y mantenimiento de infraestructuras web corporativas, resolviendo vulnerabilidades críticas y fallos de sistemas CMS. Diseñé, modelé e integré recursos y modelados 3D personalizados para campañas visuales institucionales y comerciales. Gestioné la producción avanzada de medios digitales utilizando Adobe Creative Cloud, Blender y 3ds Max.",
+      "tags": [
+        "Web Architecture",
+        "CMS",
+        "3D Modeling",
+        "Blender",
+        "3ds Max",
+        "Adobe Creative Cloud",
+        "Seguridad"
+      ],
+      "destacado": true,
+      "imagen": "",
+      "enlace": ""
+    },
+    {
+      "id": "tray-1787081600547-3",
+      "tipo": "trabajo",
+      "titulo": "Lead Developer & 3D Tech Lead (Fundador)",
+      "org": "Xlerion Studio",
+      "inicio": "2023-01",
+      "fin": "",
+      "descripcion": "Proporciono dirección técnica y artística para el desarrollo de videojuegos independientes y simuladores 3D complejos. Arquitecto sistemas modulares utilizando C# avanzado y Python, garantizando alta escalabilidad y una integración fluida entre lógica de backend y renderizado en tiempo real. Superviso pipelines completos de arte 3D y optimización de rendimiento para motores interactivos.",
+      "tags": [
+        "C#",
+        "Python",
+        "Unity",
+        "Unreal Engine 5",
+        "Godot",
+        "3D Pipelines",
+        "Optimización",
+        "Arquitectura de Software"
+      ],
+      "destacado": true,
+      "imagen": "",
+      "enlace": ""
+    },
+    {
+      "id": "tray-1787081600547-4",
+      "tipo": "trabajo",
+      "titulo": "Desarrollador Backend e IoT",
+      "org": "Universidad de Antioquia (UDEA)",
+      "inicio": "2023-01",
+      "fin": "2023-12",
+      "descripcion": "Mantuve y optimicé APIs de alta confiabilidad responsables de redes de sensores de flujo hídrico en la región de Antioquia. Garanticé un 99% de tiempo de actividad (uptime) en la captura de datos IoT en tiempo real para sistemas críticos de monitoreo ambiental.",
+      "tags": [
+        "Python",
+        "IoT",
+        "Sensores",
+        "APIs",
+        "Monitoreo Ambiental",
+        "Uptime 99%"
+      ],
+      "destacado": false,
+      "imagen": "",
+      "enlace": ""
+    },
+    {
+      "id": "tray-1787081600547-5",
+      "tipo": "trabajo",
+      "titulo": "Ingeniero Full-Stack y Consultor de Innovación",
+      "org": "Ejército Nacional de Colombia",
+      "inicio": "2020-01",
+      "fin": "2023-12",
+      "descripcion": "Formulé e implementé proyectos tecnológicos disruptivos enfocados en la seguridad institucional y automatización. Diseñé sistemas de Visión Artificial utilizando OpenCV para análisis ambiental automatizado y detección de amenazas. Prototipé soluciones de trazabilidad segura utilizando arquitecturas basadas en Blockchain y contratos inteligentes.",
+      "tags": [
+        "OpenCV",
+        "Visión Artificial",
+        "Blockchain",
+        "Smart Contracts",
+        "Seguridad",
+        "Automatización",
+        "C++",
+        "Python"
+      ],
+      "destacado": false,
+      "imagen": "",
+      "enlace": ""
+    },
+    {
+      "id": "tray-1787081600547-6",
+      "tipo": "trabajo",
+      "titulo": "Desarrollador de Software y Hardware (IoT)",
+      "org": "Omnia Solutions",
+      "inicio": "2019-01",
+      "fin": "2020-12",
+      "descripcion": "Lideré la reingeniería completa de los sistemas de seguridad perimetral, desarrollando servicios backend robustos en Python y C++. Automaticé servicios críticos en servidores Linux personalizados, reduciendo los tiempos de respuesta ante incidentes y maximizando la confiabilidad operativa.",
+      "tags": [
+        "Python",
+        "C++",
+        "IoT",
+        "Linux",
+        "Backend",
+        "Seguridad Perimetral",
+        "Automatización"
+      ],
+      "destacado": false,
+      "imagen": "",
+      "enlace": ""
+    },
+    {
+      "id": "tray-1787081600547-7",
+      "tipo": "trabajo",
+      "titulo": "Director de Diseño 3D y Visualización de Datos",
+      "org": "AONC",
+      "inicio": "2018-01",
+      "fin": "2019-12",
+      "descripcion": "Dirigí un proyecto de visualización de Big Data a gran escala, transformando conjuntos de datos complejos en entornos 3D interactivos y navegables. Construí interfaces gamificadas e intuitivas que permitieron a usuarios no técnicos explorar información densa, reduciendo el tiempo de análisis de datos en un 40%.",
+      "tags": [
+        "Big Data",
+        "3D Visualization",
+        "Gamificación",
+        "Data Analysis",
+        "Interfaces 3D",
+        "Unity"
+      ],
+      "destacado": false,
+      "imagen": "",
+      "enlace": ""
+    },
+    {
+      "id": "tray-1787081600547-8",
+      "tipo": "trabajo",
+      "titulo": "Desarrollador Web y Consultor IT (GovTech)",
+      "org": "Alcaldía de Chía",
+      "inicio": "2018-01",
+      "fin": "2019-12",
+      "descripcion": "Construí y despliegue una plataforma integral de control de inventarios para la Secretaría de Desarrollo Social utilizando PHP, JavaScript y MySQL. Modernicé la infraestructura de captura de datos, mejorando el seguimiento del gasto público y la gestión de recursos.",
+      "tags": [
+        "PHP",
+        "JavaScript",
+        "MySQL",
+        "GovTech",
+        "Inventarios",
+        "Gasto Público"
+      ],
+      "destacado": false,
+      "imagen": "",
+      "enlace": ""
+    },
+    {
+      "id": "tray-1787081600547-9",
+      "tipo": "trabajo",
+      "titulo": "Director de Proyectos IT y Innovación",
+      "org": "USAID - ACDI/VOCA Colombia",
+      "inicio": "2015-01",
+      "fin": "2017-12",
+      "descripcion": "Arquitecté el software \"ICOE\" para la visualización interactiva de matrices de información a nivel nacional. Dirigí equipos multidisciplinarios en diseño 3D, UX e ingeniería de software para iniciativas de alto impacto social.",
+      "tags": [
+        "ICOE",
+        "Visualización de Datos",
+        "Diseño 3D",
+        "UX",
+        "Equipos Multidisciplinarios",
+        "Alto Impacto Social"
+      ],
+      "destacado": false,
+      "imagen": "",
+      "enlace": ""
+    },
+    {
+      "id": "tray-1787081600547-10",
+      "tipo": "trabajo",
+      "titulo": "Diseñador Creativo (Programa WorkSkills)",
+      "org": "SENA",
+      "inicio": "2015-01",
+      "fin": "2017-12",
+      "descripcion": "Creé modelos 3D, personajes y contenidos multimedia avanzados para entornos digitales e impresos. Traduje conceptos bidimensionales en representaciones tridimensionales de alta precisión estética y técnica.",
+      "tags": [
+        "3D Modeling",
+        "Multimedia",
+        "Personajes",
+        "Impresión 3D",
+        "Diseño Técnico"
+      ],
+      "destacado": false,
+      "imagen": "",
+      "enlace": ""
+    },
+    {
+      "id": "tray-1787081600547-11",
+      "tipo": "formacion",
+      "titulo": "Máster Power BI - Visualización de Datos e Inteligencia de Negocios",
+      "org": "MinTIC & Microsoft",
+      "inicio": "2024-01",
+      "fin": "2024-12",
+      "descripcion": "Formación en visualización de datos e inteligencia de negocios, técnicas avanzadas de reporteo y dashboards interactivos para toma de decisiones estratégicas.",
+      "tags": [
+        "Power BI",
+        "Visualización de Datos",
+        "Business Intelligence",
+        "Dashboards"
+      ],
+      "destacado": false,
+      "imagen": "",
+      "enlace": ""
+    },
+    {
+      "id": "tray-1787081600547-12",
+      "tipo": "formacion",
+      "titulo": "Formación Complementaria - Ingeniería de Software, Metodologías Ágiles y Sistemas Distribuidos",
+      "org": "Universidad de Antioquia (UDEA)",
+      "inicio": "2022-01",
+      "fin": "2022-12",
+      "descripcion": "Formación en ingeniería de software, metodologías ágiles y sistemas distribuidos.",
+      "tags": [
+        "Ingeniería de Software",
+        "Metodologías Ágiles",
+        "Sistemas Distribuidos"
+      ],
+      "destacado": false,
+      "imagen": "",
+      "enlace": ""
+    },
+    {
+      "id": "tray-1787081600547-13",
+      "tipo": "formacion",
+      "titulo": "Estimación de Proyectos de Software",
+      "org": "Udemy",
+      "inicio": "2020-01",
+      "fin": "2020-12",
+      "descripcion": "Curso de estimación de proyectos de software.",
+      "tags": [
+        "Estimación",
+        "Gestión de Proyectos",
+        "Software"
+      ],
+      "destacado": false,
+      "imagen": "",
+      "enlace": ""
+    },
+    {
+      "id": "tray-1787081600547-14",
+      "tipo": "formacion",
+      "titulo": "Bootcamp de Desarrollo Web Full-Stack",
+      "org": "Udemy",
+      "inicio": "2019-01",
+      "fin": "2019-12",
+      "descripcion": "Bootcamp intensivo de desarrollo web full-stack.",
+      "tags": [
+        "Full-Stack",
+        "Web Development",
+        "Bootcamp"
+      ],
+      "destacado": false,
+      "imagen": "",
+      "enlace": ""
+    },
+    {
+      "id": "tray-1787081600547-15",
+      "tipo": "formacion",
+      "titulo": "Título Técnico en Prototipado Digital, Maquetación Web y Desarrollo Multimedia",
+      "org": "Servicio Nacional de Aprendizaje (SENA)",
+      "inicio": "2013-01",
+      "fin": "2014-12",
+      "descripcion": "Formación técnica en protipado digital, maquetación web y desarrollo multimedia.",
+      "tags": [
+        "Prototipado",
+        "Maquetación Web",
+        "Desarrollo Multimedia",
+        "SENA"
+      ],
+      "destacado": false,
+      "imagen": "",
+      "enlace": ""
+    }
+  ]
 }
