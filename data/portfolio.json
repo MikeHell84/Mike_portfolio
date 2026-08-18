@@ -87,9 +87,9 @@
     "gradfrom": "#00ffe1",
     "gradmid": "#ffffff",
     "gradto": "#00ffee",
-    "fuenteTitulos": "Sora",
-    "fuenteTexto": "Open Sans",
-    "fuenteMono": "Space Mono",
+    "fuenteTitulos": "Poppins",
+    "fuenteTexto": "Work Sans",
+    "fuenteMono": "IBM Plex Mono",
     "css": "",
     "formas": {
       "activo": true,
@@ -101,11 +101,14 @@
     },
     "parallax": {
       "activo": true,
-      "imagen": "images/1786740556319-2a3u.jpg",
+      "imagen": "images/1787074832620-kh6e.jpg",
       "posicion": "centro",
       "velocidad": 0.4,
       "opacidad": 40,
-      "desenfoque": 6
+      "desenfoque": 7,
+      "oscurecer": 0,
+      "fijo": true,
+      "zIndex": -1
     },
     "presentacion": {
       "gap": 4,
@@ -878,6 +881,25 @@
         "animation": "none",
         "iconPosition": "left",
         "disabled": false
+      },
+      "btn-seleccionar-imagen-": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
       }
     },
     "defaultButtonStyle": "BtnStyle01",
@@ -926,7 +948,8 @@
         "btn--agregar-disciplina",
         "btn--nueva-entrada-de-trayectoria",
         "btn-subir-favicon",
-        "btn--a-adir-elemento"
+        "btn--a-adir-elemento",
+        "btn-seleccionar-imagen-"
       ]
     },
     "beforeAfter": {
@@ -940,9 +963,9 @@
       "items": []
     },
     "trayectoria": {
-      "accent": "#ff0000",
+      "accent": "#ffffff",
       "accent2": "#00ffe1",
-      "accent3": "#ff3333",
+      "accent3": "#d1d1d1",
       "cardBg": "#141420",
       "cardBorder": "#2a2a3a",
       "radius": 10,
