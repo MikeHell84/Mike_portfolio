@@ -2,10 +2,10 @@
   "site": {
     "nombre": "Miguel Rodríguez Martínez",
     "claim": "Portafolio creativo",
-    "heroLinea1": "De la idea al entorno digital: 3D, multimedia y software.",
-    "heroLinea2": "\"Desarrollo interactivo, arte técnico y diseño visual: diseño ecosistemas digitales donde la lógica robusta y el impacto estético van de la mano.\"",
+    "heroLinea1": "Diseñando Ideas y Destinos",
+    "heroLinea2": "forma, color y código.",
     "heroTags": "3D · Diseño · Código · Videojuegos",
-    "descripcion": "Soluciones visuales y técnicas que evolucionan contigo.",
+    "descripcion": "\"Desarrollo interactivo, arte técnico y diseño visual: diseño ecosistemas digitales donde la lógica robusta y el impacto estético van de la mano.\"",
     "email": "merm.198427@gmail.com",
     "redes": [
       {
@@ -26,11 +26,12 @@
     "ubicacion": "Colombia",
     "formato": "comic",
     "buttonStyle": "",
-    "logoUrl": "images/1787018334960-qgqc.jpg",
-    "brand": "Mike",
-    "manifesto": "Innovación que se ve, se siente y se usa.",
-    "heroBg": "#000000",
-    "heroColor": "#ffffff",
+    "brand": "",
+    "logoUrl": "",
+    "faviconUrl": "",
+    "manifesto": "",
+    "heroBg": "#0E0E0C",
+    "heroColor": "#F2EFE6",
     "secciones": {
       "workEye": "",
       "workTitle": "",
@@ -38,11 +39,9 @@
       "aboutTitle": "",
       "servEye": "",
       "servTitle": "",
-      "recEye": "04 / Trayectoria",
-      "recTitle": "Algo de mi trayectoria..."
+      "recEye": "",
+      "recTitle": ""
     },
-    "numeros": [],
-    "faviconUrl": "images/1787025208739-94b5.jpg",
     "navItems": []
   },
   "areas": [
@@ -51,46 +50,42 @@
       "nombre": "3D",
       "corto": "3D",
       "descripcion": "Modelado, iluminación y render para producto, arquitectura y creatividad digital.",
-      "color": "#00ffee",
-      "imagen": "images/1787023806797-ufvw.jpg"
+      "color": "#00ddff"
     },
     {
       "id": "diseno",
       "nombre": "Diseño Gráfico",
       "corto": "Diseño",
       "descripcion": "Identidad, editorial y piezas visuales con foco en jerarquía y emoción.",
-      "color": "#00ffee",
-      "imagen": "images/1787023854219-x7p1.jpg"
+      "color": "#ff0084"
     },
     {
       "id": "dev",
       "nombre": "Programación de Software y Web",
       "corto": "Software & Web",
       "descripcion": "Apps, sitios web y software a medida: interfaces cuidadas y código sólido.",
-      "color": "#00ffee",
-      "imagen": "images/1787023854226-ottj.jpg"
+      "color": "#9dff00"
     },
     {
       "id": "area_1786650100016",
       "nombre": "Música & Composición",
       "corto": "Música & Composición",
       "descripcion": "Música creada para ambientes de videojuegos, videoclips y proyectos multimedia.",
-      "color": "#00ffee",
-      "imagen": "images/1787023854265-dwtc.jpg"
+      "color": "#eb002f"
     }
   ],
   "diseno": {
-    "bg": "#000000",
+    "bg": "#0b0b12",
     "panel": "#141420",
-    "texto": "#ffffff",
-    "muted": "#999999",
+    "texto": "#e8eaf2",
+    "muted": "#ffffff",
     "gradfrom": "#00ffe1",
     "gradmid": "#ffffff",
     "gradto": "#00ffee",
     "fuenteTitulos": "Space Grotesk",
     "fuenteTexto": "Inter",
-    "fuenteMono": "JetBrains Mono",
-    "css": "",
+    "fuenteMono": "Fira Code",
+    "css": ".modal .zoomed{display:block;margin:0 auto;max-width:100%;height:auto}\n\nbody::after{content:\"\";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:64px 64px;mix-blend-mode:overlay}\n\na{color:var(--c3d, #22d3ee)} a:hover{text-decoration:underline}",
     "formas": {
       "activo": true,
       "tipo": "orbes",
@@ -101,14 +96,11 @@
     },
     "parallax": {
       "activo": true,
-      "imagen": "images/1787078174319-t7fb.jpg",
+      "imagen": "images/1786740556319-2a3u.jpg",
       "posicion": "centro",
       "velocidad": 0.4,
-      "opacidad": 27,
-      "desenfoque": 9,
-      "oscurecer": 21,
-      "fijo": true,
-      "zIndex": -1
+      "opacidad": 40,
+      "desenfoque": 6
     },
     "presentacion": {
       "gap": 4,
@@ -749,25 +741,6 @@
         "iconPosition": "left",
         "disabled": false
       },
-      "btn--agregar-n-mero": {
-        "bgColor": "#22d3ee",
-        "textColor": "#0b0b12",
-        "icon": "",
-        "padding": 10,
-        "borderRadius": 8,
-        "fontWeight": "600",
-        "activo": true,
-        "label": "",
-        "behavior": {
-          "type": "none",
-          "url": ""
-        },
-        "hoverScale": 1,
-        "transitionMs": 200,
-        "animation": "none",
-        "iconPosition": "left",
-        "disabled": false
-      },
       "btn-subir-logo": {
         "bgColor": "#22d3ee",
         "textColor": "#0b0b12",
@@ -806,44 +779,6 @@
         "iconPosition": "left",
         "disabled": false
       },
-      "btn--agregar-disciplina": {
-        "bgColor": "#22d3ee",
-        "textColor": "#0b0b12",
-        "icon": "",
-        "padding": 10,
-        "borderRadius": 8,
-        "fontWeight": "600",
-        "activo": true,
-        "label": "",
-        "behavior": {
-          "type": "none",
-          "url": ""
-        },
-        "hoverScale": 1,
-        "transitionMs": 200,
-        "animation": "none",
-        "iconPosition": "left",
-        "disabled": false
-      },
-      "btn--nueva-entrada-de-trayectoria": {
-        "bgColor": "#22d3ee",
-        "textColor": "#0b0b12",
-        "icon": "",
-        "padding": 10,
-        "borderRadius": 8,
-        "fontWeight": "600",
-        "activo": true,
-        "label": "",
-        "behavior": {
-          "type": "none",
-          "url": ""
-        },
-        "hoverScale": 1,
-        "transitionMs": 200,
-        "animation": "none",
-        "iconPosition": "left",
-        "disabled": false
-      },
       "btn-subir-favicon": {
         "bgColor": "#22d3ee",
         "textColor": "#0b0b12",
@@ -864,6 +799,63 @@
         "disabled": false
       },
       "btn--a-adir-elemento": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
+      },
+      "btn--agregar-n-mero": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
+      },
+      "btn--agregar-disciplina": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
+      },
+      "btn--nueva-entrada-de-trayectoria": {
         "bgColor": "#22d3ee",
         "textColor": "#0b0b12",
         "icon": "",
@@ -942,13 +934,13 @@
         "btn--nueva-comparaci-n",
         "btn-guardar",
         "btn-eliminar",
-        "btn--agregar-n-mero",
         "btn-subir-logo",
         "btn-quitar",
-        "btn--agregar-disciplina",
-        "btn--nueva-entrada-de-trayectoria",
         "btn-subir-favicon",
         "btn--a-adir-elemento",
+        "btn--agregar-n-mero",
+        "btn--agregar-disciplina",
+        "btn--nueva-entrada-de-trayectoria",
         "btn-seleccionar-imagen-"
       ]
     },
@@ -962,24 +954,24 @@
       "etiquetaDespues": "AFTER",
       "items": []
     },
+    "bg2": "#161613",
+    "texto2": "#b8b3a3",
+    "line": "#f2efe6",
+    "accent": "#d4ff3d",
+    "accent2": "#ff4a1c",
+    "accent3": "#a78bfa",
     "trayectoria": {
-      "accent": "#ffffff",
-      "accent2": "#00fbff",
-      "accent3": "#ffffff",
-      "cardBg": "#121212",
-      "cardBorder": "#0ffffb",
+      "accent": "#a78bfa",
+      "accent2": "#22d3ee",
+      "accent3": "#f472b6",
+      "cardBg": "#141420",
+      "cardBorder": "#2a2a3a",
       "radius": 18,
       "fontTitle": "Space Grotesk"
     },
-    "bg2": "#fbf4f4",
-    "texto2": "#00fbff",
-    "line": "#454545",
-    "accent": "#0ad6ff",
-    "accent2": "#d1e7ff",
-    "accent3": "#ff0000",
     "footer": {
-      "color": "#ffffff",
-      "accent": "#00fbff",
+      "color": "#f2efe6",
+      "accent": "#d4ff3d",
       "size": 280,
       "text1": "",
       "text2": ""
@@ -1003,29 +995,29 @@
       "lh": 1.55
     },
     "nav": {
-      "color": "#000000",
-      "bg": "#030303",
+      "color": "#f2efe6",
+      "bg": "#0e0e0c",
       "blend": "difference",
-      "preBg": "#454545"
+      "preBg": "#0e0e0c"
     },
     "works": {
-      "bg": "#0b0404",
-      "border": "#00ffe1",
-      "accent": "#00f0a8"
+      "bg": "#161613",
+      "border": "#2a2a28",
+      "accent": "#d4ff3d"
     },
     "modal": {
-      "bg": "#000000",
-      "overlay": "#363535",
+      "bg": "#161613",
+      "overlay": "#000000",
       "radius": 18,
       "opacity": 0.75
     },
     "services": {
-      "bg": "#121212",
-      "border": "#00ffd5",
+      "bg": "#161613",
+      "border": "#2a2a28",
       "radius": 6
     },
     "cursor": {
-      "color": "#00e6e2",
+      "color": "#d4ff3d",
       "size": 14,
       "big": 90
     },
@@ -1195,152 +1187,5 @@
       "enlaces": []
     }
   ],
-  "trayectoria": [
-    {
-      "id": "tray-1786925788880",
-      "tipo": "trabajo",
-      "titulo": "Full-Stack Software Engineer",
-      "org": "Alcaldía de Caucasia (FOVIS)",
-      "inicio": "2024-01",
-      "fin": "2025-12",
-      "descripcion": "Arquitecté y desarrollé desde cero una plataforma gubernamental full-stack para la gestión de proyectos de vivienda utilizando React, Django, MySQL y Tailwind CSS. Optimicé flujos de datos para registros públicos, mejorando significativamente la eficiencia administrativa y el seguimiento de información institucional. Implementé paneles analíticos (dashboards) de KPIs en tiempo real para apoyar la toma de decisiones estratégicas de los administradores municipales.",
-      "tags": [
-        "React",
-        "Django",
-        "MySQL",
-        "Tailwind CSS",
-        "GovTech",
-        "Desarrollo de proyectos de vivienda"
-      ],
-      "imagen": null,
-      "enlace": "",
-      "destacado": true
-    },
-    {
-      "tipo": "trabajo",
-      "titulo": "Lead Developer & 3D Tech Lead (Fundador)",
-      "org": "Xlerion Studio",
-      "inicio": "2023-01",
-      "fin": "2025-12",
-      "descripcion": "Proporciono dirección técnica y artística para el desarrollo de videojuegos independientes y simuladores 3D complejos. Arquitecto sistemas modulares utilizando C# avanzado y Python, garantizando alta escalabilidad y una integración fluida entre lógica de backend y renderizado en tiempo real. Superviso pipelines completos de arte 3D y optimización de rendimiento para motores interactivos.",
-      "tags": [
-        "C#",
-        "Python",
-        "Unity",
-        "Unreal Engine 5",
-        "Godot",
-        " pipelines de arte 3D",
-        "Optimización de rendimiento"
-      ],
-      "destacado": true,
-      "id": "tray-1786925788881"
-    },
-    {
-      "tipo": "experiencia",
-      "titulo": "Desarrollador Backend e IoT",
-      "org": "Universidad de Antioquia (UDEA)",
-      "inicio": "2023-01",
-      "fin": "2023-12",
-      "descripcion": "Mantuve y optimicé APIs de alta confiabilidad responsables de redes de sensores de flujo hídrico en la región de Antioquia. Garanticé un 99% de tiempo de actividad (uptime) en la captura de datos IoT en tiempo real para sistemas críticos de monitoreo ambiental.",
-      "tags": [
-        "Python",
-        "IoT",
-        "Sensores hídricos",
-        "APIs confiables",
-        "Monitoreo ambiental",
-        "Uptime 99%"
-      ],
-      "destacado": false,
-      "id": "tray-1786925788882"
-    },
-    {
-      "tipo": "trabajo",
-      "titulo": "Ingeniero Full-Stack y Consultor de Innovación",
-      "org": "Ejército Nacional de Colombia",
-      "inicio": "2020-01",
-      "fin": "2023-12",
-      "descripcion": "Formulé e implementé proyectos tecnológicos enfocados en la seguridad institucional y automatización. Diseñé sistemas de Visión Artificial utilizando OpenCV para análisis ambiental automatizado y detección de amenazas. Prototipé soluciones de trazabilidad segura utilizando arquitecturas basadas en Blockchain y contratos inteligentes.",
-      "tags": [
-        "OpenCV",
-        "Visión Artificial",
-        "Blockchain",
-        "Contratos inteligentes",
-        "Seguridad institucional",
-        "Automatización"
-      ],
-      "destacado": false,
-      "id": "tray-1786925788883"
-    },
-    {
-      "tipo": "trabajo",
-      "titulo": "Director de Proyectos IT y Innovación",
-      "org": "USAID - ACDI/VOCA Colombia",
-      "inicio": "2015-01",
-      "fin": "2017-12",
-      "descripcion": "Arquitecté el software ICOE para la visualización interactiva de matrices de información a nivel nacional. Dirigí equipos multidisciplinarios en diseño 3D, UX e ingeniería de software para iniciativas de alto impacto social.",
-      "tags": [
-        "ICOE",
-        "Visualización de datos",
-        "Diseño 3D",
-        "UX",
-        "Equipos multidisciplinarios",
-        "Alto impacto social"
-      ],
-      "destacado": false,
-      "id": "tray-1786925788884"
-    },
-    {
-      "tipo": "trabajo",
-      "titulo": "Director de Diseño 3D y Visualización de Datos",
-      "org": "AONC",
-      "inicio": "2018-01",
-      "fin": "2019-12",
-      "descripcion": "Dirigí un proyecto de visualización de Big Data a gran escala, transformando conjuntos de datos complejos en entornos 3D interactivos y navegables. Construí interfaces gamificadas e intuitivas que permitieron a usuarios no técnicos explorar información densa, reduciendo el tiempo de análisis de datos en un 40%.",
-      "tags": [
-        "Big Data",
-        "Visualización 3D",
-        "Gamificación",
-        "Análisis de datos",
-        "Interfaces intuitivas",
-        "Reducción 40% tiempo análisis"
-      ],
-      "destacado": false,
-      "id": "tray-1786925788885"
-    },
-    {
-      "tipo": "trabajo",
-      "titulo": "Desarrollador Web y Diseñador de Innovación",
-      "org": "2INK",
-      "inicio": "2024-01",
-      "fin": "2025-12",
-      "descripcion": "Lideré la arquitectura y mantenimiento de infraestructuras web corporativas, resolviendo vulnerabilidades críticas y fallos de sistemas CMS. Diseñé, modelé e integré recursos y modelados 3D personalizados para campañas visuales institucionales y comerciales. Gestioné la producción avanzada de medios digitales utilizando Adobe Creative Cloud, Blender y 3ds Max.",
-      "tags": [
-        "Infraestructuras web",
-        "Corrección de vulnerabilidades",
-        "Modelado 3D",
-        "Adobe Creative Cloud",
-        "Blender",
-        "3ds Max",
-        "Medios digitales"
-      ],
-      "destacado": false,
-      "id": "tray-1786925788886"
-    },
-    {
-      "tipo": "formacion",
-      "titulo": "Máster Power BI - Visualización de Datos e Inteligencia de Negocios",
-      "org": "MinTIC & Microsoft",
-      "inicio": "2024-01",
-      "fin": "2024-12",
-      "descripcion": "Formación en visualización de datos e inteligencia de negocios, técnicas avanzadas de reporteo y dashboards interactivos para toma de decisiones estratégicas.",
-      "tags": [
-        "Power BI",
-        "Visualización de datos",
-        "Inteligencia de Negocios",
-        "Dashboards interactivos"
-      ],
-      "destacado": false,
-      "id": "tray-1786925788887"
-    }
-  ]
+  "trayectoria": []
 }
