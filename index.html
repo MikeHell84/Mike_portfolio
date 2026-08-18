@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>OBRA® — Dirección creativa & diseño digital</title>
+<title id="page-title">Cargando…</title>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/anton:vf@latest/latin-wght-normal.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/inter:vf@latest/latin-wght-normal.css" />
@@ -475,7 +475,9 @@ async function init(){
     if(parts[1]){var h2=head.querySelector('h2');if(h2)h2.innerHTML='<em>'+esc(parts[1].split(' ')[0]||'')+'</em> '+esc(parts[1].split(' ').slice(1).join(' '));}
   });
   var brand=s.brand||s.nombre||'OBRA®';
-  document.title=brand+' — '+ (s.claim||'Portafolio creativo');
+  var pageTitle=brand+' — '+ (s.claim||'Portafolio creativo');
+  document.title=pageTitle;
+  var tEl=document.getElementById('page-title'); if(tEl) tEl.textContent=pageTitle;
   renderNav(s.navItems);
   renderHero(s);renderTicker();renderWorks(trab,ar);renderManifesto(s);
   renderServices(ar);renderNumbers(trab,tray,ar);renderRecognition(tray);renderCTA(s);renderFooter(s);
