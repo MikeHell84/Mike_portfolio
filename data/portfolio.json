@@ -42,7 +42,8 @@
       "recTitle": "Algo de mi trayectoria..."
     },
     "numeros": [],
-    "faviconUrl": "images/1787025208739-94b5.jpg"
+    "faviconUrl": "images/1787025208739-94b5.jpg",
+    "navItems": []
   },
   "areas": [
     {
@@ -858,6 +859,25 @@
         "animation": "none",
         "iconPosition": "left",
         "disabled": false
+      },
+      "btn--a-adir-elemento": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
       }
     },
     "defaultButtonStyle": "BtnStyle01",
@@ -905,7 +925,8 @@
         "btn-quitar",
         "btn--agregar-disciplina",
         "btn--nueva-entrada-de-trayectoria",
-        "btn-subir-favicon"
+        "btn-subir-favicon",
+        "btn--a-adir-elemento"
       ]
     },
     "beforeAfter": {
@@ -984,6 +1005,27 @@
       "color": "#3dfcff",
       "size": 18,
       "big": 100
+    },
+    "controlLabels": {
+      "--fs-hero": "Hero h1",
+      "--fs-claim": "Hero claim",
+      "--fs-eyebrow": "Eyebrow secciones",
+      "--fs-h2": "Títulos h2 secciones",
+      "--fs-body": "Texto cuerpo",
+      "--fs-work": "Títulos tarjetas trabajo",
+      "--fs-svc": "Títulos servicios",
+      "--fs-footer": "Footer texto grande",
+      "--rad": "Radio global de bordes",
+      "--pad-sec": "Padding secciones",
+      "--nav-h": "Altura nav",
+      "--work-gap": "Gap tarjetas trabajo",
+      "--max-w": "Ancho máximo contenido",
+      "--lh": "Line height cuerpo",
+      "--tray-radius": "Radio modal",
+      "--modal-opacity": "Opacidad overlay",
+      "--svc-rad": "Radio tarjeta servicio",
+      "--cursor-size": "Tamaño cursor",
+      "--cursor-big": "Tamaño hover"
     }
   },
   "trabajos": [
