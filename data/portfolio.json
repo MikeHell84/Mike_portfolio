@@ -41,7 +41,8 @@
       "recEye": "04 / Trayectoria",
       "recTitle": "Algo de mi trayectoria..."
     },
-    "numeros": []
+    "numeros": [],
+    "faviconUrl": "images/1787025208739-94b5.jpg"
   },
   "areas": [
     {
@@ -838,6 +839,25 @@
         "animation": "none",
         "iconPosition": "left",
         "disabled": false
+      },
+      "btn-subir-favicon": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
       }
     },
     "defaultButtonStyle": "BtnStyle01",
@@ -884,7 +904,8 @@
         "btn-subir-logo",
         "btn-quitar",
         "btn--agregar-disciplina",
-        "btn--nueva-entrada-de-trayectoria"
+        "btn--nueva-entrada-de-trayectoria",
+        "btn-subir-favicon"
       ]
     },
     "beforeAfter": {
