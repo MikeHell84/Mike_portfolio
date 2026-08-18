@@ -42,7 +42,28 @@
       "recEye": "04 / Trayectoria",
       "recTitle": "Algo de mi trayectoria..."
     },
-    "navItems": [],
+    "navItems": [
+      {
+        "label": "Trabajos",
+        "href": "#work"
+      },
+      {
+        "label": "Estudio",
+        "href": "#about"
+      },
+      {
+        "label": "Servicios",
+        "href": "#services"
+      },
+      {
+        "label": "Reconocimientos",
+        "href": "#recognition"
+      },
+      {
+        "label": "Contacto",
+        "href": "#contact"
+      }
+    ],
     "numeros": []
   },
   "areas": [
@@ -90,7 +111,7 @@
     "fuenteTitulos": "Space Grotesk",
     "fuenteTexto": "Inter",
     "fuenteMono": "Fira Code",
-    "css": ".modal .zoomed{display:block;margin:0 auto;max-width:100%;height:auto}\n\nbody::after{content:\"\";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:64px 64px;mix-blend-mode:overlay}\n\na{color:var(--c3d, #22d3ee)} a:hover{text-decoration:underline}",
+    "css": "nav.top{background:rgba(var(--nav-bg-rgb,20,20,32),.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);padding:16px clamp(16px,3vw,40px)} nav.top .brand{display:flex;align-items:center;gap:16px} nav.top ul{display:flex;gap:8px;flex:1;justify-content:center} nav.top ul a{font-family:var(--f-txt),sans-serif;font-size:14px;font-weight:500;padding:12px 20px;border-radius:10px;background:rgba(255,255,255,.03);transition:all .25s} nav.top ul a:hover{background:var(--accent);color:var(--bg);box-shadow:0 8px 30px rgba(var(--accent-rgb,34,211,238),.3)} nav.top ul a::before{display:none} nav.top .cta{background:var(--accent);color:var(--bg);box-shadow:0 4px 20px rgba(var(--accent-rgb,34,211,238),.4)} nav.top .cta:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(var(--accent-rgb,34,211,238),.5)}\n\nnav.top{background:rgba(var(--nav-bg-rgb,20,20,32),.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);padding:16px clamp(16px,3vw,40px)} nav.top .brand{display:flex;align-items:center;gap:16px} nav.top ul{display:flex;gap:8px;flex:1;justify-content:center} nav.top ul a{font-family:var(--f-txt),sans-serif;font-size:14px;font-weight:500;padding:12px 20px;border-radius:10px;background:rgba(255,255,255,.03);transition:all .25s} nav.top ul a:hover{background:var(--accent);color:var(--bg);box-shadow:0 8px 30px rgba(var(--accent-rgb,34,211,238),.3)} nav.top ul a::before{display:none} nav.top .cta{background:var(--accent);color:var(--bg);box-shadow:0 4px 20px rgba(var(--accent-rgb,34,211,238),.4)} nav.top .cta:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(var(--accent-rgb,34,211,238),.5)}",
     "formas": {
       "activo": true,
       "tipo": "orbes",
@@ -100,14 +121,14 @@
       "velocidad": 27
     },
     "parallax": {
-      "activo": true,
+      "activo": false,
       "imagen": "images/1786740556319-2a3u.jpg",
       "posicion": "centro",
       "velocidad": 0.4,
       "opacidad": 40,
       "desenfoque": 6,
       "oscurecer": 0,
-      "fijo": true,
+      "fijo": false,
       "zIndex": -1
     },
     "presentacion": {
@@ -900,6 +921,44 @@
         "animation": "none",
         "iconPosition": "left",
         "disabled": false
+      },
+      "btn-aplicar-plantilla": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
+      },
+      "btn-a-adir-al-css": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
       }
     },
     "defaultButtonStyle": "BtnStyle01",
@@ -949,7 +1008,9 @@
         "btn--agregar-n-mero",
         "btn--agregar-disciplina",
         "btn--nueva-entrada-de-trayectoria",
-        "btn-seleccionar-imagen-"
+        "btn-seleccionar-imagen-",
+        "btn-aplicar-plantilla",
+        "btn-a-adir-al-css"
       ]
     },
     "beforeAfter": {
