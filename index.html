@@ -305,6 +305,24 @@
   .reveal-stagger.in>*:nth-child(5){transition-delay:.33s}
   .reveal-stagger.in>*:nth-child(6){transition-delay:.40s}
   @media (prefers-reduced-motion:reduce){.reveal,.reveal-stagger>*{opacity:1;transform:none;transition:none}}
+
+  /* ===== PARALLAX BACKGROUND ===== */
+  .parallax-bg{
+    position:fixed;inset:0;z-index:var(--parallax-z,-1);pointer-events:none;overflow:hidden;
+    background-size:cover;background-position:center;background-repeat:no-repeat;
+    will-change:transform,opacity;
+  }
+  .parallax-bg::before{
+    content:'';position:absolute;inset:0;
+    background:rgba(0,0,0,calc(var(--parallax-oscurecer,0)/100));
+  }
+  .parallax-bg img{
+    width:100%;height:100%;object-fit:cover;object-position:var(--parallax-pos,center);
+    filter:blur(calc(var(--parallax-blur,0)*1px));
+    opacity:calc(var(--parallax-opacidad,40)/100);
+  }
+  .parallax-bg.fixed{background-attachment:fixed}
+  body{position:relative;z-index:1}
 </style>
 </head>
 <body>
@@ -330,6 +348,9 @@
   <ul id="navMobile"></ul>
   <div class="foot"><span>hola@obra.studio</span><span>© 2026 — Todos los derechos reservados</span></div>
 </div>
+
+<!-- PARALLAX BACKGROUND -->
+<div id="parallaxBg" class="parallax-bg" aria-hidden="true"></div>
 
 <!-- HERO -->
 <header class="hero" id="hero">
@@ -463,6 +484,32 @@ async function init(){
   if(cu.color){document.documentElement.style.setProperty('--cursor-color',cu.color);}
   if(cu.size){document.documentElement.style.setProperty('--cursor-size',cu.size+'px');}
   if(cu.big){document.documentElement.style.setProperty('--cursor-big',cu.big+'px');}
+  // Parallax background
+  var px=dis.parallax||{};
+  var parallaxEl=document.getElementById('parallaxBg');
+  if(px.activo && px.imagen && parallaxEl){
+    parallaxEl.style.setProperty('--parallax-pos',px.posicion||'center');
+    parallaxEl.style.setProperty('--parallax-blur',px.desenfoque||0);
+    parallaxEl.style.setProperty('--parallax-opacidad',px.opacidad||40);
+    parallaxEl.style.setProperty('--parallax-oscurecer',px.oscurecer||0);
+    parallaxEl.style.setProperty('--parallax-z',px.zIndex!=null?px.zIndex:-1);
+    var posMap={centro:'center',arriba:'top',abajo:'bottom',izquierda:'left',derecha:'right'};
+    parallaxEl.style.setProperty('--parallax-pos',posMap[px.posicion]||'center');
+    if(px.fijo) parallaxEl.classList.add('fixed');
+    parallaxEl.innerHTML='<img src="'+esc(px.imagen)+'" alt="" />';
+    if(!px.fijo && typeof gsap!=='undefined' && typeof ScrollTrigger!=='undefined'){
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.to(parallaxEl,{
+        yPercent:(px.velocidad||0.4)*100,
+        ease:'none',
+        scrollTrigger:{
+          trigger:document.body,start:'top bottom',end:'bottom top',scrub:true
+        }
+      });
+    }
+  }else if(parallaxEl){
+    parallaxEl.style.display='none';
+  }
   if(s.heroBg){document.querySelector('.hero').style.background=s.heroBg;}
   if(s.heroColor){document.querySelector('.hero').style.color=s.heroColor;}
   var sec=s.secciones||{};
