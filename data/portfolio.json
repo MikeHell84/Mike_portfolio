@@ -2,8 +2,8 @@
   "site": {
     "nombre": "Miguel Rodríguez Martínez",
     "claim": "Portafolio creativo",
-    "heroLinea1": "Diseñando Ideas y Destinos",
-    "heroLinea2": "forma, color y código.",
+    "heroLinea1": "Creando mundos para liberar la mente",
+    "heroLinea2": "\"Desarrollo interactivo, arte técnico y diseño visual: diseño ecosistemas digitales donde la lógica robusta y el impacto estético van de la mano.\"",
     "heroTags": "3D · Diseño · Código · Videojuegos",
     "descripcion": "\"Desarrollo interactivo, arte técnico y diseño visual: diseño ecosistemas digitales donde la lógica robusta y el impacto estético van de la mano.\"",
     "email": "merm.198427@gmail.com",
@@ -25,7 +25,23 @@
     "telefono": "+57 3208605600",
     "ubicacion": "Colombia",
     "formato": "comic",
-    "buttonStyle": ""
+    "buttonStyle": "",
+    "logoUrl": "images/1787018334960-qgqc.jpg",
+    "brand": "",
+    "manifesto": "Diseño mundos para alternar la realidad",
+    "heroBg": "#000000",
+    "heroColor": "#ffffff",
+    "secciones": {
+      "workEye": "",
+      "workTitle": "",
+      "aboutEye": "",
+      "aboutTitle": "",
+      "servEye": "",
+      "servTitle": "",
+      "recEye": "04 / Trayectoria",
+      "recTitle": "Algo de mi trayectoria..."
+    },
+    "numeros": []
   },
   "areas": [
     {
@@ -33,28 +49,32 @@
       "nombre": "3D",
       "corto": "3D",
       "descripcion": "Modelado, iluminación y render para producto, arquitectura y creatividad digital.",
-      "color": "#00ddff"
+      "color": "#00ddff",
+      "imagen": "images/1787023806797-ufvw.jpg"
     },
     {
       "id": "diseno",
       "nombre": "Diseño Gráfico",
       "corto": "Diseño",
       "descripcion": "Identidad, editorial y piezas visuales con foco en jerarquía y emoción.",
-      "color": "#ff0084"
+      "color": "#ff0084",
+      "imagen": "images/1787023854219-x7p1.jpg"
     },
     {
       "id": "dev",
       "nombre": "Programación de Software y Web",
       "corto": "Software & Web",
       "descripcion": "Apps, sitios web y software a medida: interfaces cuidadas y código sólido.",
-      "color": "#9dff00"
+      "color": "#9dff00",
+      "imagen": "images/1787023854226-ottj.jpg"
     },
     {
       "id": "area_1786650100016",
       "nombre": "Música & Composición",
       "corto": "Música & Composición",
       "descripcion": "Música creada para ambientes de videojuegos, videoclips y proyectos multimedia.",
-      "color": "#eb002f"
+      "color": "#eb002f",
+      "imagen": "images/1787023854265-dwtc.jpg"
     }
   ],
   "diseno": {
@@ -65,10 +85,10 @@
     "gradfrom": "#00ffe1",
     "gradmid": "#ffffff",
     "gradto": "#00ffee",
-    "fuenteTitulos": "Space Grotesk",
-    "fuenteTexto": "Inter",
-    "fuenteMono": "Fira Code",
-    "css": ".modal .zoomed{display:block;margin:0 auto;max-width:100%;height:auto}\n\nbody::after{content:\"\";position:fixed;inset:0;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:64px 64px;mix-blend-mode:overlay}\n\na{color:var(--c3d, #22d3ee)} a:hover{text-decoration:underline}",
+    "fuenteTitulos": "Playfair Display",
+    "fuenteTexto": "Open Sans",
+    "fuenteMono": "Space Mono",
+    "css": "",
     "formas": {
       "activo": true,
       "tipo": "orbes",
@@ -723,6 +743,101 @@
         "animation": "none",
         "iconPosition": "left",
         "disabled": false
+      },
+      "btn--agregar-n-mero": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
+      },
+      "btn-subir-logo": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
+      },
+      "btn-quitar": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
+      },
+      "btn--agregar-disciplina": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
+      },
+      "btn--nueva-entrada-de-trayectoria": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
       }
     },
     "defaultButtonStyle": "BtnStyle01",
@@ -764,7 +879,12 @@
         "btn-subir-imagen-despu-s",
         "btn--nueva-comparaci-n",
         "btn-guardar",
-        "btn-eliminar"
+        "btn-eliminar",
+        "btn--agregar-n-mero",
+        "btn-subir-logo",
+        "btn-quitar",
+        "btn--agregar-disciplina",
+        "btn--nueva-entrada-de-trayectoria"
       ]
     },
     "beforeAfter": {
@@ -778,13 +898,71 @@
       "items": []
     },
     "trayectoria": {
-      "accent": "#00f0ec",
-      "accent2": "#22d3ee",
+      "accent": "#00eeff",
+      "accent2": "#007585",
       "accent3": "#20131a",
       "cardBg": "#141420",
       "cardBorder": "#2a2a3a",
-      "radius": 18,
+      "radius": 10,
       "fontTitle": "Space Grotesk"
+    },
+    "bg2": "#161613",
+    "texto2": "#b8b3a3",
+    "line": "#f2efe6",
+    "accent": "#3dfff2",
+    "accent2": "#ff4a1c",
+    "accent3": "#a78bfa",
+    "footer": {
+      "color": "#f2efe6",
+      "accent": "#e7ff33",
+      "size": 170,
+      "text1": "Miguel Rodríguez Martínez",
+      "text2": "Multimedia Fullstack"
+    },
+    "typography": {
+      "hero": 180,
+      "claim": 20,
+      "eyebrow": 11,
+      "h2": 48,
+      "body": 16,
+      "work": 20,
+      "svc": 42,
+      "footer": 200
+    },
+    "layout": {
+      "radius": 14,
+      "padSec": 75,
+      "navH": 64,
+      "workGap": 12,
+      "maxW": 1280,
+      "lh": 1.55
+    },
+    "nav": {
+      "color": "#f2efe6",
+      "bg": "#ffff00",
+      "blend": "screen",
+      "preBg": "#ffff00"
+    },
+    "works": {
+      "bg": "#161613",
+      "border": "#1a1a1a",
+      "accent": "#3dffe8"
+    },
+    "modal": {
+      "bg": "#0f0f0f",
+      "overlay": "#000000",
+      "radius": 18,
+      "opacity": 0.75
+    },
+    "services": {
+      "bg": "#161613",
+      "border": "#2a2a28",
+      "radius": 10
+    },
+    "cursor": {
+      "color": "#3dfcff",
+      "size": 18,
+      "big": 100
     }
   },
   "trabajos": [
