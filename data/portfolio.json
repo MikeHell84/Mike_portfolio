@@ -898,13 +898,13 @@
       "items": []
     },
     "trayectoria": {
-      "accent": "#00eeff",
-      "accent2": "#007585",
-      "accent3": "#20131a",
+      "accent": "#ff0000",
+      "accent2": "#00ffe1",
+      "accent3": "#ff3333",
       "cardBg": "#141420",
       "cardBorder": "#2a2a3a",
       "radius": 10,
-      "fontTitle": "Space Grotesk"
+      "fontTitle": "Sora"
     },
     "bg2": "#161613",
     "texto2": "#b8b3a3",
@@ -914,16 +914,16 @@
     "accent3": "#a78bfa",
     "footer": {
       "color": "#f2efe6",
-      "accent": "#e7ff33",
-      "size": 170,
+      "accent": "#33fffc",
+      "size": 160,
       "text1": "Miguel Rodríguez Martínez",
       "text2": "Multimedia Fullstack"
     },
     "typography": {
       "hero": 180,
-      "claim": 20,
+      "claim": 21,
       "eyebrow": 11,
-      "h2": 48,
+      "h2": 46,
       "body": 16,
       "work": 20,
       "svc": 42,
@@ -939,7 +939,7 @@
     },
     "nav": {
       "color": "#f2efe6",
-      "bg": "#ffff00",
+      "bg": "#0afffb",
       "blend": "screen",
       "preBg": "#ffff00"
     },
