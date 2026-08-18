@@ -15,15 +15,25 @@
 <style>
   *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
   :root{
-    --bg:#0E0E0C;
-    --bg-2:#161613;
-    --ink:#F2EFE6;
-    --ink-2:#B8B3A3;
-    --muted:#6B6860;
-    --accent:#D4FF3D;
-    --accent-2:#FF4A1C;
-    --accent-3:#a78bfa;
-    --line:rgba(242,239,230,.12);
+--bg:#0E0E0C;
+  --bg-2:#161613;
+  --ink:#F2EFE6;
+  --ink-2:#B8B3A3;
+  --muted:#6B6860;
+  --accent:#D4FF3D;
+  --accent-2:#FF4A1C;
+  --accent-3:#a78bfa;
+  --accent-rgb:212,255,61;
+  --accent-2-rgb:255,74,28;
+  --accent-3-rgb:167,139,250;
+  --bg-rgb:14,14,19;
+  --bg-2-rgb:22,22,19;
+  --ink-rgb:242,239,230;
+  --ink-2-rgb:184,179,163;
+  --muted-rgb:107,104,96;
+  --nav-bg-rgb:20,20,50;
+  --nav-color-rgb:242,239,230;
+  --line:rgba(242,239,230,.12);
     --ease:cubic-bezier(.76,0,.24,1);
     --ease-out:cubic-bezier(.22,.61,.36,1);
     --tray-accent:#a78bfa;
@@ -481,6 +491,8 @@ async function init(){
   var nv=dis.nav||{};
   if(nv.color){document.documentElement.style.setProperty('--nav-color',nv.color);document.querySelectorAll('nav.top').forEach(function(e){e.style.color=nv.color;});}
   if(nv.blend){document.querySelectorAll('nav.top').forEach(function(e){e.style.mixBlendMode=nv.blend;});}
+  if(nv.colorRgb){document.documentElement.style.setProperty('--nav-color-rgb',nv.colorRgb);}
+  if(nv.bgRgb){document.documentElement.style.setProperty('--nav-bg-rgb',nv.bgRgb);}
   // Works cards
   var wk=dis.works||{};
   if(wk.bg){document.documentElement.style.setProperty('--work-bg',wk.bg);}
