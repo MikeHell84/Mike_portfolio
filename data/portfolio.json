@@ -105,7 +105,10 @@
       "posicion": "centro",
       "velocidad": 0.4,
       "opacidad": 40,
-      "desenfoque": 6
+      "desenfoque": 6,
+      "oscurecer": 0,
+      "fijo": true,
+      "zIndex": -1
     },
     "presentacion": {
       "gap": 4,
