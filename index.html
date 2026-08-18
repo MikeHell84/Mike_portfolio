@@ -424,6 +424,12 @@ async function init(){
   if(td.radius){document.documentElement.style.setProperty('--tray-radius',td.radius+'px');}
   if(td.fontTitle && td.fontTitle.trim()){document.documentElement.style.setProperty('--tray-font',td.fontTitle);}
   var ft=dis.footer||{};
+  // Favicon
+  if(s.faviconUrl){
+    var fav=document.querySelector('link[rel~="icon"]')||document.createElement('link');
+    fav.rel='icon';fav.href=s.faviconUrl;fav.type='image/x-icon';
+    if(!fav.parentNode)document.head.appendChild(fav);
+  }
   if(dis.css){var cs=document.createElement('style');cs.textContent=dis.css;document.head.appendChild(cs);}
   // Typography sizes
   var ts=dis.typography||{};
