@@ -50,7 +50,7 @@
       "nombre": "3D",
       "corto": "3D",
       "descripcion": "Modelado, iluminación y render para producto, arquitectura y creatividad digital.",
-      "color": "#00ddff",
+      "color": "#00ffee",
       "imagen": "images/1787023806797-ufvw.jpg"
     },
     {
@@ -58,7 +58,7 @@
       "nombre": "Diseño Gráfico",
       "corto": "Diseño",
       "descripcion": "Identidad, editorial y piezas visuales con foco en jerarquía y emoción.",
-      "color": "#ff0084",
+      "color": "#00ffee",
       "imagen": "images/1787023854219-x7p1.jpg"
     },
     {
@@ -66,7 +66,7 @@
       "nombre": "Programación de Software y Web",
       "corto": "Software & Web",
       "descripcion": "Apps, sitios web y software a medida: interfaces cuidadas y código sólido.",
-      "color": "#9dff00",
+      "color": "#00ffee",
       "imagen": "images/1787023854226-ottj.jpg"
     },
     {
@@ -74,7 +74,7 @@
       "nombre": "Música & Composición",
       "corto": "Música & Composición",
       "descripcion": "Música creada para ambientes de videojuegos, videoclips y proyectos multimedia.",
-      "color": "#eb002f",
+      "color": "#00ffee",
       "imagen": "images/1787023854265-dwtc.jpg"
     }
   ],
@@ -977,7 +977,7 @@
     },
     "services": {
       "bg": "#161613",
-      "border": "#2a2a28",
+      "border": "#000000",
       "radius": 10
     },
     "cursor": {
