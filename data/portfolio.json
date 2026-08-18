@@ -82,8 +82,8 @@
   "diseno": {
     "bg": "#000000",
     "panel": "#141420",
-    "texto": "#000000",
-    "muted": "#000000",
+    "texto": "#ffffff",
+    "muted": "#999999",
     "gradfrom": "#00ffe1",
     "gradmid": "#ffffff",
     "gradto": "#00ffee",
@@ -101,12 +101,12 @@
     },
     "parallax": {
       "activo": true,
-      "imagen": "images/1787074832620-kh6e.jpg",
+      "imagen": "images/1787078174319-t7fb.jpg",
       "posicion": "centro",
       "velocidad": 0.4,
-      "opacidad": 40,
-      "desenfoque": 7,
-      "oscurecer": 0,
+      "opacidad": 27,
+      "desenfoque": 9,
+      "oscurecer": 21,
       "fijo": true,
       "zIndex": -1
     },
@@ -963,23 +963,23 @@
       "items": []
     },
     "trayectoria": {
-      "accent": "#000000",
-      "accent2": "#000000",
-      "accent3": "#000000",
-      "cardBg": "#000000",
-      "cardBorder": "#000000",
+      "accent": "#ffffff",
+      "accent2": "#00fbff",
+      "accent3": "#ffffff",
+      "cardBg": "#121212",
+      "cardBorder": "#0ffffb",
       "radius": 18,
       "fontTitle": "Space Grotesk"
     },
-    "bg2": "#000000",
-    "texto2": "#000000",
-    "line": "#000000",
-    "accent": "#000000",
-    "accent2": "#000000",
-    "accent3": "#000000",
+    "bg2": "#fbf4f4",
+    "texto2": "#00fbff",
+    "line": "#454545",
+    "accent": "#0ad6ff",
+    "accent2": "#d1e7ff",
+    "accent3": "#ff0000",
     "footer": {
-      "color": "#000000",
-      "accent": "#000000",
+      "color": "#ffffff",
+      "accent": "#00fbff",
       "size": 280,
       "text1": "",
       "text2": ""
@@ -1004,32 +1004,52 @@
     },
     "nav": {
       "color": "#000000",
-      "bg": "#000000",
+      "bg": "#030303",
       "blend": "difference",
-      "preBg": "#0e0e0c"
+      "preBg": "#454545"
     },
     "works": {
-      "bg": "#000000",
-      "border": "#000000",
-      "accent": "#000000"
+      "bg": "#0b0404",
+      "border": "#00ffe1",
+      "accent": "#00f0a8"
     },
     "modal": {
       "bg": "#000000",
-      "overlay": "#000000",
+      "overlay": "#363535",
       "radius": 18,
       "opacity": 0.75
     },
     "services": {
-      "bg": "#000000",
-      "border": "#000000",
+      "bg": "#121212",
+      "border": "#00ffd5",
       "radius": 6
     },
     "cursor": {
-      "color": "#000000",
+      "color": "#00e6e2",
       "size": 14,
       "big": 90
     },
-    "controlLabels": {}
+    "controlLabels": {
+      "--fs-hero": "Hero h1",
+      "--fs-claim": "Hero claim",
+      "--fs-eyebrow": "Eyebrow secciones",
+      "--fs-h2": "Títulos h2 secciones",
+      "--fs-body": "Texto cuerpo",
+      "--fs-work": "Títulos tarjetas trabajo",
+      "--fs-svc": "Títulos servicios",
+      "--fs-footer": "Footer texto grande",
+      "--rad": "Radio global de bordes",
+      "--pad-sec": "Padding secciones",
+      "--nav-h": "Altura nav",
+      "--work-gap": "Gap tarjetas trabajo",
+      "--max-w": "Ancho máximo contenido",
+      "--lh": "Line height cuerpo",
+      "--tray-radius": "Radio modal",
+      "--modal-opacity": "Opacidad overlay",
+      "--svc-rad": "Radio tarjeta servicio",
+      "--cursor-size": "Tamaño cursor",
+      "--cursor-big": "Tamaño hover"
+    }
   },
   "trabajos": [
     {
