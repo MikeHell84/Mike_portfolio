@@ -1,6 +1,6 @@
 {
   "site": {
-    "nombre": "Miguel Rodríguez Martínez",
+    "nombre": "Miguel Eduardo Rodríguez Martínez",
     "claim": "Soluciones visuales y técnicas que evolucionan contigo.",
     "heroLinea1": "Diseño, tecnología y creatividad en un mismo flujo.",
     "heroLinea2": "forma, color y código.",
@@ -26,7 +26,7 @@
     "ubicacion": "Colombia",
     "formato": "comic",
     "buttonStyle": "",
-    "brand": "Miguel Rodríguez Martínez",
+    "brand": "MERM",
     "logoUrl": "images/1787080952220-nyu4.jpg",
     "faviconUrl": "images/1787080952225-ier3.jpg",
     "manifesto": "Innovación que se ve, se siente y se usa.",
@@ -959,6 +959,44 @@
         "animation": "none",
         "iconPosition": "left",
         "disabled": false
+      },
+      "btn-usar-url": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
+      },
+      "btn--guardar-fondo": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
       }
     },
     "defaultButtonStyle": "BtnStyle01",
@@ -1010,7 +1048,9 @@
         "btn--nueva-entrada-de-trayectoria",
         "btn-seleccionar-imagen-",
         "btn-aplicar-plantilla",
-        "btn-a-adir-al-css"
+        "btn-a-adir-al-css",
+        "btn-usar-url",
+        "btn--guardar-fondo"
       ]
     },
     "beforeAfter": {
@@ -1110,6 +1150,32 @@
       "--svc-rad": "Radio tarjeta servicio",
       "--cursor-size": "Tamaño cursor",
       "--cursor-big": "Tamaño hover"
+    },
+    "three": {
+      "enabled": true,
+      "colors": {
+        "a1": "#3dfcff",
+        "a2": "#1affc6",
+        "a3": "#89a5fb",
+        "bg": "#0e0e0c"
+      },
+      "shapes": {
+        "hero": "galaxy",
+        "work": "cube",
+        "manifesto": "core",
+        "services": "image",
+        "about": "icosa",
+        "recognition": "icosa",
+        "contact": "wave"
+      },
+      "particleCount": 2200,
+      "particleSize": 0.18,
+      "lerp": 0.06,
+      "scale": 1,
+      "gridOpacity": 0.25,
+      "wireframe": true,
+      "imageMode": "particles",
+      "image": "images/1787285518452-g3vc.png"
     }
   },
   "trabajos": [
