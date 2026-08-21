@@ -30,7 +30,7 @@
     "logoUrl": "images/1787080952220-nyu4.jpg",
     "faviconUrl": "images/1787080952225-ier3.jpg",
     "manifesto": "Innovación que se ve, se siente y se usa.",
-    "heroBg": "#0E0E0C",
+    "heroBg": "#000000",
     "heroColor": "#F2EFE6",
     "secciones": {
       "workEye": "",
@@ -1063,7 +1063,7 @@
       "etiquetaDespues": "AFTER",
       "items": []
     },
-    "bg2": "#161613",
+    "bg2": "#ffffff",
     "texto2": "#b8b3a3",
     "line": "#f2efe6",
     "accent": "#01e8f9",
@@ -1079,8 +1079,8 @@
       "fontTitle": "Space Grotesk"
     },
     "footer": {
-      "color": "#262626",
-      "accent": "#3df2ff",
+      "color": "#ffffff",
+      "accent": "#8f8f8f",
       "size": 280,
       "text1": "",
       "text2": ""
