@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="content-language" content="es" />
+<meta name="language" content="Spanish" />
+<meta name="robots" content="index, follow" />
 <title id="page-title">Cargando…</title>
 
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/anton:vf@latest/latin-wght-normal.css" />
@@ -179,12 +182,12 @@
   }
 
   /* ===== TICKER ===== */
-  .ticker{overflow:hidden;white-space:nowrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;background:var(--accent);color:var(--bg)}
-  .ticker .track{display:inline-flex;gap:40px;will-change:transform;animation:tickmove 35s linear infinite}
-  @keyframes tickmove{to{transform:translateX(-50%)}}
-  .ticker .track span{font-family:var(--f-tit),sans-serif;font-size:clamp(24px,3vw,40px);letter-spacing:-.01em;text-transform:uppercase;display:inline-flex;align-items:center;gap:40px}
-  .ticker .track span::after{content:"✦";font-size:.5em}
-  .ticker .track .it{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;text-transform:none;letter-spacing:-.02em}
+.ticker{overflow:hidden;white-space:nowrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:18px 0;background:var(--accent);color:var(--bg)}
+.ticker .track{display:inline-flex;gap:40px;will-change:transform;animation:tickmove 40s linear infinite}
+@keyframes tickmove{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.ticker .track span{font-family:var(--f-tit),sans-serif;font-size:clamp(24px,3vw,40px);letter-spacing:-.01em;text-transform:uppercase;display:inline-flex;align-items:center;gap:40px;white-space:nowrap}
+.ticker .track span::after{content:"✦";font-size:.5em}
+.ticker .track .it{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;text-transform:none;letter-spacing:-.02em}
 
   /* ===== SECTION HEAD ===== */
   section{padding:clamp(60px,10vw,160px) 0;position:relative}
@@ -395,10 +398,10 @@
   .services-wrap{background:transparent !important}
   .numbers{background:transparent !important}
 
-  @media (prefers-reduced-motion:reduce){
-    .reveal,.reveal-stagger>*,.manifesto .word span,.hero .line-inner{opacity:1;transform:none !important;transition:none !important}
-    .ticker .track{animation:none !important}
-  }
+@media (prefers-reduced-motion:reduce){
+.reveal,.reveal-stagger>*,.manifesto .word span,.hero .line-inner{opacity:1;transform:none !important;transition:none !important}
+.ticker .track{animation:tickmove 40s linear infinite !important}
+}
   body{position:relative}
 </style>
 </head>
@@ -426,7 +429,7 @@
 
 <div class="mobile-menu" aria-hidden="true">
   <ul id="navMobile"></ul>
-  <div class="foot"><span>hola@merm.studio</span><span>© 2026 — Todos los derechos reservados</span></div>
+  <div class="foot" translate="no"><span>hola@merm.studio</span><span>© 2026 — Todos los derechos reservados</span></div>
 </div>
 
 <!-- PARALLAX BACKGROUND -->
@@ -440,7 +443,7 @@
 </header>
 
 <!-- TICKER -->
-<div class="ticker" aria-hidden="true"><div class="track" id="tickerTrack"></div></div>
+<div class="ticker" aria-hidden="true" translate="no"><div class="track" id="tickerTrack"></div></div>
 
 <!-- WORKS -->
 <section id="work">
