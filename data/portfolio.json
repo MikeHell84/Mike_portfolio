@@ -26,7 +26,7 @@
     "ubicacion": "Colombia",
     "formato": "comic",
     "buttonStyle": "",
-    "brand": "MERM",
+    "brand": "Miguel Rodríguez Martínez",
     "logoUrl": "images/1787080952220-nyu4.jpg",
     "faviconUrl": "images/1787080952225-ier3.jpg",
     "manifesto": "Innovación que se ve, se siente y se usa.",
@@ -80,7 +80,7 @@
       "nombre": "Diseño Gráfico",
       "corto": "Diseño",
       "descripcion": "Identidad, editorial y piezas visuales con foco en jerarquía y emoción.",
-      "color": "#00ffbf",
+      "color": "#00ffd5",
       "imagen": "images/1787084894759-6ang.jpg"
     },
     {
@@ -96,7 +96,7 @@
       "nombre": "Música & Composición",
       "corto": "Música & Composición",
       "descripcion": "Música creada para ambientes de videojuegos, videoclips y proyectos multimedia.",
-      "color": "#00e7eb",
+      "color": "#00ffd5",
       "imagen": "images/1787084894807-ezii.jpg"
     }
   ],
@@ -1066,21 +1066,21 @@
     "bg2": "#161613",
     "texto2": "#b8b3a3",
     "line": "#f2efe6",
-    "accent": "#d4ff3d",
+    "accent": "#01e8f9",
     "accent2": "#ff4a1c",
-    "accent3": "#a78bfa",
+    "accent3": "#89defb",
     "trayectoria": {
-      "accent": "#a78bfa",
+      "accent": "#89fbde",
       "accent2": "#22d3ee",
-      "accent3": "#f472b6",
+      "accent3": "#71a3f4",
       "cardBg": "#141420",
       "cardBorder": "#2a2a3a",
       "radius": 18,
       "fontTitle": "Space Grotesk"
     },
     "footer": {
-      "color": "#f2efe6",
-      "accent": "#d4ff3d",
+      "color": "#262626",
+      "accent": "#3df2ff",
       "size": 280,
       "text1": "",
       "text2": ""
@@ -1156,7 +1156,7 @@
       "colors": {
         "a1": "#3dfcff",
         "a2": "#1affc6",
-        "a3": "#89a5fb",
+        "a3": "#89defb",
         "bg": "#0e0e0c"
       },
       "shapes": {
@@ -1168,7 +1168,7 @@
         "recognition": "icosa",
         "contact": "wave"
       },
-      "particleCount": 2200,
+      "particleCount": 2600,
       "particleSize": 0.18,
       "lerp": 0.06,
       "scale": 1,
