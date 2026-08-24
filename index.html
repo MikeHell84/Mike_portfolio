@@ -214,6 +214,10 @@
   .work .cat-dot{width:6px;height:6px;border-radius:50%}
   .work .arrow{width:clamp(44px,4vw,56px);height:clamp(44px,4vw,56px);border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;transition:all .5s var(--ease);flex-shrink:0}
   .work .arrow svg{width:18px;height:18px;transition:transform .5s var(--ease)}
+  .work-cta{display:inline-flex;align-items:center;gap:6px;margin-top:8px;font-family:var(--f-mono),monospace;font-size:10px;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border:1px solid var(--line);border-radius:20px;color:var(--ink-2);transition:all .3s var(--ease)}
+  .work-cta:hover{border-color:var(--ink);color:var(--ink);background:rgba(242,239,230,.06)}
+  .work-cta span{transition:transform .3s var(--ease);display:inline-block}
+  .work-cta:hover span{transform:translateX(3px)}
   @media (hover:hover) and (pointer:fine){
     .work:hover{padding-left:clamp(24px,3vw,40px);border-color:var(--work-accent,var(--accent))}
     .work:hover .title{transform:translateX(10px);color:var(--work-accent,var(--accent))}
@@ -677,11 +681,12 @@ function renderWorks(trab,ar){
     var m=ti.match(/\s+\/?\s*(.+)$/);
     if(m){em=m[1].trim();tc=ti.slice(0,m.index).trim();}
     var thumb=im?'<div class="work-thumb"><img src="'+esc(im)+'" alt="'+esc(j.titulo||'')+'"/></div>':'<div class="work-thumb" style="background:linear-gradient(135deg,'+col+',var(--bg))"></div>';
+    var cta=j.pagina?'<a href="'+esc(j.pagina)+'" class="work-cta" onclick="event.stopPropagation()" aria-label="Ver proyecto '+esc(j.titulo||'')+'">Ver proyecto <span>→</span></a>':'';
     h+='<div class="work h" data-work="'+i+'" role="button" tabindex="0">'+
       '<div class="num">( '+String(i+1).padStart(2,'0')+' )</div>'+
       '<div class="title">'+esc(tc)+(em?' <em>'+esc(em)+'</em>':'')+'</div>'+
       thumb+
-      '<div class="meta-r"><span class="cat-badge"><span class="cat-dot" style="background:'+col+'"></span><span>'+esc(a.nombre||'Proyecto')+'</span></span><span>'+(j.anio||'')+'</span></div>'+
+      '<div class="meta-r"><span class="cat-badge"><span class="cat-dot" style="background:'+col+'"></span><span>'+esc(a.nombre||'Proyecto')+'</span></span><span>'+(j.anio||'')+'</span>'+cta+'</div>'+
       '<div class="arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>'+
       '</div>';
   });
