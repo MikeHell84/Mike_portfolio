@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>App de Colaboración en Tiempo Real — Miguel Rodríguez Martínez</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/anton:vf@latest/latin-wght-normal.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/inter:vf@latest/latin-wght-normal.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/jetbrains-mono:vf@latest/latin-wght-normal.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/instrument-serif:vf@latest/latin-wght-normal.css" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0E0E0C;--bg-2:#161613;--ink:#F2EFE6;--ink-2:#B8B3A3;--muted:#6B6860;--line:rgba(242,239,230,.12);--f-tit:Anton;--f-txt:Inter;--f-mono:JetBrains Mono}
+html{background:var(--bg)} body{background:var(--bg);color:var(--ink);font-family:var(--f-txt),system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
+nav{position:sticky;top:0;z-index:100;background:rgba(14,14,12,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:64px}
+nav .brand{font-family:var(--f-tit);font-size:18px;letter-spacing:.02em}
+nav .brand em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400}
+nav .links{display:flex;gap:28px;font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+nav .links a:hover{color:var(--ink)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+.breadcrumb{padding:24px 0 12px;font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.breadcrumb a{color:var(--ink-2);border-bottom:1px solid transparent}
+.breadcrumb a:hover{color:var(--ink);border-color:var(--line)}
+.hero{padding:24px 0 40px;border-bottom:1px solid var(--line)}
+.hero .eyebrow{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.hero h1{font-family:var(--f-tit);font-size:clamp(36px,7vw,84px);line-height:.9;letter-spacing:-.03em;margin-bottom:16px}
+.hero h1 em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400}
+.hero .meta{display:flex;flex-wrap:wrap;gap:10px;font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-bottom:24px}
+.hero .meta span{padding:6px 10px;border:1px solid var(--line);border-radius:20px}
+.hero .lead{font-size:17px;line-height:1.6;color:var(--ink-2);max-width:720px}
+.hero-img{margin-top:32px;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--bg-2)}
+.hero-img img{width:100%;height:auto;object-fit:cover;aspect-ratio:16/9}
+.content{padding:48px 0 80px;display:grid;gap:48px}
+.section{border-top:1px solid var(--line);padding-top:32px}
+.section:first-child{border-top:0;padding-top:0}
+.section h2{font-family:var(--f-tit);font-size:22px;letter-spacing:-.02em;margin-bottom:16px}
+.section h2 em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400}
+.section p{font-size:15px;line-height:1.7;color:var(--ink-2);max-width:720px;margin-bottom:16px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:24px}
+@media(max-width:720px){.grid2{grid-template-columns:1fr}}
+.card{border:1px solid var(--line);border-radius:12px;padding:20px;background:rgba(242,239,230,.02)}
+.card h3{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.card ul{list-style:none;display:grid;gap:8px}
+.card li{font-size:14px;line-height:1.5;color:var(--ink-2);padding-left:16px;position:relative}
+.card li::before{content:"—";position:absolute;left:0;color:var(--muted)}
+.stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.stack span{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;padding:6px 10px;border:1px solid var(--line);border-radius:20px;color:var(--ink-2)}
+.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:24px;font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--ink);background:var(--ink);color:var(--bg);transition:all .2s}
+.btn:hover{background:transparent;color:var(--ink)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--ink);background:rgba(242,239,230,.06)}
+footer{border-top:1px solid var(--line);padding:32px 0 48px;font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="brand">MERM <em>— Miguel Rodríguez</em></a>
+  <div class="links"><a href="index.html#work">Trabajos</a><a href="index.html#about">Estudio</a><a href="index.html#contact">Contacto</a></div>
+</nav>
+<div class="wrap">
+  <div class="breadcrumb"><a href="index.html">Inicio</a> / <a href="index.html#work">Trabajos</a> / <a href="index.html#work">Desarrollo Web</a> / Colaboración en tiempo real</div>
+  <header class="hero">
+    <div class="eyebrow">Desarrollo Web — 2024 — Producto interno</div>
+    <h1>App de <em>colaboración</em> en tiempo real</h1>
+    <div class="meta"><span>Next.js + Socket.io</span><span>WebSockets nativos</span><span>Redis Adapter</span><span>PostgreSQL</span></div>
+    <p class="lead">Tablero Kanban y editor donde varias personas trabajan a la vez sin pisarse. Ves quién está en línea, dónde está su cursor y los cambios llegan en milisegundos, no al recargar.</p>
+    <div class="hero-img"><img src="images/1787084894779-f1dx.jpg" alt="App colaborativa — tablero Kanban"></div>
+  </header>
+  <div class="content">
+    <section class="section">
+      <h2>Cómo <em>se siente</em> usarla</h2>
+      <p>Cada documento/tablero es una sala. Al entrar ves los avatares de quienes están dentro, sus cursores y un indicador sutil de “escribiendo…”. Si dos personas mueven la misma tarjeta a la vez, la última posición gana pero el historial guarda ambas acciones para deshacer sin perder trabajo.</p>
+      <div class="grid2">
+        <div class="card"><h3>En vivo</h3><ul><li>Edición simultánea con operaciones transformadas</li><li>Presencia y cursores remotos</li><li>Reconexión con rehidratación del estado</li><li>Cola offline que se sincroniza al volver</li></ul></div>
+        <div class="card"><h3>Para equipos</h3><ul><li>Salas por documento con permisos</li><li>Registro de cambios por autor y hora</li><li>Comentarios anclados a bloques</li><li>Atajos de teclado sin romper el flujo</li></ul></div>
+      </div>
+    </section>
+    <section class="section">
+      <h2>Stack y <em>escalado</em></h2>
+      <div class="stack"><span>Next.js</span><span>Socket.io</span><span>WebSockets</span><span>Node.js</span><span>Redis</span><span>PostgreSQL</span></div>
+      <div class="grid2" style="margin-top:24px">
+        <div class="card"><h3>Tiempo real</h3><p style="margin:0">Socket.io con rooms por documento. Cada evento lleva vector clock para ordenar. Si el cliente pierde conexión, guarda ops locales y al reconectar hace merge sin duplicar.</p></div>
+        <div class="card"><h3>Varias instancias</h3><p style="margin:0">Redis Adapter comparte el bus entre instancias de Node.js. Puedes levantar dos o tres servidores detrás de un balanceador y los mensajes siguen llegando a todos.</p></div>
+      </div>
+    </section>
+    <section class="section">
+      <h2>Detalles <em>cercanos</em></h2>
+      <p>No hay “usuario anónimo”: cada cursor tiene nombre y color asignado. El sistema evita el parpadeo al mover tarjetas optimizando el DOM y usando transiciones de 120 ms. Si alguien cierra la pestaña, su avatar permanece 15 segundos en gris antes de desaparecer.</p>
+      <div class="links">
+        <a class="btn" href="https://collab.merm.dev" target="_blank" rel="noreferrer">Probar sala demo</a>
+        <a class="btn ghost" href="https://github.com/MikeHell84/collab-realtime" target="_blank" rel="noreferrer">Repositorio</a>
+        <a class="btn ghost" href="index.html#work">← Volver a trabajos</a>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="wrap"><span>Miguel Rodríguez Martínez — 2026</span><span>merm.198427@gmail.com · Colombia</span></footer>
+</body>
+</html>
