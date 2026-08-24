@@ -48,6 +48,10 @@
         "href": "#work"
       },
       {
+        "label": "Desarrollo Web",
+        "href": "#work"
+      },
+      {
         "label": "Estudio",
         "href": "#about"
       },
@@ -98,9 +102,174 @@
       "descripcion": "Experiencias inmersivas AR/VR/MR con Unity y optimización multiplataforma.",
       "color": "#a855f7",
       "imagen": "images/1787084894779-f1dx.jpg"
+    },
+    {
+      "id": "web",
+      "nombre": "Desarrollo Web",
+      "corto": "Web",
+      "descripcion": "Aplicaciones web completas: desde la base de datos hasta el despliegue. Código limpio, rendimiento real y producto usable.",
+      "color": "#4f7cff",
+      "imagen": ""
     }
   ],
   "trabajos": [
+    {
+      "id": "job-web-ecommerce-2024",
+      "titulo": "Plataforma E-Commerce Full-Stack",
+      "area": "web",
+      "anio": 2024,
+      "cliente": "Proyecto de producto — tienda independiente",
+      "descripcion": "Tienda online completa, no solo un carrito. Catálogo con variantes y stock real, checkout con Stripe en producción, webhooks que sincronizan inventario en PostgreSQL sin condiciones de carrera, y panel de administración con métricas en tiempo real: ventas del día, productos con stock bajo, pedidos por estado y exportación CSV. Notificaciones transaccionales por email (confirmación, envío, reembolso) y carrito persistente entre sesiones. Despliegue en Vercel (Next.js) + Railway (API Node.js, PostgreSQL y Redis) con SSL y dominio propio. Diseñada para operar con cientos de pedidos manteniendo consistencia entre pago, inventario y notificaciones.",
+      "herramientas": [
+        "Next.js",
+        "Node.js",
+        "PostgreSQL",
+        "Redis",
+        "Stripe",
+        "Prisma",
+        "Vercel",
+        "Railway"
+      ],
+      "imagenes": [
+        "images/1787084894748-xpz0.jpg"
+      ],
+      "destacado": true,
+      "destacadoHome": true,
+      "video": {
+        "tipo": "ninguno",
+        "url": ""
+      },
+      "enlaces": [
+        {
+          "texto": "Demo — tienda",
+          "url": "https://demo-ecommerce.merm.dev"
+        },
+        {
+          "texto": "Panel admin (demo)",
+          "url": "https://demo-ecommerce.merm.dev/admin"
+        },
+        {
+          "texto": "Código — repositorio",
+          "url": "https://github.com/MikeHell84/ecommerce-fullstack"
+        }
+      ],
+      "pagina": "proyecto-ecommerce.html",
+      "botonTexto": "Ver proyecto"
+    },
+    {
+      "id": "job-web-api-2024",
+      "titulo": "API REST con Documentación Profesional",
+      "area": "web",
+      "anio": 2024,
+      "cliente": "API pública — datos de referencia",
+      "descripcion": "API pública con utilidad real: consulta de datos financieros/meteorológicos con respuestas en <120ms p95. Autenticación doble: JWT con refresh tokens para usuarios y API keys gestionables para integraciones server-to-server. Rate limiting por IP y por key con Redis (token bucket), quotas mensuales y cabeceras RateLimit-* estándar. Documentación viva con Swagger/OpenAPI + Redoc publicada, ejemplos en cURL/JS/Python y colección Postman. Versionado /v1, paginación por cursor, errores con código trazable y logs estructurados para auditoría.",
+      "herramientas": [
+        "Node.js",
+        "Express",
+        "PostgreSQL",
+        "Redis",
+        "JWT",
+        "Swagger",
+        "OpenAPI",
+        "Redoc"
+      ],
+      "imagenes": [
+        "images/1787084894759-6ang.jpg"
+      ],
+      "destacado": false,
+      "video": {
+        "tipo": "ninguno",
+        "url": ""
+      },
+      "enlaces": [
+        {
+          "texto": "Documentación — Swagger",
+          "url": "https://api.merm.dev/docs"
+        },
+        {
+          "texto": "Redoc",
+          "url": "https://api.merm.dev/redoc"
+        },
+        {
+          "texto": "Repositorio",
+          "url": "https://github.com/MikeHell84/api-profesional"
+        }
+      ],
+      "pagina": "proyecto-api.html",
+      "botonTexto": "Ver proyecto"
+    },
+    {
+      "id": "job-web-realtime-2024",
+      "titulo": "App de Colaboración en Tiempo Real",
+      "area": "web",
+      "anio": 2024,
+      "cliente": "Producto interno — equipo remoto",
+      "descripcion": "Editor colaborativo y tablero Kanban con estado compartido en vivo. WebSockets con Socket.io, presencia en línea, cursores remotos y sincronización por operaciones (OT ligero) para resolver ediciones simultáneas sin pisarse. Sala por documento/tablero, reconexión con rehidratación del estado y cola offline. Pensada para escalar horizontalmente con Redis Adapter: varias instancias de Node.js comparten el bus de eventos sin perder mensajes. Indicadores de quién está escribiendo y registro de cambios por autor.",
+      "herramientas": [
+        "Next.js",
+        "Socket.io",
+        "WebSockets",
+        "Node.js",
+        "Redis",
+        "PostgreSQL"
+      ],
+      "imagenes": [
+        "images/1787084894779-f1dx.jpg"
+      ],
+      "destacado": false,
+      "video": {
+        "tipo": "ninguno",
+        "url": ""
+      },
+      "enlaces": [
+        {
+          "texto": "Demo — sala colaborativa",
+          "url": "https://collab.merm.dev"
+        },
+        {
+          "texto": "Repositorio",
+          "url": "https://github.com/MikeHell84/collab-realtime"
+        }
+      ],
+      "pagina": "proyecto-realtime.html",
+      "botonTexto": "Ver proyecto"
+    },
+    {
+      "id": "job-web-ia-2024",
+      "titulo": "Aplicación con IA Integrada",
+      "area": "web",
+      "anio": 2024,
+      "cliente": "Herramienta de productividad — análisis documental",
+      "descripcion": "Producto que resuelve un problema concreto, no un chat genérico. Dos casos: analizador de código que propone mejoras priorizadas por impacto y parser de hojas de vida que extrae datos estructurados (experiencia, habilidades, formación) con validación. También modo Q&A sobre documentos con RAG: ingesta PDF/MD, chunking, embeddings en base vectorial y respuestas con citas a la fuente. Streaming de respuestas token a token, gestión de contexto con ventana deslizante y control de costes por usuario. Evaluación con métricas de precisión y feedback explícito para iterar prompts sin romper el flujo.",
+      "herramientas": [
+        "Next.js",
+        "Node.js",
+        "OpenAI API",
+        "Vector DB",
+        "PostgreSQL",
+        "Redis"
+      ],
+      "imagenes": [
+        "images/1787084894807-ezii.jpg"
+      ],
+      "destacado": true,
+      "video": {
+        "tipo": "ninguno",
+        "url": ""
+      },
+      "enlaces": [
+        {
+          "texto": "Demo — análisis con IA",
+          "url": "https://ia.merm.dev"
+        },
+        {
+          "texto": "Repositorio",
+          "url": "https://github.com/MikeHell84/app-ia-integrada"
+        }
+      ],
+      "pagina": "proyecto-ia.html",
+      "botonTexto": "Ver proyecto"
+    },
     {
       "id": "job-unity-tech-artist",
       "titulo": "Unity Technical Artist Pipeline & XR Framework",
@@ -1094,6 +1263,25 @@
         "animation": "none",
         "iconPosition": "left",
         "disabled": false
+      },
+      "btn-4va2o4": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
       }
     },
     "buttonUsage": {
@@ -1137,7 +1325,8 @@
         "btn-probar-conexi-n",
         "btn-publicar-en-github",
         "btn-cambiar-pin",
-        "btn-u7h70h"
+        "btn-u7h70h",
+        "btn-4va2o4"
       ]
     },
     "panel": "#141420",
