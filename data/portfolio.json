@@ -1282,6 +1282,25 @@
         "animation": "none",
         "iconPosition": "left",
         "disabled": false
+      },
+      "btn-m046mz": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
       }
     },
     "buttonUsage": {
@@ -1326,7 +1345,8 @@
         "btn-publicar-en-github",
         "btn-cambiar-pin",
         "btn-u7h70h",
-        "btn-4va2o4"
+        "btn-4va2o4",
+        "btn-m046mz"
       ]
     },
     "panel": "#141420",
