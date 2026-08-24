@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>API REST con Documentación Profesional — Miguel Rodríguez Martínez</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/anton:vf@latest/latin-wght-normal.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/inter:vf@latest/latin-wght-normal.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/jetbrains-mono:vf@latest/latin-wght-normal.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/instrument-serif:vf@latest/latin-wght-normal.css" />
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0E0E0C;--bg-2:#161613;--ink:#F2EFE6;--ink-2:#B8B3A3;--muted:#6B6860;--line:rgba(242,239,230,.12);--f-tit:Anton;--f-txt:Inter;--f-mono:JetBrains Mono}
+html{background:var(--bg)} body{background:var(--bg);color:var(--ink);font-family:var(--f-txt),system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
+nav{position:sticky;top:0;z-index:100;background:rgba(14,14,12,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:64px}
+nav .brand{font-family:var(--f-tit);font-size:18px;letter-spacing:.02em}
+nav .brand em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400}
+nav .links{display:flex;gap:28px;font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+nav .links a:hover{color:var(--ink)}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+.breadcrumb{padding:24px 0 12px;font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.breadcrumb a{color:var(--ink-2);border-bottom:1px solid transparent}
+.breadcrumb a:hover{color:var(--ink);border-color:var(--line)}
+.hero{padding:24px 0 40px;border-bottom:1px solid var(--line)}
+.hero .eyebrow{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.hero h1{font-family:var(--f-tit);font-size:clamp(36px,7vw,84px);line-height:.9;letter-spacing:-.03em;margin-bottom:16px}
+.hero h1 em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400}
+.hero .meta{display:flex;flex-wrap:wrap;gap:10px;font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-bottom:24px}
+.hero .meta span{padding:6px 10px;border:1px solid var(--line);border-radius:20px}
+.hero .lead{font-size:17px;line-height:1.6;color:var(--ink-2);max-width:720px}
+.hero-img{margin-top:32px;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--bg-2)}
+.hero-img img{width:100%;height:auto;object-fit:cover;aspect-ratio:16/9}
+.content{padding:48px 0 80px;display:grid;gap:48px}
+.section{border-top:1px solid var(--line);padding-top:32px}
+.section:first-child{border-top:0;padding-top:0}
+.section h2{font-family:var(--f-tit);font-size:22px;letter-spacing:-.02em;margin-bottom:16px}
+.section h2 em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400}
+.section p{font-size:15px;line-height:1.7;color:var(--ink-2);max-width:720px;margin-bottom:16px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:24px}
+@media(max-width:720px){.grid2{grid-template-columns:1fr}}
+.card{border:1px solid var(--line);border-radius:12px;padding:20px;background:rgba(242,239,230,.02)}
+.card h3{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.card ul{list-style:none;display:grid;gap:8px}
+.card li{font-size:14px;line-height:1.5;color:var(--ink-2);padding-left:16px;position:relative}
+.card li::before{content:"—";position:absolute;left:0;color:var(--muted)}
+.stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.stack span{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;padding:6px 10px;border:1px solid var(--line);border-radius:20px;color:var(--ink-2)}
+.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:24px;font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--ink);background:var(--ink);color:var(--bg);transition:all .2s}
+.btn:hover{background:transparent;color:var(--ink)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.ghost:hover{border-color:var(--ink);background:rgba(242,239,230,.06)}
+pre{background:var(--bg-2);border:1px solid var(--line);border-radius:10px;padding:16px;overflow:auto;font-family:var(--f-mono);font-size:12px;line-height:1.6;color:var(--ink-2);margin-top:16px}
+footer{border-top:1px solid var(--line);padding:32px 0 48px;font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="brand">MERM <em>— Miguel Rodríguez</em></a>
+  <div class="links"><a href="index.html#work">Trabajos</a><a href="index.html#about">Estudio</a><a href="index.html#contact">Contacto</a></div>
+</nav>
+<div class="wrap">
+  <div class="breadcrumb"><a href="index.html">Inicio</a> / <a href="index.html#work">Trabajos</a> / <a href="index.html#work">Desarrollo Web</a> / API REST</div>
+  <header class="hero">
+    <div class="eyebrow">Desarrollo Web — 2024 — API pública</div>
+    <h1>API REST <em>con documentación</em> profesional</h1>
+    <div class="meta"><span>Node.js + Express</span><span>PostgreSQL + Redis</span><span>JWT + API Keys</span><span>Swagger / Redoc</span></div>
+    <p class="lead">API con utilidad real, no un CRUD de ejemplo. Respuestas en menos de 120 ms p95, con errores trazables, versionado y documentación que un tercero puede usar sin preguntar.</p>
+    <div class="hero-img"><img src="images/1787084894759-6ang.jpg" alt="API REST — documentación"></div>
+  </header>
+  <div class="content">
+    <section class="section">
+      <h2>Qué <em>resuelve</em></h2>
+      <p>Consulta de datos financieros/meteorológicos con filtros, paginación por cursor y campos seleccionables. Cada respuesta incluye metadatos de paginación y enlaces para la siguiente página, sin exponer offsets frágiles.</p>
+      <div class="grid2">
+        <div class="card"><h3>Autenticación</h3><ul><li>JWT con access corto y refresh rotativo</li><li>API keys por proyecto, revocables y con scopes</li><li>Cabeceras y logs por key para auditoría</li><li>Rotación sin downtime</li></ul></div>
+        <div class="card"><h3>Protección</h3><ul><li>Rate limiting token bucket en Redis</li><li>Quotas mensuales y burst por plan</li><li>Cabeceras estándar RateLimit-*</li><li>Bloqueo progresivo ante abuso</li></ul></div>
+      </div>
+    </section>
+    <section class="section">
+      <h2>Stack y <em>contrato</em></h2>
+      <div class="stack"><span>Node.js</span><span>Express</span><span>PostgreSQL</span><span>Redis</span><span>JWT</span><span>Swagger</span><span>OpenAPI 3.1</span><span>Redoc</span></div>
+      <div class="grid2" style="margin-top:24px">
+        <div class="card"><h3>Documentación viva</h3><p style="margin:0">OpenAPI generado desde el código. Swagger UI para probar, Redoc para leer y colección Postman versionada. Ejemplos en cURL, JS y Python que realmente funcionan copiando y pegando.</p></div>
+        <div class="card"><h3>Operación</h3><p style="margin:0">Versionado /v1, errores con código, mensaje humano y traceId. Logs estructurados en JSON y métricas de latencia por endpoint para detectar regresiones.</p></div>
+      </div>
+      <pre>GET /v1/observations?city=bogota&amp;from=2024-01-01&amp;fields=temp,humidity
+Authorization: Bearer eyJ...
+
+{
+  "data": [{ "temp": 18.4, "humidity": 72 }],
+  "page": { "next_cursor": "eyJpZCI6MTAyfQ==" },
+  "rate": { "remaining": 982, "reset": 1699992000 }
+}</pre>
+    </section>
+    <section class="section">
+      <h2>Uso <em>real</em></h2>
+      <p>Pensada para que otro equipo la integre sin soporte. Códigos de error documentados, cambios con changelog y deprecaciones con fecha. Un cliente puede generar su API key, probarla en Swagger y pasar a producción el mismo día.</p>
+      <div class="links">
+        <a class="btn" href="api/index.html" target="_blank" rel="noreferrer">Ver API REST — Probar en vivo</a>
+        <a class="btn ghost" href="api/docs.html" target="_blank" rel="noreferrer">Swagger</a>
+        <a class="btn ghost" href="api/redoc.html" target="_blank" rel="noreferrer">Redoc</a>
+        <a class="btn ghost" href="https://github.com/MikeHell84/api-profesional" target="_blank" rel="noreferrer">Repositorio</a>
+        <a class="btn ghost" href="index.html#work">← Volver a trabajos</a>
+      </div>
+    </section>
+  </div>
+</div>
+<footer class="wrap"><span>Miguel Rodríguez Martínez — 2026</span><span>merm.198427@gmail.com · Colombia</span></footer>
+</body>
+</html>
