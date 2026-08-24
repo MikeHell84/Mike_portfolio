@@ -81,97 +81,406 @@
       "corto": "Diseño",
       "descripcion": "Identidad, editorial y piezas visuales con foco en jerarquía y emoción.",
       "color": "#00ffd5",
-      "imagen": "images/1787084894759-6ang.jpg"
+      "imagen": "images/1787084894807-ezii.jpg"
     },
     {
       "id": "dev",
-      "nombre": "Programación de Software y Web",
-      "corto": "Software & Web",
-      "descripcion": "Apps, sitios web y software a medida: interfaces cuidadas y código sólido.",
-      "color": "#00ffd5",
+      "nombre": "Desarrollo",
+      "corto": "Dev",
+      "descripcion": "Aplicaciones interactivas, herramientas técnicas y pipelines de producción.",
+      "color": "#8b5cf6",
+      "imagen": "images/1787084894759-6ang.jpg"
+    },
+    {
+      "id": "xr",
+      "nombre": "Realidad Extendida",
+      "corto": "XR",
+      "descripcion": "Experiencias inmersivas AR/VR/MR con Unity y optimización multiplataforma.",
+      "color": "#a855f7",
+      "imagen": "images/1787084894779-f1dx.jpg"
+    }
+  ],
+  "trabajos": [
+    {
+      "id": "job-unity-tech-artist",
+      "titulo": "Unity Technical Artist Pipeline & XR Framework",
+      "area": "xr",
+      "anio": 2024,
+      "imagenes": [
+        "images/1787084894779-f1dx.jpg"
+      ],
+      "descripcion": "Framework técnico completo para producción XR en Unity: arquitectura de scenes, pipeline de assets 3D, sistema de animación UI/UX, optimización multi-plataforma (Quest, Vision Pro, WebXR) y control de versiones con Git/Perforce. Incluye tools de automatización asistidas por IA para integración de assets artísticos, configuración de interacciones XR y profiling de rendimiento.",
+      "destacado": true,
+      "cliente": "Estudio Colaborativo / Equipo Interno",
+      "herramientas": [
+        "Unity 2022/2023 LTS",
+        "C# .NET 6",
+        "URP/HDRP",
+        "XR Interaction Toolkit",
+        "OpenXR",
+        "Git/Perforce",
+        "Visual Studio + Copilot",
+        "Blender/Maya/Substance",
+        "Addressables",
+        "DOTS/ECS"
+      ],
+      "video": {
+        "tipo": "ninguno",
+        "url": ""
+      },
+      "enlaces": [],
+      "beforeAfter": null,
+      "destacadoHome": true
+    },
+    {
+      "id": "job-1786850614912",
+      "titulo": "Dead Hope",
+      "area": "area_1786650100016",
+      "anio": 2025,
+      "imagenes": [
+        "images/1786850614951-vfei.jpg"
+      ],
+      "descripcion": "Creación, Composición y grabación de la canción Dead Hope para el videojuego llamado Total Darkness",
+      "destacado": true,
+      "cliente": "Redemthor",
+      "herramientas": [
+        "Software de Captura y extracción de sonidos diseñada por mi",
+        "Cakewalk Sonar",
+        "Addictive Drums 2."
+      ],
+      "video": {
+        "tipo": "youtube",
+        "url": "https://youtu.be/_FKCl1oPJbg"
+      },
+      "enlaces": [],
+      "beforeAfter": null
+    },
+    {
+      "id": "tmspms7sw",
+      "titulo": "Assets Renders",
+      "area": "3d",
+      "anio": 2019,
+      "imagenes": [
+        "images/1786511427864-nxpg.jpg",
+        "images/1786511428047-oxbh.jpg",
+        "images/1786511428149-6ygz.jpg",
+        "images/1786511428246-k8vm.jpg",
+        "images/1786511428353-cio0.jpg",
+        "images/1786511428427-ywcc.jpg",
+        "images/1786511428545-gng6.jpg",
+        "images/1786511428661-hhzx.jpg",
+        "images/1786511428749-xgak.jpg",
+        "images/1786511428837-l2p8.jpg",
+        "images/1786511428950-g2y1.jpg",
+        "images/1786511428999-h9ci.jpg",
+        "images/1786511429043-kqym.jpg",
+        "images/1786511429070-ar42.jpg"
+      ],
+      "descripcion": "Serie de Assets creados en 3D Max y con el motor de Renderizado Vray.",
+      "destacado": true,
+      "cliente": "Xlerion Studios",
+      "herramientas": [
+        "3D max",
+        "Vray."
+      ],
+      "video": {
+        "tipo": "ninguno",
+        "url": ""
+      },
+      "enlaces": [],
+      "beforeAfter": {
+        "before": "images/1786739228674-u0ow.jpg",
+        "after": "images/1786739228684-m29u.jpg",
+        "activo": true
+      }
+    },
+    {
+      "id": "t-geometria",
+      "titulo": "Dummu Ul",
+      "area": "3d",
+      "anio": 2023,
+      "imagenes": [
+        "images/1786736406321-abj9.jpg",
+        "images/1786736406327-lps0.jpg",
+        "images/1786736406333-w2qd.jpg",
+        "images/1786736406347-dun8.jpg",
+        "images/1786736406354-29i5.jpg",
+        "images/1786736406365-ai0j.jpg"
+      ],
+      "descripcion": "Serie de renders de uno de los personajes para el videojuego llamado TOTAL DARKNESS en Colombia para",
+      "destacado": true,
+      "cliente": "Xlerion Studios",
+      "herramientas": [
+        "Zbrush",
+        "3D Max",
+        "Substance 3D Painter."
+      ],
+      "video": {
+        "tipo": "ninguno",
+        "url": ""
+      },
+      "enlaces": [],
+      "beforeAfter": null
+    },
+    {
+      "id": "t-identidad",
+      "titulo": "USAID",
+      "area": "diseno",
+      "anio": 2015,
+      "imagenes": [
+        "images/1786513633083-7yxd.jpg",
+        "images/1786513633102-5qia.jpg",
+        "images/1786513633118-gf0s.jpg",
+        "images/1786513633144-e8hh.jpg",
+        "images/1786513633159-dwyf.jpg",
+        "images/1786513633179-e48m.jpg",
+        "images/1786513633192-zv5m.jpg"
+      ],
+      "descripcion": "Identidad visual completa para una USAID: logotipo, papelería, editorial, backings, brieffers y rede",
+      "destacado": true,
+      "cliente": "USAID",
+      "herramientas": [
+        "Illustrator",
+        "InDesign",
+        "Figma"
+      ],
+      "video": {
+        "tipo": "ninguno",
+        "url": ""
+      },
+      "enlaces": [],
+      "beforeAfter": null
+    },
+    {
+      "id": "t-tienda",
+      "titulo": "ICOE",
+      "area": "dev",
+      "anio": 2016,
+      "imagenes": [
+        "images/1786513806719-e4dj.jpg",
+        "images/1786513806746-dcav.jpg",
+        "images/1786513806799-yeri.png",
+        "images/1786513806837-xscb.png",
+        "images/1786736406383-j9wk.jpg"
+      ],
+      "descripcion": "Sistema basado en Excel y Visual Basic para la visualización de datos en bruto a gráficos entendible",
+      "destacado": true,
+      "cliente": "USAID & ACDIVOCA",
+      "herramientas": [
+        "React",
+        "Node.js",
+        "PostgreSQL"
+      ],
+      "video": {
+        "tipo": "ninguno",
+        "url": ""
+      },
+      "enlaces": [],
+      "beforeAfter": null
+    }
+  ],
+  "trayectoria": [
+    {
+      "inicio": "2024-01",
+      "fin": "",
+      "tipo": "experiencia",
+      "titulo": "Unity Technical Artist / XR Specialist",
+      "org": "Estudio Colaborativo / Equipo Interno",
+      "descripcion": "Liderazgo técnico en pipeline XR: arquitectura de scenes, addressables, DOTS/ECS, profiling, Git/Perforce, CI/CD, tools IA para asset integration.",
       "imagen": "images/1787084894779-f1dx.jpg"
     },
     {
-      "id": "area_1786650100016",
-      "nombre": "Música & Composición",
-      "corto": "Música & Composición",
-      "descripcion": "Música creada para ambientes de videojuegos, videoclips y proyectos multimedia.",
-      "color": "#00ffd5",
-      "imagen": "images/1787084894807-ezii.jpg"
+      "inicio": "2022-01",
+      "fin": "2023-12",
+      "tipo": "experiencia",
+      "titulo": "Senior 3D Artist / Technical Artist",
+      "org": "Xlerion Studios",
+      "descripcion": "Creación de assets 3D para videojuegos (Total Darkness), pipeline ZBrush→Maya→Substance→Unity, optimización mobile/PC, rigging técnico.",
+      "imagen": "images/1786736406321-abj9.jpg"
+    },
+    {
+      "inicio": "2019-01",
+      "fin": "2021-12",
+      "tipo": "experiencia",
+      "titulo": "3D Generalist / Motion Designer",
+      "org": "Xlerion Studios",
+      "descripcion": "Modelado, texturizado, iluminación V-Ray, motion graphics para piezas publicitarias y cinemáticas.",
+      "imagen": "images/1786511427864-nxpg.jpg"
+    },
+    {
+      "inicio": "2017-01",
+      "fin": "2018-12",
+      "tipo": "experiencia",
+      "titulo": "Diseñador Gráfico / Motion Designer",
+      "org": "2INK",
+      "descripcion": "Identidad visual, editorial, motion design para clientes institucionales (USAID, ACDI/VOCA).",
+      "imagen": "images/1786513633083-7yxd.jpg"
+    },
+    {
+      "inicio": "2015-01",
+      "fin": "2016-12",
+      "tipo": "experiencia",
+      "titulo": "Desarrollador Junior / Diseñador",
+      "org": "Omnia Solutions / AONC",
+      "descripcion": "Sistemas de visualización de datos (Excel/VB/React), dashboards interactivos, automatización de reportes.",
+      "imagen": "images/1786513806719-e4dj.jpg"
+    },
+    {
+      "inicio": "2013-01",
+      "fin": "2014-12",
+      "tipo": "formacion",
+      "titulo": "Técnico en Diseño Gráfico",
+      "org": "SENA",
+      "descripcion": "Fundamentos de diseño, tipografía, composición, teoría del color, software Adobe CC.",
+      "imagen": ""
+    },
+    {
+      "inicio": "2018-01",
+      "fin": "2018-12",
+      "tipo": "formacion",
+      "titulo": "Power BI para Inteligencia de Negocios",
+      "org": "MinTIC",
+      "descripcion": "Modelado de datos, DAX, visualización avanzada, dashboards ejecutivos.",
+      "imagen": ""
+    },
+    {
+      "inicio": "2020-01",
+      "fin": "2020-12",
+      "tipo": "formacion",
+      "titulo": "Desarrollo de Videojuegos con Unity",
+      "org": "UDEA",
+      "descripcion": "C# scripting, física, animación, UI/UX, optimización, publicación multiplataforma.",
+      "imagen": ""
+    },
+    {
+      "inicio": "2021-01",
+      "fin": "2021-12",
+      "tipo": "formacion",
+      "titulo": "Realidad Extendida (AR/VR/MR) con Unity",
+      "org": "Udemy",
+      "descripcion": "XR Interaction Toolkit, AR Foundation, OpenXR, Quest development, hand tracking, spatial audio.",
+      "imagen": ""
+    },
+    {
+      "inicio": "2022-01",
+      "fin": "2022-12",
+      "tipo": "formacion",
+      "titulo": "Arquitectura de Software y Patrones en Unity",
+      "org": "Udemy",
+      "descripcion": "SOLID, DOTS/ECS, Addressables, ScriptableObjects, Dependency Injection, testing automatizado.",
+      "imagen": ""
     }
   ],
   "diseno": {
-    "bg": "#0b0b12",
-    "panel": "#141420",
-    "texto": "#e8eaf2",
-    "muted": "#ffffff",
-    "gradfrom": "#00ffe1",
-    "gradmid": "#ffffff",
-    "gradto": "#00ffee",
-    "fuenteTitulos": "Space Grotesk",
+    "bg": "#0e0e0c",
+    "bg2": "#161613",
+    "texto": "#f2efe6",
+    "texto2": "#B8B3A3",
+    "muted": "#6b6860",
+    "line": "rgba(242,239,230,.12)",
+    "accent": "#D4FF3D",
+    "accent2": "#FF4A1C",
+    "accent3": "#a78bfa",
+    "fuenteTitulos": "Anton",
     "fuenteTexto": "Inter",
-    "fuenteMono": "Fira Code",
-    "css": "nav.top{background:rgba(var(--nav-bg-rgb,20,20,32),.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);padding:16px clamp(16px,3vw,40px)} nav.top .brand{display:flex;align-items:center;gap:16px} nav.top ul{display:flex;gap:8px;flex:1;justify-content:center} nav.top ul a{font-family:var(--f-txt),sans-serif;font-size:14px;font-weight:500;padding:12px 20px;border-radius:10px;background:rgba(255,255,255,.03);transition:all .25s} nav.top ul a:hover{background:var(--accent);color:var(--bg);box-shadow:0 8px 30px rgba(var(--accent-rgb,34,211,238),.3)} nav.top ul a::before{display:none} nav.top .cta{background:var(--accent);color:var(--bg);box-shadow:0 4px 20px rgba(var(--accent-rgb,34,211,238),.4)} nav.top .cta:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(var(--accent-rgb,34,211,238),.5)}\n\nnav.top{background:rgba(var(--nav-bg-rgb,20,20,32),.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);padding:16px clamp(16px,3vw,40px)} nav.top .brand{display:flex;align-items:center;gap:16px} nav.top ul{display:flex;gap:8px;flex:1;justify-content:center} nav.top ul a{font-family:var(--f-txt),sans-serif;font-size:14px;font-weight:500;padding:12px 20px;border-radius:10px;background:rgba(255,255,255,.03);transition:all .25s} nav.top ul a:hover{background:var(--accent);color:var(--bg);box-shadow:0 8px 30px rgba(var(--accent-rgb,34,211,238),.3)} nav.top ul a::before{display:none} nav.top .cta{background:var(--accent);color:var(--bg);box-shadow:0 4px 20px rgba(var(--accent-rgb,34,211,238),.4)} nav.top .cta:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(var(--accent-rgb,34,211,238),.5)}",
-    "formas": {
-      "activo": true,
-      "tipo": "orbes",
-      "cantidad": 10,
-      "blur": 100,
-      "opacidad": 50,
-      "velocidad": 27
-    },
+    "fuenteMono": "JetBrains Mono",
+    "css": "nav.top{background:rgba(var(--nav-bg-rgb,20,20,32),.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);padding:16px clamp(16px,3vw,40px)} nav.top .brand{display:flex;align-items:center;gap:16px} nav.top ul{display:flex;gap:8px;flex:1;justify-content:center} nav.top ul a{font-family:var(--f-txt),sans-serif;font-size:14px;font-weight:500;padding:12px 20px;border-radius:10px;background:rgba(255,255,255,.03);transition:all .25s} nav.top ul a:hover{background:var(--accent);color:var(--bg);box-shadow:0 8px 30px rgba(var(--accent-rgb,34,211,238),.3)} nav.top ul a::before{display:none} nav.top .cta{background:var(--accent);color:var(--bg);box-shadow:0 4px 20px rgba(var(--accent-rgb,34,211,238),.4)} nav.top .cta:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(var(--accent-rgb,34,211,238),.5)}",
     "parallax": {
       "activo": false,
       "imagen": "images/1786740556319-2a3u.jpg",
       "posicion": "centro",
       "velocidad": 0.4,
       "opacidad": 40,
-      "desenfoque": 6,
-      "oscurecer": 0,
-      "fijo": false,
-      "zIndex": -1
+      "desenfoque": 6
     },
-    "presentacion": {
-      "gap": 4,
-      "mincol": 270,
-      "radius": 24,
-      "tilt": 2.8,
-      "shadow": 6,
-      "colores": {
-        "bg": "#404040",
-        "border": "#404454",
-        "text": "#FFFFFF",
-        "muted": "#474747",
-        "overlay": "#151A2E",
-        "chip": "#212121",
-        "chipText": "#FFFFFF",
-        "anioBg": "#151A2E",
-        "anioText": "#00FFD5",
-        "toolBg": "#151A2E",
-        "toolText": "#F3F0FF",
-        "videoBg": null,
-        "videoText": null,
-        "shadow": "#030407"
-      }
+    "nav": {
+      "color": "#F2EFE6",
+      "blend": "difference",
+      "colorRgb": "242,239,230",
+      "bgRgb": "20,20,50"
     },
-    "fondo": {
-      "activo": false,
-      "imagen": "",
-      "posicion": "centro",
-      "opacidad": 40,
-      "desenfoque": 0,
-      "oscurecer": 0
+    "cursor": {
+      "color": "#D4FF3D",
+      "size": 14,
+      "big": 90
+    },
+    "trayectoria": {
+      "accent": "#a78bfa",
+      "accent2": "#22d3ee",
+      "accent3": "#f472b6",
+      "cardBg": "#141420",
+      "cardBorder": "#2a2a3a",
+      "radius": 18,
+      "fontTitle": "Anton"
+    },
+    "footer": {
+      "color": "#F2EFE6",
+      "accent": "#D4FF3D",
+      "size": 280,
+      "text1": "MERM",
+      "text2": "studio."
+    },
+    "typography": {
+      "hero": 200,
+      "claim": 20,
+      "eyebrow": 11,
+      "h2": 48,
+      "body": 15,
+      "work": 20,
+      "svc": 44,
+      "footer": 280
+    },
+    "layout": {
+      "radius": 14,
+      "padSec": 100,
+      "navH": 64,
+      "workGap": 12,
+      "maxW": 1280,
+      "lh": 1.55
+    },
+    "works": {
+      "bg": "#161613",
+      "border": "#2a2a28",
+      "accent": "#D4FF3D"
+    },
+    "modal": {
+      "bg": "#161613",
+      "overlay": "rgba(0,0,0,.75)",
+      "radius": 18,
+      "opacity": 0.75
+    },
+    "services": {
+      "bg": "#161613",
+      "border": "#2a2a28",
+      "radius": 6
+    },
+    "three": {
+      "enabled": true,
+      "colors": {
+        "a1": "#3dfcff",
+        "a2": "#1affc6",
+        "a3": "#89defb",
+        "bg": "#0e0e0c"
+      },
+      "shapes": {
+        "hero": "galaxy",
+        "work": "cube",
+        "manifesto": "core",
+        "services": "image",
+        "about": "icosa",
+        "recognition": "icosa",
+        "contact": "wave"
+      },
+      "particleCount": 2600,
+      "particleSize": 0.18,
+      "lerp": 0.06,
+      "scale": 1,
+      "gridOpacity": 0.25,
+      "wireframe": true,
+      "imageMode": "particles",
+      "image": "images/1787285518452-g3vc.png"
     },
     "buttonStyles": {
-      "BtnStyle01": {
-        "bgColor": "#000000",
-        "textColor": "#ffffff",
-        "icon": "images/1786736406314-3ved.jpg",
-        "padding": 10,
-        "borderRadius": 8,
-        "fontWeight": "600",
-        "activo": false
-      },
       "btn-abrir-sitio": {
         "behavior": {
           "type": "link",
@@ -195,9 +504,7 @@
         "transitionMs": 200,
         "animation": "none",
         "iconPosition": "left",
-        "disabled": false,
-        "hoverTextColor": "#b1ff0a",
-        "hoverEnabled": true
+        "disabled": false
       },
       "btn-vista-previa": {
         "bgColor": "#22d3ee",
@@ -237,7 +544,7 @@
         "iconPosition": "left",
         "disabled": false
       },
-      "btn-nuevo": {
+      "btn-nuevo-trabajo": {
         "bgColor": "#22d3ee",
         "textColor": "#0b0b12",
         "icon": "",
@@ -256,7 +563,7 @@
         "iconPosition": "left",
         "disabled": false
       },
-      "btn-a-adir-imagen": {
+      "btn-707z5a": {
         "bgColor": "#22d3ee",
         "textColor": "#0b0b12",
         "icon": "",
@@ -275,64 +582,7 @@
         "iconPosition": "left",
         "disabled": false
       },
-      "btn-a-adir-url": {
-        "bgColor": "#22d3ee",
-        "textColor": "#0b0b12",
-        "icon": "",
-        "padding": 10,
-        "borderRadius": 8,
-        "fontWeight": "600",
-        "activo": true,
-        "label": "",
-        "behavior": {
-          "type": "none",
-          "url": ""
-        },
-        "hoverScale": 1,
-        "transitionMs": 200,
-        "animation": "none",
-        "iconPosition": "left",
-        "disabled": false
-      },
-      "btn-subir-video": {
-        "bgColor": "#22d3ee",
-        "textColor": "#0b0b12",
-        "icon": "",
-        "padding": 10,
-        "borderRadius": 8,
-        "fontWeight": "600",
-        "activo": true,
-        "label": "",
-        "behavior": {
-          "type": "none",
-          "url": ""
-        },
-        "hoverScale": 1,
-        "transitionMs": 200,
-        "animation": "none",
-        "iconPosition": "left",
-        "disabled": false
-      },
-      "btn-a-adir-enlace": {
-        "bgColor": "#22d3ee",
-        "textColor": "#0b0b12",
-        "icon": "",
-        "padding": 10,
-        "borderRadius": 8,
-        "fontWeight": "600",
-        "activo": true,
-        "label": "",
-        "behavior": {
-          "type": "none",
-          "url": ""
-        },
-        "hoverScale": 1,
-        "transitionMs": 200,
-        "animation": "none",
-        "iconPosition": "left",
-        "disabled": false
-      },
-      "btn-guardar-trabajo": {
+      "btn-crear-primer-trabajo": {
         "bgColor": "#22d3ee",
         "textColor": "#0b0b12",
         "icon": "",
@@ -370,7 +620,7 @@
         "iconPosition": "left",
         "disabled": false
       },
-      "btn--a-adir-red": {
+      "btn-eliminar": {
         "bgColor": "#22d3ee",
         "textColor": "#0b0b12",
         "icon": "",
@@ -389,7 +639,26 @@
         "iconPosition": "left",
         "disabled": false
       },
-      "btn--guardar-sitio": {
+      "btn-a-adir-im-genes": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
+      },
+      "btn-a-adir-por-url": {
         "bgColor": "#22d3ee",
         "textColor": "#0b0b12",
         "icon": "",
@@ -409,6 +678,158 @@
         "disabled": false
       },
       "btn-subir-imagen": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
+      },
+      "btn-subir-video": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
+      },
+      "btn--a-adir-enlace": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
+      },
+      "btn-guardar-trabajo": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
+      },
+      "btn-subir-imagen-despu-s": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
+      },
+      "btn-a-adir-enlace": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
+      },
+      "btn--a-adir-red": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
+      },
+      "btn--agregar-rea-de-trabajo": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
+      },
+      "btn--guardar-sitio": {
         "bgColor": "#22d3ee",
         "textColor": "#0b0b12",
         "icon": "",
@@ -634,8 +1055,7 @@
         "transitionMs": 200,
         "animation": "none",
         "iconPosition": "left",
-        "disabled": false,
-        "hoverBgColor": "#eecc20"
+        "disabled": false
       },
       "btn-cerrar": {
         "bgColor": "#22d3ee",
@@ -656,330 +1076,7 @@
         "iconPosition": "left",
         "disabled": false
       },
-      "btn--agregar-rea-de-trabajo": {
-        "bgColor": "#22d3ee",
-        "textColor": "#0b0b12",
-        "icon": "",
-        "padding": 10,
-        "borderRadius": 8,
-        "fontWeight": "600",
-        "activo": true,
-        "label": "",
-        "behavior": {
-          "type": "none",
-          "url": ""
-        },
-        "hoverScale": 1,
-        "transitionMs": 200,
-        "animation": "none",
-        "iconPosition": "left",
-        "disabled": false
-      },
-      "btn-subir-imagen-antes": {
-        "bgColor": "#22d3ee",
-        "textColor": "#0b0b12",
-        "icon": "",
-        "padding": 10,
-        "borderRadius": 8,
-        "fontWeight": "600",
-        "activo": true,
-        "label": "",
-        "behavior": {
-          "type": "none",
-          "url": ""
-        },
-        "hoverScale": 1,
-        "transitionMs": 200,
-        "animation": "none",
-        "iconPosition": "left",
-        "disabled": false
-      },
-      "btn-subir-imagen-despu-s": {
-        "bgColor": "#22d3ee",
-        "textColor": "#0b0b12",
-        "icon": "",
-        "padding": 10,
-        "borderRadius": 8,
-        "fontWeight": "600",
-        "activo": true,
-        "label": "",
-        "behavior": {
-          "type": "none",
-          "url": ""
-        },
-        "hoverScale": 1,
-        "transitionMs": 200,
-        "animation": "none",
-        "iconPosition": "left",
-        "disabled": false
-      },
-      "btn--nueva-comparaci-n": {
-        "bgColor": "#22d3ee",
-        "textColor": "#0b0b12",
-        "icon": "",
-        "padding": 10,
-        "borderRadius": 8,
-        "fontWeight": "600",
-        "activo": true,
-        "label": "",
-        "behavior": {
-          "type": "none",
-          "url": ""
-        },
-        "hoverScale": 1,
-        "transitionMs": 200,
-        "animation": "none",
-        "iconPosition": "left",
-        "disabled": false
-      },
-      "btn-guardar": {
-        "bgColor": "#22d3ee",
-        "textColor": "#0b0b12",
-        "icon": "",
-        "padding": 10,
-        "borderRadius": 8,
-        "fontWeight": "600",
-        "activo": true,
-        "label": "",
-        "behavior": {
-          "type": "none",
-          "url": ""
-        },
-        "hoverScale": 1,
-        "transitionMs": 200,
-        "animation": "none",
-        "iconPosition": "left",
-        "disabled": false
-      },
-      "btn-eliminar": {
-        "bgColor": "#22d3ee",
-        "textColor": "#0b0b12",
-        "icon": "",
-        "padding": 10,
-        "borderRadius": 8,
-        "fontWeight": "600",
-        "activo": true,
-        "label": "",
-        "behavior": {
-          "type": "none",
-          "url": ""
-        },
-        "hoverScale": 1,
-        "transitionMs": 200,
-        "animation": "none",
-        "iconPosition": "left",
-        "disabled": false
-      },
-      "btn-subir-logo": {
-        "bgColor": "#22d3ee",
-        "textColor": "#0b0b12",
-        "icon": "",
-        "padding": 10,
-        "borderRadius": 8,
-        "fontWeight": "600",
-        "activo": true,
-        "label": "",
-        "behavior": {
-          "type": "none",
-          "url": ""
-        },
-        "hoverScale": 1,
-        "transitionMs": 200,
-        "animation": "none",
-        "iconPosition": "left",
-        "disabled": false
-      },
-      "btn-quitar": {
-        "bgColor": "#22d3ee",
-        "textColor": "#0b0b12",
-        "icon": "",
-        "padding": 10,
-        "borderRadius": 8,
-        "fontWeight": "600",
-        "activo": true,
-        "label": "",
-        "behavior": {
-          "type": "none",
-          "url": ""
-        },
-        "hoverScale": 1,
-        "transitionMs": 200,
-        "animation": "none",
-        "iconPosition": "left",
-        "disabled": false
-      },
-      "btn-subir-favicon": {
-        "bgColor": "#22d3ee",
-        "textColor": "#0b0b12",
-        "icon": "",
-        "padding": 10,
-        "borderRadius": 8,
-        "fontWeight": "600",
-        "activo": true,
-        "label": "",
-        "behavior": {
-          "type": "none",
-          "url": ""
-        },
-        "hoverScale": 1,
-        "transitionMs": 200,
-        "animation": "none",
-        "iconPosition": "left",
-        "disabled": false
-      },
-      "btn--a-adir-elemento": {
-        "bgColor": "#22d3ee",
-        "textColor": "#0b0b12",
-        "icon": "",
-        "padding": 10,
-        "borderRadius": 8,
-        "fontWeight": "600",
-        "activo": true,
-        "label": "",
-        "behavior": {
-          "type": "none",
-          "url": ""
-        },
-        "hoverScale": 1,
-        "transitionMs": 200,
-        "animation": "none",
-        "iconPosition": "left",
-        "disabled": false
-      },
-      "btn--agregar-n-mero": {
-        "bgColor": "#22d3ee",
-        "textColor": "#0b0b12",
-        "icon": "",
-        "padding": 10,
-        "borderRadius": 8,
-        "fontWeight": "600",
-        "activo": true,
-        "label": "",
-        "behavior": {
-          "type": "none",
-          "url": ""
-        },
-        "hoverScale": 1,
-        "transitionMs": 200,
-        "animation": "none",
-        "iconPosition": "left",
-        "disabled": false
-      },
-      "btn--agregar-disciplina": {
-        "bgColor": "#22d3ee",
-        "textColor": "#0b0b12",
-        "icon": "",
-        "padding": 10,
-        "borderRadius": 8,
-        "fontWeight": "600",
-        "activo": true,
-        "label": "",
-        "behavior": {
-          "type": "none",
-          "url": ""
-        },
-        "hoverScale": 1,
-        "transitionMs": 200,
-        "animation": "none",
-        "iconPosition": "left",
-        "disabled": false
-      },
-      "btn--nueva-entrada-de-trayectoria": {
-        "bgColor": "#22d3ee",
-        "textColor": "#0b0b12",
-        "icon": "",
-        "padding": 10,
-        "borderRadius": 8,
-        "fontWeight": "600",
-        "activo": true,
-        "label": "",
-        "behavior": {
-          "type": "none",
-          "url": ""
-        },
-        "hoverScale": 1,
-        "transitionMs": 200,
-        "animation": "none",
-        "iconPosition": "left",
-        "disabled": false
-      },
-      "btn-seleccionar-imagen-": {
-        "bgColor": "#22d3ee",
-        "textColor": "#0b0b12",
-        "icon": "",
-        "padding": 10,
-        "borderRadius": 8,
-        "fontWeight": "600",
-        "activo": true,
-        "label": "",
-        "behavior": {
-          "type": "none",
-          "url": ""
-        },
-        "hoverScale": 1,
-        "transitionMs": 200,
-        "animation": "none",
-        "iconPosition": "left",
-        "disabled": false
-      },
-      "btn-aplicar-plantilla": {
-        "bgColor": "#22d3ee",
-        "textColor": "#0b0b12",
-        "icon": "",
-        "padding": 10,
-        "borderRadius": 8,
-        "fontWeight": "600",
-        "activo": true,
-        "label": "",
-        "behavior": {
-          "type": "none",
-          "url": ""
-        },
-        "hoverScale": 1,
-        "transitionMs": 200,
-        "animation": "none",
-        "iconPosition": "left",
-        "disabled": false
-      },
-      "btn-a-adir-al-css": {
-        "bgColor": "#22d3ee",
-        "textColor": "#0b0b12",
-        "icon": "",
-        "padding": 10,
-        "borderRadius": 8,
-        "fontWeight": "600",
-        "activo": true,
-        "label": "",
-        "behavior": {
-          "type": "none",
-          "url": ""
-        },
-        "hoverScale": 1,
-        "transitionMs": 200,
-        "animation": "none",
-        "iconPosition": "left",
-        "disabled": false
-      },
-      "btn-usar-url": {
-        "bgColor": "#22d3ee",
-        "textColor": "#0b0b12",
-        "icon": "",
-        "padding": 10,
-        "borderRadius": 8,
-        "fontWeight": "600",
-        "activo": true,
-        "label": "",
-        "behavior": {
-          "type": "none",
-          "url": ""
-        },
-        "hoverScale": 1,
-        "transitionMs": 200,
-        "animation": "none",
-        "iconPosition": "left",
-        "disabled": false
-      },
-      "btn--guardar-fondo": {
+      "btn-u7h70h": {
         "bgColor": "#22d3ee",
         "textColor": "#0b0b12",
         "icon": "",
@@ -999,11 +1096,14 @@
         "disabled": false
       }
     },
-    "defaultButtonStyle": "BtnStyle01",
-    "lead": "#e3e3e3",
     "buttonUsage": {
       "admin:global": [
         "btn-entrar",
+        "btn-subir-imagen-despu-s",
+        "btn-subir-video",
+        "btn-a-adir-enlace",
+        "btn-guardar-trabajo",
+        "btn-cancelar",
         "btn-cerrar"
       ],
       "admin:header:anon": [
@@ -1012,16 +1112,20 @@
         "btn-guardar-todo"
       ],
       "admin:section:anon": [
-        "btn-nuevo",
-        "btn-a-adir-imagen",
-        "btn-a-adir-url",
-        "btn-subir-video",
-        "btn-a-adir-enlace",
-        "btn-guardar-trabajo",
+        "btn-nuevo-trabajo",
+        "btn-707z5a",
+        "btn-crear-primer-trabajo",
         "btn-cancelar",
-        "btn--a-adir-red",
-        "btn--guardar-sitio",
+        "btn-eliminar",
+        "btn-a-adir-im-genes",
+        "btn-a-adir-por-url",
         "btn-subir-imagen",
+        "btn-subir-video",
+        "btn--a-adir-enlace",
+        "btn-guardar-trabajo",
+        "btn--a-adir-red",
+        "btn--agregar-rea-de-trabajo",
+        "btn--guardar-sitio",
         "btn--nuevo-estilo",
         "btn-insertar",
         "btn-agregar-al-final",
@@ -1033,588 +1137,53 @@
         "btn-probar-conexi-n",
         "btn-publicar-en-github",
         "btn-cambiar-pin",
-        "btn--agregar-rea-de-trabajo",
-        "btn-subir-imagen-antes",
-        "btn-subir-imagen-despu-s",
-        "btn--nueva-comparaci-n",
-        "btn-guardar",
-        "btn-eliminar",
-        "btn-subir-logo",
-        "btn-quitar",
-        "btn-subir-favicon",
-        "btn--a-adir-elemento",
-        "btn--agregar-n-mero",
-        "btn--agregar-disciplina",
-        "btn--nueva-entrada-de-trayectoria",
-        "btn-seleccionar-imagen-",
-        "btn-aplicar-plantilla",
-        "btn-a-adir-al-css",
-        "btn-usar-url",
-        "btn--guardar-fondo"
+        "btn-u7h70h"
       ]
     },
-    "beforeAfter": {
+    "panel": "#141420",
+    "gradfrom": "#22d3ee",
+    "gradmid": "#a78bfa",
+    "gradto": "#f472b6",
+    "lead": "#000000",
+    "formas": {
+      "activo": true,
+      "tipo": "orbes",
+      "cantidad": 3,
+      "blur": 90,
+      "opacidad": 45,
+      "velocidad": 14
+    },
+    "fondo": {
       "activo": false,
-      "titulo": "Transformaciones",
-      "descripcion": "Resultados lado a lado",
-      "color": "#22d3ee",
-      "etiquetaTitulo": "Comparativa",
-      "etiquetaAntes": "BEFORE",
-      "etiquetaDespues": "AFTER",
-      "items": []
+      "imagen": "",
+      "posicion": "centro",
+      "opacidad": 40,
+      "desenfoque": 0,
+      "oscurecer": 0
     },
-    "bg2": "#ffffff",
-    "texto2": "#b8b3a3",
-    "line": "#f2efe6",
-    "accent": "#01e8f9",
-    "accent2": "#4b1aff",
-    "accent3": "#89defb",
-    "trayectoria": {
-      "accent": "#89fbde",
-      "accent2": "#22d3ee",
-      "accent3": "#71a3f4",
-      "cardBg": "#141420",
-      "cardBorder": "#2a2a3a",
+    "presentacion": {
+      "gap": 26,
+      "mincol": 300,
       "radius": 18,
-      "fontTitle": "Space Grotesk"
-    },
-    "footer": {
-      "color": "#ffffff",
-      "accent": "#8f8f8f",
-      "size": 280,
-      "text1": "",
-      "text2": ""
-    },
-    "typography": {
-      "hero": 200,
-      "claim": 20,
-      "eyebrow": 11,
-      "h2": 48,
-      "body": 15,
-      "work": 20,
-      "svc": 44,
-      "footer": 280
-    },
-    "layout": {
-      "radius": 14,
-      "padSec": 100,
-      "navH": 64,
-      "workGap": 12,
-      "maxW": 1280,
-      "lh": 1.55
-    },
-    "nav": {
-      "color": "#f2efe6",
-      "bg": "#0e0e0c",
-      "blend": "difference",
-      "preBg": "#0e0e0c"
-    },
-    "works": {
-      "bg": "#161613",
-      "border": "#2a2a28",
-      "accent": "#d4ff3d"
-    },
-    "modal": {
-      "bg": "#161613",
-      "overlay": "#000000",
-      "radius": 18,
-      "opacity": 0.75
-    },
-    "services": {
-      "bg": "#161613",
-      "border": "#2a2a28",
-      "radius": 6
-    },
-    "cursor": {
-      "color": "#d4ff3d",
-      "size": 14,
-      "big": 90
-    },
-    "controlLabels": {
-      "--fs-hero": "Hero h1",
-      "--fs-claim": "Hero claim",
-      "--fs-eyebrow": "Eyebrow secciones",
-      "--fs-h2": "Títulos h2 secciones",
-      "--fs-body": "Texto cuerpo",
-      "--fs-work": "Títulos tarjetas trabajo",
-      "--fs-svc": "Títulos servicios",
-      "--fs-footer": "Footer texto grande",
-      "--rad": "Radio global de bordes",
-      "--pad-sec": "Padding secciones",
-      "--nav-h": "Altura nav",
-      "--work-gap": "Gap tarjetas trabajo",
-      "--max-w": "Ancho máximo contenido",
-      "--lh": "Line height cuerpo",
-      "--tray-radius": "Radio modal",
-      "--modal-opacity": "Opacidad overlay",
-      "--svc-rad": "Radio tarjeta servicio",
-      "--cursor-size": "Tamaño cursor",
-      "--cursor-big": "Tamaño hover"
-    },
-    "three": {
-      "enabled": true,
-      "colors": {
-        "a1": "#3dfcff",
-        "a2": "#1affc6",
-        "a3": "#89defb",
-        "bg": "#0e0e0c"
-      },
-      "shapes": {
-        "hero": "galaxy",
-        "work": "cube",
-        "manifesto": "core",
-        "services": "image",
-        "about": "icosa",
-        "recognition": "icosa",
-        "contact": "wave"
-      },
-      "particleCount": 2600,
-      "particleSize": 0.18,
-      "lerp": 0.06,
-      "scale": 1,
-      "gridOpacity": 0.25,
-      "wireframe": true,
-      "imageMode": "particles",
-      "image": "images/1787285518452-g3vc.png"
-    }
-  },
-  "trabajos": [
-    {
-      "id": "job-1786850614912",
-      "titulo": "Dead Hope",
-      "area": "area_1786650100016",
-      "anio": 2025,
-      "cliente": "Redemthor",
-      "descripcion": "Creación, Composición y grabación de la canción Dead Hope para el videojuego llamado Total Darkness de la Banda Redemthor.",
-      "herramientas": [
-        "Software de Captura y extracción de sonidos diseñada por mi",
-        "Cakewalk Sonar",
-        "Addictive Drums 2."
-      ],
-      "destacado": true,
-      "imagenes": [
-        "images/1786850614951-vfei.jpg"
-      ],
-      "video": {
-        "tipo": "youtube",
-        "url": "https://youtu.be/_FKCl1oPJbg"
-      },
-      "enlaces": []
-    },
-    {
-      "id": "tmspms7sw",
-      "titulo": "Assets Renders",
-      "area": "3d",
-      "anio": 2019,
-      "cliente": "Xlerion Studios",
-      "descripcion": "Serie de Assets creados en 3D Max y con el motor de Renderizado Vray.",
-      "herramientas": [
-        "3D max",
-        "Vray."
-      ],
-      "destacado": true,
-      "imagenes": [
-        "images/1786511427864-nxpg.jpg",
-        "images/1786511428047-oxbh.jpg",
-        "images/1786511428149-6ygz.jpg",
-        "images/1786511428246-k8vm.jpg",
-        "images/1786511428353-cio0.jpg",
-        "images/1786511428427-ywcc.jpg",
-        "images/1786511428545-gng6.jpg",
-        "images/1786511428661-hhzx.jpg",
-        "images/1786511428749-xgak.jpg",
-        "images/1786511428837-l2p8.jpg",
-        "images/1786511428950-g2y1.jpg",
-        "images/1786511428999-h9ci.jpg",
-        "images/1786511429043-kqym.jpg",
-        "images/1786511429070-ar42.jpg"
-      ],
-      "video": {
-        "tipo": "ninguno",
-        "url": ""
-      },
-      "enlaces": [],
-      "beforeAfter": {
-        "before": "images/1786739228674-u0ow.jpg",
-        "after": "images/1786739228684-m29u.jpg",
-        "activo": true
+      "tilt": 1.2,
+      "shadow": 8,
+      "colores": {
+        "bg": null,
+        "border": null,
+        "text": null,
+        "muted": null,
+        "overlay": null,
+        "chip": null,
+        "chipText": null,
+        "anioBg": null,
+        "anioText": null,
+        "toolBg": null,
+        "toolText": null,
+        "videoBg": "#212121",
+        "videoText": null,
+        "shadow": null
       }
     },
-    {
-      "id": "t-geometria",
-      "titulo": "Dummu Ul",
-      "area": "3d",
-      "anio": 2023,
-      "cliente": "Xlerion Studios",
-      "descripcion": "Serie de renders de uno de los personajes para el videojuego llamado TOTAL DARKNESS en Colombia para Xlerion Studios. trabajado en Zbrush para el modelado, 3D max para el mapping de las texturas, y Substance 3d painter para las texturas.",
-      "herramientas": [
-        "Zbrush",
-        "3D Max",
-        "Substance 3D Painter."
-      ],
-      "destacado": true,
-      "imagenes": [
-        "images/1786736406321-abj9.jpg",
-        "images/1786736406327-lps0.jpg",
-        "images/1786736406333-w2qd.jpg",
-        "images/1786736406347-dun8.jpg",
-        "images/1786736406354-29i5.jpg",
-        "images/1786736406365-ai0j.jpg"
-      ],
-      "video": {
-        "tipo": "ninguno",
-        "url": ""
-      },
-      "enlaces": []
-    },
-    {
-      "id": "t-identidad",
-      "titulo": "USAID",
-      "area": "diseno",
-      "anio": 2015,
-      "cliente": "USAID",
-      "descripcion": "Identidad visual completa para una USAID: logotipo, papelería, editorial, backings, brieffers y redes sociales.",
-      "herramientas": [
-        "Illustrator",
-        "InDesign",
-        "Figma"
-      ],
-      "destacado": true,
-      "imagenes": [
-        "images/1786513633083-7yxd.jpg",
-        "images/1786513633102-5qia.jpg",
-        "images/1786513633118-gf0s.jpg",
-        "images/1786513633144-e8hh.jpg",
-        "images/1786513633159-dwyf.jpg",
-        "images/1786513633179-e48m.jpg",
-        "images/1786513633192-zv5m.jpg"
-      ],
-      "video": {
-        "tipo": "ninguno",
-        "url": ""
-      },
-      "enlaces": []
-    },
-    {
-      "id": "t-tienda",
-      "titulo": "ICOE",
-      "area": "dev",
-      "anio": 2016,
-      "cliente": "USAID & ACDIVOCA",
-      "descripcion": "Sistema basado en Excel y Visual Basic para la visualización de datos en bruto a gráficos entendibles y temáticos para la comunidad del Choco.",
-      "herramientas": [
-        "React",
-        "Node.js",
-        "PostgreSQL"
-      ],
-      "destacado": true,
-      "imagenes": [
-        "images/1786513806719-e4dj.jpg",
-        "images/1786513806746-dcav.jpg",
-        "images/1786513806799-yeri.png",
-        "images/1786513806837-xscb.png",
-        "images/1786736406383-j9wk.jpg"
-      ],
-      "video": {
-        "tipo": "ninguno",
-        "url": ""
-      },
-      "enlaces": []
-    }
-  ],
-  "trayectoria": [
-    {
-      "id": "tray-1787081600547-1",
-      "tipo": "trabajo",
-      "titulo": "Full-Stack Software Engineer",
-      "org": "Alcaldía de Caucasia (FOVIS)",
-      "inicio": "2024-01",
-      "fin": "2025-12",
-      "descripcion": "Arquitecté y desarrollé desde cero una plataforma gubernamental full-stack para la gestión de proyectos de vivienda utilizando React, Django, MySQL y Tailwind CSS. Optimicé flujos de datos para registros públicos, mejorando significativamente la eficiencia administrativa y el seguimiento de información institucional. Implementé paneles analíticos (dashboards) de KPIs en tiempo real para apoyar la toma de decisiones estratégicas de los administradores municipales.",
-      "tags": [
-        "React",
-        "Django",
-        "MySQL",
-        "Tailwind CSS",
-        "GovTech",
-        "Dashboards",
-        "KPIs"
-      ],
-      "destacado": true,
-      "imagen": "",
-      "enlace": ""
-    },
-    {
-      "id": "tray-1787081600547-2",
-      "tipo": "trabajo",
-      "titulo": "Desarrollador Web y Diseñador de Innovación",
-      "org": "2INK",
-      "inicio": "2024-01",
-      "fin": "2025-12",
-      "descripcion": "Lideré la arquitectura y mantenimiento de infraestructuras web corporativas, resolviendo vulnerabilidades críticas y fallos de sistemas CMS. Diseñé, modelé e integré recursos y modelados 3D personalizados para campañas visuales institucionales y comerciales. Gestioné la producción avanzada de medios digitales utilizando Adobe Creative Cloud, Blender y 3ds Max.",
-      "tags": [
-        "Web Architecture",
-        "CMS",
-        "3D Modeling",
-        "Blender",
-        "3ds Max",
-        "Adobe Creative Cloud",
-        "Seguridad"
-      ],
-      "destacado": true,
-      "imagen": "",
-      "enlace": ""
-    },
-    {
-      "id": "tray-1787081600547-3",
-      "tipo": "trabajo",
-      "titulo": "Lead Developer & 3D Tech Lead (Fundador)",
-      "org": "Xlerion Studio",
-      "inicio": "2023-01",
-      "fin": "",
-      "descripcion": "Proporciono dirección técnica y artística para el desarrollo de videojuegos independientes y simuladores 3D complejos. Arquitecto sistemas modulares utilizando C# avanzado y Python, garantizando alta escalabilidad y una integración fluida entre lógica de backend y renderizado en tiempo real. Superviso pipelines completos de arte 3D y optimización de rendimiento para motores interactivos.",
-      "tags": [
-        "C#",
-        "Python",
-        "Unity",
-        "Unreal Engine 5",
-        "Godot",
-        "3D Pipelines",
-        "Optimización",
-        "Arquitectura de Software"
-      ],
-      "destacado": true,
-      "imagen": "",
-      "enlace": ""
-    },
-    {
-      "id": "tray-1787081600547-4",
-      "tipo": "trabajo",
-      "titulo": "Desarrollador Backend e IoT",
-      "org": "Universidad de Antioquia (UDEA)",
-      "inicio": "2023-01",
-      "fin": "2023-12",
-      "descripcion": "Mantuve y optimicé APIs de alta confiabilidad responsables de redes de sensores de flujo hídrico en la región de Antioquia. Garanticé un 99% de tiempo de actividad (uptime) en la captura de datos IoT en tiempo real para sistemas críticos de monitoreo ambiental.",
-      "tags": [
-        "Python",
-        "IoT",
-        "Sensores",
-        "APIs",
-        "Monitoreo Ambiental",
-        "Uptime 99%"
-      ],
-      "destacado": false,
-      "imagen": "",
-      "enlace": ""
-    },
-    {
-      "id": "tray-1787081600547-5",
-      "tipo": "trabajo",
-      "titulo": "Ingeniero Full-Stack y Consultor de Innovación",
-      "org": "Ejército Nacional de Colombia",
-      "inicio": "2020-01",
-      "fin": "2023-12",
-      "descripcion": "Formulé e implementé proyectos tecnológicos disruptivos enfocados en la seguridad institucional y automatización. Diseñé sistemas de Visión Artificial utilizando OpenCV para análisis ambiental automatizado y detección de amenazas. Prototipé soluciones de trazabilidad segura utilizando arquitecturas basadas en Blockchain y contratos inteligentes.",
-      "tags": [
-        "OpenCV",
-        "Visión Artificial",
-        "Blockchain",
-        "Smart Contracts",
-        "Seguridad",
-        "Automatización",
-        "C++",
-        "Python"
-      ],
-      "destacado": false,
-      "imagen": "",
-      "enlace": ""
-    },
-    {
-      "id": "tray-1787081600547-6",
-      "tipo": "trabajo",
-      "titulo": "Desarrollador de Software y Hardware (IoT)",
-      "org": "Omnia Solutions",
-      "inicio": "2019-01",
-      "fin": "2020-12",
-      "descripcion": "Lideré la reingeniería completa de los sistemas de seguridad perimetral, desarrollando servicios backend robustos en Python y C++. Automaticé servicios críticos en servidores Linux personalizados, reduciendo los tiempos de respuesta ante incidentes y maximizando la confiabilidad operativa.",
-      "tags": [
-        "Python",
-        "C++",
-        "IoT",
-        "Linux",
-        "Backend",
-        "Seguridad Perimetral",
-        "Automatización"
-      ],
-      "destacado": false,
-      "imagen": "",
-      "enlace": ""
-    },
-    {
-      "id": "tray-1787081600547-7",
-      "tipo": "trabajo",
-      "titulo": "Director de Diseño 3D y Visualización de Datos",
-      "org": "AONC",
-      "inicio": "2018-01",
-      "fin": "2019-12",
-      "descripcion": "Dirigí un proyecto de visualización de Big Data a gran escala, transformando conjuntos de datos complejos en entornos 3D interactivos y navegables. Construí interfaces gamificadas e intuitivas que permitieron a usuarios no técnicos explorar información densa, reduciendo el tiempo de análisis de datos en un 40%.",
-      "tags": [
-        "Big Data",
-        "3D Visualization",
-        "Gamificación",
-        "Data Analysis",
-        "Interfaces 3D",
-        "Unity"
-      ],
-      "destacado": false,
-      "imagen": "",
-      "enlace": ""
-    },
-    {
-      "id": "tray-1787081600547-8",
-      "tipo": "trabajo",
-      "titulo": "Desarrollador Web y Consultor IT (GovTech)",
-      "org": "Alcaldía de Chía",
-      "inicio": "2018-01",
-      "fin": "2019-12",
-      "descripcion": "Construí y despliegue una plataforma integral de control de inventarios para la Secretaría de Desarrollo Social utilizando PHP, JavaScript y MySQL. Modernicé la infraestructura de captura de datos, mejorando el seguimiento del gasto público y la gestión de recursos.",
-      "tags": [
-        "PHP",
-        "JavaScript",
-        "MySQL",
-        "GovTech",
-        "Inventarios",
-        "Gasto Público"
-      ],
-      "destacado": false,
-      "imagen": "",
-      "enlace": ""
-    },
-    {
-      "id": "tray-1787081600547-9",
-      "tipo": "trabajo",
-      "titulo": "Director de Proyectos IT y Innovación",
-      "org": "USAID - ACDI/VOCA Colombia",
-      "inicio": "2015-01",
-      "fin": "2017-12",
-      "descripcion": "Arquitecté el software \"ICOE\" para la visualización interactiva de matrices de información a nivel nacional. Dirigí equipos multidisciplinarios en diseño 3D, UX e ingeniería de software para iniciativas de alto impacto social.",
-      "tags": [
-        "ICOE",
-        "Visualización de Datos",
-        "Diseño 3D",
-        "UX",
-        "Equipos Multidisciplinarios",
-        "Alto Impacto Social"
-      ],
-      "destacado": false,
-      "imagen": "",
-      "enlace": ""
-    },
-    {
-      "id": "tray-1787081600547-10",
-      "tipo": "trabajo",
-      "titulo": "Diseñador Creativo (Programa WorkSkills)",
-      "org": "SENA",
-      "inicio": "2015-01",
-      "fin": "2017-12",
-      "descripcion": "Creé modelos 3D, personajes y contenidos multimedia avanzados para entornos digitales e impresos. Traduje conceptos bidimensionales en representaciones tridimensionales de alta precisión estética y técnica.",
-      "tags": [
-        "3D Modeling",
-        "Multimedia",
-        "Personajes",
-        "Impresión 3D",
-        "Diseño Técnico"
-      ],
-      "destacado": false,
-      "imagen": "",
-      "enlace": ""
-    },
-    {
-      "id": "tray-1787081600547-11",
-      "tipo": "formacion",
-      "titulo": "Máster Power BI - Visualización de Datos e Inteligencia de Negocios",
-      "org": "MinTIC & Microsoft",
-      "inicio": "2024-01",
-      "fin": "2024-12",
-      "descripcion": "Formación en visualización de datos e inteligencia de negocios, técnicas avanzadas de reporteo y dashboards interactivos para toma de decisiones estratégicas.",
-      "tags": [
-        "Power BI",
-        "Visualización de Datos",
-        "Business Intelligence",
-        "Dashboards"
-      ],
-      "destacado": false,
-      "imagen": "",
-      "enlace": ""
-    },
-    {
-      "id": "tray-1787081600547-12",
-      "tipo": "formacion",
-      "titulo": "Formación Complementaria - Ingeniería de Software, Metodologías Ágiles y Sistemas Distribuidos",
-      "org": "Universidad de Antioquia (UDEA)",
-      "inicio": "2022-01",
-      "fin": "2022-12",
-      "descripcion": "Formación en ingeniería de software, metodologías ágiles y sistemas distribuidos.",
-      "tags": [
-        "Ingeniería de Software",
-        "Metodologías Ágiles",
-        "Sistemas Distribuidos"
-      ],
-      "destacado": false,
-      "imagen": "",
-      "enlace": ""
-    },
-    {
-      "id": "tray-1787081600547-13",
-      "tipo": "formacion",
-      "titulo": "Estimación de Proyectos de Software",
-      "org": "Udemy",
-      "inicio": "2020-01",
-      "fin": "2020-12",
-      "descripcion": "Curso de estimación de proyectos de software.",
-      "tags": [
-        "Estimación",
-        "Gestión de Proyectos",
-        "Software"
-      ],
-      "destacado": false,
-      "imagen": "",
-      "enlace": ""
-    },
-    {
-      "id": "tray-1787081600547-14",
-      "tipo": "formacion",
-      "titulo": "Bootcamp de Desarrollo Web Full-Stack",
-      "org": "Udemy",
-      "inicio": "2019-01",
-      "fin": "2019-12",
-      "descripcion": "Bootcamp intensivo de desarrollo web full-stack.",
-      "tags": [
-        "Full-Stack",
-        "Web Development",
-        "Bootcamp"
-      ],
-      "destacado": false,
-      "imagen": "",
-      "enlace": ""
-    },
-    {
-      "id": "tray-1787081600547-15",
-      "tipo": "formacion",
-      "titulo": "Título Técnico en Prototipado Digital, Maquetación Web y Desarrollo Multimedia",
-      "org": "Servicio Nacional de Aprendizaje (SENA)",
-      "inicio": "2013-01",
-      "fin": "2014-12",
-      "descripcion": "Formación técnica en protipado digital, maquetación web y desarrollo multimedia.",
-      "tags": [
-        "Prototipado",
-        "Maquetación Web",
-        "Desarrollo Multimedia",
-        "SENA"
-      ],
-      "destacado": false,
-      "imagen": "",
-      "enlace": ""
-    }
-  ]
+    "defaultButtonStyle": ""
+  }
 }
