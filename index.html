@@ -302,15 +302,14 @@
   .manifesto .corner-tag-r{position:absolute;top:clamp(16px,3vw,32px);right:clamp(16px,3vw,40px);font-family:var(--f-mono),monospace;font-size:11px;letter-spacing:.15em;text-transform:uppercase;color:var(--muted)}
 
   /* ===== SERVICES ===== */
-  .services-wrap{overflow:hidden;background:var(--svc-bg,var(--bg-2));padding:var(--pad-sec) 0}
+  .services-wrap{overflow-x:auto;overflow-y:hidden;background:var(--svc-bg,var(--bg-2));padding:var(--pad-sec) 0;scrollbar-width:none;-webkit-overflow-scrolling:touch;scroll-behavior:smooth}
+  .services-wrap::-webkit-scrollbar{display:none}
   .services-wrap .sec-head{padding:0 clamp(16px,3vw,40px);margin-bottom:clamp(40px,6vw,80px)}
-  .services-track{display:flex;gap:clamp(16px,2vw,24px);padding:0 clamp(16px,3vw,40px);will-change:transform}
-  @media(max-width:720px){
-    .services-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
-    .services-wrap::-webkit-scrollbar{display:none}
-    .services-track{flex-wrap:nowrap;padding-bottom:20px}
-  }
+  .services-track{display:flex;gap:clamp(16px,2vw,24px);padding:0 clamp(16px,3vw,40px);will-change:transform;flex-wrap:nowrap;padding-bottom:20px;cursor:grab}
+  .services-track:active{cursor:grabbing}
   .service{flex:0 0 clamp(280px,80vw,420px);border:1px solid var(--svc-border,var(--line));border-radius:var(--svc-rad);padding:clamp(24px,3vw,40px);background:var(--svc-bg,var(--bg));position:relative;overflow:hidden;display:flex;flex-direction:column;justify-content:space-between;min-height:clamp(360px,45vw,480px);transition:transform .5s var(--ease),border-color .4s}
+  .service{cursor:pointer}
+  .service.active{border-color:var(--accent) !important;background:rgba(var(--accent-rgb,212,255,61),.08) !important;transform:translateY(-4px)}
   .service:hover{transform:translateY(-6px);border-color:var(--accent)}
   .service .top{display:flex;justify-content:space-between;align-items:flex-start}
   .service .num{font-family:var(--f-mono),monospace;font-size:var(--fs-eyebrow);letter-spacing:.15em;color:var(--muted)}
@@ -944,7 +943,6 @@ window.__heroPlay=function(){
   });
   document.body.appendChild(wrap);
   var dots=wrap.querySelectorAll('button');
-  var svcWrap=document.querySelector('.services-wrap'),svcTrack=document.getElementById('servicesTrack');
   var parallaxEl=document.getElementById('parallaxBg');
   var current='';
   function updateActive(){
@@ -960,12 +958,6 @@ window.__heroPlay=function(){
   }
   function frame(){
     if(!document.hidden){
-      if(svcWrap&&svcTrack&&window.innerWidth>720){
-        var r=svcWrap.getBoundingClientRect();
-        var p=Math.min(1,Math.max(0,(window.innerHeight-r.top)/(window.innerHeight+r.height)));
-        var d=svcTrack.scrollWidth-window.innerWidth+80;
-        if(d>0)svcTrack.style.transform='translateX('+(-d*p)+'px)';
-      }
       if(window.__parallaxCfg&&parallaxEl&&parallaxEl.style.display!=='none'){
         var total=Math.max(1,document.documentElement.scrollHeight-window.innerHeight);
         var yp=(window.scrollY/total)*window.__parallaxCfg.velocidad*100;
@@ -976,6 +968,49 @@ window.__heroPlay=function(){
     requestAnimationFrame(frame);
   }
   frame();
+  // Drag + elegir disciplinas — horizontal libre, click filtra trabajos
+  (function(){
+    var wrap=document.querySelector('.services-wrap');
+    var track=document.getElementById('servicesTrack');
+    if(!wrap||!track) return;
+    var isDown=false,isDragging=false,startX,scrollLeft;
+    wrap.style.cursor='grab';
+    wrap.addEventListener('mousedown',function(e){isDown=true;isDragging=false;startX=e.pageX-wrap.getBoundingClientRect().left;scrollLeft=wrap.scrollLeft;wrap.style.cursor='grabbing';wrap.style.userSelect='none';});
+    wrap.addEventListener('mouseleave',function(){isDown=false;isDragging=false;wrap.style.cursor='grab';wrap.style.userSelect='';});
+    wrap.addEventListener('mouseup',function(){isDown=false;setTimeout(function(){isDragging=false;},30);wrap.style.cursor='grab';wrap.style.userSelect='';});
+    wrap.addEventListener('mousemove',function(e){if(!isDown) return; e.preventDefault(); var x=e.pageX-wrap.getBoundingClientRect().left; var walk=(x-startX)*1.8; if(Math.abs(walk)>5) isDragging=true; wrap.scrollLeft=scrollLeft-walk;});
+    wrap.addEventListener('touchstart',function(e){startX=e.touches[0].pageX-wrap.getBoundingClientRect().left;scrollLeft=wrap.scrollLeft;},{passive:true});
+    wrap.addEventListener('touchmove',function(e){var x=e.touches[0].pageX-wrap.getBoundingClientRect().left; var walk=(x-startX)*1.8; wrap.scrollLeft=scrollLeft-walk;},{passive:true});
+    // Click en disciplina filtra trabajos
+    track.addEventListener('click',function(e){
+      if(isDragging) {e.preventDefault(); e.stopPropagation(); return;}
+      var card=e.target.closest('.service'); if(!card) return;
+      var idx=Array.from(track.children).indexOf(card);
+      var area=(DATA.areas||[])[idx]; if(!area) return;
+      // Toggle filtro
+      var isActive=card.classList.contains('active');
+      track.querySelectorAll('.service').forEach(function(c){c.classList.remove('active'); c.style.borderColor=''; c.style.transform='';});
+      if(isActive){
+        // Quitar filtro - mostrar todos
+        renderWorks(DATA.trabajos||[], DATA.areas||[]);
+        if(window.__observeReveals) window.__observeReveals();
+        document.getElementById('work')?.scrollIntoView({behavior:'smooth'});
+        return;
+      }
+      card.classList.add('active'); card.style.borderColor='var(--accent)'; card.style.transform='translateY(-6px)';
+      var filtered=(DATA.trabajos||[]).filter(function(t){return t.area===area.id;});
+      renderWorks(filtered.length?filtered:DATA.trabajos, DATA.areas||[]);
+      if(window.__observeReveals) window.__observeReveals();
+      // Mostrar aviso si no hay trabajos en esa disciplina
+      if(!filtered.length){
+        var wl=document.getElementById('worksList');
+        if(wl) wl.innerHTML='<div style="padding:40px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:12px;">No hay proyectos en "'+area.nombre+'". Haz clic de nuevo para ver todos.</div>';
+      }
+      document.getElementById('work')?.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+    // Flechas visibles para indicar que se puede elegir
+    var hint=document.createElement('div'); hint.style.cssText='text-align:center;font-family:var(--f-mono),monospace;font-size:10px;letter-spacing:.12em;color:var(--muted);margin-top:12px;'; hint.textContent='← Arrastra o haz clic en una disciplina para filtrar → Click de nuevo para ver todo'; wrap.appendChild(hint);
+  })();
   window.addEventListener('resize',updateActive);
 })();
 
