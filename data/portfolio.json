@@ -1398,6 +1398,25 @@
         "animation": "none",
         "iconPosition": "left",
         "disabled": false
+      },
+      "btn-xt4ee3": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
       }
     },
     "buttonUsage": {
@@ -1448,7 +1467,8 @@
         "btn-subir",
         "btn-ahzw8s",
         "btn-bhqhp1",
-        "btn-so1a53"
+        "btn-so1a53",
+        "btn-xt4ee3"
       ]
     },
     "panel": "#141420",
