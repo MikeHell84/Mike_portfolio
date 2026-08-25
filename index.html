@@ -578,6 +578,13 @@ async function init(){
   if(cu.color){document.documentElement.style.setProperty('--cursor-color',cu.color);}
   if(cu.size){document.documentElement.style.setProperty('--cursor-size',cu.size+'px');}
   if(cu.big){document.documentElement.style.setProperty('--cursor-big',cu.big+'px');}
+  if(cu.fuente||cu.font){var ff=cu.fuente||cu.font; document.documentElement.style.setProperty('--cursor-font',ff); var st=document.createElement('style'); st.textContent='.cursor.big::after{font-family:\"'+ff.replace(/"/g,'\\"')+'\",var(--f-mono),monospace}'; document.head.appendChild(st); if(!/^(system-ui|monospace|serif|sans-serif)$/i.test(ff)){ var fid='cur-fnt-'+ff.replace(/\W+/g,''); if(!document.getElementById(fid)){ var l=document.createElement('link'); l.id=fid; l.rel='stylesheet'; var q=ff.replace(/\s+/g,'+'); l.href='https://fonts.googleapis.com/css2?family='+q+':wght@400;500;600&display=swap'; document.head.appendChild(l); } } }
+  // Ticker (track) - class="track"
+  var tk=dis.ticker||dis.track||{};
+  if(tk.bg||tk.fondo){var tbg=tk.bg||tk.fondo; document.documentElement.style.setProperty('--ticker-bg',tbg); var sbg=document.createElement('style'); sbg.textContent='.ticker{background:'+tbg+' !important}'; document.head.appendChild(sbg); }
+  if(tk.color){document.documentElement.style.setProperty('--ticker-color',tk.color); var sc=document.createElement('style'); sc.textContent='.ticker{color:'+tk.color+' !important}'; document.head.appendChild(sc); }
+  if(tk.fuente||tk.font){var tff=tk.fuente||tk.font; document.documentElement.style.setProperty('--ticker-font',tff); var stt=document.createElement('style'); stt.textContent='.ticker .track span{font-family:\"'+tff.replace(/"/g,'\\"')+'\",var(--f-tit),sans-serif}'; document.head.appendChild(stt); if(!/^(system-ui|monospace|serif|sans-serif)$/i.test(tff)){ var fid2='tick-fnt-'+tff.replace(/\W+/g,''); if(!document.getElementById(fid2)){ var l2=document.createElement('link'); l2.id=fid2; l2.rel='stylesheet'; var q2=tff.replace(/\s+/g,'+'); l2.href='https://fonts.googleapis.com/css2?family='+q2+':wght@400;700&display=swap'; document.head.appendChild(l2); } } }
+  if(tk.speed){var sp=parseFloat(tk.speed); if(!isNaN(sp)&&sp>0){ document.documentElement.style.setProperty('--ticker-speed',sp+'s'); var ssp=document.createElement('style'); ssp.textContent='.ticker .track{animation-duration:'+sp+'s !important}'; document.head.appendChild(ssp); } }
   // Parallax background (vanilla - no GSAP)
   var px=dis.parallax||{};
   var parallaxEl=document.getElementById('parallaxBg');
