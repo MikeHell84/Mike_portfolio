@@ -551,11 +551,11 @@
     "accent2": "#FF4A1C",
     "accent3": "#a78bfa",
     "fuenteTitulos": "Playfair Display",
-    "fuenteTexto": "Inter",
+    "fuenteTexto": "Open Sans",
     "fuenteMono": "JetBrains Mono",
     "css": "nav.top{background:rgba(var(--nav-bg-rgb,20,20,32),.98);backdrop-filter:blur(20px);border-bottom:1px solid var(--line);padding:16px clamp(16px,3vw,40px)} nav.top .brand{display:flex;align-items:center;gap:16px} nav.top ul{display:flex;gap:8px;flex:1;justify-content:center} nav.top ul a{font-family:var(--f-txt),sans-serif;font-size:14px;font-weight:500;padding:12px 20px;border-radius:10px;background:rgba(255,255,255,.03);transition:all .25s} nav.top ul a:hover{background:var(--accent);color:var(--bg);box-shadow:0 8px 30px rgba(var(--accent-rgb,34,211,238),.3)} nav.top ul a::before{display:none} nav.top .cta{background:var(--accent);color:var(--bg);box-shadow:0 4px 20px rgba(var(--accent-rgb,34,211,238),.4)} nav.top .cta:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(var(--accent-rgb,34,211,238),.5)}",
     "parallax": {
-      "activo": false,
+      "activo": true,
       "imagen": "images/1786740556319-2a3u.jpg",
       "posicion": "centro",
       "velocidad": 0.4,
@@ -570,10 +570,10 @@
     },
     "cursor": {
       "color": "#00fffb",
-      "fuente": "Space Grotesk",
-      "font": "Space Grotesk",
-      "size": 18,
-      "big": 90
+      "fuente": "Fira Code",
+      "font": "Fira Code",
+      "size": 14,
+      "big": 75
     },
     "trayectoria": {
       "accent": "#a78bfa",
@@ -1417,6 +1417,44 @@
         "animation": "none",
         "iconPosition": "left",
         "disabled": false
+      },
+      "btn-fsm13x": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
+      },
+      "btn-0lvh8n": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
       }
     },
     "buttonUsage": {
@@ -1468,7 +1506,9 @@
         "btn-ahzw8s",
         "btn-bhqhp1",
         "btn-so1a53",
-        "btn-xt4ee3"
+        "btn-xt4ee3",
+        "btn-fsm13x",
+        "btn-0lvh8n"
       ]
     },
     "panel": "#141420",
@@ -1478,7 +1518,7 @@
     "lead": "#000000",
     "formas": {
       "activo": true,
-      "tipo": "orbes",
+      "tipo": "particulas",
       "cantidad": 3,
       "blur": 90,
       "opacidad": 45,
@@ -1520,16 +1560,16 @@
       "bg": "#424242",
       "fondo": "#424242",
       "color": "#ffffff",
-      "fuente": "Outfit",
-      "font": "Outfit",
+      "fuente": "JetBrains Mono",
+      "font": "JetBrains Mono",
       "speed": 30
     },
     "track": {
       "bg": "#424242",
       "fondo": "#424242",
       "color": "#ffffff",
-      "fuente": "Outfit",
-      "font": "Outfit",
+      "fuente": "JetBrains Mono",
+      "font": "JetBrains Mono",
       "speed": 30
     }
   }
