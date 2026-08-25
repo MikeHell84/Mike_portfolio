@@ -837,6 +837,25 @@
         "animation": "none",
         "iconPosition": "left",
         "disabled": false
+      },
+      "btn-02dy04": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
       }
     },
     "defaultButtonStyle": "BtnStyle01",
@@ -884,7 +903,8 @@
         "btn-a-adir-im-genes",
         "btn-a-adir-por-url",
         "btn--a-adir-enlace",
-        "btn-a0i21d"
+        "btn-a0i21d",
+        "btn-02dy04"
       ]
     },
     "beforeAfter": {
