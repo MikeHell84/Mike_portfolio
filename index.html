@@ -8,6 +8,7 @@
 <meta name="robots" content="index, follow" />
 <title id="page-title">Cargando…</title>
 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&family=Instrument+Serif:ital@0;1&display=swap" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/anton:vf@latest/latin-wght-normal.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/inter:vf@latest/latin-wght-normal.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/jetbrains-mono:vf@latest/latin-wght-normal.css" />
@@ -584,6 +585,16 @@ async function init(){
   if(tk.color){document.documentElement.style.setProperty('--ticker-color',tk.color); var sc=document.createElement('style'); sc.textContent='.ticker{color:'+tk.color+' !important}'; document.head.appendChild(sc); }
   if(tk.fuente||tk.font){var tff=tk.fuente||tk.font; document.documentElement.style.setProperty('--ticker-font',tff); var stt=document.createElement('style'); stt.textContent='.ticker .track span{font-family:\"'+tff.replace(/"/g,'\\"')+'\",var(--f-tit),sans-serif}'; document.head.appendChild(stt); if(!/^(system-ui|monospace|serif|sans-serif)$/i.test(tff)){ var fid2='tick-fnt-'+tff.replace(/\W+/g,''); if(!document.getElementById(fid2)){ var l2=document.createElement('link'); l2.id=fid2; l2.rel='stylesheet'; var q2=tff.replace(/\s+/g,'+'); l2.href='https://fonts.googleapis.com/css2?family='+q2+':wght@400;700&display=swap'; document.head.appendChild(l2); } } }
   if(tk.speed){var sp=parseFloat(tk.speed); if(!isNaN(sp)&&sp>0){ document.documentElement.style.setProperty('--ticker-speed',sp+'s'); var ssp=document.createElement('style'); ssp.textContent='.ticker .track{animation-duration:'+sp+'s !important}'; document.head.appendChild(ssp); } }
+  // Forzar que todas las secciones usen las fuentes administrables (corrige "la mayoría no se refleja")
+  (function(){
+    var s=document.createElement('style');
+    s.textContent='.hero h1,.sec-head h2,.work .title,.service h3,.numbers-grid .num,.cta-sec h2,.foot-big,.manifesto h2,.preloader .big{font-family:var(--f-tit),sans-serif !important} body,.hero .bottom p,.service p,.numbers-grid .txt,.rec .pr,.hero .claim{font-family:var(--f-txt),sans-serif !important} nav.top ul,.hero .meta,.work .num,.work .meta-r,.service .num,.numbers-grid .lbl,.rec .yr,.rec .badge{font-family:var(--f-mono),monospace !important}';
+    document.head.appendChild(s);
+  })();
+  // Énfasis <em> - ej. "Estos" en títulos
+  var emd=dis.em||dis.enfasis||{};
+  if(emd.color||emd.fondo){var emc=emd.color||emd.fondo; document.documentElement.style.setProperty('--em-color',emc); var sem=document.createElement('style'); sem.textContent='em{color:'+emc+' !important} .sec-head h2 em,.manifesto h2 em,.cta-sec h2 em,.foot-big em,.work .title em,.service h3 em,.rec .aw em{color:'+emc+' !important}'; document.head.appendChild(sem); }
+  if(emd.fuente||emd.font){var emf=emd.fuente||emd.font; document.documentElement.style.setProperty('--em-font',emf); var sef=document.createElement('style'); sef.textContent='em{font-family:\"'+emf.replace(/"/g,'\\"')+'\",serif !important; font-style:italic} .sec-head h2 em,.manifesto h2 em,.cta-sec h2 em,.foot-big em,.work .title em,.service h3 em,.rec .aw em{font-family:\"'+emf.replace(/"/g,'\\"')+'\",serif !important}'; document.head.appendChild(sef); if(!/^(system-ui|monospace|serif|sans-serif)$/i.test(emf)){ var fid3='em-fnt-'+emf.replace(/\W+/g,''); if(!document.getElementById(fid3)){ var l3=document.createElement('link'); l3.id=fid3; l3.rel='stylesheet'; var q3=emf.replace(/\s+/g,'+'); l3.href='https://fonts.googleapis.com/css2?family='+q3+':wght@400;400i;700&display=swap'; document.head.appendChild(l3); } } }
   // Parallax background (vanilla - no GSAP)
   var px=dis.parallax||{};
   var parallaxEl=document.getElementById('parallaxBg');
