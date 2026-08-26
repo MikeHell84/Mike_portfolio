@@ -622,8 +622,8 @@
     },
     "cursor": {
       "color": "#00fffb",
-      "fuente": "Fira Code",
-      "font": "Fira Code",
+      "fuente": "JetBrains Mono",
+      "font": "JetBrains Mono",
       "size": 14,
       "big": 75
     },
@@ -1640,6 +1640,25 @@
         "animation": "none",
         "iconPosition": "left",
         "disabled": false
+      },
+      "btn-mtj69u": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
       }
     },
     "buttonUsage": {
@@ -1700,7 +1719,8 @@
         "btn-lrp1ao",
         "btn-qakgfx",
         "btn-0qdrxn",
-        "btn-nj7e3l"
+        "btn-nj7e3l",
+        "btn-mtj69u"
       ]
     },
     "panel": "#141420",
@@ -1752,35 +1772,35 @@
       "bg": "#424242",
       "fondo": "#424242",
       "color": "#ffffff",
-      "fuente": "Outfit",
-      "font": "Outfit",
+      "fuente": "Anton",
+      "font": "Anton",
       "speed": 30
     },
     "track": {
       "bg": "#424242",
       "fondo": "#424242",
       "color": "#ffffff",
-      "fuente": "Outfit",
-      "font": "Outfit",
+      "fuente": "Anton",
+      "font": "Anton",
       "speed": 30
     },
     "em": {
-      "color": "#d4ff3d",
-      "fondo": "#d4ff3d",
-      "fuente": "Playfair Display",
-      "font": "Playfair Display"
+      "color": "#00a87e",
+      "fondo": "#00a87e",
+      "fuente": "Sora",
+      "font": "Sora"
     },
     "enfasis": {
-      "color": "#d4ff3d",
-      "fondo": "#d4ff3d",
-      "fuente": "Playfair Display",
-      "font": "Playfair Display"
+      "color": "#00a87e",
+      "fondo": "#00a87e",
+      "fuente": "Sora",
+      "font": "Sora"
     },
     "sidebar": {
       "bg": "#161613",
       "color": "#f2efe6",
       "border": "#2a2a28",
-      "active": "#d4ff3d"
+      "active": "#292929"
     }
   }
 }
