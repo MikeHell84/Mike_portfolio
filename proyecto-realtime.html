@@ -3,15 +3,16 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>App de Colaboración en Tiempo Real — Miguel Rodríguez Martínez</title>
+<title>Editor Colaborativo en Tiempo Real — Miguel Rodríguez Martínez</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400&family=Instrument+Serif:ital@0;1&display=swap" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/anton:vf@latest/latin-wght-normal.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/inter:vf@latest/latin-wght-normal.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/jetbrains-mono:vf@latest/latin-wght-normal.css" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/instrument-serif:vf@latest/latin-wght-normal.css" />
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--bg:#0E0E0C;--bg-2:#161613;--ink:#F2EFE6;--ink-2:#B8B3A3;--muted:#6B6860;--line:rgba(242,239,230,.12);--f-tit:Anton;--f-txt:Inter;--f-mono:JetBrains Mono}
-html{background:var(--bg)} body{background:var(--bg);color:var(--ink);font-family:var(--f-txt),system-ui,sans-serif;line-height:1.5;-webkit-font-smoothing:antialiased}
+:root{--bg:#0E0E0C;--bg-2:#161613;--ink:#F2EFE6;--ink-2:#B8B3A3;--muted:#6B6860;--line:rgba(242,239,230,.12);--accent:#D4FF3D;--accent-2:#FF4A1C;--accent-3:#a78bfa;--f-tit:Anton;--f-txt:Inter;--f-mono:JetBrains Mono}
+html{background:var(--bg)} body{background:var(--bg);color:var(--ink);font-family:var(--f-txt),system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none} img{display:block;max-width:100%}
 nav{position:sticky;top:0;z-index:100;background:rgba(14,14,12,.92);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:64px}
 nav .brand{font-family:var(--f-tit);font-size:18px;letter-spacing:.02em}
@@ -24,34 +25,51 @@ nav .links a:hover{color:var(--ink)}
 .breadcrumb a:hover{color:var(--ink);border-color:var(--line)}
 .hero{padding:24px 0 40px;border-bottom:1px solid var(--line)}
 .hero .eyebrow{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
-.hero h1{font-family:var(--f-tit);font-size:clamp(36px,7vw,84px);line-height:.9;letter-spacing:-.03em;margin-bottom:16px}
-.hero h1 em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400}
+.hero h1{font-family:var(--f-tit);font-size:clamp(32px,6vw,72px);line-height:.9;letter-spacing:-.03em;margin-bottom:16px}
+.hero h1 em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;color:var(--accent)}
 .hero .meta{display:flex;flex-wrap:wrap;gap:10px;font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);margin-bottom:24px}
 .hero .meta span{padding:6px 10px;border:1px solid var(--line);border-radius:20px}
-.hero .lead{font-size:17px;line-height:1.6;color:var(--ink-2);max-width:720px}
+.hero .lead{font-size:17px;line-height:1.6;color:var(--ink-2);max-width:780px}
 .hero-img{margin-top:32px;border-radius:16px;overflow:hidden;border:1px solid var(--line);background:var(--bg-2)}
 .hero-img img{width:100%;height:auto;object-fit:cover;aspect-ratio:16/9}
-.content{padding:48px 0 80px;display:grid;gap:48px}
+.content{padding:48px 0 80px;display:grid;gap:56px}
 .section{border-top:1px solid var(--line);padding-top:32px}
 .section:first-child{border-top:0;padding-top:0}
-.section h2{font-family:var(--f-tit);font-size:22px;letter-spacing:-.02em;margin-bottom:16px}
-.section h2 em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400}
-.section p{font-size:15px;line-height:1.7;color:var(--ink-2);max-width:720px;margin-bottom:16px}
-.grid2{display:grid;grid-template-columns:1fr 1fr;gap:32px;margin-top:24px}
-@media(max-width:720px){.grid2{grid-template-columns:1fr}}
-.card{border:1px solid var(--line);border-radius:12px;padding:20px;background:rgba(242,239,230,.02)}
-.card h3{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
-.card ul{list-style:none;display:grid;gap:8px}
+.section h2{font-family:var(--f-tit);font-size:26px;letter-spacing:-.02em;margin-bottom:12px}
+.section h2 em{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;color:var(--accent)}
+.section h3{font-family:var(--f-tit);font-size:18px;letter-spacing:-.01em;margin:28px 0 12px}
+.section p{font-size:15px;line-height:1.7;color:var(--ink-2);max-width:780px;margin-bottom:16px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:20px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:20px}
+@media(max-width:900px){.grid2{grid-template-columns:1fr}.grid3{grid-template-columns:1fr}}
+.card{border:1px solid var(--line);border-radius:12px;padding:20px;background:rgba(242,239,230,.03)}
+.card h3{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:0 0 12px}
+.card h4{font-family:var(--f-tit);font-size:16px;margin:0 0 8px;letter-spacing:-.01em}
+.card p{font-size:14px;margin:0 0 10px}
+.card ul{list-style:none;display:grid;gap:8px;margin-top:8px}
 .card li{font-size:14px;line-height:1.5;color:var(--ink-2);padding-left:16px;position:relative}
 .card li::before{content:"—";position:absolute;left:0;color:var(--muted)}
 .stack{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
-.stack span{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;padding:6px 10px;border:1px solid var(--line);border-radius:20px;color:var(--ink-2)}
-.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.stack span{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;padding:6px 10px;border:1px solid var(--line);border-radius:20px;color:var(--ink-2);background:rgba(212,255,61,.06)}
+.stack span.accent{border-color:var(--accent);color:var(--accent);background:rgba(212,255,61,.12)}
+pre{background:#0a0a0f;border:1px solid var(--line);border-radius:12px;padding:16px;overflow:auto;font-family:var(--f-mono);font-size:13px;line-height:1.6;color:#c9d1e6;margin:16px 0}
+code{font-family:var(--f-mono);font-size:.88em;background:rgba(242,239,230,.08);padding:2px 6px;border-radius:6px;border:1px solid var(--line)}
+.kbd{font-family:var(--f-mono);font-size:11px;padding:3px 7px;border:1px solid var(--line);border-bottom-width:2px;border-radius:6px;background:var(--bg-2);color:var(--ink-2)}
+.links{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
 .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:24px;font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--ink);background:var(--ink);color:var(--bg);transition:all .2s}
 .btn:hover{background:transparent;color:var(--ink)}
 .btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
 .btn.ghost:hover{border-color:var(--ink);background:rgba(242,239,230,.06)}
+.badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;padding:6px 10px;border-radius:20px;border:1px solid var(--line);color:var(--ink-2)}
+.badge.dot::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--accent);display:inline-block}
+.table-wrap{overflow:auto;border:1px solid var(--line);border-radius:12px;margin-top:16px}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+th{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:rgba(242,239,230,.03)}
+td{color:var(--ink-2)}
 footer{border-top:1px solid var(--line);padding:32px 0 48px;font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
+.callout{border-left:3px solid var(--accent);background:rgba(212,255,61,.06);padding:16px 18px;border-radius:0 12px 12px 0;margin:16px 0}
+.callout strong{color:var(--ink)}
 </style>
 </head>
 <body>
@@ -60,36 +78,92 @@ footer{border-top:1px solid var(--line);padding:32px 0 48px;font-family:var(--f-
   <div class="links"><a href="index.html#work">Trabajos</a><a href="index.html#about">Estudio</a><a href="index.html#contact">Contacto</a></div>
 </nav>
 <div class="wrap">
-  <div class="breadcrumb"><a href="index.html">Inicio</a> / <a href="index.html#work">Trabajos</a> / <a href="index.html#work">Desarrollo Web</a> / Colaboración en tiempo real</div>
+  <div class="breadcrumb"><a href="index.html">Inicio</a> / <a href="index.html#work">Trabajos</a> / Desarrollo Web / Editor colaborativo en tiempo real</div>
   <header class="hero">
-    <div class="eyebrow">Desarrollo Web — 2024 — Producto interno</div>
-    <h1>App de <em>colaboración</em> en tiempo real</h1>
-    <div class="meta"><span>Next.js + Socket.io</span><span>WebSockets nativos</span><span>Redis Adapter</span><span>PostgreSQL</span></div>
-    <p class="lead">Tablero Kanban y editor donde varias personas trabajan a la vez sin pisarse. Ves quién está en línea, dónde está su cursor y los cambios llegan en milisegundos, no al recargar.</p>
-    <div class="hero-img"><img src="images/1787084894779-f1dx.jpg" alt="App colaborativa — tablero Kanban"></div>
+    <div class="eyebrow">Desarrollo Web — 2024 — Editor colaborativo · Google Docs-like</div>
+    <h1>Editor <em>colaborativo</em> de documentos en tiempo real</h1>
+    <div class="meta"><span>React 18 + TS</span><span>Socket.io + Redis</span><span>TipTap / ProseMirror</span><span>PostgreSQL + Prisma</span><span>Zustand</span></div>
+    <p class="lead">Google Docs local: múltiples usuarios editando el mismo documento, cursores de colores, comentarios anclados y sincronización por Operational Transformation. Auto-save cada 2s, reconexión con cola offline y despliegue escalable con Redis Adapter.</p>
+    <div class="hero-img"><img src="images/1787084894779-f1dx.jpg" alt="Editor colaborativo — cursores y presencia"></div>
   </header>
   <div class="content">
     <section class="section">
-      <h2>Cómo <em>se siente</em> usarla</h2>
-      <p>Cada documento/tablero es una sala. Al entrar ves los avatares de quienes están dentro, sus cursores y un indicador sutil de “escribiendo…”. Si dos personas mueven la misma tarjeta a la vez, la última posición gana pero el historial guarda ambas acciones para deshacer sin perder trabajo.</p>
+      <h2>Objetivo</h2>
+      <p>Construir una aplicación de edición colaborativa que demuestre habilidades avanzadas en <strong>WebSockets</strong>, <strong>sincronización de estado</strong> y <strong>resolución de conflictos</strong>. No es un chat con editor, es un sistema donde cada pulsación se transforma en una operación versionada, se ordena en el servidor y se replica a todos sin perder ni una letra.</p>
+      <div class="stack"><span class="accent">OT / CRDT</span><span>Presencia</span><span>Reconexión</span><span>Offline queue</span><span>Heartbeat 30s</span></div>
+    </section>
+
+    <section class="section">
+      <h2>Stack <em>tecnológico</em></h2>
+      <div class="stack"><span>React 18 + TypeScript</span><span>Zustand</span><span>TipTap / ProseMirror</span><span>Node.js + Express</span><span>Socket.io</span><span>Redis Adapter</span><span>PostgreSQL</span><span>Prisma</span><span>NextAuth / Passport</span><span>Vercel</span><span>Railway</span><span>Redis</span></div>
+      <div class="grid3">
+        <div class="card"><h3>Frontend</h3><p>React 18 + TS con TipTap (ProseMirror) para rich text. Zustand para estado local + selección/cursores. TipTap extensions para bold/italic, headings, listas, links, imágenes, code blocks y tablas.</p></div>
+        <div class="card"><h3>Backend</h3><p>Node + Express + Socket.io. Redis Adapter para escalar horizontalmente: N instancias comparten el bus. Prisma sobre PostgreSQL para persistencia versionada.</p></div>
+        <div class="card"><h3>Infra</h3><p>Vercel (frontend) + Railway (API, Postgres, Redis). Redis para sesiones, presencia y rate limiting. Deploy con variables por entorno y healthchecks.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Features <em>obligatorias</em></h2>
       <div class="grid2">
-        <div class="card"><h3>En vivo</h3><ul><li>Edición simultánea con operaciones transformadas</li><li>Presencia y cursores remotos</li><li>Reconexión con rehidratación del estado</li><li>Cola offline que se sincroniza al volver</li></ul></div>
-        <div class="card"><h3>Para equipos</h3><ul><li>Salas por documento con permisos</li><li>Registro de cambios por autor y hora</li><li>Comentarios anclados a bloques</li><li>Atajos de teclado sin romper el flujo</li></ul></div>
+        <div class="card"><h4>1 · Autenticación</h4><ul><li>Login email/password + OAuth Google/GitHub</li><li>Sesiones persistentes (NextAuth/Passport)</li><li>Perfiles con avatar y presencia</li><li>Invitaciones por email para colaborar</li></ul></div>
+        <div class="card"><h4>2 · Gestión de documentos</h4><ul><li>Crear, renombrar, eliminar; carpetas</li><li>Permisos: Owner / Editor / Commenter / Viewer</li><li>Historial de versiones con restore</li><li>Público vs privado + compartir por link</li></ul></div>
+        <div class="card"><h4>3 · Edición en tiempo real</h4><ul><li>Rich text: H1-H6, listas, links, imágenes, tablas, code + highlight</li><li>Sincronización instantánea + OT</li><li>Cursores remotos de colores + nombre</li><li>Auto-save 2s + presencia “quién está viendo”</li></ul></div>
+        <div class="card"><h4>4 · Comentarios</h4><ul><li>Inline en selección + hilos de respuestas</li><li>Resolver / reabrir</li><li>Notificaciones + @menciones</li><li>Anclados a posición del documento</li></ul></div>
+        <div class="card"><h4>5 · Notificaciones</h4><ul><li>Email: @mención, compartir, edición en doc propio</li><li>In-app con badge + centro de notificaciones</li><li>Preferencias por tipo y frecuencia</li><li>Digest diario opcional</li></ul></div>
+        <div class="card"><h4>6 · Búsqueda</h4><ul><li>Full-text PostgreSQL por título y contenido</li><li>Filtros: fecha, autor, compartido conmigo</li><li>Búsqueda dentro del documento (find)</li><li>Índices GIN + ranking</li></ul></div>
+        <div class="card"><h4>7 · Exportación</h4><ul><li>PDF (paginado), Markdown, HTML</li><li>Imprimir con CSS optimizado</li><li>Preserva formato y tablas</li><li>Descarga con nombre y metadatos</li></ul></div>
+        <div class="card"><h4>Extras pulidos</h4><ul><li>Atajos <span class="kbd">⌘ B</span> <span class="kbd">⌘ I</span> sin romper OT</li><li>Deshacer/rehacer por usuario</li><li>Selecciones múltiples</li><li>Modo offline con indicador</li></ul></div>
       </div>
     </section>
+
     <section class="section">
-      <h2>Stack y <em>escalado</em></h2>
-      <div class="stack"><span>Next.js</span><span>Socket.io</span><span>WebSockets</span><span>Node.js</span><span>Redis</span><span>PostgreSQL</span></div>
-      <div class="grid2" style="margin-top:24px">
-        <div class="card"><h3>Tiempo real</h3><p style="margin:0">Socket.io con rooms por documento. Cada evento lleva vector clock para ordenar. Si el cliente pierde conexión, guarda ops locales y al reconectar hace merge sin duplicar.</p></div>
-        <div class="card"><h3>Varias instancias</h3><p style="margin:0">Redis Adapter comparte el bus entre instancias de Node.js. Puedes levantar dos o tres servidores detrás de un balanceador y los mensajes siguen llegando a todos.</p></div>
+      <h2>Arquitectura <em>en tiempo real</em></h2>
+      <h3>Estrategia de sincronización — OT</h3>
+      <p>Cada cambio es una operación atómica. El servidor ordena por <code>timestamp</code> + <code>userId</code> y re-emite. Conflictos: <em>last-write-wins</em> con reloj del servidor como fuente de verdad; el cliente rebasa su estado con la versión confirmada.</p>
+      <pre>{
+  type: "insert" | "delete" | "format",
+  position: number,
+  content?: string,
+  length?: number,
+  userId: string,
+  timestamp: number
+}</pre>
+      <div class="callout"><strong>Por qué OT y no solo broadcast:</strong> sin transformación, dos inserts en la misma posición duplican o pierden texto. OT ajusta <code>position</code> según ops concurrentes ya aplicadas.</div>
+      <div class="grid2">
+        <div class="card"><h3>Manejo de conexiones</h3><ul><li>Reconexión automática con backoff</li><li>Queue offline en IndexedDB</li><li>Sync al reconectar (replay)</li><li>Heartbeat 30s → detecta caída</li></ul></div>
+        <div class="card"><h3>Presencia y cursores</h3><ul><li>Cliente reporta <code>selection</code> cada 150ms throttled</li><li>Server broadcast a room con color único asignado</li><li>Nombre junto al cursor + timeout 5 min inactividad</li><li>Lista de avatares en header del doc</li></ul></div>
       </div>
     </section>
+
     <section class="section">
-      <h2>Detalles <em>cercanos</em></h2>
-      <p>No hay “usuario anónimo”: cada cursor tiene nombre y color asignado. El sistema evita el parpadeo al mover tarjetas optimizando el DOM y usando transiciones de 120 ms. Si alguien cierra la pestaña, su avatar permanece 15 segundos en gris antes de desaparecer.</p>
+      <h2>Base de <em>datos</em></h2>
+      <p>Modelo Prisma con versionado. <code>DocumentContent</code> guarda el JSON de TipTap actual; <code>DocumentVersions</code> guarda snapshots incrementales para historial y restore sin recalcular diffs.</p>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Tabla</th><th>Campos clave</th><th>Uso</th></tr></thead>
+          <tbody>
+            <tr><td><code>Users</code></td><td>id, email, name, avatar_url</td><td>Auth + presencia</td></tr>
+            <tr><td><code>Documents</code></td><td>id, title, owner_id, is_public</td><td>Metadatos + permisos</td></tr>
+            <tr><td><code>DocumentContent</code></td><td>document_id, content_json, version</td><td>Estado vivo OT</td></tr>
+            <tr><td><code>DocumentVersions</code></td><td>document_id, version, created_by</td><td>Historial / restore</td></tr>
+            <tr><td><code>Collaborators</code></td><td>document_id, user_id, permission</td><td>Owner/Editor/Commenter/Viewer</td></tr>
+            <tr><td><code>Comments</code></td><td>document_id, position, parent_id, is_resolved</td><td>Hilos inline</td></tr>
+            <tr><td><code>Notifications</code></td><td>user_id, type, is_read</td><td>@mención, share, edit</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="grid2">
+        <div class="card"><h3>Autenticación</h3><p style="margin:0">NextAuth con JWT + refresh, OAuth Google/GitHub, invitaciones firmadas por email con expiración 7 días y link de un solo uso.</p></div>
+        <div class="card"><h3>Búsqueda</h3><p style="margin:0">PostgreSQL <code>tsvector</code> + <code>tsquery</code> con trigger en <code>DocumentContent.content_json</code> → índice GIN. Filtros combinables y ranking por relevancia.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Flujo <em>cercano</em></h2>
+      <p>Abres un doc → entras a <code>room:doc:{id}</code> → ves 2-3 cursores moviéndose, alguien escribe “Hola” y aparece letra a letra. Seleccionas “Hola” → <span class="kbd">⌘ B</span> → se envía <code>{type:"format", position:0, length:4}</code> → todos ven negrita al instante. Dejas un comentario en “Hola” → hilo → @mencionas → email + badge. Cierras pestaña → reconexión guarda tu cursor 15s en gris antes de quitarlo. Exportas a PDF con un clic.</p>
       <div class="links">
-        <a class="btn" href="https://collab.merm.dev" target="_blank" rel="noreferrer">Probar sala demo</a>
+        <a class="btn" href="collab/index.html" target="_blank" rel="noreferrer">Probar sala demo — conectada ✓</a>
         <a class="btn ghost" href="https://github.com/MikeHell84/collab-realtime" target="_blank" rel="noreferrer">Repositorio</a>
         <a class="btn ghost" href="index.html#work">← Volver a trabajos</a>
       </div>
