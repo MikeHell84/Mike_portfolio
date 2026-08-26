@@ -621,11 +621,11 @@
       "bgRgb": "20,20,50"
     },
     "cursor": {
-      "color": "#00fffb",
-      "fuente": "JetBrains Mono",
-      "font": "JetBrains Mono",
-      "size": 14,
-      "big": 75
+      "color": "#00ffd5",
+      "fuente": "monospace",
+      "font": "monospace",
+      "size": 18,
+      "big": 115
     },
     "trayectoria": {
       "accent": "#a78bfa",
@@ -708,7 +708,8 @@
         "behavior": {
           "type": "link",
           "url": "index.html"
-        }
+        },
+        "activo": true
       },
       "btn-entrar": {
         "bgColor": "#22d3ee",
@@ -1753,13 +1754,13 @@
       "colores": {
         "bg": null,
         "border": null,
-        "text": null,
+        "text": "#FFFFFF",
         "muted": null,
         "overlay": null,
-        "chip": null,
-        "chipText": null,
+        "chip": "#292929",
+        "chipText": "#FFFFFF",
         "anioBg": null,
-        "anioText": null,
+        "anioText": "#D9D9D9",
         "toolBg": null,
         "toolText": null,
         "videoBg": "#212121",
@@ -1769,20 +1770,20 @@
     },
     "defaultButtonStyle": "",
     "ticker": {
-      "bg": "#424242",
-      "fondo": "#424242",
+      "bg": "#121212",
+      "fondo": "#121212",
       "color": "#ffffff",
-      "fuente": "Anton",
-      "font": "Anton",
-      "speed": 30
+      "fuente": "JetBrains Mono",
+      "font": "JetBrains Mono",
+      "speed": 20
     },
     "track": {
-      "bg": "#424242",
-      "fondo": "#424242",
+      "bg": "#121212",
+      "fondo": "#121212",
       "color": "#ffffff",
-      "fuente": "Anton",
-      "font": "Anton",
-      "speed": 30
+      "fuente": "JetBrains Mono",
+      "font": "JetBrains Mono",
+      "speed": 20
     },
     "em": {
       "color": "#00a87e",
