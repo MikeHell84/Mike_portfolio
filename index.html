@@ -533,6 +533,13 @@ async function init(){
     cs.textContent='@media (min-width: 901px){'+dis.css+'}';
     document.head.appendChild(cs);
   }
+  // Full CSS completo — reemplaza/override total si existe (control total desde admin)
+  var fullCss = dis.fullCss || dis.cssCompleto || dis.css_completo || '';
+  if(fullCss && fullCss.trim()){
+    var fullEl=document.getElementById('fullcss-override');
+    if(!fullEl){ fullEl=document.createElement('style'); fullEl.id='fullcss-override'; document.head.appendChild(fullEl); }
+    fullEl.textContent=fullCss;
+  }
   // Typography sizes
   var ts=dis.typography||{};
   if(ts.hero){document.documentElement.style.setProperty('--fs-hero',ts.hero+'px');document.querySelector('.hero h1').style.fontSize='var(--fs-hero)';}
@@ -638,6 +645,21 @@ async function init(){
   if(s.heroColor){document.querySelector('.hero').style.color=s.heroColor;}
   var sec=s.secciones||{};
   var secHeads={work:[sec.workEye,sec.workTitle],about:[sec.aboutEye,sec.aboutTitle],services:[sec.servEye,sec.servTitle],recognition:[sec.recEye,sec.recTitle]};
+  // Secciones por bloque - fondo, color, fuente (admin Secciones)
+  var dSecs=dis.secciones||{};
+  Object.keys(dSecs).forEach(function(k){
+    var cfg=dSecs[k]; if(!cfg||(!cfg.bg&&!cfg.color&&!cfg.font)) return;
+    var el=document.getElementById(k); if(!el) return;
+    if(cfg.bg) el.style.background=cfg.bg;
+    if(cfg.color) el.style.color=cfg.color;
+    if(cfg.font){
+      var fh=cfg.font; el.style.fontFamily=fh;
+      var h2=el.querySelector('.sec-head h2'); if(h2) h2.style.fontFamily=fh;
+      if(!/^(system-ui|monospace|serif|sans-serif)$/i.test(fh)){
+        var fid='sec-fnt-'+fh.replace(/\W+/g,''); if(!document.getElementById(fid)){ var l=document.createElement('link'); l.id=fid; l.rel='stylesheet'; l.href='https://fonts.googleapis.com/css2?family='+fh.replace(/\s+/g,'+')+':wght@400;700&display=swap'; document.head.appendChild(l); }
+      }
+    }
+  });
   Object.keys(secHeads).forEach(function(k){
     var el=document.getElementById(k);if(!el)return;
     var head=el.querySelector('.sec-head');if(!head)return;
