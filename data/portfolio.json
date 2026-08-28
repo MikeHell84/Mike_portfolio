@@ -2191,6 +2191,44 @@
         "animation": "none",
         "iconPosition": "left",
         "disabled": false
+      },
+      "btn-01nq86": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
+      },
+      "btn-86af61": {
+        "bgColor": "#22d3ee",
+        "textColor": "#0b0b12",
+        "icon": "",
+        "padding": 10,
+        "borderRadius": 8,
+        "fontWeight": "600",
+        "activo": true,
+        "label": "",
+        "behavior": {
+          "type": "none",
+          "url": ""
+        },
+        "hoverScale": 1,
+        "transitionMs": 200,
+        "animation": "none",
+        "iconPosition": "left",
+        "disabled": false
       }
     },
     "buttonUsage": {
@@ -2279,7 +2317,9 @@
         "btn-lnvmlm",
         "btn-5ohmlk",
         "btn-kq3hsc",
-        "btn-pzo4ct"
+        "btn-pzo4ct",
+        "btn-01nq86",
+        "btn-86af61"
       ]
     },
     "panel": "#141420",
@@ -2369,7 +2409,7 @@
       },
       "work": {
         "bg": "#0e0e0c",
-        "color": "#f2efe6",
+        "color": "#757575",
         "font": "Anton"
       },
       "services": {
@@ -2378,8 +2418,8 @@
         "font": "system-ui"
       },
       "about": {
-        "bg": "#ffff00",
-        "color": "#f2efe6",
+        "bg": "#fcfcfc",
+        "color": "#000000",
         "font": "Anton"
       },
       "recognition": {
