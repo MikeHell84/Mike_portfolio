@@ -407,6 +407,45 @@
 .ticker .track{animation:tickmove 40s linear infinite !important}
 }
   body{position:relative}
+  /* ===== TABLET (1024) ===== */
+  @media(max-width:1024px){
+    .hero h1{font-size:clamp(48px,11vw,180px)}
+    .sec-head h2{font-size:clamp(36px,6vw,90px)}
+    .work{grid-template-columns:60px 1fr 100px auto 48px}
+    .work .work-thumb{width:100px;height:68px}
+    .services-track{gap:16px}
+    .service{flex:0 0 clamp(300px,42vw,380px)}
+    .numbers-grid .num{font-size:clamp(48px,7vw,120px)}
+    .foot-grid{grid-template-columns:1.5fr 1fr 1fr 1fr;gap:24px}
+  }
+  /* ===== TABLET (768) ===== */
+  @media(max-width:768px){
+    nav.top{padding:14px 16px}
+    .hero{padding:90px 16px 24px}
+    .hero .bottom{grid-template-columns:1fr;gap:18px}
+    .hero .bottom .index{text-align:left;order:-1}
+    .work{grid-template-columns:1fr auto;gap:8px;padding:14px}
+    .work .num{display:none}
+    .work .work-thumb{display:none}
+    .work .title{font-size:clamp(22px,6vw,32px)}
+    .work .arrow{width:40px;height:40px}
+    .services-wrap{padding:60px 0}
+    .services-track{padding:0 16px;gap:14px}
+    .service{flex:0 0 82vw;min-height:340px;padding:20px}
+    .numbers-grid{grid-template-columns:1fr 1fr}
+    .rec-list{grid-template-columns:1fr 1fr;gap:16px}
+    .foot-grid{grid-template-columns:1fr 1fr;gap:20px}
+    .foot-big{font-size:clamp(48px,14vw,160px)}
+    .manifesto .sticky{height:100vh}
+    .manifesto h2{font-size:clamp(32px,9vw,100px)}
+  }
+  @media(max-width:600px){
+    .rec-list{grid-template-columns:1fr}
+    .numbers-grid{grid-template-columns:1fr}
+    .foot-grid{grid-template-columns:1fr}
+    .hero .meta{font-size:9px;gap:10px}
+    .ticker .track{animation-duration:25s !important}
+  }
 </style>
 </head>
 <body>
@@ -427,6 +466,7 @@
 <nav class="top">
   <a href="#" class="logo"><span class="dot"></span> MERM</a>
   <ul id="navDesktop"></ul>
+  <button id="langToggle" class="lang-toggle" aria-label="Cambiar idioma" style="font-family:var(--f-mono),monospace;font-size:11px;letter-spacing:.1em;padding:8px 12px;border:1px solid rgba(255,255,255,.3);border-radius:999px;background:transparent;color:var(--ink);cursor:pointer;">EN</button>
   <a href="#contact" class="cta"><span class="pulse"></span> Iniciar proyecto</a>
   <button class="menu-btn" aria-label="Menú"><span></span><span></span></button>
 </nav>
@@ -447,7 +487,7 @@
 </header>
 
 <!-- TICKER -->
-<div class="ticker" aria-hidden="true" translate="no"><div class="track" id="tickerTrack"></div></div>
+<div class="ticker" id="ticker" aria-hidden="true" translate="no"><div class="track" id="tickerTrack"></div></div>
 
 <!-- WORKS -->
 <section id="work">
@@ -497,6 +537,60 @@
 async function loadData(){try{var r=await fetch('data/portfolio.json',{cache:'no-store'});return r.ok?await r.json():{}}catch(e){return {};}}
 function esc(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
 var DATA={};
+var LANG = localStorage.getItem('merm_lang') || ((navigator.language||'es').startsWith('en') ? 'en' : 'es');
+var I18N = {
+  es: {
+    nav_trabajos:"Trabajos", nav_estudio:"Estudio", nav_servicios:"Servicios", nav_reconocimientos:"Reconocimientos", nav_contacto:"Contacto",
+    hero_live:"En vivo", hero_scroll:"Scroll", cta_iniciar:"Iniciar proyecto",
+    eyebrow_work:"01 / Trabajos", eyebrow_manifesto:"02 / Manifiesto", eyebrow_services:"03 / Servicios", eyebrow_about:"02 / El estudio", eyebrow_rec:"04 / Reconocimientos",
+    title_work:"Una <em>selección</em> <span class=\"stroke\">reciente</span> de lo que hemos construido.",
+    title_manifesto:"Diseño, tecnología y creatividad",
+    title_services:"Cuatro disciplinas, <em>una</em> sola <span class=\"stroke\">obsesión.</span>",
+    title_about:"Pequeños por elección, <em>obsesivos</em> por <span class=\"stroke\">naturaleza.</span>",
+    title_rec:"Algunos <em>premios</em> que nos ayudan a seguir <span class=\"stroke\">mejorando.</span>",
+    cta_small:"¿Tienes una visión en mente? Hagámosla realidad.", cta_mail:"hola@merm.studio",
+    footer_hecho:"Hecho con café y obsesión", footer_derechos:"Todos los derechos reservados"
+  },
+  en: {
+    nav_trabajos:"Work", nav_estudio:"Studio", nav_servicios:"Services", nav_reconocimientos:"Awards", nav_contacto:"Contact",
+    hero_live:"Live", hero_scroll:"Scroll", cta_iniciar:"Start project",
+    eyebrow_work:"01 / Work", eyebrow_manifesto:"02 / Manifesto", eyebrow_services:"03 / Services", eyebrow_about:"02 / Studio", eyebrow_rec:"04 / Awards",
+    title_work:"A <em>recent</em> <span class=\"stroke\">selection</span> of what we've built.",
+    title_manifesto:"Design, technology and creativity",
+    title_services:"Four disciplines, <em>one</em> <span class=\"stroke\">obsession.</span>",
+    title_about:"Small by choice, <em>obsessive</em> by <span class=\"stroke\">nature.</span>",
+    title_rec:"Some <em>awards</em> keeping us <span class=\"stroke\">improving.</span>",
+    cta_small:"Have a vision in mind? Let's make it real.", cta_mail:"hello@merm.studio",
+    footer_hecho:"Made with coffee & obsession", footer_derechos:"All rights reserved"
+  }
+};
+function t(k){ return (I18N[LANG]&&I18N[LANG][k]) || (I18N.es[k]||k); }
+function applyI18N(){
+  document.documentElement.lang = LANG;
+  const btn=document.getElementById('langToggle'); if(btn) btn.textContent = LANG==='es' ? 'EN' : 'ES';
+  // nav will be re-rendered via renderNav, hero via renderHero, etc. Update static sec-heads if already rendered
+  document.querySelectorAll('#work .eyebrow').forEach(e=>e.textContent=t('eyebrow_work'));
+  document.querySelectorAll('#manifesto .corner-tag').forEach(e=>e.textContent='[ '+t('eyebrow_manifesto')+' ]');
+  document.querySelectorAll('#services .eyebrow').forEach(e=>e.textContent=t('eyebrow_services'));
+  document.querySelectorAll('#about .eyebrow').forEach(e=>e.textContent=t('eyebrow_about'));
+  document.querySelectorAll('#recognition .eyebrow').forEach(e=>e.textContent=t('eyebrow_rec'));
+  const cta=document.querySelector('nav.top .cta'); if(cta) cta.innerHTML='<span class="pulse"></span> '+t('cta_iniciar');
+  const heroLive=document.querySelector('.hero .live'); if(heroLive) heroLive.textContent=t('hero_live');
+  const heroScroll=document.querySelector('.hero .scroll'); if(heroScroll) heroScroll.childNodes[0] && (heroScroll.childNodes[0].textContent=t('hero_scroll')+' ');
+}
+document.addEventListener('DOMContentLoaded', ()=>{
+  const b=document.getElementById('langToggle');
+  if(b) b.addEventListener('click', ()=>{
+    LANG = LANG==='es' ? 'en' : 'es';
+    localStorage.setItem('merm_lang', LANG);
+    applyI18N();
+    if(typeof renderNav==='function' && DATA.site) renderNav(DATA.site.navItems);
+    if(typeof renderHero==='function' && DATA.site) renderHero(DATA.site);
+    if(typeof renderCTA==='function' && DATA.site) renderCTA(DATA.site);
+    if(typeof renderFooter==='function' && DATA.site) renderFooter(DATA.site);
+  });
+  applyI18N();
+});
 async function init(){
   DATA=await loadData();
   var s=DATA.site||{},ar=DATA.areas||[],trab=DATA.trabajos||[],tray=DATA.trayectoria||[],dis=DATA.diseno||{};
@@ -644,12 +738,12 @@ async function init(){
   if(s.heroBg){document.querySelector('.hero').style.background=s.heroBg;}
   if(s.heroColor){document.querySelector('.hero').style.color=s.heroColor;}
   var sec=s.secciones||{};
-  var secHeads={work:[sec.workEye,sec.workTitle],about:[sec.aboutEye,sec.aboutTitle],services:[sec.servEye,sec.servTitle],recognition:[sec.recEye,sec.recTitle]};
+  var secHeads={work:[sec.workEye,sec.workTitle],manifesto:[sec.manifestoEye,sec.manifestoTitle],about:[sec.aboutEye,sec.aboutTitle],services:[sec.servEye,sec.servTitle],recognition:[sec.recEye,sec.recTitle],hero:[sec.heroEye,sec.heroTitle],contact:[sec.contactEye,sec.contactTitle]};
   // Secciones por bloque - fondo, color, fuente (admin Secciones)
   var dSecs=dis.secciones||{};
   Object.keys(dSecs).forEach(function(k){
     var cfg=dSecs[k]; if(!cfg||(!cfg.bg&&!cfg.color&&!cfg.font)) return;
-    var el=document.getElementById(k); if(!el) return;
+    var el=document.getElementById(k) || (k==='footer' ? document.querySelector('footer') : null) || (k==='ticker' ? document.querySelector('.ticker') : null); if(!el) return;
     if(cfg.bg) el.style.background=cfg.bg;
     if(cfg.color) el.style.color=cfg.color;
     if(cfg.font){
@@ -679,6 +773,7 @@ async function init(){
   if(window.__observeCounters)window.__observeCounters();
   if(window.__initManifesto)window.__initManifesto();
   if(window.__heroPlay)window.__heroPlay();
+  if(typeof applyI18N==='function') applyI18N();
 }
 function updateBrand(brand,s){
   var logoHtml=(s&&s.logoUrl)?'<img src="'+esc(s.logoUrl)+'" alt="'+esc(brand)+'" style="height:28px;width:auto;object-fit:contain;vertical-align:middle;margin-right:6px">':'<span class="dot"></span> ';
@@ -691,9 +786,11 @@ if(window.__PORTFOLIO__){DATA=window.__PORTFOLIO__;}
 init();
 
 function renderNav(navItems){
+  var mapEn={"Trabajos":t('nav_trabajos'),"Desarrollo Web":t('nav_trabajos'),"Estudio":t('nav_estudio'),"Servicios":t('nav_servicios'),"Reconocimientos":t('nav_reconocimientos'),"Contacto":t('nav_contacto')};
+  var tr = function(lbl){ return LANG==='en' && mapEn[lbl] ? mapEn[lbl] : lbl; };
   var items=navItems||[{label:'Trabajos',href:'#work'},{label:'Estudio',href:'#about'},{label:'Servicios',href:'#services'},{label:'Reconocimientos',href:'#recognition'}];
-  var dsk=items.map(function(n,i){return '<li><a href="'+esc(n.href)+'" data-num="'+String(i+1).padStart(2,'0')+'">'+esc(n.label)+'</a></li>';}).join('');
-  var mob=items.map(function(n,i){return '<li><a href="'+esc(n.href)+'">'+esc(n.label)+' <span class="n">'+String(i+1).padStart(2,'0')+'</span></a></li>';}).join('');
+  var dsk=items.map(function(n,i){return '<li><a href="'+esc(n.href)+'" data-num="'+String(i+1).padStart(2,'0')+'">'+esc(tr(n.label))+'</a></li>';}).join('');
+  var mob=items.map(function(n,i){return '<li><a href="'+esc(n.href)+'">'+esc(tr(n.label))+' <span class="n">'+String(i+1).padStart(2,'0')+'</span></a></li>';}).join('');
   var nd=document.getElementById('navDesktop');if(nd)nd.innerHTML=dsk;
   var nm=document.getElementById('navMobile');if(nm)nm.innerHTML=mob;
 }
