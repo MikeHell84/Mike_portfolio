@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Miguel E. Rodriguez | Senior Creative Developer & 3D Tech Lead</title>
 <meta name="description" content="Senior Creative Developer & Full-Stack Engineer especializado en Gemelos Digitales, IoT e IA/RAG. +7 años transformando datos complejos en experiencias interactivas.">
+<meta name="keywords" content="desarrollo, full-stack, 3D, IoT, IA, RAG, portfolio">
+<meta name="author" content="Miguel E. Rodriguez">
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
   
@@ -78,6 +80,7 @@
     background-clip: text;
     letter-spacing: -0.02em;
   }
+  .logo img { width:40px; height:40px; object-fit:contain; border-radius:8px; }
   
   .nav-links {
     display: flex;
@@ -803,7 +806,6 @@
 </style>
 </head>
 <body>
-
 <nav>
   <div class="nav-container">
     <div class="logo">M.R.</div>
@@ -1374,7 +1376,9 @@
 </footer>
 
 <script>
-  function toggleMenu() {
+function esc(s){return String(s||'').replace(/[&<>\"/']/g,c=>({'&':'&','<':'<','>':'>','\"':'\"','\'':'\''}[c]))}
+function escAttr(s){return esc(s).replace(/"/g,'"')}
+function toggleMenu() {
     document.getElementById('navLinks').classList.toggle('mobile-open');
   }
   
@@ -1401,15 +1405,25 @@
     const r=await fetch('data/portfolio.json',{cache:'no-store'});
     if(!r.ok) return;
     const d=await r.json();
+    window.__appData=d;
     const site=d.site||{}, hero=d.hero||{}, about=d.about||{}, contact=d.contact||{};
+    // SEO
+    if(d.seo){
+      const seo=d.seo;
+      if(seo.title) document.title=seo.title;
+      if(seo.description){const m=document.querySelector('meta[name="description"]'); if(m) m.setAttribute('content',seo.description);}
+      if(seo.keywords){const m=document.querySelector('meta[name="keywords"]'); if(m) m.setAttribute('content',seo.keywords);}
+      if(seo.author){const m=document.querySelector('meta[name="author"]'); if(m) m.setAttribute('content',seo.author);}
+      if(seo.canonical){let l=document.querySelector('link[rel="canonical"]'); if(!l){l=document.createElement('link');l.rel='canonical';document.head.appendChild(l)};l.href=seo.canonical;}
+      if(seo.robots){let m=document.querySelector('meta[name="robots"]'); if(!m){m=document.createElement('meta');m.name='robots';document.head.appendChild(m)};m.content=seo.robots;}
+    }
     // Nav
     if(site.nav && site.nav.length){
       const nav=document.getElementById('navLinks');
       if(nav) nav.innerHTML=site.nav.map(n=>`<li><a href="${n.href}">${n.label}</a></li>`).join('')+(nav.innerHTML.includes('nav-cta')?'':'<li><a href="#contact" class="nav-cta">Contacto</a></li>');
       // keep CTA if missing
-      if(!nav.innerHTML.includes('nav-cta')) nav.innerHTML+='<li><a href="#contact" class="nav-cta">Contacto</a></li>';
     }
-    if(site.brand) document.querySelector('.logo').textContent=site.brand;
+    if(site.brand){const logo=document.querySelector('.logo');logo.textContent=site.brand;}
     // Hero
     if(hero.badge) document.querySelector('.hero-badge span:last-child').textContent=hero.badge;
     if(hero.h1a || hero.h1b){
@@ -1439,14 +1453,92 @@
     if(contact.subtitle) document.querySelector('.contact-info p').textContent=contact.subtitle;
     // Design
     const des=d.design||{};
+    if(site.brand){const logo=document.querySelector('.logo');if(des.logo_url){logo.innerHTML='<img src="'+des.logo_url+'" alt="'+esc(site.brand)+'" style="width:40px;height:40px;object-fit:contain">';}}
     if(des.bg) document.documentElement.style.setProperty('--bg-primary', des.bg);
+    if(des.bg2) document.documentElement.style.setProperty('--bg-secondary', des.bg2);
+    if(des.bg3) document.documentElement.style.setProperty('--bg-tertiary', des.bg3);
+    if(des.bg_card) document.documentElement.style.setProperty('--bg-card', des.bg_card);
     if(des.texto) document.documentElement.style.setProperty('--text-primary', des.texto);
+    if(des.text2) document.documentElement.style.setProperty('--text-secondary', des.text2);
+    if(des.muted) document.documentElement.style.setProperty('--text-muted', des.muted);
+    if(des.border) document.documentElement.style.setProperty('--border', des.border);
+    if(des.border_hover) document.documentElement.style.setProperty('--border-hover', des.border_hover);
     if(des.accent) document.documentElement.style.setProperty('--accent-blue', des.accent);
     if(des.accent2) document.documentElement.style.setProperty('--accent-purple', des.accent2);
+    if(des.accent_emerald) document.documentElement.style.setProperty('--accent-emerald', des.accent_emerald);
+    if(des.accent_amber) document.documentElement.style.setProperty('--accent-amber', des.accent_amber);
+    if(des.accent_rose) document.documentElement.style.setProperty('--accent-rose', des.accent_rose);
+    if(des.accent_cyan) document.documentElement.style.setProperty('--accent-cyan', des.accent_cyan);
+    if(des.grad_from) document.documentElement.style.setProperty('--grad-from', des.grad_from);
+    if(des.grad_mid) document.documentElement.style.setProperty('--grad-mid', des.grad_mid);
+    if(des.grad_to) document.documentElement.style.setProperty('--grad-to', des.grad_to);
+    if(des.grad2_from) document.documentElement.style.setProperty('--grad2-from', des.grad2_from);
+    if(des.grad2_mid) document.documentElement.style.setProperty('--grad2-mid', des.grad2_mid);
+    if(des.grad2_to) document.documentElement.style.setProperty('--grad2-to', des.grad2_to);
+    if(des.grad3_from) document.documentElement.style.setProperty('--grad3-from', des.grad3_from);
+    if(des.grad3_mid) document.documentElement.style.setProperty('--grad3-mid', des.grad3_mid);
+    if(des.grad3_to) document.documentElement.style.setProperty('--grad3-to', des.grad3_to);
+    if(des.font_heading) document.documentElement.style.setProperty('--font-heading', des.font_heading);
+    if(des.font_body) document.documentElement.style.setProperty('--font-body', des.font_body);
+    if(des.font_mono) document.documentElement.style.setProperty('--font-mono', des.font_mono);
+    if(des.font_size_base) document.documentElement.style.setProperty('--font-size-base', des.font_size_base+'px');
+    if(des.parallax_enabled!==false) document.documentElement.style.setProperty('--parallax-enabled', 'true');
+    if(des.parallax_img) document.documentElement.style.setProperty('--parallax-img', 'url('+des.parallax_img+')');
+    if(des.parallax_speed) document.documentElement.style.setProperty('--parallax-speed', des.parallax_speed);
+    if(des.parallax_pos) document.documentElement.style.setProperty('--parallax-pos', des.parallax_pos);
+    if(des.parallax_opacity) document.documentElement.style.setProperty('--parallax-opacity', des.parallax_opacity+'%');
+    if(des.fondo_enabled!==false) document.documentElement.style.setProperty('--fondo-enabled', 'true');
+    if(des.fondo_img) document.documentElement.style.setProperty('--fondo-img', 'url('+des.fondo_img+')');
+    if(des.fondo_pos) document.documentElement.style.setProperty('--fondo-pos', des.fondo_pos);
+    if(des.fondo_opacity) document.documentElement.style.setProperty('--fondo-opacity', des.fondo_opacity+'%');
+    if(des.fondo_blur) document.documentElement.style.setProperty('--fondo-blur', des.fondo_blur+'px');
+    if(des.cursor_color) document.documentElement.style.setProperty('--cursor-color', des.cursor_color);
+    if(des.cursor_size) document.documentElement.style.setProperty('--cursor-size', des.cursor_size+'px');
+    if(des.cursor_big) document.documentElement.style.setProperty('--cursor-big', des.cursor_big+'px');
+    if(des.cursor_font) document.documentElement.style.setProperty('--cursor-font', des.cursor_font);
+    if(des.ticker_bg) document.documentElement.style.setProperty('--ticker-bg', des.ticker_bg);
+    if(des.ticker_color) document.documentElement.style.setProperty('--ticker-color', des.ticker_color);
+    if(des.ticker_font) document.documentElement.style.setProperty('--ticker-font', des.ticker_font);
+    if(des.ticker_speed) document.documentElement.style.setProperty('--ticker-speed', des.ticker_speed+'s');
+    if(des.sidebar_bg) document.documentElement.style.setProperty('--sidebar-bg', des.sidebar_bg);
+    if(des.sidebar_color) document.documentElement.style.setProperty('--sidebar-color', des.sidebar_color);
+    if(des.sidebar_border) document.documentElement.style.setProperty('--sidebar-border', des.sidebar_border);
+    if(des.sidebar_active) document.documentElement.style.setProperty('--sidebar-active', des.sidebar_active);
+    if(des.favicon_url) {
+      let fav=document.querySelector('link[rel~="icon"]')||document.createElement('link');
+      fav.rel='icon'; fav.href=des.favicon_url; fav.type='image/x-icon';
+      if(!fav.parentNode) document.head.appendChild(fav);
+    }
+    // Settings: custom CSS/JS
+    if(d.settings?.customCss){
+      let style=document.getElementById('__custom_css__');
+      if(!style){style=document.createElement('style');style.id='__custom_css__';document.head.appendChild(style)}
+      style.textContent=d.settings.customCss;
+    }
+    if(d.settings?.customJs){
+      let script=document.getElementById('__custom_js__');
+      if(!script){script=document.createElement('script');script.id='__custom_js__';script.textContent=d.settings.customJs;document.body.appendChild(script)}
+    }
+    // Settings: section visibility
+    const sc=d.settings?.showSections||{};
+    ['hero','about','services','experience','projects','contact'].forEach(s=>{
+      const el=document.getElementById(s+'-section');
+      if(el) el.style.display=(sc[s]!==false)?'':'none';
+    });
+    // Settings: maintenance mode
+    if(d.settings?.maintenance){
+      document.body.innerHTML='<div style="display:grid;place-items:center;min-height:100vh;background:var(--bg-primary,#0a0a0f);color:var(--text-primary,#f0f0f5);text-align:center;padding:2rem"><h1>En mantenimiento</h1><p>'+(d.settings.maintenanceMsg||'Volvemos pronto.')+'</p></div>';
+      return;
+    }
+    // Settings: language
+    if(d.settings?.lang==='es') document.documentElement.lang='es'; else document.documentElement.lang='en';
     document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
   }catch(e){ console.log('CMS no disponible',e); }
 })();
 </script>
 
+
+
 </body>
 </html>
+
