@@ -15,6 +15,10 @@
         "href": "#experience"
       },
       {
+        "label": "Portfolio",
+        "href": "#portfolio"
+      },
+      {
         "label": "Projects",
         "href": "#projects"
       },
@@ -526,8 +530,162 @@
       "about": true,
       "services": true,
       "experience": true,
+      "portfolio": true,
       "projects": true,
       "contact": true
     }
+  },
+  "portfolio": {
+    "label": "PORTFOLIO",
+    "title": "Selected works",
+    "subtitle": "A curated selection of shipped platforms, 3D experiences and AI products — from concept to production.",
+    "categories": [
+      "All",
+      "3D",
+      "AI",
+      "IoT",
+      "Web"
+    ],
+    "items": [
+      {
+        "visible": true,
+        "id": "pf-001",
+        "title": "SmartFactory — Digital Twin Ops",
+        "category": "3D",
+        "client": "Industrial Client",
+        "year": "2024",
+        "cover": "images/1788224071183-ri4e.jpg",
+        "gallery": [
+          "images/Oficina0013.jpg",
+          "images/Oficina0010.jpg"
+        ],
+        "desc": "Digital twin for factory floor with real-time WebSocket telemetry, LOD and 60 FPS Three.js rendering. React + FastAPI + MQTT.",
+        "tools": [
+          "React",
+          "Three.js",
+          "FastAPI",
+          "WebSockets"
+        ],
+        "link": "https://github.com/MikeHell84/smartfactory-3d",
+        "linkLabel": "View Case",
+        "featured": true,
+        "color": "#f0f0f5"
+      },
+      {
+        "visible": true,
+        "id": "pf-002",
+        "title": "RAG Knowledge Platform",
+        "category": "AI",
+        "client": "Enterprise",
+        "year": "2024",
+        "cover": "images/documentacion-parallax.jpg",
+        "gallery": [
+          "images/documentacion-parallax.jpg",
+          "images/documentacion-recursos-parallax.jpg"
+        ],
+        "desc": "Corporate RAG with semantic chunking, hybrid search (pgvector + lexical) and LLM re-ranking to eliminate hallucinations.",
+        "tools": [
+          "Django",
+          "LangChain",
+          "pgvector",
+          "Celery"
+        ],
+        "link": "https://github.com/MikeHell84/Rag_X",
+        "linkLabel": "View Code",
+        "featured": true,
+        "color": "#f0f0f5"
+      },
+      {
+        "visible": true,
+        "id": "pf-003",
+        "title": "IoT Telemetry Fleet — Resilient Ingest",
+        "category": "IoT",
+        "client": "Logistics",
+        "year": "2023",
+        "cover": "images/proyectos-parallax.jpg",
+        "gallery": [
+          "images/proyectos-parallax.jpg"
+        ],
+        "desc": "Buffered ingestion pipeline with local persistence, MQTT and TimescaleDB. 99% uptime under concurrent load.",
+        "tools": [
+          "Python",
+          "MQTT",
+          "PostgreSQL",
+          "Docker"
+        ],
+        "link": "https://github.com/MikeHell84/Ingest_Pipeline",
+        "linkLabel": "View Code",
+        "featured": true,
+        "color": "#f0f0f5"
+      },
+      {
+        "visible": true,
+        "id": "pf-004",
+        "title": "Web 3D Configurator",
+        "category": "Web",
+        "client": "Xlerion Studio",
+        "year": "2023",
+        "cover": "images/servicios-productos-parallax.jpg",
+        "gallery": [
+          "images/servicios-productos-parallax.jpg"
+        ],
+        "desc": "Interactive product configurator with PBR materials and real-time 3D in the browser. Asset pipeline Blender → Three.js.",
+        "tools": [
+          "Three.js",
+          "Blender",
+          "React"
+        ],
+        "link": "https://github.com/MikeHell84/Products_ThreeJS_Page",
+        "linkLabel": "View Live",
+        "featured": false,
+        "color": "#f0f0f5"
+      },
+      {
+        "visible": true,
+        "id": "pf-005",
+        "title": "GobIA — Public Procurement Auditor",
+        "category": "AI",
+        "client": "MinTIC Hackathon",
+        "year": "2026",
+        "cover": "images/inversionistas-alianzas-parallax.jpg",
+        "gallery": [
+          "images/inversionistas-alianzas-parallax.jpg",
+          "images/noticias-eventos-parallax.jpg"
+        ],
+        "desc": "SECOP II auditor with risk scoring, GPT analysis and HTML/email reports for public contracts.",
+        "tools": [
+          "Python",
+          "OpenAI",
+          "SECOP II"
+        ],
+        "link": "https://github.com/MikeHell84/GobIA",
+        "linkLabel": "View Case",
+        "featured": true,
+        "color": "#f0f0f5"
+      },
+      {
+        "visible": true,
+        "id": "pf-006",
+        "title": "KPI Command Center",
+        "category": "Web",
+        "client": "FOVIS",
+        "year": "2024",
+        "cover": "images/cronograma-progreso-parallax.jpg",
+        "gallery": [
+          "images/cronograma-progreso-parallax.jpg",
+          "images/fundador-parallax.jpg"
+        ],
+        "desc": "Real-time KPI dashboards for 1,200+ housing units. Reduced decision time by 60% with reusable component library.",
+        "tools": [
+          "React",
+          "Django",
+          "PostgreSQL"
+        ],
+        "link": "#projects",
+        "linkLabel": "View Project",
+        "featured": false,
+        "color": "#f0f0f5"
+      }
+    ]
   }
 }
