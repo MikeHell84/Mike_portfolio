@@ -1,12 +1,22 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Miguel E. Rodriguez | Senior Creative Developer & 3D Tech Lead</title>
-<meta name="description" content="Senior Creative Developer & Full-Stack Engineer especializado en Gemelos Digitales, IoT e IA/RAG. +7 años transformando datos complejos en experiencias interactivas.">
-<meta name="keywords" content="desarrollo, full-stack, 3D, IoT, IA, RAG, portfolio">
+<title>Miguel E. Rodriguez | Senior Full-Stack Engineer · Real-Time 3D & AI Data Platforms — React · Django · Three.js · LangChain</title>
+<meta name="description" content="Senior Full-Stack Engineer (7+ y) — Real-Time 3D & AI Data Platforms. React / Next.js · Django / DRF · Three.js / WebGL · LangChain / pgvector · FastAPI · WebSockets / MQTT. Digital Twins, RAG & IoT telemetry at scale.">
+<meta name="keywords" content="Senior Full-Stack Engineer, React, Next.js, Django, DRF, Three.js, WebGL, LangChain, pgvector, FastAPI, WebSockets, MQTT, Digital Twin, RAG, AI Data Platform, IoT, TypeScript, Python">
 <meta name="author" content="Miguel E. Rodriguez">
+<link rel="canonical" href="https://mikehell84.github.io/Mike_portfolio/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mikehell84.github.io/Mike_portfolio/">
+<meta property="og:title" content="Miguel E. Rodriguez — Senior Full-Stack Engineer · Real-Time 3D & AI Data Platforms">
+<meta property="og:description" content="React · Django · Three.js · LangChain. Digital Twins & RAG platforms with real-time telemetry, hybrid search and resilient ingestion.">
+<meta property="og:image" content="https://mikehell84.github.io/Mike_portfolio/images/LogoMike.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Miguel E. Rodriguez — Senior Full-Stack Engineer · Real-Time 3D & AI Data Platforms">
+<meta name="twitter:description" content="React · Django · Three.js · LangChain — Digital Twins, RAG & IoT telemetry">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Miguel E. Rodriguez","jobTitle":"Senior Full-Stack Engineer — Real-Time 3D & AI Data Platforms","url":"https://mikehell84.github.io/Mike_portfolio/","sameAs":["https://github.com/MikeHell84","https://linkedin.com/in/mikerodriguez84"],"knowsAbout":["React","Next.js","Django","Three.js","LangChain","pgvector","FastAPI","WebSockets","Digital Twin","RAG"]}</script>
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700&display=swap');
   
@@ -72,13 +82,22 @@
   }
   
   .logo {
-    font-weight: 800;
-    font-size: 1.1rem;
-    background: var(--gradient-1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    letter-spacing: -0.02em;
+    font-weight: 700;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .logo::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: var(--text-primary);
+    border-radius: 50%;
+    display: inline-block;
   }
   .logo img { width:40px; height:40px; object-fit:contain; border-radius:8px; }
   
@@ -105,20 +124,20 @@
     bottom: -4px;
     left: 0;
     width: 0;
-    height: 2px;
-    background: var(--gradient-1);
+    height: 1px;
+    background: var(--text-primary);
     transition: width 0.3s;
   }
   
   .nav-links a:hover::after { width: 100%; }
   
   .nav-cta {
-    background: var(--gradient-1);
-    color: white !important;
+    background: var(--text-primary);
+    color: var(--bg-primary) !important;
     padding: 0.5rem 1.2rem;
-    border-radius: 6px;
+    border-radius: 100px;
     font-weight: 600;
-    -webkit-text-fill-color: white !important;
+    -webkit-text-fill-color: var(--bg-primary) !important;
   }
   
   .nav-cta::after { display: none !important; }
@@ -148,7 +167,7 @@
     right: -20%;
     width: 800px;
     height: 800px;
-    background: radial-gradient(circle, rgba(79, 140, 255, 0.15) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(240,240,245,0.04) 0%, transparent 70%);
     pointer-events: none;
   }
   
@@ -159,7 +178,7 @@
     left: -10%;
     width: 600px;
     height: 600px;
-    background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(240,240,245,0.03) 0%, transparent 70%);
     pointer-events: none;
   }
   
@@ -198,19 +217,20 @@
   }
   
   .hero h1 {
-    font-size: clamp(2.5rem, 6vw, 5rem);
-    font-weight: 900;
-    line-height: 1.05;
-    letter-spacing: -0.03em;
+    font-size: clamp(2.6rem, 6vw, 4.6rem);
+    font-weight: 700;
+    line-height: 0.95;
+    letter-spacing: -0.05em;
     margin-bottom: 1.5rem;
     max-width: 900px;
   }
   
   .hero h1 .gradient-text {
-    background: var(--gradient-1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    background: none;
+    -webkit-text-fill-color: var(--text-primary);
+    color: var(--text-primary);
+    font-weight: 300;
+    letter-spacing: -0.05em;
   }
   
   .hero-subtitle {
@@ -236,11 +256,9 @@
   
   .stat-number {
     font-size: 2rem;
-    font-weight: 800;
-    background: var(--gradient-1);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.03em;
   }
   
   .stat-label {
@@ -271,14 +289,16 @@
   }
   
   .btn-primary {
-    background: var(--gradient-1);
-    color: white;
-    box-shadow: 0 4px 20px rgba(79, 140, 255, 0.3);
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    box-shadow: none;
+    border: 1px solid var(--text-primary);
   }
   
   .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 30px rgba(79, 140, 255, 0.4);
+    transform: translateY(-1px);
+    background: #ffffff;
+    border-color: #ffffff;
   }
   
   .btn-secondary {
@@ -309,20 +329,29 @@
   .section-label {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    color: var(--accent-blue);
+    gap: 0.6rem;
+    color: var(--text-muted);
     font-family: 'JetBrains Mono', monospace;
-    font-size: 0.9rem;
+    font-size: 0.72rem;
     font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
     margin-bottom: 1rem;
+  }
+  .section-label::before {
+    content: '';
+    width: 16px;
+    height: 1px;
+    background: var(--text-muted);
+    display: inline-block;
   }
   
   .section-title {
     font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 800;
-    letter-spacing: -0.02em;
+    font-weight: 650;
+    letter-spacing: -0.04em;
     margin-bottom: 1rem;
-    line-height: 1.1;
+    line-height: 0.95;
   }
   
   .section-subtitle {
@@ -504,31 +533,35 @@
     top: 0;
     left: 0;
     right: 0;
-    height: 3px;
-    background: var(--gradient-1);
+    height: 1px;
+    background: var(--text-primary);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.4s;
+    opacity: 0.8;
   }
   
   .project-card:hover {
     border-color: var(--border-hover);
-    transform: translateY(-4px);
+    transform: translateY(-2px);
   }
   
   .project-card:hover::before {
     transform: scaleX(1);
   }
   
-  .project-card:nth-child(2)::before { background: var(--gradient-2); }
-  .project-card:nth-child(3)::before { background: var(--gradient-3); }
+  .project-card:nth-child(2)::before { background: var(--text-primary); }
+  .project-card:nth-child(3)::before { background: var(--text-primary); }
+  .project-card:nth-child(4)::before { background: var(--text-primary); }
   
   .project-number {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 0.85rem;
-    color: var(--accent-blue);
+    font-size: 0.72rem;
+    color: var(--text-muted);
     margin-bottom: 1rem;
     font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
   
   .project-title {
@@ -616,7 +649,7 @@
     right: 0;
     width: 100px;
     height: 100px;
-    background: radial-gradient(circle, rgba(79, 140, 255, 0.1) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(240,240,245,0.04) 0%, transparent 70%);
     pointer-events: none;
   }
   
@@ -671,7 +704,7 @@
   }
   
   .contact-section {
-    background: linear-gradient(135deg, rgba(79, 140, 255, 0.05) 0%, rgba(168, 85, 247, 0.05) 100%);
+    background: var(--bg-secondary);
     border-top: 1px solid var(--border);
     border-bottom: 1px solid var(--border);
   }
@@ -802,23 +835,39 @@
     .services-grid {
       grid-template-columns: 1fr;
     }
+    .hero { grid-template-columns: 1fr !important; }
+    #hero3d { height: 300px; order: -1; }
+  }
+
+  /* Imágenes subidas desde el CMS */
+  .service-img, .project-img, .exp-img {
+    display: block;
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 14px;
+    background: var(--bg-tertiary);
+  }
+  .exp-img {
+    height: 200px;
+    margin-bottom: 16px;
   }
 </style>
 </head>
 <body>
 <nav>
   <div class="nav-container">
-    <div class="logo">M.R.</div>
+    <div class="logo">M.R. — Full-Stack 3D+AI</div>
     <ul class="nav-links" id="navLinks">
-      <li><a href="#about">Perfil</a></li>
-      <li><a href="#about">Habilidades</a></li>
-      <li><a href="#services">Servicios</a></li>
-      <li><a href="#experience">Experiencia</a></li>
-      <li><a href="#projects">Proyectos</a></li>
-      <li><a href="#contact" class="nav-cta">Contacto</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
     </ul>
     <button class="mobile-toggle" onclick="toggleMenu()">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
         <line x1="3" y1="6" x2="21" y2="6"/>
         <line x1="3" y1="12" x2="21" y2="12"/>
         <line x1="3" y1="18" x2="21" y2="18"/>
@@ -827,53 +876,66 @@
   </div>
 </nav>
 
-<section class="hero">
+<section class="hero" style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:2rem;align-items:center">
   <div class="hero-container">
     <div class="hero-badge">
       <span class="dot"></span>
-      <span>Disponible para proyectos remotos</span>
+      <span>Available for remote — GMT-5 · EU/US overlap</span>
     </div>
     <h1>
-      Senior Creative Developer<br>
-      <span class="gradient-text">& 3D Tech Lead</span>
+      Senior Full-Stack Engineer<br>
+      <span class="gradient-text">Real-Time 3D & AI Data Platforms</span>
     </h1>
     <p class="hero-subtitle">
-      Ingeniero de Software con +7 años de experiencia unificando desarrollo Full-Stack (React, Python, Django) con visualización de datos 3D e Inteligencia Artificial. Especialista en Gemelos Digitales, IoT y sistemas RAG.
+      React · Next.js · Django · Three.js · LangChain · pgvector · FastAPI. I ship <strong>Digital Twins</strong>, <strong>RAG platforms</strong> and <strong>IoT telemetry</strong> that turn massive tabular/sensor data into interactive 3D experiences — with resilient ingestion, hybrid search and stable FPS.
     </p>
+    <div class="mono" style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.2rem">
+      <span class="skill-tag">React 18 · Next.js</span><span class="skill-tag">Django · DRF</span><span class="skill-tag">Three.js · WebGL</span><span class="skill-tag">LangChain · pgvector</span><span class="skill-tag">FastAPI · WebSockets/MQTT</span><span class="skill-tag">Docker · PostgreSQL</span>
+    </div>
     <div class="hero-stats">
       <div class="stat">
         <div class="stat-number">7+</div>
-        <div class="stat-label">Años de experiencia</div>
+        <div class="stat-label">Years experience</div>
       </div>
       <div class="stat">
         <div class="stat-number">99%</div>
-        <div class="stat-label">Uptime en IoT</div>
+        <div class="stat-label">Uptime (buffered ingestion)</div>
       </div>
       <div class="stat">
         <div class="stat-number">60%</div>
-        <div class="stat-label">Reducción en análisis</div>
+        <div class="stat-label">Faster decision time</div>
       </div>
       <div class="stat">
-        <div class="stat-number">1,200+</div>
-        <div class="stat-label">Unidades gestionadas</div>
+        <div class="stat-number">4</div>
+        <div class="stat-label">Prod. platforms featured</div>
       </div>
     </div>
     <div class="hero-actions">
       <a href="#projects" class="btn btn-primary">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
           <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
           <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
         </svg>
-        Ver Proyectos
+        View Projects
+      </a>
+      <a href="https://github.com/MikeHell84" target="_blank" class="btn btn-secondary">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        GitHub
       </a>
       <a href="#contact" class="btn btn-secondary">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
           <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
           <polyline points="22,6 12,13 2,6"/>
         </svg>
-        Contactar
+        Contact
       </a>
     </div>
+  </div>
+  <div id="hero3d" style="position:relative;height:420px;border:1px solid var(--border);border-radius:16px;overflow:hidden;background:radial-gradient(600px 300px at 70% 20%, rgba(79,140,255,0.18), transparent 60%), var(--bg-card)">
+    <canvas id="heroCanvas" style="width:100%;height:100%;display:block"></canvas>
+    <div class="mono" style="position:absolute;left:12px;bottom:10px;font-size:0.75rem;color:var(--text-muted);background:rgba(10,10,15,0.6);padding:6px 8px;border-radius:8px;border:1px solid var(--border)">Three.js · WebGL · 60 FPS · drag to orbit</div>
+    <div class="mono" style="position:absolute;right:12px;top:10px;font-size:0.7rem;color:var(--text-secondary);background:rgba(10,10,15,0.65);padding:5px 8px;border-radius:999px;border:1px solid var(--border)">Digital Twin — live scene</div>
+  </div>
   </div>
 </section>
 
@@ -881,29 +943,29 @@
   <div class="container">
     <div class="section-header reveal">
       <div class="section-label">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
           <circle cx="12" cy="12" r="10"/>
           <path d="M12 6v6l4 2"/>
         </svg>
-        SOBRE MÍ
+        ABOUT ME
       </div>
-      <h2 class="section-title">El puente entre diseño visual<br>e ingeniería robusta</h2>
-      <p class="section-subtitle">Mi valor diferencial radica en cerrar la brecha entre el diseño 3D de alto impacto y el desarrollo de software escalable.</p>
+      <h2 class="section-title">Bridging visual design<br>and robust engineering</h2>
+      <p class="section-subtitle">I close the gap between high-impact 3D and scalable software — from asset pipeline to resilient APIs.</p>
     </div>
     
     <div class="about-grid">
       <div class="about-text reveal">
         <p>
-          Mi carrera comenzó en el mundo del <strong>diseño 3D y el arte digital</strong>, pero rápidamente me di cuenta de que quería construir las herramientas que usaban los creativos, no solo usarlas. Esa curiosidad me llevó a dominar el <strong>desarrollo Full-Stack</strong>.
+          Started in <strong>3D & digital art</strong>, I pivoted to build the tools creatives use. That path led me to master <strong>Full-Stack Engineering</strong> for data-intensive products.
         </p>
         <p>
-          Hoy, mi valor diferencial radica en ser <strong>bilingüe en dos mundos</strong>: hablo el lenguaje del diseño (UX, jerarquía visual, optimización de assets 3D) y el lenguaje de la ingeniería (arquitecturas escalables, APIs seguras, pipelines de IA/RAG).
+          Today I'm <strong>bilingual in two worlds</strong>: design language (UX, visual hierarchy, 3D asset optimization) and engineering language (scalable architectures, secure APIs, RAG/LLM pipelines).
         </p>
         <p>
-          Me especializo en transformar requisitos de negocio complejos en aplicaciones web de alto rendimiento, siempre con un enfoque en la <strong>mentoría de equipos</strong>, la <strong>calidad del código</strong> y la <strong>reducción de la deuda técnica</strong>.
+          I specialize in turning complex business requirements into <strong>high-performance web platforms</strong> — real-time 3D dashboards, RAG assistants and IoT telemetry — with a focus on <strong>code quality, mentorship and tech debt reduction</strong>.
         </p>
         <p>
-          <strong>Mi superpoder:</strong> No solo puedo programar la interfaz, sino que entiendo el pipeline completo de los assets 3D y la arquitectura de datos, lo que me permite optimizar el rendimiento y la experiencia de usuario de extremo a extremo.
+          <strong>Superpower:</strong> End-to-end ownership from 3D asset pipeline (Blender/Substance) to data architecture (Postgres/pgvector, WebSockets/MQTT) — optimizing performance and UX across the stack.
         </p>
       </div>
       
@@ -965,118 +1027,124 @@
   <div class="container">
     <div class="section-header reveal">
       <div class="section-label">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
           <path d="M12 2L2 7l10 5 10-5-10-5z"/>
           <path d="M2 17l10 5 10-5M2 12l10 5 10-5"/>
         </svg>
-        LO QUE PUEDO HACER
+        WHAT I DO
       </div>
-      <h2 class="section-title">Servicios y capacidades</h2>
-      <p class="section-subtitle">Soluciones técnicas completas que combinan diseño, código e inteligencia artificial.</p>
+      <h2 class="section-title">Services & capabilities</h2>
+      <p class="section-subtitle">End-to-end platforms: 3D, real-time data and AI — from ingestion to interactive visualization.</p>
     </div>
     
     <div class="services-grid">
       <div class="service-card reveal">
-        <div class="service-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#4f8cff" stroke-width="2">
+        <img class="service-img" src="images/Oficina0013.jpg" alt="Service 1" loading="lazy">
+        <div class="service-icon" style="color:#9aa0b5">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9aa0b5" stroke-width="1.6">
             <path d="M2 20h20M5 20V8l5 4V8l5 4V4l5 4v12"/>
           </svg>
         </div>
-        <h3 class="service-title">Gemelos Digitales & IoT</h3>
-        <p class="service-desc">Plataformas de visualización 3D en tiempo real que conectan sensores IoT con interfaces interactivas para monitoreo industrial.</p>
+        <h3 class="service-title">Digital Twins & IoT</h3>
+        <p class="service-desc">Real-time 3D platforms that connect IoT sensors to interactive WebGL dashboards for industrial monitoring.</p>
         <ul class="service-features">
-          <li>Dashboards 3D con datos en tiempo real</li>
-          <li>Integración WebSockets/MQTT</li>
-          <li>Visualización de plantas industriales</li>
-          <li>Sistemas de alertas y predicción</li>
+          <li>3D dashboards with live telemetry</li>
+          <li>WebSockets / MQTT ingestion</li>
+          <li>Factory floor visualization</li>
+          <li>Alerts & predictive signals</li>
         </ul>
       </div>
       
       <div class="service-card reveal">
-        <div class="service-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#a855f7" stroke-width="2">
+        <img class="service-img" src="images/documentacion-parallax.jpg" alt="Service 2" loading="lazy">
+        <div class="service-icon" style="color:#9aa0b5">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9aa0b5" stroke-width="1.6">
             <rect x="4" y="4" width="16" height="16" rx="2"/>
             <path d="M9 9h6v6H9z"/>
             <path d="M9 1v3M15 1v3M9 20v3M15 20v3M20 9h3M20 14h3M1 9h3M1 14h3"/>
           </svg>
         </div>
-        <h3 class="service-title">Sistemas IA/RAG</h3>
-        <p class="service-desc">Asistentes inteligentes que conectan bases de conocimiento corporativas con LLMs mediante Retrieval-Augmented Generation.</p>
+        <h3 class="service-title">AI / RAG Systems</h3>
+        <p class="service-desc">LLM assistants that ground corporate knowledge bases with Retrieval-Augmented Generation.</p>
         <ul class="service-features">
-          <li>Procesamiento de PDFs complejos</li>
-          <li>Búsqueda híbrida vectorial + léxica</li>
-          <li>Re-ranking anti-alucinaciones</li>
-          <li>APIs seguras con control de concurrencia</li>
+          <li>Complex PDF processing & semantic chunking</li>
+          <li>Hybrid vector + lexical search</li>
+          <li>LLM re-ranking anti-hallucination</li>
+          <li>Secure APIs with concurrency control</li>
         </ul>
       </div>
       
       <div class="service-card reveal">
-        <div class="service-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+        <img class="service-img" src="images/proyectos-parallax.jpg" alt="Service 3" loading="lazy">
+        <div class="service-icon" style="color:#9aa0b5">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9aa0b5" stroke-width="1.6">
             <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
             <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
             <line x1="12" y1="22.08" x2="12" y2="12"/>
           </svg>
         </div>
-        <h3 class="service-title">Visualización 3D Web</h3>
-        <p class="service-desc">Experiencias interactivas en el navegador que transforman datos complejos en entornos 3D navegables y gamificados.</p>
+        <h3 class="service-title">Web 3D Visualization</h3>
+        <p class="service-desc">Interactive browser experiences that turn complex data into navigable, gamified 3D environments.</p>
         <ul class="service-features">
-          <li>Three.js / Unity WebGL</li>
-          <li>Optimización de assets para web</li>
-          <li>Estable FPS en navegadores</li>
-          <li>Interfaces responsivas y accesibles</li>
+          <li>Three.js / WebGL</li>
+          <li>Asset optimization for web</li>
+          <li>Stable 60 FPS</li>
+          <li>Responsive & accessible UI</li>
         </ul>
       </div>
       
       <div class="service-card reveal">
-        <div class="service-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2">
+        <img class="service-img" src="images/servicios-productos-parallax.jpg" alt="Service 4" loading="lazy">
+        <div class="service-icon" style="color:#9aa0b5">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9aa0b5" stroke-width="1.6">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
           </svg>
         </div>
-        <h3 class="service-title">Arquitectura Full-Stack</h3>
-        <p class="service-desc">Diseño y desarrollo de plataformas completas desde cero, con arquitecturas escalables y tolerantes a fallos.</p>
+        <h3 class="service-title">Full-Stack Architecture</h3>
+        <p class="service-desc">Complete platforms from scratch with scalable, fault-tolerant architectures.</p>
         <ul class="service-features">
-          <li>React / Next.js / Django / Node.js</li>
-          <li>PostgreSQL / MongoDB / Redis</li>
+          <li>React / Next.js / Django / FastAPI</li>
+          <li>PostgreSQL / pgvector / Redis</li>
           <li>Docker / Linux / Nginx</li>
-          <li>99% uptime garantizado</li>
+          <li>99% uptime by design (buffering)</li>
         </ul>
       </div>
       
       <div class="service-card reveal">
-        <div class="service-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#f43f5e" stroke-width="2">
+        <img class="service-img" src="images/cronograma-progreso-parallax.jpg" alt="Service 5" loading="lazy">
+        <div class="service-icon" style="color:#9aa0b5">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9aa0b5" stroke-width="1.6">
             <circle cx="12" cy="12" r="10"/>
             <path d="M12 6v6l4 2"/>
           </svg>
         </div>
-        <h3 class="service-title">Dashboards de KPIs</h3>
-        <p class="service-desc">Paneles de control en tiempo real que transforman datos complejos en insights accionables para la toma de decisiones.</p>
+        <h3 class="service-title">KPI Dashboards</h3>
+        <p class="service-desc">Real-time control panels that turn complex data into actionable insights.</p>
         <ul class="service-features">
-          <li>Visualización de datos complejos</li>
-          <li>Actualización en tiempo real</li>
-          <li>UX centrada en usabilidad</li>
-          <li>Reducción de 60% en tiempo de análisis</li>
+          <li>Complex data visualization</li>
+          <li>Real-time updates</li>
+          <li>UX focused on usability</li>
+          <li>60% reduction in analysis time</li>
         </ul>
       </div>
       
       <div class="service-card reveal">
-        <div class="service-icon">
-          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="2">
+        <img class="service-img" src="images/fundador-parallax.jpg" alt="Service 6" loading="lazy">
+        <div class="service-icon" style="color:#9aa0b5">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#9aa0b5" stroke-width="1.6">
             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
             <circle cx="9" cy="7" r="4"/>
             <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
             <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
           </svg>
         </div>
-        <h3 class="service-title">Liderazgo Técnico</h3>
-        <p class="service-desc">Mentoría de equipos, estandarización de pipelines y reducción de deuda técnica en proyectos de alto impacto.</p>
+        <h3 class="service-title">Tech Leadership</h3>
+        <p class="service-desc">Team mentorship, pipeline standardization and tech debt reduction on high-impact projects.</p>
         <ul class="service-features">
-          <li>Mentoría de desarrolladores junior</li>
-          <li>Estandarización de pipelines</li>
-          <li>Code review y mejores prácticas</li>
-          <li>Optimización de rendimiento</li>
+          <li>Junior mentorship</li>
+          <li>Pipeline standardization</li>
+          <li>Code review & best practices</li>
+          <li>Performance optimization</li>
         </ul>
       </div>
     </div>
@@ -1087,18 +1155,19 @@
   <div class="container">
     <div class="section-header reveal">
       <div class="section-label">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
           <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
           <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
         </svg>
-        EXPERIENCIA
+        EXPERIENCE
       </div>
-      <h2 class="section-title">Trayectoria profesional</h2>
-      <p class="section-subtitle">+7 años construyendo plataformas que transforman datos complejos en experiencias interactivas.</p>
+      <h2 class="section-title">Professional track</h2>
+      <p class="section-subtitle">7+ years shipping platforms that turn complex data into interactive experiences.</p>
     </div>
     
     <div class="experience-list">
       <div class="experience-item reveal">
+        <img class="exp-img" src="images/Oficina0013.jpg" alt="Experience 1" loading="lazy">
         <div class="exp-header">
           <div>
             <div class="exp-title">Desarrollador Full-Stack Senior</div>
@@ -1121,6 +1190,7 @@
       </div>
       
       <div class="experience-item reveal">
+        <img class="exp-img" src="images/servicios-productos-parallax.jpg" alt="Experience 2" loading="lazy">
         <div class="exp-header">
           <div>
             <div class="exp-title">Technical Lead 3D & Creative Developer</div>
@@ -1143,6 +1213,7 @@
       </div>
       
       <div class="experience-item reveal">
+        <img class="exp-img" src="images/filosofia-parallax.jpg" alt="Experience 3" loading="lazy">
         <div class="exp-header">
           <div>
             <div class="exp-title">Director de Diseño 3D & Data Visualization</div>
@@ -1163,6 +1234,7 @@
       </div>
       
       <div class="experience-item reveal">
+        <img class="exp-img" src="images/convocatorias-alianzas-parallax.jpg" alt="Experience 4" loading="lazy">
         <div class="exp-header">
           <div>
             <div class="exp-title">Desarrollador Frontend & UI Designer</div>
@@ -1188,23 +1260,52 @@
   <div class="container">
     <div class="section-header reveal">
       <div class="section-label">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
           <polyline points="16 18 22 12 16 6"/>
           <polyline points="8 6 2 12 8 18"/>
         </svg>
-        PROYECTOS DESTACADOS
+        FEATURED PROJECTS
       </div>
-      <h2 class="section-title">Trabajo en producción</h2>
-      <p class="section-subtitle">Tres proyectos que demuestran mi capacidad para resolver problemas complejos de negocio con tecnología.</p>
+      <h2 class="section-title">Production work</h2>
+      <p class="section-subtitle">Four platforms that prove the headline: Real-Time 3D + AI Data — React · Django · Three.js · LangChain.</p>
     </div>
     
     <div class="projects-grid">
       <div class="project-card reveal">
-        <div class="project-number">01 / IA & RAG</div>
-        <h3 class="project-title">Enterprise RAG Assistant</h3>
-        <p class="project-desc">Sistema backend modular que conecta bases de conocimiento corporativas con LLMs mediante Generación Aumentada por Recuperación (RAG).</p>
+        <img class="project-img" src="images/Oficina0010.jpg" alt="Project 1" loading="lazy">
+        <div class="project-number">01 / REAL-TIME 3D · DIGITAL TWIN</div>
+        <h3 class="project-title">SmartFactory 3D — Industrial Digital Twin</h3>
+        <p class="project-desc"><strong>Problem:</strong> Factory floor opacity. <strong>Solution:</strong> React 18 + Three.js r150 + FastAPI + WebSockets live telemetry with buffered ingestion and LOD for stable 60 FPS.</p>
         <div class="project-metric">
-          <strong>Logro:</strong> Procesamiento asíncrono de PDFs complejos, chunking semántico y búsqueda híbrida con re-ranking para evitar alucinaciones.
+          <strong>Impact:</strong> Dockerized full-stack (JS 83k + Python 34k) · Real factory visualization with interactive orbit, instancing & telemetry overlays. <strong>Updated 2026-08-31</strong>.
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">React 18</span>
+          <span class="tech-tag">Three.js r150</span>
+          <span class="tech-tag">FastAPI</span>
+          <span class="tech-tag">WebSockets/MQTT</span>
+          <span class="tech-tag">Python 3.11</span>
+          <span class="tech-tag">Docker Compose</span>
+          <span class="tech-tag">PostgreSQL</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/MikeHell84/smartfactory-3d" target="_blank" class="project-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+            </svg>
+            View Code
+          </a>
+          <a href="https://github.com/MikeHell84/smartfactory-3d#readme" target="_blank" class="project-link">Docs →</a>
+        </div>
+      </div>
+      
+      <div class="project-card reveal">
+        <img class="project-img" src="images/documentacion-recursos-parallax.jpg" alt="Project 2" loading="lazy">
+        <div class="project-number">02 / AI & RAG · DATA PLATFORM</div>
+        <h3 class="project-title">Rag_X — Enterprise RAG Assistant</h3>
+        <p class="project-desc"><strong>Problem:</strong> Corporate knowledge trapped in messy PDFs. <strong>Solution:</strong> Django/DRF + LangChain + pgvector + Celery/Redis with semantic chunking, hybrid search & LLM re-ranking.</p>
+        <div class="project-metric">
+          <strong>Impact:</strong> Async PDF pipeline, anti-hallucination re-ranking, secure concurrent API. <strong>Python 190k + TS 57k · Docker</strong>.
         </div>
         <div class="project-tech">
           <span class="tech-tag">Python 3.10+</span>
@@ -1220,59 +1321,63 @@
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
             </svg>
-            Ver Código
+            View Code
           </a>
+          <a href="https://github.com/MikeHell84/Rag_X#readme" target="_blank" class="project-link">Architecture →</a>
         </div>
       </div>
       
       <div class="project-card reveal">
-        <div class="project-number">02 / IoT & BACKEND</div>
-        <h3 class="project-title">IoT Telemetry Resilient Backend</h3>
-        <p class="project-desc">Plataforma de alto rendimiento para la ingesta y procesamiento en tiempo real de flujos masivos de datos de sensores IoT.</p>
+        <img class="project-img" src="images/soluciones-parallax.jpg" alt="Project 3" loading="lazy">
+        <div class="project-number">03 / DATA PLATFORM · ETL + IA</div>
+        <h3 class="project-title">Ingest Pipeline — Enterprise ETL + AI Enrichment</h3>
+        <p class="project-desc"><strong>Problem:</strong> Multiformat raw docs (PDF/CSV/JSON/TXT) unfit for AI. <strong>Solution:</strong> Resilient pipeline (buffering, retries) that cleans, traces & semantically enriches data for RAG.</p>
         <div class="project-metric">
-          <strong>Logro:</strong> Diseño tolerante a fallos de red con persistencia local (buffering), garantizando un <strong>99% de uptime</strong> bajo tráfico concurrente simulado.
+          <strong>Impact:</strong> Production-grade data engineering pattern · <strong>99% uptime with local buffering</strong> under concurrent load (Locust-tested).
         </div>
         <div class="project-tech">
           <span class="tech-tag">Python Asyncio</span>
-          <span class="tech-tag">Node.js</span>
-          <span class="tech-tag">WebSockets/MQTT</span>
+          <span class="tech-tag">MQTT / WebSockets</span>
           <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">Docker</span>
           <span class="tech-tag">Locust</span>
           <span class="tech-tag">Linux</span>
-          <span class="tech-tag">Docker</span>
         </div>
         <div class="project-links">
           <a href="https://github.com/MikeHell84/Ingest_Pipeline" target="_blank" class="project-link">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
             </svg>
-            Ver Código
+            View Code
           </a>
+          <a href="https://github.com/MikeHell84/Ingest_Pipeline/blob/main/docs/architecture-diagram.svg" target="_blank" class="project-link">Diagram →</a>
         </div>
       </div>
       
       <div class="project-card reveal">
-        <div class="project-number">03 / 3D & DATA VIZ</div>
-        <h3 class="project-title">Interactive 3D Analytics Dashboard</h3>
-        <p class="project-desc">Aplicación Full-Stack que transforma bases de datos tabulares masivas en entornos visuales gamificados en tiempo real.</p>
+        <img class="project-img" src="images/inversionistas-alianzas-parallax.jpg" alt="Project 4" loading="lazy">
+        <div class="project-number">04 / AI · CIVIC TECH</div>
+        <h3 class="project-title">GobIA Auditor — Public Contracts Risk Agent</h3>
+        <p class="project-desc"><strong>Problem:</strong> Opaque public procurement (SECOP II). <strong>Solution:</strong> Python agent that normalizes contracts, scores risk locally + optional GPT, and generates HTML + email reports.</p>
         <div class="project-metric">
-          <strong>Logro:</strong> Reducción drástica de tiempos de análisis para usuarios no técnicos, manteniendo un <strong>framerate estable (stable FPS)</strong> en el navegador.
+          <strong>Impact:</strong> MinTIC Hackathon 2026 · Automated audit signals for Colombian SECOP II. <strong>HTML 148k + Python 84k</strong>.
         </div>
         <div class="project-tech">
-          <span class="tech-tag">React.js</span>
-          <span class="tech-tag">Tailwind CSS</span>
-          <span class="tech-tag">Three.js</span>
-          <span class="tech-tag">Unity WebGL</span>
-          <span class="tech-tag">WebSockets</span>
-          <span class="tech-tag">Django REST</span>
+          <span class="tech-tag">Python 3.10+</span>
+          <span class="tech-tag">OpenAI / GPT</span>
+          <span class="tech-tag">SECOP II API</span>
+          <span class="tech-tag">Risk Scorer</span>
+          <span class="tech-tag">HTML Reports</span>
+          <span class="tech-tag">Docker</span>
         </div>
         <div class="project-links">
-          <a href="https://github.com/MikeHell84/xlerion-leaderboard-api" target="_blank" class="project-link">
+          <a href="https://github.com/MikeHell84/GobIA" target="_blank" class="project-link">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
               <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
             </svg>
-            Ver Código
+            View Code
           </a>
+          <a href="https://github.com/MikeHell84/GobIA#readme" target="_blank" class="project-link">Case Study →</a>
         </div>
       </div>
     </div>
@@ -1284,36 +1389,37 @@
     <div class="contact-grid">
       <div class="contact-info reveal">
         <div class="section-label">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
             <polyline points="22,6 12,13 2,6"/>
           </svg>
-          CONTACTO
+          CONTACT
         </div>
-        <h2>Hagamos realidad<br>tu próxima visión.</h2>
-        <p>Actualmente disponible para roles remotos como Senior Creative Developer, Tech Lead o Ingeniero Full-Stack especializado en IA y Visualización de Datos.</p>
+        <h2>Let's build<br>your next vision.</h2>
+        <p>Available for remote Senior Full-Stack / Tech Lead roles — Real-Time 3D & AI Data Platforms. GMT-5 with EU/US overlap. Let's talk architecture, not just features.</p>
         <div class="hero-actions">
-          <a href="mailto:merm.198427@gmail.com" class="btn btn-primary">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <a href="mailto:miguelxlerion@gmail.com" class="btn btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
               <polyline points="22,6 12,13 2,6"/>
             </svg>
-            Envíame un correo
+            Email me
           </a>
+          <a href="https://linkedin.com/in/mikerodriguez84" target="_blank" class="btn btn-secondary">LinkedIn</a>
         </div>
       </div>
       
       <div class="contact-links reveal">
-        <a href="mailto:merm.198427@gmail.com" class="contact-link">
+        <a href="mailto:miguelxlerion@gmail.com" class="contact-link">
           <div class="contact-link-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4f8cff" stroke-width="2">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9aa0b5" stroke-width="1.6">
               <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
               <polyline points="22,6 12,13 2,6"/>
             </svg>
           </div>
           <div class="contact-link-text">
             <div class="contact-link-label">Email</div>
-            <div class="contact-link-value">merm.198427@gmail.com</div>
+            <div class="contact-link-value">miguelxlerion@gmail.com</div>
           </div>
         </a>
         
@@ -1343,7 +1449,7 @@
         
         <a href="https://mikehell84.github.io/Mike_portfolio/" target="_blank" class="contact-link">
           <div class="contact-link-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9aa0b5" stroke-width="1.6">
               <circle cx="12" cy="12" r="10"/>
               <line x1="2" y1="12" x2="22" y2="12"/>
               <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
@@ -1357,7 +1463,7 @@
         
         <a href="tel:+573132263265" class="contact-link">
           <div class="contact-link-icon">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#9aa0b5" stroke-width="1.6">
               <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
             </svg>
           </div>
@@ -1374,10 +1480,10 @@
 <footer>
   <div class="mono">© 2026 Miguel E. Rodriguez Martinez · Built with precision</div>
 </footer>
-
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Featured Projects — Senior Full-Stack 3D & AI","itemListElement":[{"@type":"ListItem","position":1,"url":"https://github.com/MikeHell84/smartfactory-3d","name":"SmartFactory 3D — Industrial Digital Twin — React + Three.js + FastAPI"},{"@type":"ListItem","position":2,"url":"https://github.com/MikeHell84/Rag_X","name":"Rag_X — Enterprise RAG Assistant — Django + LangChain + pgvector"},{"@type":"ListItem","position":3,"url":"https://github.com/MikeHell84/Ingest_Pipeline","name":"Ingest Pipeline — Enterprise ETL + AI Enrichment"},{"@type":"ListItem","position":4,"url":"https://github.com/MikeHell84/GobIA","name":"GobIA Auditor — Public Contracts Risk Agent"}]}</script>
 <script>
-function esc(s){return String(s||'').replace(/[&<>\"/']/g,c=>({'&':'&','<':'<','>':'>','\"':'\"','\'':'\''}[c]))}
-function escAttr(s){return esc(s).replace(/"/g,'"')}
+function esc(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;',"'":'&#39;'}[c]))}
+function escAttr(s){return esc(s).replace(/"/g,'&quot;')}
 function toggleMenu() {
     document.getElementById('navLinks').classList.toggle('mobile-open');
   }
@@ -1397,6 +1503,89 @@ function toggleMenu() {
       document.getElementById('navLinks').classList.remove('mobile-open');
     });
   });
+</script>
+<script type="importmap">{"imports":{"three":"./vendor_three.module.js"}}</script>
+<script type="module">
+// Hero 3D — lightweight Digital Twin scene (no extra deps)
+import * as THREE from 'three';
+const canvas = document.getElementById('heroCanvas');
+if(canvas){
+  const container = document.getElementById('hero3d');
+  const renderer = new THREE.WebGLRenderer({canvas, antialias:true, alpha:true});
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+  const scene = new THREE.Scene();
+  scene.fog = new THREE.Fog(0x0a0a0f, 12, 30);
+  const camera = new THREE.PerspectiveCamera(42, 1, 0.1, 100);
+  camera.position.set(7,5,9);
+  // Lights
+  scene.add(new THREE.HemisphereLight(0xffffff, 0x0a0a0f, 1.0));
+  const dir = new THREE.DirectionalLight(0x8ab4ff, 1.2); dir.position.set(6,10,4); scene.add(dir);
+  const point = new THREE.PointLight(0xa855f7, 1.0, 20); point.position.set(-4,4,-2); scene.add(point);
+  // Grid floor
+  const grid = new THREE.GridHelper(20, 20, 0x2a2a3a, 0x1e1e2e); grid.position.y = -1.2; scene.add(grid);
+  const floor = new THREE.Mesh(new THREE.PlaneGeometry(20,20), new THREE.MeshStandardMaterial({color:0x12121a, roughness:0.9})); floor.rotation.x = -Math.PI/2; floor.position.y = -1.21; scene.add(floor);
+  // Machines — boxes with emissive status
+  const group = new THREE.Group(); scene.add(group);
+  const boxGeo = new THREE.BoxGeometry(1.2,0.8,1.2);
+  const edges = new THREE.EdgesGeometry(boxGeo);
+  for(let i=0;i<6;i++){
+    const x = (i%3)*2.6 - 2.6, z = Math.floor(i/3)*2.6 - 1.3;
+    const mat = new THREE.MeshStandardMaterial({color: i%2?0x4f8cff:0x10b981, emissive: i%3===0?0xa855f7:0x000000, emissiveIntensity:0.25, roughness:0.4, metalness:0.2});
+    const m = new THREE.Mesh(boxGeo, mat); m.position.set(x, -0.4 + Math.sin(i)*0.15, z); m.userData = {baseY:m.position.y, phase:i*1.1, mat};
+    group.add(m);
+    const line = new THREE.LineSegments(edges, new THREE.LineBasicMaterial({color:0x3a3a4f})); m.add(line);
+    // status light
+    const light = new THREE.Mesh(new THREE.SphereGeometry(0.12,12,12), new THREE.MeshStandardMaterial({color: i===2?0xf43f5e:0x10b981, emissive:(i===2?0xf43f5e:0x10b981), emissiveIntensity:0.9}));
+    light.position.set(0,0.6,0); m.add(light);
+  }
+  // telemetry lines (floating)
+  const lineMat = new THREE.LineBasicMaterial({color:0x4f8cff, transparent:true, opacity:0.5});
+  const pts = [new THREE.Vector3(-3,1.2,-2), new THREE.Vector3(-1,1.6,-1), new THREE.Vector3(1,1.3,0), new THREE.Vector3(3,1.7,1)];
+  const tube = new THREE.BufferGeometry().setFromPoints(pts);
+  scene.add(new THREE.Line(tube, lineMat));
+  // particles
+  const pGeo = new THREE.BufferGeometry();
+  const pCount=80; const pos=new Float32Array(pCount*3);
+  for(let i=0;i<pCount;i++){ pos[i*3]=(Math.random()-0.5)*12; pos[i*3+1]=Math.random()*3; pos[i*3+2]=(Math.random()-0.5)*12; }
+  pGeo.setAttribute('position', new THREE.BufferAttribute(pos,3));
+  const pMat = new THREE.PointsMaterial({size:0.05, color:0x6aa8ff, transparent:true, opacity:0.6});
+  scene.add(new THREE.Points(pGeo, pMat));
+  // Controls — simple drag orbit
+  let isDown=false, startX=0, rotY=0.45, rotX=0.15, targetRotY=rotY, targetRotX=rotX;
+  const onDown=e=>{isDown=true; startX=(e.touches?e.touches[0].clientX:e.clientX);};
+  const onUp=()=>isDown=false;
+  const onMove=e=>{ if(!isDown) return; const x=(e.touches?e.touches[0].clientX:e.clientX); const dx=(x-startX)*0.008; targetRotY = rotY + dx; };
+  canvas.addEventListener('mousedown', onDown); window.addEventListener('mouseup', onUp); window.addEventListener('mousemove', onMove);
+  canvas.addEventListener('touchstart', onDown, {passive:true}); window.addEventListener('touchend', onUp); canvas.addEventListener('touchmove', onMove, {passive:true});
+  canvas.addEventListener('wheel', e=>{ camera.position.multiplyScalar(1 + e.deltaY*0.0005); camera.position.clampLength(6,16); }, {passive:true});
+  function resize(){
+    const w = container.clientWidth, h = container.clientHeight;
+    renderer.setSize(w,h,false); camera.aspect=w/h; camera.updateProjectionMatrix();
+  }
+  window.addEventListener('resize', resize); resize();
+  const clock = new THREE.Clock();
+  function animate(){
+    requestAnimationFrame(animate);
+    const t = clock.getElapsedTime();
+    group.rotation.y += (targetRotY - group.rotation.y)*0.08;
+    group.rotation.x += (targetRotX - group.rotation.x)*0.08;
+    if(!isDown){ targetRotY += 0.0015; }
+    group.children.forEach((m,i)=>{
+      if(m.isMesh){
+        m.position.y = m.userData.baseY + Math.sin(t*0.9 + m.userData.phase)*0.08;
+        const pulse = 0.2 + Math.sin(t*1.5 + i)*0.1;
+        m.userData.mat.emissiveIntensity = pulse;
+      }
+    });
+    pGeo.attributes.position.needsUpdate = false;
+    const baseRadius = Math.hypot(camera.position.x, camera.position.z);
+    camera.position.x = Math.cos(targetRotY)*baseRadius;
+    camera.position.z = Math.sin(targetRotY)*baseRadius;
+    camera.lookAt(0,0,0);
+    renderer.render(scene,camera);
+  }
+  animate();
+}
 </script>
 <script>
 // CMS — carga data/portfolio.json y renderiza si existe
@@ -1443,11 +1632,11 @@ function toggleMenu() {
       document.querySelector('.skills-grid').innerHTML=about.skills.map(sk=>`<div class="skill-category"><div class="skill-category-title">${sk.title}</div><div class="skill-tags">${(sk.tags||[]).map(t=>`<span class="skill-tag">${t}</span>`).join('')}</div></div>`).join('');
     }
     // Services
-    if(d.services) document.querySelector('.services-grid').innerHTML=d.services.map(s=>`<div class="service-card reveal"><div class="service-icon"></div><h3 class="service-title">${s.title}</h3><p class="service-desc">${s.desc}</p><ul class="service-features">${(s.features||[]).map(f=>`<li>${f}</li>`).join('')}</ul></div>`).join('');
+    if(d.services) document.querySelector('.services-grid').innerHTML=d.services.map(s=>`<div class="service-card reveal">${s.image?`<img class="service-img" src="${escAttr(s.image)}" alt="${escAttr(s.title)}">`:''}<div class="service-icon" style="color:#9aa0b5"></div><h3 class="service-title">${s.title}</h3><p class="service-desc">${s.desc}</p><ul class="service-features">${(s.features||[]).map(f=>`<li>${f}</li>`).join('')}</ul></div>`).join('');
     // Experience
-    if(d.experience) document.querySelector('.experience-list').innerHTML=d.experience.map(ex=>`<div class="experience-item reveal"><div class="exp-header"><div><div class="exp-title">${ex.title}</div><div class="exp-company">${ex.company}</div></div><div class="exp-date">${ex.date}</div></div><ul class="exp-achievements">${(ex.achievements||[]).map(a=>`<li>${a}</li>`).join('')}</ul><div class="exp-stack">${(ex.stack||[]).map(t=>`<span class="skill-tag">${t}</span>`).join('')}</div></div>`).join('');
+    if(d.experience) document.querySelector('.experience-list').innerHTML=d.experience.map(ex=>`<div class="experience-item reveal">${ex.image?`<img class="exp-img" src="${escAttr(ex.image)}" alt="${escAttr(ex.title)}">`:''}<div class="exp-header"><div><div class="exp-title">${ex.title}</div><div class="exp-company">${ex.company}</div></div><div class="exp-date">${ex.date}</div></div><ul class="exp-achievements">${(ex.achievements||[]).map(a=>`<li>${a}</li>`).join('')}</ul><div class="exp-stack">${(ex.stack||[]).map(t=>`<span class="skill-tag">${t}</span>`).join('')}</div></div>`).join('');
     // Projects
-    if(d.projects) document.querySelector('.projects-grid').innerHTML=d.projects.map(p=>`<div class="project-card reveal"><div class="project-number">${p.number}</div><h3 class="project-title">${p.title}</h3><p class="project-desc">${p.desc}</p><div class="project-metric">${p.metric}</div><div class="project-tech">${(p.tech||[]).map(t=>`<span class="tech-tag">${t}</span>`).join('')}</div><div class="project-links"><a href="${p.link}" target="_blank" class="project-link">🔗 ${p.linkLabel}</a></div></div>`).join('');
+    if(d.projects) document.querySelector('.projects-grid').innerHTML=d.projects.map(p=>`<div class="project-card reveal">${p.image?`<img class="project-img" src="${escAttr(p.image)}" alt="${escAttr(p.title)}">`:''}<div class="project-number">${p.number}</div><h3 class="project-title">${p.title}</h3><p class="project-desc">${p.desc}</p><div class="project-metric">${p.metric}</div><div class="project-tech">${(p.tech||[]).map(t=>`<span class="tech-tag">${t}</span>`).join('')}</div><div class="project-links"><a href="${p.link}" target="_blank" class="project-link">↗ ${p.linkLabel}</a></div></div>`).join('');
     // Contact
     if(contact.title) document.querySelector('.contact-info h2').innerHTML=contact.title;
     if(contact.subtitle) document.querySelector('.contact-info p').textContent=contact.subtitle;
