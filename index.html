@@ -703,6 +703,216 @@
     font-weight: bold;
   }
   
+  /* Portfolio — modern editorial gallery */
+  .portfolio-section { background: var(--bg-primary); border-top: 1px solid var(--border); }
+  .portfolio-filters {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+  }
+  .filter-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    padding: 0.45rem 1.1rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: 'Inter', sans-serif;
+  }
+  .filter-btn:hover { border-color: var(--border-hover); color: var(--text-primary); }
+  .filter-btn.active {
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    border-color: var(--text-primary);
+  }
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 1.5rem;
+  }
+  .portfolio-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+  }
+  .portfolio-card:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-3px);
+  }
+  .portfolio-card-img {
+    height: 220px;
+    overflow: hidden;
+    background: var(--bg-tertiary);
+    position: relative;
+  }
+  .portfolio-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    display: block;
+  }
+  .portfolio-card:hover .portfolio-card-img img { transform: scale(1.04); }
+  .portfolio-card-category {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(10,10,15,0.85);
+    backdrop-filter: blur(8px);
+    color: #f0f0f5;
+    padding: 0.25rem 0.65rem;
+    border-radius: 100px;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: 1px solid rgba(255,255,255,0.08);
+    font-family: 'JetBrains Mono', monospace;
+  }
+  .portfolio-card-featured {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: var(--text-primary);
+    color: var(--bg-primary);
+    padding: 0.25rem 0.6rem;
+    border-radius: 100px;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+  .portfolio-card-body { padding: 1.4rem 1.5rem 1.5rem; flex: 1; display: flex; flex-direction: column; }
+  .portfolio-card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    font-family: 'JetBrains Mono', monospace;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 0.6rem;
+  }
+  .portfolio-card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.6rem;
+    color: var(--text-primary);
+  }
+  .portfolio-card-desc {
+    color: var(--text-secondary);
+    font-size: 0.88rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    flex: 1;
+  }
+  .portfolio-card-tools {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-top: auto;
+  }
+  .portfolio-card-tools span {
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    color: var(--text-secondary);
+    font-family: 'JetBrains Mono', monospace;
+  }
+  /* Modal */
+  .portfolio-modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+    padding: 1.5rem;
+  }
+  .portfolio-modal.active { display: flex; }
+  .portfolio-modal-content {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    max-width: 960px;
+    width: 100%;
+    max-height: 92vh;
+    overflow-y: auto;
+    position: relative;
+  }
+  .portfolio-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .portfolio-modal-close:hover { background: var(--bg-primary); color: var(--text-primary); }
+  .portfolio-modal-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .portfolio-modal-gallery img {
+    width: 100%;
+    height: auto;
+    max-height: 52vh;
+    object-fit: cover;
+    display: block;
+    background: var(--bg-tertiary);
+  }
+  .portfolio-modal-body { padding: 2rem; }
+  .portfolio-modal-meta {
+    display: flex;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+  }
+  .portfolio-modal-title { font-size: 1.8rem; font-weight: 700; letter-spacing: -0.03em; line-height: 1.1; margin-bottom: 1rem; }
+  .portfolio-modal-desc { color: var(--text-secondary); line-height: 1.6; margin-bottom: 1.5rem; }
+  .portfolio-modal-tools { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+  .portfolio-modal-actions { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+  @media (max-width: 768px) {
+    .portfolio-grid { grid-template-columns: 1fr; }
+    .portfolio-modal-content { margin: 0; border-radius: 12px; }
+    .portfolio-modal-body { padding: 1.5rem; }
+  }
+
   .contact-section {
     background: var(--bg-secondary);
     border-top: 1px solid var(--border);
@@ -1384,6 +1594,57 @@
   </div>
 </section>
 
+<section id="portfolio" class="portfolio-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <div class="section-label">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+          <rect x="3" y="3" width="18" height="18" rx="2"/>
+          <path d="M3 9h18M9 21V9"/>
+        </svg>
+        PORTFOLIO
+      </div>
+      <h2 class="section-title">Selected works</h2>
+      <p class="section-subtitle">A curated selection of shipped platforms, 3D experiences and AI products — from concept to production.</p>
+    </div>
+    <div class="portfolio-filters" id="portfolioFilters">
+      <button class="filter-btn active" data-filter="All">All</button>
+      <button class="filter-btn" data-filter="3D">3D</button>
+      <button class="filter-btn" data-filter="AI">AI</button>
+      <button class="filter-btn" data-filter="IoT">IoT</button>
+      <button class="filter-btn" data-filter="Web">Web</button>
+    </div>
+    <div class="portfolio-grid" id="portfolioGrid">
+      <div class="portfolio-card reveal" data-category="3D">
+        <div class="portfolio-card-img"><img src="images/Oficina0013.jpg" alt="SmartFactory" loading="lazy"><span class="portfolio-card-category">3D</span><span class="portfolio-card-featured">Featured</span></div>
+        <div class="portfolio-card-body"><div class="portfolio-card-meta"><span>Industrial Client</span><span>2024</span></div><h3 class="portfolio-card-title">SmartFactory — Digital Twin Ops</h3><p class="portfolio-card-desc">Digital twin for factory floor with real-time WebSocket telemetry and 60 FPS Three.js rendering.</p><div class="portfolio-card-tools"><span>React</span><span>Three.js</span><span>FastAPI</span></div></div>
+      </div>
+      <div class="portfolio-card reveal" data-category="AI">
+        <div class="portfolio-card-img"><img src="images/documentacion-parallax.jpg" alt="RAG" loading="lazy"><span class="portfolio-card-category">AI</span><span class="portfolio-card-featured">Featured</span></div>
+        <div class="portfolio-card-body"><div class="portfolio-card-meta"><span>Enterprise</span><span>2024</span></div><h3 class="portfolio-card-title">RAG Knowledge Platform</h3><p class="portfolio-card-desc">Corporate RAG with semantic chunking and hybrid search to eliminate hallucinations.</p><div class="portfolio-card-tools"><span>Django</span><span>LangChain</span><span>pgvector</span></div></div>
+      </div>
+      <div class="portfolio-card reveal" data-category="IoT">
+        <div class="portfolio-card-img"><img src="images/proyectos-parallax.jpg" alt="IoT" loading="lazy"><span class="portfolio-card-category">IoT</span></div>
+        <div class="portfolio-card-body"><div class="portfolio-card-meta"><span>Logistics</span><span>2023</span></div><h3 class="portfolio-card-title">IoT Telemetry Fleet</h3><p class="portfolio-card-desc">Buffered ingestion pipeline with MQTT and TimescaleDB — 99% uptime.</p><div class="portfolio-card-tools"><span>Python</span><span>MQTT</span><span>PostgreSQL</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="portfolio-modal" id="portfolioModal" onclick="if(event.target===this)closePortfolioModal()">
+  <div class="portfolio-modal-content">
+    <button class="portfolio-modal-close" onclick="closePortfolioModal()" aria-label="Close">✕</button>
+    <div class="portfolio-modal-gallery" id="portfolioModalGallery"></div>
+    <div class="portfolio-modal-body">
+      <div class="portfolio-modal-meta" id="portfolioModalMeta"></div>
+      <h3 class="portfolio-modal-title" id="portfolioModalTitle"></h3>
+      <p class="portfolio-modal-desc" id="portfolioModalDesc"></p>
+      <div class="portfolio-modal-tools" id="portfolioModalTools"></div>
+      <div class="portfolio-modal-actions" id="portfolioModalActions"></div>
+    </div>
+  </div>
+</div>
+
 <section id="contact" class="contact-section">
   <div class="container">
     <div class="contact-grid">
@@ -1503,6 +1764,24 @@ function toggleMenu() {
       document.getElementById('navLinks').classList.remove('mobile-open');
     });
   });
+window.openPortfolioModal = function(idx){
+  const items = window.__portfolioItems || [];
+  const it = items[idx];
+  if(!it) return;
+  document.getElementById('portfolioModalGallery').innerHTML = (it.gallery && it.gallery.length ? it.gallery : [it.cover].filter(Boolean)).map(src=>`<img src="${escAttr(src)}" alt="${escAttr(it.title)}">`).join('');
+  document.getElementById('portfolioModalMeta').innerHTML = `<span>${esc(it.category||'')}</span><span>•</span><span>${esc(it.client||'')}</span><span>•</span><span>${esc(it.year||'')}</span>`;
+  document.getElementById('portfolioModalTitle').textContent = it.title||'';
+  document.getElementById('portfolioModalDesc').textContent = it.desc||'';
+  document.getElementById('portfolioModalTools').innerHTML = (it.tools||[]).map(t=>`<span class="tech-tag">${esc(t)}</span>`).join('');
+  document.getElementById('portfolioModalActions').innerHTML = it.link ? `<a href="${escAttr(it.link)}" target="_blank" class="btn btn-primary">↗ ${esc(it.linkLabel||'View')}</a>` : '';
+  document.getElementById('portfolioModal').classList.add('active');
+  document.body.style.overflow='hidden';
+}
+window.closePortfolioModal = function(){
+  document.getElementById('portfolioModal').classList.remove('active');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') closePortfolioModal(); });
 </script>
 <script type="importmap">{"imports":{"three":"./vendor_three.module.js"}}</script>
 <script type="module">
@@ -1637,6 +1916,52 @@ if(canvas){
     if(d.experience) document.querySelector('.experience-list').innerHTML=d.experience.map(ex=>`<div class="experience-item reveal">${ex.image?`<img class="exp-img" src="${escAttr(ex.image)}" alt="${escAttr(ex.title)}">`:''}<div class="exp-header"><div><div class="exp-title">${ex.title}</div><div class="exp-company">${ex.company}</div></div><div class="exp-date">${ex.date}</div></div><ul class="exp-achievements">${(ex.achievements||[]).map(a=>`<li>${a}</li>`).join('')}</ul><div class="exp-stack">${(ex.stack||[]).map(t=>`<span class="skill-tag">${t}</span>`).join('')}</div></div>`).join('');
     // Projects
     if(d.projects) document.querySelector('.projects-grid').innerHTML=d.projects.map(p=>`<div class="project-card reveal">${p.image?`<img class="project-img" src="${escAttr(p.image)}" alt="${escAttr(p.title)}">`:''}<div class="project-number">${p.number}</div><h3 class="project-title">${p.title}</h3><p class="project-desc">${p.desc}</p><div class="project-metric">${p.metric}</div><div class="project-tech">${(p.tech||[]).map(t=>`<span class="tech-tag">${t}</span>`).join('')}</div><div class="project-links"><a href="${p.link}" target="_blank" class="project-link">↗ ${p.linkLabel}</a></div></div>`).join('');
+    // Portfolio — curated works
+    if(d.portfolio){
+      const pf=d.portfolio;
+      const pfLabel=document.querySelector('#portfolio .section-label');
+      if(pfLabel && pf.label) pfLabel.lastChild.textContent=' '+pf.label;
+      const pfTitle=document.querySelector('#portfolio .section-title');
+      if(pfTitle && pf.title) pfTitle.innerHTML=pf.title;
+      const pfSub=document.querySelector('#portfolio .section-subtitle');
+      if(pfSub && pf.subtitle) pfSub.textContent=pf.subtitle;
+      const pfFilters=document.getElementById('portfolioFilters');
+      if(pfFilters && pf.categories){
+        pfFilters.innerHTML=pf.categories.map((c,i)=>`<button class="filter-btn ${i===0?'active':''}" data-filter="${escAttr(c)}">${esc(c)}</button>`).join('');
+        pfFilters.querySelectorAll('.filter-btn').forEach(btn=>{
+          btn.addEventListener('click',()=>{
+            pfFilters.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+            btn.classList.add('active');
+            const f=btn.dataset.filter;
+            document.querySelectorAll('#portfolioGrid .portfolio-card').forEach(card=>{
+              const cat=card.dataset.category;
+              card.style.display=(f==='All'||cat===f)?'':'none';
+            });
+          });
+        });
+      }
+      const pfGrid=document.getElementById('portfolioGrid');
+      if(pfGrid && pf.items){
+        const visibleItems=pf.items.filter(it=>it.visible!==false);
+        pfGrid.innerHTML=visibleItems.map((it,idx)=>`
+          <div class="portfolio-card reveal" data-category="${escAttr(it.category||'')}" onclick="openPortfolioModal(${idx})">
+            <div class="portfolio-card-img">
+              ${it.cover?`<img src="${escAttr(it.cover)}" alt="${escAttr(it.title)}" loading="lazy">`:'<div style="height:100%;background:var(--bg-tertiary)"></div>'}
+              <span class="portfolio-card-category">${esc(it.category||'')}</span>
+              ${it.featured?'<span class="portfolio-card-featured">Featured</span>':''}
+            </div>
+            <div class="portfolio-card-body">
+              <div class="portfolio-card-meta"><span>${esc(it.client||'')}</span><span>${esc(it.year||'')}</span></div>
+              <h3 class="portfolio-card-title">${esc(it.title||'')}</h3>
+              <p class="portfolio-card-desc">${esc(it.desc||'')}</p>
+              <div class="portfolio-card-tools">${(it.tools||[]).map(t=>`<span>${esc(t)}</span>`).join('')}</div>
+            </div>
+          </div>
+        `).join('');
+        window.__portfolioItems=visibleItems;
+        document.querySelectorAll('#portfolioGrid .reveal').forEach(el=>observer.observe(el));
+      }
+    }
     // Contact
     if(contact.title) document.querySelector('.contact-info h2').innerHTML=contact.title;
     if(contact.subtitle) document.querySelector('.contact-info p').textContent=contact.subtitle;
@@ -1710,8 +2035,8 @@ if(canvas){
     }
     // Settings: section visibility
     const sc=d.settings?.showSections||{};
-    ['hero','about','services','experience','projects','contact'].forEach(s=>{
-      const el=document.getElementById(s+'-section');
+    ['hero','about','services','experience','portfolio','projects','contact'].forEach(s=>{
+      const el = s==='hero' ? document.querySelector('.hero') : document.getElementById(s);
       if(el) el.style.display=(sc[s]!==false)?'':'none';
     });
     // Settings: maintenance mode
@@ -1725,8 +2050,29 @@ if(canvas){
   }catch(e){ console.log('CMS no disponible',e); }
 })();
 </script>
-
-
+<script>
+// Portfolio modal — ensure global
+window.openPortfolioModal = window.openPortfolioModal || function(idx){
+  const items = window.__portfolioItems || [];
+  const it = items[idx];
+  if(!it) return;
+  const escM = (s)=> String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const escAM = (s)=> escM(s).replace(/"/g,'&quot;');
+  document.getElementById('portfolioModalGallery').innerHTML = (it.gallery && it.gallery.length ? it.gallery : [it.cover].filter(Boolean)).map(src=>`<img src="${escAM(src)}" alt="${escM(it.title)}">`).join('');
+  document.getElementById('portfolioModalMeta').innerHTML = `<span>${escM(it.category||'')}</span><span>•</span><span>${escM(it.client||'')}</span><span>•</span><span>${escM(it.year||'')}</span>`;
+  document.getElementById('portfolioModalTitle').textContent = it.title||'';
+  document.getElementById('portfolioModalDesc').textContent = it.desc||'';
+  document.getElementById('portfolioModalTools').innerHTML = (it.tools||[]).map(t=>`<span class="tech-tag">${escM(t)}</span>`).join('');
+  document.getElementById('portfolioModalActions').innerHTML = it.link ? `<a href="${escAM(it.link)}" target="_blank" class="btn btn-primary">↗ ${escM(it.linkLabel||'View')}</a>` : '';
+  document.getElementById('portfolioModal').classList.add('active');
+  document.body.style.overflow='hidden';
+};
+window.closePortfolioModal = window.closePortfolioModal || function(){
+  document.getElementById('portfolioModal').classList.remove('active');
+  document.body.style.overflow='';
+};
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') window.closePortfolioModal(); });
+</script>
 
 </body>
 </html>
