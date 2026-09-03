@@ -390,22 +390,22 @@
       {
         "icon": "linkedin",
         "label": "LinkedIn",
-        "value": "linkedin.com/in/mikerodriguez84",
-        "href": "https://linkedin.com/in/mikerodriguez84",
+        "value": "www.linkedin.com/in/miguelrodriguez-dataviz",
+        "href": "www.linkedin.com/in/miguelrodriguez-dataviz",
         "color": "#4f8cff"
       },
       {
         "icon": "github",
         "label": "GitHub",
-        "value": "github.com/MikeHell84",
-        "href": "https://github.com/MikeHell84",
+        "value": "https://github.com/miguelxlerion",
+        "href": "https://github.com/miguelxlerion",
         "color": "#a855f7"
       },
       {
         "icon": "globe",
         "label": "Portafolio Web",
-        "value": "mikehell84.github.io",
-        "href": "https://mikehell84.github.io/Mike_portfolio/",
+        "value": "https://github.com/miguelxlerion",
+        "href": "https://miguelxlerion.github.io/Mike_portfolio",
         "color": "#10b981"
       },
       {
