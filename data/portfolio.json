@@ -373,6 +373,20 @@
       ],
       "link": "https://github.com/MikeHell84/GobIA",
       "linkLabel": "View Code"
+    },
+    {
+      "number": "05 / Data Analisis - Digital Twins",
+      "title": "Urban Twin",
+      "desc": "Urban Twin is a full-stack, real-time digital twin platform for urban monitoring and smart city analytics. It renders live IoT telemetry — traffic flow, air quality, and energy consumption — onto a photogrammetric 3D globe of Bogota, Colombia, using Cesium ion's World Terrain and OSM Buildings tilesets.\n\nThe system ingests data from public APIs (OpenAQ) and simulated urban sensors via WebSockets, processes it through a FastAPI backend, and visualizes it across three concurrent data layers on a WebGL-powered 3D globe. The platform is designed to demonstrate how geospatial digital twins can close the gap between raw urban telemetry and actionable decision-making for city planners and municipal authorities.",
+      "metric": "<strong>Impact:</strong> Digital Twin -Urban Twin is a full-stack, real-time digital twin platform for urban monitoring and smart city analytics.. <strong>HTML 148k + Python 84k</strong>.",
+      "tech": [
+        "Python",
+        "Javascript",
+        "Css"
+      ],
+      "link": "https://github.com/miguelxlerion/urban_twin.git",
+      "linkLabel": "View Code",
+      "image": "images/1788404121424-emqv.gif"
     }
   ],
   "contact": {
