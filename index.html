@@ -1002,6 +1002,8 @@
   }
   .ticker-item { display: inline-block; padding: 0 2rem; font-size: 0.9rem; letter-spacing: 0.05em; }
 
+
+
   .contact-section {
     background: var(--bg-secondary);
     border-top: 1px solid var(--border);
@@ -2278,7 +2280,7 @@ if(canvas){
     }
     // Settings: section visibility
     const sc=d.settings?.showSections||{};
-    ['hero','about','services','experience','portfolio','projects','contact'].forEach(s=>{
+    ['hero','about','services','experience','portfolio','gamedev','projects','contact'].forEach(s=>{
       const el = s==='hero' ? document.querySelector('.hero') : document.getElementById(s);
       if(el) el.style.display=(sc[s]!==false)?'':'none';
     });
@@ -2309,6 +2311,10 @@ window.openPortfolioModal = window.openPortfolioModal || function(idx){
   document.getElementById('portfolioModalActions').innerHTML = it.link ? `<a href="${escAM(it.link)}" target="_blank" class="btn btn-primary">↗ ${escM(it.linkLabel||'View')}</a>` : '';
   document.getElementById('portfolioModal').classList.add('active');
   document.body.style.overflow='hidden';
+};
+window.closePortfolioModal = window.closePortfolioModal || function(){
+  document.getElementById('portfolioModal').classList.remove('active');
+  document.body.style.overflow='';
 };
 window.closePortfolioModal = window.closePortfolioModal || function(){
   document.getElementById('portfolioModal').classList.remove('active');
