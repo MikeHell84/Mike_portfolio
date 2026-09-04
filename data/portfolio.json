@@ -19,6 +19,10 @@
         "href": "#portfolio"
       },
       {
+        "label": "3D & Videojuegos",
+        "href": "3D Portfolio.html"
+      },
+      {
         "label": "Projects",
         "href": "#projects"
       },
@@ -702,5 +706,654 @@
         "color": "#f0f0f5"
       }
     ]
+  },
+  "gamedev": {
+    "label": "",
+    "title": "",
+    "subtitle": "",
+    "categories": [
+      "All",
+      "3D",
+      "Videojuegos",
+      "Demo"
+    ],
+    "items": [
+      {
+        "visible": true,
+        "id": "gd-001",
+        "title": "Demo — Escena 3D Interactiva",
+        "category": "3D",
+        "client": "Demo",
+        "year": "2026",
+        "cover": "images/proyectos-parallax.jpg",
+        "gallery": [
+          "images/proyectos-parallax.jpg"
+        ],
+        "desc": "Demo de escena 3D con Three.js — cámara orbital, iluminación y materiales PBR. Reemplaza cover, galería y texto desde el admin.",
+        "tools": [
+          "Three.js",
+          "Blender"
+        ],
+        "link": "#gamedev",
+        "linkLabel": "Ver Demo",
+        "featured": true
+      },
+      {
+        "visible": true,
+        "id": "gd-002",
+        "title": "Demo — Videojuego Prototype",
+        "category": "Videojuegos",
+        "client": "Demo",
+        "year": "2026",
+        "cover": "images/servicios-productos-parallax.jpg",
+        "gallery": [
+          "images/servicios-productos-parallax.jpg"
+        ],
+        "desc": "Prototipo de videojuego — mecánicas básicas, UI y loop jugable. Ideal para mostrar gameplay, trailer o build WebGL.",
+        "tools": [
+          "Unity",
+          "C#"
+        ],
+        "link": "#gamedev",
+        "linkLabel": "Ver Demo",
+        "featured": false
+      },
+      {
+        "visible": true,
+        "id": "gd-003",
+        "title": "Demo — Entorno Estilizado",
+        "category": "Demo",
+        "client": "Demo",
+        "year": "2026",
+        "cover": "images/fundador-parallax.jpg",
+        "gallery": [
+          "images/fundador-parallax.jpg"
+        ],
+        "desc": "Entorno 3D estilizado — vegetación, props y post-proceso. Cambia categoría, cover y descripción desde el panel.",
+        "tools": [
+          "Unreal",
+          "Substance"
+        ],
+        "link": "#gamedev",
+        "linkLabel": "Ver Demo",
+        "featured": false
+      }
+    ]
+  },
+  "threeDPage": {
+    "hero": {
+      "tag": "CREATIVE TECHNOLOGIST — v2.6",
+      "titleLines": [
+        {
+          "text": "CODE.",
+          "class": "",
+          "dataText": ""
+        },
+        {
+          "text": "RENDER.",
+          "class": "glitch",
+          "dataText": "RENDER."
+        },
+        {
+          "text": "INTELLIGENCE.",
+          "class": "",
+          "dataText": ""
+        }
+      ],
+      "sub": "Ingeniero de Software & Tecnólogo Creativo con <b>10+ años</b> unificando desarrollo Full-Stack con <b>visualización 3D en tiempo real</b> e <b>Inteligencia Artificial</b>. Cierro la brecha entre diseño visual de alto impacto e ingeniería robusta.",
+      "cta": [
+        {
+          "text": "Ver Proyectos",
+          "href": "#work",
+          "variant": "primary"
+        },
+        {
+          "text": "Contactar →",
+          "href": "#contact",
+          "variant": "ghost"
+        }
+      ],
+      "visual": {
+        "hexInner": "MR",
+        "dataPoints": [
+          "THREE.JS // ACTIVE",
+          "WEBSOCKETS // 99% UPTIME",
+          "RAG // VECTOR SEARCH",
+          "UNREAL // 60FPS"
+        ]
+      },
+      "stats": [
+        {
+          "num": "10",
+          "label": "Años de Experiencia",
+          "suffix": ""
+        },
+        {
+          "num": "40",
+          "label": "% Reducción Análisis",
+          "suffix": ""
+        },
+        {
+          "num": "80",
+          "label": "% Optimización Assets",
+          "suffix": ""
+        },
+        {
+          "num": "1200",
+          "label": "Unidades Gestionadas",
+          "suffix": ""
+        }
+      ]
+    },
+    "about": {
+      "num": "01 // ABOUT",
+      "title": "HYBRID <span class=\"accent\">MINDSET</span>",
+      "desc": "Un perfil que trasciende disciplinas. Código, arte, diseño y datos convergen en una sola visión creativa.",
+      "manifesto": {
+        "label": "// MANIFIESTO",
+        "paragraphs": [
+          "No soy solo desarrollador, ni solo artista, ni solo diseñador. Soy un <b>arquitecto de experiencias</b> que entiende cómo cada disciplina se conecta para crear algo mayor que la suma de sus partes.",
+          "Desde <b>modelar personajes en ZBrush</b> hasta <b>orquestar pipelines RAG con LangChain</b>, desde <b>diseñar interfaces gamificadas</b> hasta <b>optimizar shaders en Unreal Engine 5</b> — mi trabajo vive en las intersecciones.",
+          "Transformo datos complejos en experiencias visuales que reducen tiempos de análisis en un <b>40%</b>. Convierto ideas en productos que funcionan a <b>60 FPS estables</b>."
+        ]
+      },
+      "terminal": {
+        "lines": [
+          {
+            "prompt": "miguel@xlerion:~$",
+            "cmd": "whoami",
+            "out": "→ Creative Technologist — Full-Stack Engineer — 3D Artist"
+          },
+          {
+            "prompt": "miguel@xlerion:~$",
+            "cmd": "cat stack.json",
+            "out": "{"
+          },
+          {
+            "prompt": "",
+            "cmd": "",
+            "out": "  \"frontend\": [\"React\", \"Next.js\", \"Three.js\", \"TypeScript\"],"
+          },
+          {
+            "prompt": "",
+            "cmd": "",
+            "out": "  \"backend\": [\"Python\", \"Django\", \"Node.js\", \"WebSockets\"],"
+          },
+          {
+            "prompt": "",
+            "cmd": "",
+            "out": "  \"3d_realtime\": [\"Unreal 5\", \"Unity\", \"ZBrush\", \"Substance\"],"
+          },
+          {
+            "prompt": "",
+            "cmd": "",
+            "out": "  \"ai_data\": [\"RAG\", \"LangChain\", \"pgvector\", \"OpenAI\"]"
+          },
+          {
+            "prompt": "",
+            "cmd": "",
+            "out": "}"
+          },
+          {
+            "prompt": "miguel@xlerion:~$",
+            "cmd": "./current_mission.sh",
+            "out": "→ Building immersive data experiences & AAA-ready assets"
+          }
+        ]
+      }
+    },
+    "skills": {
+      "num": "02 // CAPABILITIES",
+      "title": "TECH <span class=\"accent\">MATRIX</span>",
+      "desc": "Un stack técnico que cubre todo el pipeline creativo: desde el píxel hasta el dato, desde el modelo 3D hasta la IA.",
+      "clusters": [
+        {
+          "title": "01 — 3D & REAL-TIME",
+          "icon": "3D",
+          "items": [
+            {
+              "name": "Unreal Engine 5",
+              "lvl": "EXPERTO",
+              "w": 95
+            },
+            {
+              "name": "Unity 3D",
+              "lvl": "EXPERTO",
+              "w": 90
+            },
+            {
+              "name": "Three.js / WebGL",
+              "lvl": "EXPERTO",
+              "w": 92
+            },
+            {
+              "name": "ZBrush",
+              "lvl": "EXPERTO",
+              "w": 88
+            },
+            {
+              "name": "Substance 3D Painter",
+              "lvl": "EXPERTO",
+              "w": 85
+            },
+            {
+              "name": "3ds Max / Blender",
+              "lvl": "AVANZADO",
+              "w": 80
+            }
+          ]
+        },
+        {
+          "title": "02 — AI & DATA",
+          "icon": "AI",
+          "items": [
+            {
+              "name": "RAG / LLM Integration",
+              "lvl": "EXPERTO",
+              "w": 93
+            },
+            {
+              "name": "LangChain / LlamaIndex",
+              "lvl": "AVANZADO",
+              "w": 85
+            },
+            {
+              "name": "pgvector / Vector DB",
+              "lvl": "AVANZADO",
+              "w": 82
+            },
+            {
+              "name": "Python (Asyncio)",
+              "lvl": "EXPERTO",
+              "w": 90
+            },
+            {
+              "name": "WebSockets / MQTT",
+              "lvl": "EXPERTO",
+              "w": 88
+            },
+            {
+              "name": "PostgreSQL / Redis",
+              "lvl": "AVANZADO",
+              "w": 80
+            }
+          ]
+        },
+        {
+          "title": "03 — FRONTEND",
+          "icon": "UI",
+          "items": [
+            {
+              "name": "React.js / Next.js",
+              "lvl": "EXPERTO",
+              "w": 92
+            },
+            {
+              "name": "TypeScript",
+              "lvl": "EXPERTO",
+              "w": 88
+            },
+            {
+              "name": "HTML5 / CSS3",
+              "lvl": "AVANZADO",
+              "w": 90
+            },
+            {
+              "name": "Tailwind CSS",
+              "lvl": "AVANZADO",
+              "w": 85
+            },
+            {
+              "name": "UI/UX Design",
+              "lvl": "AVANZADO",
+              "w": 87
+            },
+            {
+              "name": "Responsive / RWD",
+              "lvl": "AVANZADO",
+              "w": 85
+            }
+          ]
+        },
+        {
+          "title": "04 — DESIGN & INFRA",
+          "icon": "DS",
+          "items": [
+            {
+              "name": "Adobe Suite (Ps, Ai, Ae, Id)",
+              "lvl": "AVANZADO",
+              "w": 88
+            },
+            {
+              "name": "Branding / Identity",
+              "lvl": "AVANZADO",
+              "w": 82
+            },
+            {
+              "name": "Docker / Linux SysAdmin",
+              "lvl": "AVANZADO",
+              "w": 80
+            },
+            {
+              "name": "Node.js / Django",
+              "lvl": "EXPERTO",
+              "w": 88
+            },
+            {
+              "name": "Scrum / Agile",
+              "lvl": "AVANZADO",
+              "w": 85
+            },
+            {
+              "name": "PMP® Certified",
+              "lvl": "CERTIFICADO",
+              "w": 78
+            }
+          ]
+        }
+      ]
+    },
+    "work": {
+      "num": "03 // SELECTED WORK",
+      "title": "CASE <span class=\"accent\">STUDIES</span>",
+      "desc": "Proyectos que demuestran pensamiento multidisciplinario: desde IA empresarial hasta visualización 3D gamificada.",
+      "projects": [
+        {
+          "num": "PROJECT_01",
+          "tag": "AI — RAG",
+          "title": "Enterprise RAG Assistant",
+          "desc": "Sistema modular que conecta bases de conocimiento corporativas con LLMs mediante RAG. Procesamiento asíncrono de PDFs, chunking semántico y búsqueda híbrida con re-ranking anti-alucinaciones.",
+          "stack": [
+            "Python",
+            "Django",
+            "LangChain",
+            "pgvector",
+            "Docker",
+            "OpenAI"
+          ],
+          "link": "#",
+          "linkLabel": "Ver caso de estudio",
+          "visual": "rag"
+        },
+        {
+          "num": "PROJECT_02",
+          "tag": "IoT — REAL-TIME",
+          "title": "IoT Telemetry Resilient Backend",
+          "desc": "Plataforma de alto rendimiento para flujos masivos de datos de sensores IoT. Diseño tolerante a fallos con persistencia local, garantizando 99% de uptime bajo tráfico concurrente simulado.",
+          "stack": [
+            "Python Asyncio",
+            "WebSockets",
+            "MQTT",
+            "PostgreSQL",
+            "Docker",
+            "Linux"
+          ],
+          "link": "#",
+          "linkLabel": "Ver caso de estudio",
+          "visual": "iot"
+        },
+        {
+          "num": "PROJECT_03",
+          "tag": "3D — WEBGL",
+          "title": "Interactive 3D Analytics Dashboard",
+          "desc": "Transforma bases de datos tabulares masivas en entornos visuales gamificados en tiempo real. Reducción drástica de tiempos de análisis manteniendo framerate estable en el navegador.",
+          "stack": [
+            "React",
+            "Three.js",
+            "WebSockets",
+            "Tailwind",
+            "Django REST"
+          ],
+          "link": "#",
+          "linkLabel": "Ver caso de estudio",
+          "visual": "3d"
+        },
+        {
+          "num": "PROJECT_04",
+          "tag": "GAME — UNITY",
+          "title": "Total Darkness — Videojuego Musical",
+          "desc": "Desarrollo conceptual y técnico de un videojuego musical basado en la discografía de Redemthor. Unificación de diseño de sonido, narrativa escrita y desarrollo en Unity.",
+          "stack": [
+            "Unity",
+            "C#",
+            "Audio Design",
+            "Narrative",
+            "Level Design"
+          ],
+          "link": "#",
+          "linkLabel": "Ver caso de estudio",
+          "visual": "game"
+        },
+        {
+          "num": "PROJECT_05",
+          "tag": "AR — CRM",
+          "title": "Gualiví CRM — Avistour AR",
+          "desc": "Plataforma de turismo inteligente con experiencia de realidad aumentada para avistamiento de aves. Integración de gestión de datos con gamificación móvil.",
+          "stack": [
+            "AR",
+            "Mobile",
+            "CRM",
+            "Gamification",
+            "Data Viz"
+          ],
+          "link": "#",
+          "linkLabel": "Ver caso de estudio",
+          "visual": "ar"
+        },
+        {
+          "num": "PROJECT_06",
+          "tag": "GOV — DASHBOARD",
+          "title": "FOVIS — Plataforma Gubernamental",
+          "desc": "Arquitectura y desarrollo desde cero de plataforma de gestión habitacional con 1,200+ unidades. Dashboards de KPIs en tiempo real que redujeron tiempo de decisiones en 60%.",
+          "stack": [
+            "React",
+            "Tailwind",
+            "Node.js",
+            "KPIs",
+            "UX/UI"
+          ],
+          "link": "#",
+          "linkLabel": "Ver caso de estudio",
+          "visual": "gov"
+        }
+      ]
+    },
+    "experience": {
+      "num": "04 // TRAJECTORY",
+      "title": "EXPERIENCE <span class=\"accent\">LOG</span>",
+      "desc": "Una década construyendo en la intersección entre tecnología, arte y datos.",
+      "items": [
+        {
+          "date": "2023 — PRESENTE",
+          "role": "Lead Engineer & Founder",
+          "company": "Xlerion Studio",
+          "desc": [
+            "Arquitecturas frontend complejas conectando flujos en tiempo real (WebSockets/MQTT) con interfaces 3D dinámicas",
+            "Automatización de pipelines con MaxScript: reducción del 80% en tiempo de exportación de assets 3D",
+            "Desarrollo conceptual y técnico de videojuegos y plataformas de turismo inteligente con AR"
+          ],
+          "stack": [
+            "Three.js",
+            "Unity",
+            "React",
+            "Python",
+            "MaxScript"
+          ]
+        },
+        {
+          "date": "2024 — 2025",
+          "role": "Desarrollador Full-Stack Senior",
+          "company": "Alcaldía de Caucasia (FOVIS)",
+          "desc": [
+            "Arquitectura desde cero de plataforma de gestión habitacional con 1,200+ unidades",
+            "Dashboards de KPIs en tiempo real: reducción del 60% en tiempo de toma de decisiones",
+            "Biblioteca de componentes UI reutilizables: mejora del 35% en tiempos de carga"
+          ],
+          "stack": [
+            "React",
+            "Tailwind",
+            "Node.js",
+            "UX/UI"
+          ]
+        },
+        {
+          "date": "2022 — 2023",
+          "role": "Desarrollador Web & Integración 3D",
+          "company": "2INK",
+          "desc": [
+            "Diseño, modelado e integración de recursos gráficos 3D avanzados para campañas institucionales",
+            "Producción de medios digitales y optimización de infraestructuras visuales con Blender y 3ds Max"
+          ],
+          "stack": [
+            "Blender",
+            "3ds Max",
+            "Adobe Suite",
+            "Figma"
+          ]
+        },
+        {
+          "date": "2018 — 2019",
+          "role": "Director de Diseño 3D & Data Visualization",
+          "company": "AONC Neuroscientific Strategies",
+          "desc": [
+            "Transformación de datos masivos en entornos 3D gamificados para análisis visual en tiempo real",
+            "Reducción del 40% en tiempo de análisis para usuarios no técnicos mediante UX centrado en usabilidad"
+          ],
+          "stack": [
+            "3D Viz",
+            "Gamification",
+            "UX",
+            "Python"
+          ]
+        },
+        {
+          "date": "2015 — 2017",
+          "role": "Desarrollador Frontend & UI Designer",
+          "company": "USAID — ACDI/VOCA",
+          "desc": [
+            "Arquitectura del software ICOE: traducción de bases de datos complejas en paneles interactivos accesibles",
+            "Dirección creativa y producción multimedia para campañas institucionales de alcance nacional"
+          ],
+          "stack": [
+            "Frontend",
+            "UI Design",
+            "Multimedia",
+            "3D"
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "num": "// LET'S BUILD",
+      "title": "READY TO <span class=\"accent\">RENDER</span><br>THE IMPOSSIBLE?",
+      "sub": "Disponible para proyectos remotos en visualización 3D en tiempo real, plataformas de IA, desarrollo de videojuegos y experiencias interactivas de alto impacto.",
+      "links": [
+        {
+          "text": "Email",
+          "href": "mailto:miguelxlerion@gmail.com"
+        },
+        {
+          "text": "LinkedIn",
+          "href": "https://www.linkedin.com/in/miguelrodriguez-dataviz"
+        },
+        {
+          "text": "GitHub",
+          "href": "https://github.com/miguelxlerion"
+        },
+        {
+          "text": "CV / PDF",
+          "href": "#"
+        }
+      ],
+      "email": "miguelxlerion@gmail.com",
+      "footer": "© 2026 MIGUEL E. RODRIGUEZ // ALL SYSTEMS OPERATIONAL",
+      "coords": [
+        "4.7110° N",
+        "74.0721° W",
+        "BOGOTÁ, CO"
+      ]
+    },
+    "fonts": {
+      "mono": "JetBrains Mono",
+      "sans": "Space Grotesk"
+    },
+    "colors": {
+      "bg": "#05070d",
+      "bg2": "#0a0e18",
+      "grid": "#0d1424",
+      "line": "#1a2340",
+      "text": "#c7d2e8",
+      "muted": "#6b7a99",
+      "laser": "#00d4ff",
+      "laser2": "#0099ff",
+      "accent": "#7df9ff"
+    },
+    "background": {
+      "color": "#05070d",
+      "color2": "#0a0e18",
+      "particleColor": "#00d4ff",
+      "particleCount": 1500,
+      "particleSize": 0.03,
+      "particleOpacity": 0.8,
+      "lineColor": "#00d4ff",
+      "lineOpacity": 0.15,
+      "wireColor": "#00d4ff",
+      "behavior": "neural",
+      "speed": 0.2,
+      "density": 1,
+      "models": [
+        {
+          "url": "images/1788558280608-humi.glb",
+          "name": "turbina.glb",
+          "scale": 1,
+          "autoRotate": true,
+          "animations": true
+        }
+      ],
+      "maxModelSize": "10MB",
+      "supportedTypes": [
+        "glb",
+        "gltf",
+        "fbx",
+        "obj"
+      ],
+      "materialMode": "wireframe",
+      "showParticles": true,
+      "showLines": true,
+      "showTorus": false,
+      "showIco": false,
+      "lights": [
+        {
+          "type": "hemisphere",
+          "color": "#ffffff",
+          "groundColor": "#0a0e18",
+          "intensity": 2.8,
+          "enabled": true
+        },
+        {
+          "type": "directional",
+          "color": "#abafb5",
+          "intensity": 2.7,
+          "position": [
+            6,
+            10,
+            4
+          ],
+          "enabled": true
+        },
+        {
+          "type": "point",
+          "color": "#a855f7",
+          "intensity": 2.8,
+          "position": [
+            -4,
+            4,
+            -2
+          ],
+          "distance": 20,
+          "enabled": true
+        }
+      ]
+    }
   }
 }
