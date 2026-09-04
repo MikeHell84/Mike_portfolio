@@ -557,7 +557,26 @@ function renderAll(){
   const po=document.getElementById('t3d_particleOpacity'); if(po) {po.value=bg.particleOpacity||0.8; const v=document.getElementById('t3d_particleOpacity_val'); if(v) v.textContent=bg.particleOpacity||0.8;}
   const list=document.getElementById('t3d_models_list');
   if(list){
-    list.innerHTML=(bg.models||[]).map((m,i)=>`<div class="item"><div class="grow"><div class="mono" style="font-size:0.75rem; word-break:break-all;">${m.url} <span class="hint">(${m.name||'modelo'}${m.animations?' • animado':''})</span></div><div style="display:flex;gap:8px; margin-top:4px;"><label class="field" style="flex:1"><span class="hint">Escala</span><input type="number" data-k="t3d_model_scale" data-i="${i}" value="${m.scale||1}" step="0.1" style="width:80px"></label><label style="display:flex;align-items:center;gap:4px; font-size:0.8rem;"><input type="checkbox" data-k="t3d_model_autorotate" data-i="${i}" ${m.autoRotate!==false?'checked':''}> Auto-rotar</label></div></div><button class="btn ghost small" data-del="t3d_model" data-i="${i}">✕</button></div>`).join('');
+    list.innerHTML=(bg.models||[]).map((m,i)=>{
+      const pos = m.position || {x:0, y:0, z:0};
+      const rot = m.rotation || {x:0, y:0, z:0};
+      return `<div class="item"><div class="grow"><div class="mono" style="font-size:0.75rem; word-break:break-all;">${m.url} <span class="hint">(${m.name||'modelo'}${m.animations?' • animado':''})</span></div>
+        <div style="display:flex;gap:8px; margin-top:4px; flex-wrap:wrap;">
+          <label class="field" style="flex:1"><span class="hint">Escala</span><input type="number" data-k="t3d_model_scale" data-i="${i}" value="${m.scale||1}" step="0.1" style="width:80px"></label>
+          <label style="display:flex;align-items:center;gap:4px; font-size:0.8rem;"><input type="checkbox" data-k="t3d_model_autorotate" data-i="${i}" ${m.autoRotate!==false?'checked':''}> Auto-rotar</label>
+        </div>
+        <div style="display:flex;gap:8px; margin-top:8px; flex-wrap:wrap;">
+          <label class="field"><span class="hint">Pos X</span><input type="number" data-k="t3d_model_pos_x" data-i="${i}" value="${pos.x||0}" step="0.5" style="width:70px"></label>
+          <label class="field"><span class="hint">Pos Y</span><input type="number" data-k="t3d_model_pos_y" data-i="${i}" value="${pos.y||0}" step="0.5" style="width:70px"></label>
+          <label class="field"><span class="hint">Pos Z</span><input type="number" data-k="t3d_model_pos_z" data-i="${i}" value="${pos.z||0}" step="0.5" style="width:70px"></label>
+        </div>
+        <div style="display:flex;gap:8px; margin-top:8px; flex-wrap:wrap;">
+          <label class="field"><span class="hint">Rot X (rad)</span><input type="number" data-k="t3d_model_rot_x" data-i="${i}" value="${rot.x||0}" step="0.1" style="width:90px"></label>
+          <label class="field"><span class="hint">Rot Y (rad)</span><input type="number" data-k="t3d_model_rot_y" data-i="${i}" value="${rot.y||0}" step="0.1" style="width:90px"></label>
+          <label class="field"><span class="hint">Rot Z (rad)</span><input type="number" data-k="t3d_model_rot_z" data-i="${i}" value="${rot.z||0}" step="0.1" style="width:90px"></label>
+        </div>
+      </div><button class="btn ghost small" data-del="t3d_model" data-i="${i}">✕</button></div>`;
+    }).join('');
     if(!(bg.models||[]).length) list.innerHTML='<div class="hint">No hay modelos. Sube un .glb/.gltf/.fbx/.obj (max 10MB) — aparecerá en el fondo de 3D Portfolio.</div>';
   }
   $('#pf_list').innerHTML = (pf.items||[]).map((it,i)=>`<div class="panel"><div class="grid2"><div class="field"><label>Visible</label><input type="checkbox" data-k="pf_v" data-i="${i}" ${it.visible!==false?'checked':''}></div><div class="field"><label>Destacado</label><input type="checkbox" data-k="pf_feat" data-i="${i}" ${it.featured?'checked':''}></div><div class="field"><label>Título</label><input data-k="pf_t" data-i="${i}" value="${escAttr(it.title||'')}"></div><div class="field"><label>Categoría</label><input list="pf_cat_list" data-k="pf_catv" data-i="${i}" value="${escAttr(it.category||'')}"><datalist id="pf_cat_list">${(pf.categories||[]).map(c=>`<option value="${escAttr(c)}">`).join('')}</datalist></div><div class="field"><label>Cliente</label><input data-k="pf_client" data-i="${i}" value="${escAttr(it.client||'')}"></div><div class="field"><label>Año</label><input data-k="pf_year" data-i="${i}" value="${escAttr(it.year||'')}"></div></div><div class="field"><label>Cover (url)</label><input data-k="pf_cover" data-i="${i}" value="${escAttr(it.cover||'')}"></div><div class="field"><label>Cover (subir PC)</label><input type="file" accept="image/*" data-up="pf_cover" data-i="${i}"></div><div class="field"><label>Galería (urls, una por línea)</label><textarea data-k="pf_gallery" data-i="${i}" rows="2">${esc((it.gallery||[]).join('\\n'))}</textarea></div><div class="field"><label>Galería (subir múltiple)</label><input type="file" accept="image/*" multiple data-up="pf_gallery" data-i="${i}"></div><div class="field"><label>Descripción</label><textarea data-k="pf_desc" data-i="${i}" rows="3">${esc(it.desc||'')}</textarea></div><div class="field"><label>Tools (coma)</label><input data-k="pf_tools" data-i="${i}" value="${escAttr((it.tools||[]).join(', '))}"></div><div class="grid2"><div class="field"><label>Link</label><input data-k="pf_link" data-i="${i}" value="${escAttr(it.link||'')}"></div><div class="field"><label>Link label</label><input data-k="pf_linkLabel" data-i="${i}" value="${escAttr(it.linkLabel||'')}"></div></div><button class="btn danger small" data-del="pf_item" data-i="${i}">Eliminar trabajo</button></div>`).join('');
@@ -818,6 +837,12 @@ document.addEventListener('input',e=>{
   else if(k==='t3d_particleOpacity') state.threeDPage.background.particleOpacity=parseFloat(t.value);
   else if(k==='t3d_model_scale') state.threeDPage.background.models[i].scale=parseFloat(t.value);
   else if(k==='t3d_model_autorotate') state.threeDPage.background.models[i].autoRotate=t.checked;
+  else if(k==='t3d_model_pos_x'){ if(!state.threeDPage.background.models[i].position) state.threeDPage.background.models[i].position={}; state.threeDPage.background.models[i].position.x=parseFloat(t.value); }
+  else if(k==='t3d_model_pos_y'){ if(!state.threeDPage.background.models[i].position) state.threeDPage.background.models[i].position={}; state.threeDPage.background.models[i].position.y=parseFloat(t.value); }
+  else if(k==='t3d_model_pos_z'){ if(!state.threeDPage.background.models[i].position) state.threeDPage.background.models[i].position={}; state.threeDPage.background.models[i].position.z=parseFloat(t.value); }
+  else if(k==='t3d_model_rot_x'){ if(!state.threeDPage.background.models[i].rotation) state.threeDPage.background.models[i].rotation={}; state.threeDPage.background.models[i].rotation.x=parseFloat(t.value); }
+  else if(k==='t3d_model_rot_y'){ if(!state.threeDPage.background.models[i].rotation) state.threeDPage.background.models[i].rotation={}; state.threeDPage.background.models[i].rotation.y=parseFloat(t.value); }
+  else if(k==='t3d_model_rot_z'){ if(!state.threeDPage.background.models[i].rotation) state.threeDPage.background.models[i].rotation={}; state.threeDPage.background.models[i].rotation.z=parseFloat(t.value); }
   else if(k==='c_l_label') state.contact.links[i].label=t.value;
   else if(k==='c_l_value') state.contact.links[i].value=t.value;
   else if(k==='c_l_href'){
@@ -893,7 +918,7 @@ function setupFileInputs(){
           if(j.ok && j.path){
             if(!state.threeDPage.background) state.threeDPage.background={};
             if(!state.threeDPage.background.models) state.threeDPage.background.models=[];
-            state.threeDPage.background.models.push({url:j.path, name:file.name, scale:1, autoRotate:true, animations:true});
+            state.threeDPage.background.models.push({url:j.path, name:file.name, scale:1, autoRotate:true, animations:true, position:{x:0,y:0,z:0}, rotation:{x:0,y:0,z:0}});
             renderAll();
             continue;
           }
@@ -902,7 +927,7 @@ function setupFileInputs(){
       // Fallback to dataURL if upload fails
       if(!state.threeDPage.background) state.threeDPage.background={};
       if(!state.threeDPage.background.models) state.threeDPage.background.models=[];
-      state.threeDPage.background.models.push({url:dataURL, name:file.name, scale:1, autoRotate:true, animations:true});
+      state.threeDPage.background.models.push({url:dataURL, name:file.name, scale:1, autoRotate:true, animations:true, position:{x:0,y:0,z:0}, rotation:{x:0,y:0,z:0}});
       renderAll();
     }
     e.target.value='';
