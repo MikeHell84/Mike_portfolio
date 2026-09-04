@@ -1116,11 +1116,7 @@ $('#gh_publish').onclick=async()=>{
     }
     ghLog('Subiendo data/portfolio.json...');
     await putText('data/portfolio.json', JSON.stringify(state,null,2));
-    ghLog('✔ portfolio.json');
-    ghLog('Subiendo index.html...');
-    const idx=await fetch('index.html',{cache:'no-store'}).then(r=>r.text());
-    await putText('index.html', idx);
-    ghLog('✔ index.html — Publicación completa. GitHub Pages tarda 1-2 min.');
+    ghLog('✔ portfolio.json — Publicación completa. GitHub Pages tarda 1-2 min.');
     ghLog('Tip: recarga con Ctrl+F5 si no ves la imagen');
   }catch(e){ ghLog('✘ '+e.message); }
 }
