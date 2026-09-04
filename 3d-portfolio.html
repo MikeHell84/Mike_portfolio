@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>3D Portfolio — MIGUEL RODRIGUEZRGUEZ // CREATIVE TECHNOLOGIST</title>
+<link rel="icon" href="images/favicon-3d-portfolio.svg" type="image/svg+xml">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/jetbrains-mono@latest/latin-400-normal.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/jetbrains-mono@latest/latin-700-normal.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/space-grotesk@latest/latin-400-normal.css">
@@ -796,7 +797,20 @@ function loadModels(){
         box.setFromObject(model);
         const center=box.getCenter(new THREE.Vector3());
         model.position.sub(center);
-        model.position.add(new THREE.Vector3((Math.random()-0.5)*6, (Math.random()-0.5)*2, -1 - Math.random()*3));
+        // Apply configured position (default random if not set)
+        const cfgPos = m.position || {};
+        const cfgRot = m.rotation || {};
+        model.position.set(
+          cfgPos.x !== undefined ? cfgPos.x : (Math.random()-0.5)*6,
+          cfgPos.y !== undefined ? cfgPos.y : (Math.random()-0.5)*2,
+          cfgPos.z !== undefined ? cfgPos.z : -1 - Math.random()*3
+        );
+        // Apply configured rotation (in radians)
+        model.rotation.set(
+          cfgRot.x || 0,
+          cfgRot.y || 0,
+          cfgRot.z || 0
+        );
         // Material mode: original vs wireframe
         const matMode = bgConfig.materialMode||'original';
         let hasVisibleMesh = false;
