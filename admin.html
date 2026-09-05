@@ -1152,6 +1152,10 @@ $('#gh_publish').onclick=async()=>{
   ['parallax_img','fondo_img','logo_url','favicon_url'].forEach(k=>{ const v=state.design[k]; if(v && v.startsWith('images/') && !v.startsWith('data:')) imgPaths.add(v); });
   // 3D Portfolio background models
   (state.threeDPage?.background?.models||[]).forEach(m=>{ if(m.url && m.url.startsWith('images/') && !m.url.startsWith('data:')) imgPaths.add(m.url); });
+  // 3D Portfolio work projects (cover/image)
+  (state.threeDPage?.work?.projects||[]).forEach(p=>{ if(p.cover && p.cover.startsWith('images/') && !p.cover.startsWith('data:')) imgPaths.add(p.cover); if(p.image && p.image.startsWith('images/') && !p.image.startsWith('data:')) imgPaths.add(p.image); });
+  // 3D Portfolio case studies (heroImage/gallery)
+  (state.threeDPage?.caseStudies||[]).forEach(c=>{ if(c.heroImage && c.heroImage.startsWith('images/') && !c.heroImage.startsWith('data:')) imgPaths.add(c.heroImage); (c.gallery||[]).forEach(g=>{ if(g && g.startsWith('images/') && !g.startsWith('data:')) imgPaths.add(g); }); });
   try{
     if(imgPaths.size){
       ghLog('Sincronizando imágenes ('+imgPaths.size+')...');
