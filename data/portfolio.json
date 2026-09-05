@@ -1073,7 +1073,9 @@
           "link": "#",
           "linkLabel": "Ver caso de estudio",
           "visual": "rag",
-          "caseStudySlug": "enterprise-rag-assistant"
+          "caseStudySlug": "enterprise-rag-assistant",
+          "cover": "images/1788626418988-9ncd.jpg",
+          "image": "images/1788626418988-9ncd.jpg"
         },
         {
           "num": "PROJECT_02",
@@ -1091,7 +1093,9 @@
           "link": "#",
           "linkLabel": "Ver caso de estudio",
           "visual": "iot",
-          "caseStudySlug": "iot-telemetry-resilient-backend"
+          "caseStudySlug": "iot-telemetry-resilient-backend",
+          "cover": "images/1788626287159-5t0u.jpg",
+          "image": "images/1788626287159-5t0u.jpg"
         },
         {
           "num": "PROJECT_03",
@@ -1108,7 +1112,9 @@
           "link": "#",
           "linkLabel": "Ver caso de estudio",
           "visual": "3d",
-          "caseStudySlug": "interactive-3d-analytics-dashboard"
+          "caseStudySlug": "interactive-3d-analytics-dashboard",
+          "cover": "images/1788626301009-89v6.jpg",
+          "image": "images/1788626301009-89v6.jpg"
         },
         {
           "num": "PROJECT_04",
@@ -1126,8 +1132,8 @@
           "linkLabel": "Ver caso de estudio",
           "visual": "game",
           "caseStudySlug": "",
-          "cover": "images/1788572392416-4j1f.gif",
-          "image": "images/1788572392416-4j1f.gif"
+          "cover": "images/1788626433226-g033.jpg",
+          "image": "images/1788626433226-g033.jpg"
         },
         {
           "num": "PROJECT_05",
@@ -1144,7 +1150,9 @@
           "link": "#",
           "linkLabel": "Ver caso de estudio",
           "visual": "ar",
-          "caseStudySlug": ""
+          "caseStudySlug": "",
+          "cover": "images/1788626340011-602b.jpg",
+          "image": "images/1788626340011-602b.jpg"
         },
         {
           "num": "PROJECT_06",
@@ -1161,7 +1169,9 @@
           "link": "",
           "linkLabel": "Ver caso de estudio",
           "visual": "gov",
-          "caseStudySlug": ""
+          "caseStudySlug": "",
+          "cover": "images/1788626351762-uwta.jpg",
+          "image": "images/1788626351762-uwta.jpg"
         }
       ]
     },
