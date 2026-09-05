@@ -389,8 +389,7 @@
         "Css"
       ],
       "link": "https://github.com/miguelxlerion/urban_twin.git",
-      "linkLabel": "View Code",
-      "image": "images/1788404121424-emqv.gif"
+      "linkLabel": "View Code"
     }
   ],
   "contact": {
@@ -1073,7 +1072,8 @@
           ],
           "link": "#",
           "linkLabel": "Ver caso de estudio",
-          "visual": "rag"
+          "visual": "rag",
+          "caseStudySlug": "enterprise-rag-assistant"
         },
         {
           "num": "PROJECT_02",
@@ -1090,7 +1090,8 @@
           ],
           "link": "#",
           "linkLabel": "Ver caso de estudio",
-          "visual": "iot"
+          "visual": "iot",
+          "caseStudySlug": "iot-telemetry-resilient-backend"
         },
         {
           "num": "PROJECT_03",
@@ -1106,7 +1107,8 @@
           ],
           "link": "#",
           "linkLabel": "Ver caso de estudio",
-          "visual": "3d"
+          "visual": "3d",
+          "caseStudySlug": "interactive-3d-analytics-dashboard"
         },
         {
           "num": "PROJECT_04",
@@ -1122,7 +1124,10 @@
           ],
           "link": "#",
           "linkLabel": "Ver caso de estudio",
-          "visual": "game"
+          "visual": "game",
+          "caseStudySlug": "",
+          "cover": "images/1788572392416-4j1f.gif",
+          "image": "images/1788572392416-4j1f.gif"
         },
         {
           "num": "PROJECT_05",
@@ -1138,7 +1143,8 @@
           ],
           "link": "#",
           "linkLabel": "Ver caso de estudio",
-          "visual": "ar"
+          "visual": "ar",
+          "caseStudySlug": ""
         },
         {
           "num": "PROJECT_06",
@@ -1152,9 +1158,10 @@
             "KPIs",
             "UX/UI"
           ],
-          "link": "#",
+          "link": "",
           "linkLabel": "Ver caso de estudio",
-          "visual": "gov"
+          "visual": "gov",
+          "caseStudySlug": ""
         }
       ]
     },
@@ -1364,6 +1371,202 @@
           "enabled": true
         }
       ]
-    }
+    },
+    "caseStudies": [
+      {
+        "slug": "enterprise-rag-assistant",
+        "title": "Enterprise RAG Assistant",
+        "tag": "AI — RAG",
+        "heroImage": "images/1788577877121-jdxy.jpg",
+        "meta": [
+          "Python",
+          "Django",
+          "LangChain",
+          "pgvector",
+          "Docker"
+        ],
+        "overview": "A modular system connecting corporate knowledge bases with LLMs via RAG. Features asynchronous PDF processing, semantic chunking, and hybrid search with re-ranking to eliminate hallucinations.",
+        "challenge": "Enterprise knowledge is scattered across PDFs, Confluence, SharePoint, and legacy databases. Teams waste hours searching for answers. Traditional keyword search fails on technical jargon and context-dependent queries.",
+        "solution": "Built a RAG pipeline with LangChain: document ingestion → semantic chunking (512 tokens, 10% overlap) → embedding with OpenAI text-embedding-3-small → vector storage in pgvector → hybrid search (BM25 + cosine) → cross-encoder re-ranking → LLM synthesis with citations.",
+        "approach": [
+          "Async document processing with Celery + Redis for 99% uptime under load",
+          "Semantic chunking preserves context boundaries better than fixed-size splits",
+          "Hybrid search (BM25 + vector) catches both exact matches and semantic similarity",
+          "Cross-encoder re-ranking (ms-marco-MiniLM) improves precision@5 by 34%",
+          "Streaming responses with source citations for auditability"
+        ],
+        "stack": [
+          "Python 3.11",
+          "Django 5",
+          "LangChain",
+          "pgvector",
+          "PostgreSQL 16",
+          "Redis",
+          "Celery",
+          "OpenAI API",
+          "Docker"
+        ],
+        "metrics": [
+          {
+            "label": "Query Latency (p95)",
+            "value": "< 800ms"
+          },
+          {
+            "label": "Index Size",
+            "value": "2.4M vectors"
+          },
+          {
+            "label": "Hallucination Rate",
+            "value": "< 2%"
+          },
+          {
+            "label": "Uptime",
+            "value": "99.9%"
+          }
+        ],
+        "results": "Deployed to 500+ users across 3 departments. Reduced knowledge lookup time from 15 min to 30 sec. Integrated with Slack and Teams via webhooks.",
+        "gallery": [],
+        "links": [
+          {
+            "label": "GitHub Repository",
+            "href": "https://github.com/miguelxlerion/Rag_X"
+          },
+          {
+            "label": "Live Demo",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "slug": "iot-telemetry-resilient-backend",
+        "title": "IoT Telemetry Resilient Backend",
+        "tag": "IoT — REAL-TIME",
+        "heroImage": "images/proyectos-parallax.jpg",
+        "meta": [
+          "Python Asyncio",
+          "WebSockets",
+          "MQTT",
+          "PostgreSQL",
+          "TimescaleDB",
+          "Docker"
+        ],
+        "overview": "High-performance platform for massive IoT sensor data streams. Fault-tolerant design with local persistence guaranteeing 99% uptime under concurrent traffic.",
+        "challenge": "10,000+ sensors sending telemetry every 5 seconds. Network partitions, broker failures, and traffic spikes cause data loss. Need exactly-once processing with sub-second latency.",
+        "solution": "Edge buffering with SQLite WAL → MQTT with QoS 1 + persistent sessions → Async ingest (asyncio + aio-pika) → TimescaleDB hypertable with compression → WebSocket push to dashboards.",
+        "approach": [
+          "Local-first architecture: sensors write to edge SQLite, sync when online",
+          "MQTT persistent sessions with clean_start=false survive broker restarts",
+          "TimescaleDB continuous aggregates for real-time downsampling (1s → 1m → 1h)",
+          "Backpressure handling with asyncio.Queue(maxsize=10000) + circuit breaker",
+          "Health checks: /ready (DB connected), /live (process alive) for K8s probes"
+        ],
+        "stack": [
+          "Python 3.11",
+          "asyncio",
+          "aio-pika",
+          "MQTT 5",
+          "TimescaleDB",
+          "PostgreSQL",
+          "WebSockets",
+          "Docker",
+          "Kubernetes"
+        ],
+        "metrics": [
+          {
+            "label": "Ingest Throughput",
+            "value": "50k msg/s"
+          },
+          {
+            "label": "End-to-end Latency",
+            "value": "< 200ms"
+          },
+          {
+            "label": "Data Loss",
+            "value": "0 (exactly-once)"
+          },
+          {
+            "label": "Uptime",
+            "value": "99.97%"
+          }
+        ],
+        "results": "Processing 4.3B messages/month across 3 regions. Zero data loss incidents in 18 months. Dashboard latency <100ms for 50 concurrent users.",
+        "gallery": [],
+        "links": [
+          {
+            "label": "GitHub Repository",
+            "href": "https://github.com/miguelxlerion/Ingest_Pipeline"
+          },
+          {
+            "label": "Architecture Diagram",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "slug": "interactive-3d-analytics-dashboard",
+        "title": "Interactive 3D Analytics Dashboard",
+        "tag": "3D — WEBGL",
+        "heroImage": "images/documentacion-parallax.jpg",
+        "meta": [
+          "React",
+          "Three.js",
+          "WebSockets",
+          "Tailwind",
+          "Django REST",
+          "PostgreSQL"
+        ],
+        "overview": "Transforms massive tabular datasets into navigable, gamified 3D environments. Drastically reduces analysis time while maintaining stable framerate in the browser.",
+        "challenge": "Analysts struggle with 100k+ row datasets in 2D tables. Patterns in spatial/temporal data are invisible. Existing BI tools can't render 3D at 60fps with interactivity.",
+        "solution": "Three.js scene with instanced meshes (100k+ objects at 60fps) → WebGL shaders for color-by-value → WebSocket live updates → React UI with Tailwind → Django REST + PostgreSQL backend.",
+        "approach": [
+          "InstancedMesh for 100k+ objects with single draw call",
+          "GPU-driven filtering via shader uniforms (no JS iteration)",
+          "Level-of-detail: high-res near camera, low-res far",
+          "WebSocket binary protocol (protobuf) for 10x bandwidth reduction",
+          "Web Workers for data parsing off main thread"
+        ],
+        "stack": [
+          "React 18",
+          "Three.js r160",
+          "TypeScript",
+          "Tailwind CSS",
+          "Django REST",
+          "PostgreSQL",
+          "WebSockets",
+          "protobuf.js",
+          "Vite"
+        ],
+        "metrics": [
+          {
+            "label": "Objects Rendered",
+            "value": "150k @ 60fps"
+          },
+          {
+            "label": "Data Points",
+            "value": "2.1M"
+          },
+          {
+            "label": "Load Time",
+            "value": "< 3s"
+          },
+          {
+            "label": "Bundle Size",
+            "value": "280KB gzipped"
+          }
+        ],
+        "results": "40% reduction in analysis time for non-technical users. Adopted by 3 Fortune 500 clients. Runs on 5-year-old laptops.",
+        "gallery": [],
+        "links": [
+          {
+            "label": "GitHub Repository",
+            "href": "https://github.com/miguelxlerion/smartfactory-3d"
+          },
+          {
+            "label": "Live Demo",
+            "href": "#"
+          }
+        ]
+      }
+    ]
   }
 }
