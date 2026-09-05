@@ -1,9 +1,21 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>3D Portfolio — MIGUEL RODRIGUEZRGUEZ // CREATIVE TECHNOLOGIST</title>
+<title>3D Portfolio — MIGUEL E. RODRIGUEZ // CREATIVE TECHNOLOGIST</title>
+<meta name="description" content="Creative Technologist & Senior Full-Stack Engineer. Real-Time 3D, Digital Twins, RAG & AI Data Platforms. Interactive Three.js portfolio with case studies.">
+<meta name="keywords" content="Creative Technologist, Senior Full-Stack Engineer, Three.js, WebGL, Real-Time 3D, Digital Twin, RAG, AI, Python, React, Django">
+<meta name="author" content="Miguel E. Rodriguez">
+<link rel="canonical" href="https://miguelxlerion.github.io/Mike_portfolio/3d-portfolio.html">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://miguelxlerion.github.io/Mike_portfolio/3d-portfolio.html">
+<meta property="og:title" content="3D Portfolio — Miguel E. Rodriguez">
+<meta property="og:description" content="Creative Technologist portfolio: Real-Time 3D, Digital Twins, RAG & AI Data Platforms">
+<meta property="og:image" content="https://miguelxlerion.github.io/Mike_portfolio/images/favicon-3d-portfolio.svg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="3D Portfolio — Miguel E. Rodriguez">
+<meta name="twitter:description" content="Creative Technologist & Senior Full-Stack Engineer — Real-Time 3D & AI">
 <link rel="icon" href="images/favicon-3d-portfolio.svg" type="image/svg+xml">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/jetbrains-mono@latest/latin-400-normal.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/fontsource/fonts/jetbrains-mono@latest/latin-700-normal.css">
@@ -1000,6 +1012,13 @@ document.querySelectorAll('[data-tilt]').forEach(card=>{
     card.style.transform=`perspective(1000px) rotateY(${x*8}deg) rotateX(${-y*8}deg) translateY(-5px)`;
   });
   card.addEventListener('mouseleave',()=>{card.style.transform=''});
+  // Make entire card clickable (delegate to inner link)
+  card.addEventListener('click',e=>{
+    if(e.target.closest('a')) return; // let link handle its own click
+    const link=card.querySelector('.project-link');
+    if(link){ link.click(); }
+  });
+  card.style.cursor='pointer'; // override cursor:none for clickability
 });
 
 // GSAP ANIMATIONS
@@ -1161,12 +1180,13 @@ window.addEventListener('scroll',()=>{
       if(workDesc && t3d.work.desc) workDesc.textContent=t3d.work.desc;
       const grid=document.querySelector('#work .projects');
       if(grid && t3d.work.projects){
-        grid.innerHTML=t3d.work.projects.map(pr=>`
-          <div class="project" data-tilt>
+        grid.innerHTML=t3d.work.projects.map(pr=>{
+          const link = pr.caseStudySlug ? `case-study.html?slug=${esc(pr.caseStudySlug)}` : (pr.link||'#');
+          return `<div class="project" data-tilt>
             <div class="project-visual">${pr.cover||pr.image ? `<img src="${esc(pr.cover||pr.image)}" alt="${esc(pr.title)}" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;">` : `<svg viewBox="0 0 200 120"><g stroke="#00d4ff" fill="none" stroke-width="0.5"><circle cx="100" cy="60" r="40" fill="none" stroke="#00d4ff"/><text x="100" y="65" text-anchor="middle" fill="#00d4ff" font-size="8" font-family="monospace">${esc(pr.visual||'3D')}</text></g></svg>`}<div class="project-num">${esc(pr.num)}</div><div class="project-tag">${esc(pr.tag)}</div></div>
-            <h3>${esc(pr.title)}</h3><p class="project-desc">${esc(pr.desc)}</p><div class="project-stack">${(pr.stack||[]).map(s=>`<span>${esc(s)}</span>`).join('')}</div><a href="${pr.link}" class="project-link">${esc(pr.linkLabel||'Ver')}</a>
-          </div>
-        `).join('');
+            <h3>${esc(pr.title)}</h3><p class="project-desc">${esc(pr.desc)}</p><div class="project-stack">${(pr.stack||[]).map(s=>`<span>${esc(s)}</span>`).join('')}</div><a href="${link}" class="project-link">${esc(pr.linkLabel||'View Case Study')}</a>
+          </div>`;
+        }).join('');
       }
     }
     // Experience
