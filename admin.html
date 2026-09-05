@@ -144,6 +144,9 @@
             <div class="field"><label>Desc</label><textarea id="t3d_work_desc" rows="2"></textarea></div>
             <div id="t3d_work_list"></div><button class="btn small ghost" id="t3d_addWork">+ Proyecto</button>
           </div>
+          <div class="panel"><h3>Case Studies — Plantillas Detalladas</h3>
+            <div id="t3d_cs_list"></div><button class="btn small ghost" id="t3d_addCS">+ Case Study</button>
+          </div>
           <div class="panel"><h3>Experience — Timeline</h3>
             <div class="field"><label>Num</label><input id="t3d_exp_num"></div>
             <div class="field"><label>Título</label><input id="t3d_exp_title"></div>
@@ -508,7 +511,12 @@ function renderAll(){
   // Ensure work projects have cover/gallery handling
   const t3dWorkList = document.getElementById('t3d_work_list');
   if(t3dWorkList){
-    t3dWorkList.innerHTML = (t3d.work?.projects||[]).map((pr,i)=>`<div class="panel"><div class="grid2"><div class="field"><label>Título</label><input data-k="t3d_work_t" data-i="${i}" value="${escAttr(pr.title)}"></div><div class="field"><label>Tag</label><input data-k="t3d_work_tag" data-i="${i}" value="${escAttr(pr.tag)}"></div><div class="field"><label>Num</label><input data-k="t3d_work_numi" data-i="${i}" value="${escAttr(pr.num)}"></div></div><div class="field"><label>Cover (url) — para imagen del proyecto</label><input data-k="t3d_work_cover" data-i="${i}" value="${escAttr(pr.cover||pr.image||'')}"></div><div class="field"><label>Cover (subir PC) — gif/png/jpeg/jpg</label><input type="file" accept=".gif,.png,.jpeg,.jpg,image/*" data-up="t3d_work_cover" data-i="${i}"></div><div class="field"><label>Desc</label><textarea data-k="t3d_work_desc" data-i="${i}" rows="2">${esc(pr.desc)}</textarea></div><div class="field"><label>Stack (coma)</label><input data-k="t3d_work_stack" data-i="${i}" value="${escAttr((pr.stack||[]).join(', '))}"></div><div class="grid2"><div class="field"><label>Link</label><input data-k="t3d_work_link" data-i="${i}" value="${escAttr(pr.link)}"></div><div class="field"><label>Link label</label><input data-k="t3d_work_linkLabel" data-i="${i}" value="${escAttr(pr.linkLabel)}"></div></div><button class="btn danger small" data-del="t3d_work" data-i="${i}">Eliminar</button></div>`).join('');
+    t3dWorkList.innerHTML = (t3d.work?.projects||[]).map((pr,i)=>`<div class="panel"><div class="grid2"><div class="field"><label>Título</label><input data-k="t3d_work_t" data-i="${i}" value="${escAttr(pr.title)}"></div><div class="field"><label>Tag</label><input data-k="t3d_work_tag" data-i="${i}" value="${escAttr(pr.tag)}"></div><div class="field"><label>Num</label><input data-k="t3d_work_numi" data-i="${i}" value="${escAttr(pr.num)}"></div></div><div class="field"><label>Cover (url) — para imagen del proyecto</label><input data-k="t3d_work_cover" data-i="${i}" value="${escAttr(pr.cover||pr.image||'')}"></div><div class="field"><label>Cover (subir PC) — gif/png/jpeg/jpg</label><input type="file" accept=".gif,.png,.jpeg,.jpg,image/*" data-up="t3d_work_cover" data-i="${i}"></div><div class="field"><label>Desc</label><textarea data-k="t3d_work_desc" data-i="${i}" rows="2">${esc(pr.desc)}</textarea></div><div class="field"><label>Stack (coma)</label><input data-k="t3d_work_stack" data-i="${i}" value="${escAttr((pr.stack||[]).join(', '))}"></div><div class="grid2"><div class="field"><label>Link</label><input data-k="t3d_work_link" data-i="${i}" value="${escAttr(pr.link)}"></div><div class="field"><label>Link label</label><input data-k="t3d_work_linkLabel" data-i="${i}" value="${escAttr(pr.linkLabel)}"></div></div><div class="field"><label>Case Study Slug (link to case-study.html?slug=)</label><input data-k="t3d_work_csSlug" data-i="${i}" value="${escAttr(pr.caseStudySlug||'')}" placeholder="enterprise-rag-assistant"></div><button class="btn danger small" data-del="t3d_work" data-i="${i}">Eliminar</button></div>`).join('');
+  }
+  // Case Studies list
+  const t3dCSList = document.getElementById('t3d_cs_list');
+  if(t3dCSList){
+    t3dCSList.innerHTML = (t3d.caseStudies||[]).map((cs,i)=>`<div class="panel" style="background:var(--panel2);"><div class="grid2"><div class="field"><label>Slug (URL key)</label><input data-k="t3d_cs_slug" data-i="${i}" value="${escAttr(cs.slug||'')}"></div><div class="field"><label>Título</label><input data-k="t3d_cs_title" data-i="${i}" value="${escAttr(cs.title||'')}"></div></div><div class="field"><label>Tag</label><input data-k="t3d_cs_tag" data-i="${i}" value="${escAttr(cs.tag||'')}"></div><div class="field"><label>Hero Image (url)</label><input data-k="t3d_cs_heroImage" data-i="${i}" value="${escAttr(cs.heroImage||'')}"><input type="file" accept="image/*" data-up="t3d_cs_heroImage" data-i="${i}"></div><div class="field"><label>Meta tags (coma)</label><input data-k="t3d_cs_meta" data-i="${i}" value="${escAttr((cs.meta||[]).join(', '))}"></div><div class="field"><label>Overview</label><textarea data-k="t3d_cs_overview" data-i="${i}" rows="3">${esc(cs.overview||'')}</textarea></div><div class="field"><label>Challenge</label><textarea data-k="t3d_cs_challenge" data-i="${i}" rows="3">${esc(cs.challenge||'')}</textarea></div><div class="field"><label>Solution</label><textarea data-k="t3d_cs_solution" data-i="${i}" rows="3">${esc(cs.solution||'')}</textarea></div><div class="field"><label>Approach (one per line)</label><textarea data-k="t3d_cs_approach" data-i="${i}" rows="4">${esc((cs.approach||[]).join('\\n'))}</textarea></div><div class="field"><label>Stack (coma)</label><input data-k="t3d_cs_stack" data-i="${i}" value="${escAttr((cs.stack||[]).join(', '))}"></div><div class="field"><label>Metrics (JSON: [{label,value}])</label><textarea data-k="t3d_cs_metrics" data-i="${i}" rows="3">${esc(JSON.stringify(cs.metrics||[],null,2))}</textarea></div><div class="field"><label>Results</label><textarea data-k="t3d_cs_results" data-i="${i}" rows="3">${esc(cs.results||'')}</textarea></div><div class="field"><label>Gallery (urls, one per line)</label><textarea data-k="t3d_cs_gallery" data-i="${i}" rows="2">${esc((cs.gallery||[]).join('\\n'))}</textarea></div><div class="field"><label>Links (JSON: [{label,href}])</label><textarea data-k="t3d_cs_links" data-i="${i}" rows="3">${esc(JSON.stringify(cs.links||[],null,2))}</textarea></div><button class="btn danger small" data-del="t3d_cs" data-i="${i}">Eliminar</button></div>`).join('');
   }
   const t3dExpNum = document.getElementById('t3d_exp_num'); if(t3dExpNum) t3dExpNum.value = t3d.experience?.num||'';
   const t3dExpTitle = document.getElementById('t3d_exp_title'); if(t3dExpTitle) t3dExpTitle.value = t3d.experience?.title||'';
@@ -804,7 +812,15 @@ document.addEventListener('input',e=>{
   else if(k==='t3d_work_num') state.threeDPage.work.num=t.value;
   else if(k==='t3d_work_title') state.threeDPage.work.title=t.value;
   else if(k==='t3d_work_desc') state.threeDPage.work.desc=t.value;
+  else if(k==='t3d_work_t') state.threeDPage.work.projects[i].title=t.value;
+  else if(k==='t3d_work_tag') state.threeDPage.work.projects[i].tag=t.value;
+  else if(k==='t3d_work_numi') state.threeDPage.work.projects[i].num=t.value;
   else if(k==='t3d_work_cover') { state.threeDPage.work.projects[i].cover=t.value; state.threeDPage.work.projects[i].image=t.value; }
+  else if(k==='t3d_work_desc') state.threeDPage.work.projects[i].desc=t.value;
+  else if(k==='t3d_work_stack') state.threeDPage.work.projects[i].stack=t.value.split(',').map(s=>s.trim()).filter(Boolean);
+  else if(k==='t3d_work_link') state.threeDPage.work.projects[i].link=t.value;
+  else if(k==='t3d_work_linkLabel') state.threeDPage.work.projects[i].linkLabel=t.value;
+  else if(k==='t3d_work_csSlug') state.threeDPage.work.projects[i].caseStudySlug=t.value;
   else if(k==='t3d_exp_num') state.threeDPage.experience.num=t.value;
   else if(k==='t3d_exp_title') state.threeDPage.experience.title=t.value;
   else if(k==='t3d_exp_desc') state.threeDPage.experience.desc=t.value;
@@ -843,6 +859,20 @@ document.addEventListener('input',e=>{
   else if(k==='t3d_model_rot_x'){ if(!state.threeDPage.background.models[i].rotation) state.threeDPage.background.models[i].rotation={}; state.threeDPage.background.models[i].rotation.x=parseFloat(t.value); }
   else if(k==='t3d_model_rot_y'){ if(!state.threeDPage.background.models[i].rotation) state.threeDPage.background.models[i].rotation={}; state.threeDPage.background.models[i].rotation.y=parseFloat(t.value); }
   else if(k==='t3d_model_rot_z'){ if(!state.threeDPage.background.models[i].rotation) state.threeDPage.background.models[i].rotation={}; state.threeDPage.background.models[i].rotation.z=parseFloat(t.value); }
+  else if(k==='t3d_cs_slug'){ if(!state.threeDPage.caseStudies[i]) state.threeDPage.caseStudies[i]={}; state.threeDPage.caseStudies[i].slug=t.value; }
+  else if(k==='t3d_cs_title'){ if(!state.threeDPage.caseStudies[i]) state.threeDPage.caseStudies[i]={}; state.threeDPage.caseStudies[i].title=t.value; }
+  else if(k==='t3d_cs_tag'){ if(!state.threeDPage.caseStudies[i]) state.threeDPage.caseStudies[i]={}; state.threeDPage.caseStudies[i].tag=t.value; }
+  else if(k==='t3d_cs_heroImage'){ if(!state.threeDPage.caseStudies[i]) state.threeDPage.caseStudies[i]={}; state.threeDPage.caseStudies[i].heroImage=t.value; }
+  else if(k==='t3d_cs_meta'){ if(!state.threeDPage.caseStudies[i]) state.threeDPage.caseStudies[i]={}; state.threeDPage.caseStudies[i].meta=t.value.split(',').map(s=>s.trim()).filter(Boolean); }
+  else if(k==='t3d_cs_overview'){ if(!state.threeDPage.caseStudies[i]) state.threeDPage.caseStudies[i]={}; state.threeDPage.caseStudies[i].overview=t.value; }
+  else if(k==='t3d_cs_challenge'){ if(!state.threeDPage.caseStudies[i]) state.threeDPage.caseStudies[i]={}; state.threeDPage.caseStudies[i].challenge=t.value; }
+  else if(k==='t3d_cs_solution'){ if(!state.threeDPage.caseStudies[i]) state.threeDPage.caseStudies[i]={}; state.threeDPage.caseStudies[i].solution=t.value; }
+  else if(k==='t3d_cs_approach'){ if(!state.threeDPage.caseStudies[i]) state.threeDPage.caseStudies[i]={}; state.threeDPage.caseStudies[i].approach=t.value.split('\n').map(s=>s.trim()).filter(Boolean); }
+  else if(k==='t3d_cs_stack'){ if(!state.threeDPage.caseStudies[i]) state.threeDPage.caseStudies[i]={}; state.threeDPage.caseStudies[i].stack=t.value.split(',').map(s=>s.trim()).filter(Boolean); }
+  else if(k==='t3d_cs_metrics'){ if(!state.threeDPage.caseStudies[i]) state.threeDPage.caseStudies[i]={}; try{ state.threeDPage.caseStudies[i].metrics=JSON.parse(t.value); }catch(e){} }
+  else if(k==='t3d_cs_results'){ if(!state.threeDPage.caseStudies[i]) state.threeDPage.caseStudies[i]={}; state.threeDPage.caseStudies[i].results=t.value; }
+  else if(k==='t3d_cs_gallery'){ if(!state.threeDPage.caseStudies[i]) state.threeDPage.caseStudies[i]={}; state.threeDPage.caseStudies[i].gallery=t.value.split('\n').map(s=>s.trim()).filter(Boolean); }
+  else if(k==='t3d_cs_links'){ if(!state.threeDPage.caseStudies[i]) state.threeDPage.caseStudies[i]={}; try{ state.threeDPage.caseStudies[i].links=JSON.parse(t.value); }catch(e){} }
   else if(k==='c_l_label') state.contact.links[i].label=t.value;
   else if(k==='c_l_value') state.contact.links[i].value=t.value;
   else if(k==='c_l_href'){
@@ -873,6 +903,7 @@ document.addEventListener('click',e=>{
   else if(k==='t3d_cluster') state.threeDPage.skills.clusters.splice(i,1);
   else if(k==='t3d_skill_item'){ const si=Number(b.dataset.si); state.threeDPage.skills.clusters[i].items.splice(si,1); }
   else if(k==='t3d_work') state.threeDPage.work.projects.splice(i,1);
+  else if(k==='t3d_cs') state.threeDPage.caseStudies.splice(i,1);
   else if(k==='t3d_exp') state.threeDPage.experience.items.splice(i,1);
   else if(k==='t3d_link') state.threeDPage.contact.links.splice(i,1);
   else if(k==='t3d_model') state.threeDPage.background.models.splice(i,1);
@@ -893,7 +924,8 @@ $('#pf_addCat').onclick=()=>{ const v=$('#pf_newCat').value.trim(); if(!v) retur
 $('#gd_add').onclick=()=>{ state.gamedev.items.push({visible:true, id:'gd-'+Date.now(), title:'Nuevo trabajo 3D', category:(state.gamedev.categories[1]||'3D'), client:'Demo', year:String(new Date().getFullYear()), cover:'', gallery:[], desc:'Descripción demo', tools:[], link:'#gamedev', linkLabel:'Ver Demo', featured:false}); renderAll(); };
 $('#gd_addCat').onclick=()=>{ const v=$('#gd_newCat').value.trim(); if(!v) return; state.gamedev.categories.push(v); $('#gd_newCat').value=''; renderAll(); };
 $('#c_addLink').onclick=()=>{ state.contact.links.push({icon:'mail',label:'Nuevo',value:'valor',href:'#',color:'#4f8cff'}); renderAll(); };
-$('#site_addNav').onclick=()=>{ state.site.nav.push({label:'Nuevo',href:'#about'}); renderAll(); };
+  $('#site_addNav').onclick=()=>{ state.site.nav.push({label:'Nuevo',href:'#about'}); renderAll(); };
+  $('#t3d_addCS').onclick=()=>{ if(!state.threeDPage.caseStudies) state.threeDPage.caseStudies=[]; state.threeDPage.caseStudies.push({slug:'new-case-study-'+Date.now(),title:'New Case Study',tag:'TAG',heroImage:'',meta:[],overview:'',challenge:'',solution:'',approach:[],stack:[],metrics:[],results:'',gallery:[],links:[]}); renderAll(); };
 
 // File input handlers - safe null guards, consolidated
 function setupFileInputs(){
@@ -943,6 +975,7 @@ function setupFileInputs(){
       const files = Array.from(t.files||[]);
       if(!files.length) return;
       for(const file of files){
+        if(file.size > 500*1024){ alert('Imagen demasiado grande: ' + (file.size/1024).toFixed(0) + 'KB (máx 500KB)'); continue; }
         try{
           const dataURL = await fileToDataURL(file);
           let uploadedPath=null;
@@ -962,6 +995,14 @@ function setupFileInputs(){
     }
     const file=t.files && t.files[0];
     if(!file) return;
+    // Size limit for cover images (500KB) — large GIFs crash the page
+    if(file.size > 500*1024){
+      alert('Imagen demasiado grande: ' + (file.size/1024).toFixed(0) + 'KB (máx 500KB).\nLos GIFs animados grandes congelan el navegador — usa WebP/MP4/JPG estático.');
+      t.value=''; return;
+    }
+    if(file.type==='image/gif' && file.size > 200*1024){
+      if(!confirm('GIF grande (' + (file.size/1024).toFixed(0) + 'KB) — puede ralentizar la página.\n¿Continuar?')){ t.value=''; return; }
+    }
     // Try to upload to server (serve.js) to get a real file path
     let uploadedPath = null;
     try{
@@ -977,10 +1018,11 @@ function setupFileInputs(){
         else if(t.dataset.up==='pr_img') state.projects[i].image=uploadedPath;
         else if(t.dataset.up==='pf_cover') state.portfolio.items[i].cover=uploadedPath;
         else if(t.dataset.up==='t3d_work_cover'){ state.threeDPage.work.projects[i].cover=uploadedPath; state.threeDPage.work.projects[i].image=uploadedPath; }
+        else if(t.dataset.up==='t3d_cs_heroImage'){ if(!state.threeDPage.caseStudies[i]) state.threeDPage.caseStudies[i]={}; state.threeDPage.caseStudies[i].heroImage=uploadedPath; }
         else if(t.dataset.up==='t3d_model'){ state.threeDPage.background.models.push({url:uploadedPath, name:file.name, scale:1, autoRotate:true, animations:true}); renderAll(); }
         const urlInp=document.querySelector('[data-k="'+t.dataset.up+'"][data-i="'+i+'"]');
         if(urlInp) urlInp.value=uploadedPath;
-        if(t.dataset.up==='pf_cover' || t.dataset.up==='t3d_work_cover') renderAll();
+        if(t.dataset.up==='pf_cover' || t.dataset.up==='t3d_work_cover' || t.dataset.up==='t3d_cs_heroImage') renderAll();
         return;
       }
       // fallback to base64 if upload didn't return path
@@ -989,6 +1031,7 @@ function setupFileInputs(){
       else if(t.dataset.up==='pr_img') state.projects[i].image=dataURL;
       else if(t.dataset.up==='pf_cover') { state.portfolio.items[i].cover=dataURL; renderAll(); }
       else if(t.dataset.up==='t3d_work_cover'){ state.threeDPage.work.projects[i].cover=dataURL; state.threeDPage.work.projects[i].image=dataURL; renderAll(); }
+      else if(t.dataset.up==='t3d_cs_heroImage'){ if(!state.threeDPage.caseStudies[i]) state.threeDPage.caseStudies[i]={}; state.threeDPage.caseStudies[i].heroImage=dataURL; renderAll(); }
       const urlInp=document.querySelector('[data-k="'+t.dataset.up+'"][data-i="'+i+'"]');
       if(urlInp) urlInp.value=dataURL;
     }catch(err){
@@ -1129,7 +1172,7 @@ $('#gh_publish').onclick=async()=>{
     }
     // Sync HTML files
     ghLog('Sincronizando archivos HTML...');
-    const htmlFiles = ['index.html', '3d-portfolio.html', 'admin.html'];
+    const htmlFiles = ['index.html', '3d-portfolio.html', 'admin.html', 'case-study.html', 'vendor_three.module.js'];
     for(const p of htmlFiles){
       try{
         const sha=await shaOf(p);
