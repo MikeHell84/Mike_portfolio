@@ -295,6 +295,18 @@ function esc(s){
 
 async function loadCaseStudy(){
   console.log('loadCaseStudy called');
+  
+  // Cleanup previous GSAP ScrollTriggers
+  if(typeof ScrollTrigger !== 'undefined'){
+    ScrollTrigger.getAll().forEach(st => st.kill());
+  }
+  // Cleanup model viewer
+  const modelViewer = document.getElementById('modelViewer');
+  if(modelViewer){
+    modelViewer.classList.remove('visible');
+    modelViewer.innerHTML = '<canvas id="modelCanvas"></canvas>';
+  }
+  
   const params=new URLSearchParams(window.location.search);
   const slug=params.get('slug');
   console.log('slug:', slug);
@@ -388,7 +400,27 @@ function initModelViewer(url){
   },undefined,()=>{ container.classList.remove('visible'); });
 }
 
-document.addEventListener('DOMContentLoaded',loadCaseStudy);
+// Initialize on load and on bfcache restore (back button)
+let currentSlug = null;
+function initCaseStudy(){
+  const params = new URLSearchParams(window.location.search);
+  const slug = params.get('slug');
+  if(slug && slug !== currentSlug){
+    currentSlug = slug;
+    loadCaseStudy();
+  }
+}
+
+document.addEventListener('DOMContentLoaded', initCaseStudy);
+window.addEventListener('pageshow', (e) => {
+  if(e.persisted || currentSlug === null){
+    // Page restored from bfcache or first load
+    initCaseStudy();
+  }
+});
+
+// Also handle popstate (back/forward navigation)
+window.addEventListener('popstate', initCaseStudy);
 
 const loader=document.getElementById('pageLoader');
 if(loader){ let p=0; const c=document.getElementById('loaderCounter'); const iv=setInterval(()=>{ p+=Math.random()*15; if(p>=100){ p=100; clearInterval(iv); loader.style.opacity='0'; setTimeout(()=>loader.remove(),500); } c.textContent=String(Math.floor(p)).padStart(3,'0'); },50); }
