@@ -1344,7 +1344,7 @@
         "fbx",
         "obj"
       ],
-      "materialMode": "original",
+      "materialMode": "wireframe",
       "showParticles": true,
       "showLines": true,
       "showTorus": false,
